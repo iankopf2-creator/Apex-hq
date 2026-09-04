@@ -1,6 +1,7 @@
 /**
- * Niche theme configs — templated palettes/fonts/copy tone only.
+ * Niche theme configs — templated palettes/fonts/copy tone + credited hero imagery.
  * No hardcoded business names, phones, or addresses.
+ * Imagery is stock trade/job reference (Unsplash License) — not competitor brand cloning.
  *
  * Mobile-first / WCAG notes:
  * - Prefer contrast-safe primary/onPrimary pairs (aim AA: 4.5:1 body text).
@@ -9,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping";
 
 export type ThemePalette = {
   primary: string;
@@ -35,6 +36,15 @@ export type CopyTone = {
   avoid: string[];
 };
 
+/** Credited stock hero — local path for <2s load; sourceUrl is the public reference. */
+export type ThemeHeroImage = {
+  src: string;
+  alt: string;
+  credit: string;
+  sourceUrl: string;
+  license: "unsplash";
+};
+
 export type NicheThemeConfig = {
   niche: ThemeNicheId;
   label: string;
@@ -43,6 +53,8 @@ export type NicheThemeConfig = {
   copyTone: CopyTone;
   /** CSS custom-property map for optional /s/[slug] wiring */
   cssVars: Record<string, string>;
+  /** Trade/job reference photos with attribution (not business-specific). */
+  heroImages: ThemeHeroImage[];
 };
 
 const baseAvoid = ["fake urgency", "impersonating a human", "guaranteed results claims"];
@@ -52,15 +64,16 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "hvac",
     label: "HVAC",
     palette: {
-      primary: "#0ea5e9",
-      primaryForeground: "#0f172a",
-      accent: "#0369a1",
-      accentForeground: "#f8fafc",
+      // Cool sky CTA on deeper ocean hero — calm trust
+      primary: "#38bdf8",
+      primaryForeground: "#0c4a6e",
+      accent: "#0c4a6e",
+      accentForeground: "#f0f9ff",
       background: "#f8fafc",
       foreground: "#0f172a",
-      muted: "#e2e8f0",
-      mutedForeground: "#475569",
-      border: "#cbd5e1",
+      muted: "#e0f2fe",
+      mutedForeground: "#0369a1",
+      border: "#bae6fd",
     },
     fonts: {
       heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
@@ -68,25 +81,35 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "trustworthy, practical, calm",
-      heroStyle: "reliability + comfort at home",
-      ctaStyle: "clear service booking",
+      heroStyle: "comfort you can schedule — clear next step",
+      ctaStyle: "book a service visit",
       avoid: [...baseAvoid, "scare tactics about broken AC"],
     },
     cssVars: {
-      "--theme-primary": "#0ea5e9",
-      "--theme-primary-fg": "#0f172a",
-      "--theme-accent": "#0369a1",
+      "--theme-primary": "#38bdf8",
+      "--theme-primary-fg": "#0c4a6e",
+      "--theme-accent": "#0c4a6e",
       "--theme-bg": "#f8fafc",
       "--theme-fg": "#0f172a",
     },
+    heroImages: [
+      {
+        src: "/niches/hvac.jpg",
+        alt: "Technician working with electronics and tools",
+        credit: "ThisisEngineering on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/32PpagSzeGs",
+        license: "unsplash",
+      },
+    ],
   },
   plumber: {
     niche: "plumber",
     label: "Plumber",
     palette: {
-      primary: "#06b6d4",
+      // Deep water navy hero + bright cyan CTA — distinct from HVAC sky
+      primary: "#22d3ee",
       primaryForeground: "#083344",
-      accent: "#0e7490",
+      accent: "#164e63",
       accentForeground: "#ecfeff",
       background: "#f0fdfa",
       foreground: "#083344",
@@ -100,25 +123,35 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "straightforward, clean, respectful",
-      heroStyle: "fast help without the mess",
+      heroStyle: "fast help without the mess — clear price, clear next step",
       ctaStyle: "schedule plumbing help",
-      avoid: [...baseAvoid],
+      avoid: [...baseAvoid, "flood scare tactics"],
     },
     cssVars: {
-      "--theme-primary": "#06b6d4",
+      "--theme-primary": "#22d3ee",
       "--theme-primary-fg": "#083344",
-      "--theme-accent": "#0e7490",
+      "--theme-accent": "#164e63",
       "--theme-bg": "#f0fdfa",
       "--theme-fg": "#083344",
     },
+    heroImages: [
+      {
+        src: "/niches/plumber.jpg",
+        alt: "Plumbing tools and pipes at a job site",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1607472586893-edb57bdc0e39",
+        license: "unsplash",
+      },
+    ],
   },
   salon: {
     niche: "salon",
     label: "Salon",
     palette: {
-      primary: "#f43f5e",
-      primaryForeground: "#fff1f2",
-      accent: "#be123c",
+      // Soft blush CTA on deep rose hero — polished, not neon
+      primary: "#fb7185",
+      primaryForeground: "#4c0519",
+      accent: "#881337",
       accentForeground: "#fff1f2",
       background: "#fff7f8",
       foreground: "#4c0519",
@@ -132,17 +165,26 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "warm, polished, welcoming",
-      heroStyle: "look your best — book with ease",
+      heroStyle: "look your best — book with ease, no pressure",
       ctaStyle: "book an appointment",
-      avoid: [...baseAvoid, "body-shaming language"],
+      avoid: [...baseAvoid, "body-shaming language", "FOMO booking pressure"],
     },
     cssVars: {
-      "--theme-primary": "#f43f5e",
-      "--theme-primary-fg": "#fff1f2",
-      "--theme-accent": "#be123c",
+      "--theme-primary": "#fb7185",
+      "--theme-primary-fg": "#4c0519",
+      "--theme-accent": "#881337",
       "--theme-bg": "#fff7f8",
       "--theme-fg": "#4c0519",
     },
+    heroImages: [
+      {
+        src: "/niches/salon.jpg",
+        alt: "Salon chairs and styling stations",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1560066984-138dadb4c035",
+        license: "unsplash",
+      },
+    ],
   },
   trucking: {
     niche: "trucking",
@@ -175,6 +217,138 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       "--theme-bg": "#fffbeb",
       "--theme-fg": "#1c1917",
     },
+    heroImages: [
+      {
+        src: "/niches/trucking.jpg",
+        alt: "Semi truck on the highway",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1601584115197-04ecc0da31d7",
+        license: "unsplash",
+      },
+    ],
+  },
+  electrician: {
+    niche: "electrician",
+    label: "Electrician",
+    palette: {
+      primary: "#facc15",
+      primaryForeground: "#1c1917",
+      accent: "#1e293b",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "precise, safety-minded, clear",
+      heroStyle: "licensed work you can schedule — no guesswork",
+      ctaStyle: "book an electrical visit",
+      avoid: [...baseAvoid, "scare tactics about fire risk"],
+    },
+    cssVars: {
+      "--theme-primary": "#facc15",
+      "--theme-primary-fg": "#1c1917",
+      "--theme-accent": "#1e293b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    heroImages: [
+      {
+        src: "/niches/electrician.jpg",
+        alt: "Electrical tools and wiring work",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1621905252507-b35492cc74b4",
+        license: "unsplash",
+      },
+    ],
+  },
+  roofing: {
+    niche: "roofing",
+    label: "Roofing",
+    palette: {
+      primary: "#ea580c",
+      primaryForeground: "#fff7ed",
+      accent: "#292524",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "solid, protective, plain-spoken",
+      heroStyle: "a roof that holds — inspect, repair, replace",
+      ctaStyle: "request a roof inspection",
+      avoid: [...baseAvoid, "storm-chaser scare tactics"],
+    },
+    cssVars: {
+      "--theme-primary": "#ea580c",
+      "--theme-primary-fg": "#fff7ed",
+      "--theme-accent": "#292524",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    heroImages: [
+      {
+        src: "/niches/roofing.jpg",
+        alt: "Residential home exterior and roof line",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1600585154340-be6161a56a0c",
+        license: "unsplash",
+      },
+    ],
+  },
+  landscaping: {
+    niche: "landscaping",
+    label: "Landscaping",
+    palette: {
+      primary: "#65a30d",
+      primaryForeground: "#14532d",
+      accent: "#14532d",
+      accentForeground: "#f7fee7",
+      background: "#f7fee7",
+      foreground: "#14532d",
+      muted: "#d9f99d",
+      mutedForeground: "#3f6212",
+      border: "#bef264",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "fresh, reliable, outdoor-ready",
+      heroStyle: "yards that look cared for — mow, mulch, maintain",
+      ctaStyle: "request a yard estimate",
+      avoid: [...baseAvoid, "overselling overnight makeovers"],
+    },
+    cssVars: {
+      "--theme-primary": "#65a30d",
+      "--theme-primary-fg": "#14532d",
+      "--theme-accent": "#14532d",
+      "--theme-bg": "#f7fee7",
+      "--theme-fg": "#14532d",
+    },
+    heroImages: [
+      {
+        src: "/niches/landscaping.jpg",
+        alt: "Maintained lawn and landscaping",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1558904541-efa843a96f01",
+        license: "unsplash",
+      },
+    ],
   },
 };
 
