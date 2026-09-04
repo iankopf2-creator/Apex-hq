@@ -19,6 +19,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 
 ### Demo / live URL
 Front Door LIVE: https://apex-hq-five.vercel.app
+- [x] Fixed production `/s/[slug]` 500: serverless-safe store (memory/`/tmp` fallback) + always-available `demo-dallas-hvac` (`getDemoBusiness`)
 
 ## Protocol
 See docs/SUB_AGENT_PROTOCOL.md — single worker for 0.1; no extra sub-agents; money/legal stay with Ian/Eve/Rose.
@@ -78,3 +79,12 @@ See docs/THEME_LEAD_MAGNET_PROTOCOL.md
 ## Theme & Lead Magnet Agents (historical spawn gate)
 
 Front Door is live; scaffolding authorized by Ian for this run.
+
+## Lead Scout Agent (NOT THIS RUN)
+
+Spawn only after Front Door is confirmed live AND Stripe checkout works. Never contacts businesses — Ian pitches.
+
+- [ ] Lead Scout scaffolded
+- [ ] First daily leads/YYYY-MM-DD.md produced
+
+See docs/LEAD_SCOUT_PROTOCOL.md

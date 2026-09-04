@@ -51,7 +51,10 @@ Set `VOICE_PROVIDER=bland` or `retell` in env when you start Layer 2. Do not pur
 
 ## Data
 
-Without Supabase env, businesses persist under `data/businesses.json`.  
+Without Supabase env, businesses persist under `data/businesses.json` locally.  
+On Vercel (read-only FS), the store falls back to `/tmp` or an in-memory Map (ephemeral per instance).  
+Demo slug `demo-dallas-hvac` is always available via `getDemoBusiness()` without a prior seed POST.  
+**Durable production requires Supabase** — see `shared/blockers.md`.  
 SQL: `supabase/migrations/20260904000000_init.sql`.
 
 ## Next steps (not this run)
