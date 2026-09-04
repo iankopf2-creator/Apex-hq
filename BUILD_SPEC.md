@@ -125,3 +125,12 @@ After free audit curiosity. Requires signed agreement before POS access.
 - [ ] Aggregate-only analytics path
 
 See docs/PAID_DIAGNOSTIC_OFFER.md
+
+## Discovery & Custom Build Agent (NOT THIS RUN)
+
+Spawn after Paid Diagnostic proven on 3 customers. Ian reviews every spec before build.
+
+- [ ] Discovery agent scaffolded
+- [ ] First custom spec delivered to Ian
+
+See docs/DISCOVERY_CUSTOM_BUILD_PROTOCOL.md
