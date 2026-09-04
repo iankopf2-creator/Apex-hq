@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { NICHE_TEMPLATES, getTemplate } from "@/templates/niches";
 import type { BusinessHours, NicheId, ServiceItem } from "@/lib/types";
 import { Button } from "@/components/ui/button";
@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { CheckoutButton } from "@/components/pricing/checkout-button";
 
 const STEPS = ["Business", "Niche & city", "Hours", "Services", "Photos", "Review"] as const;
 
@@ -23,7 +24,6 @@ const emptyHours: BusinessHours = {
 };
 
 export function OnboardingWizard() {
-  const router = useRouter();
   const [step, setStep] = useState(0);
   const [name, setName] = useState("");
   const [niche, setNiche] = useState<NicheId | "">("");
@@ -33,6 +33,8 @@ export function OnboardingWizard() {
   const [photos, setPhotos] = useState<string[]>([""]);
   const [error, setError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [publishedSlug, setPublishedSlug] = useState<string | null>(null);
+  const [stripeConfigured, setStripeConfigured] = useState(false);
 
   const template = useMemo(() => (niche ? getTemplate(niche) : undefined), [niche]);
 
@@ -80,11 +82,59 @@ export function OnboardingWizard() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to save");
-      router.push("/s/" + data.slug);
+
+      let configured = false;
+      try {
+        const status = await fetch("/api/stripe/checkout");
+        const statusJson = await status.json();
+        configured = Boolean(statusJson.configured);
+      } catch {
+        configured = false;
+      }
+      setStripeConfigured(configured);
+      setPublishedSlug(data.slug);
+      setSaving(false);
     } catch (e) {
       setError(e instanceof Error ? e.message : "Something went wrong");
       setSaving(false);
     }
+  }
+
+  if (publishedSlug) {
+    return (
+      <Card className="mx-auto w-full max-w-2xl">
+        <CardHeader>
+          <CardTitle>Site published</CardTitle>
+          <CardDescription>
+            Your front door is live at /s/{publishedSlug}. Start Starter ($49/mo) via Stripe when ready.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <Button asChild className="w-full">
+            <Link href={"/s/" + publishedSlug}>View public site</Link>
+          </Button>
+          <CheckoutButton
+            tierId="starter"
+            tierName="Starter ($49/mo)"
+            businessSlug={publishedSlug}
+            stripeConfigured={stripeConfigured}
+            className="w-full"
+          />
+          <Button asChild variant="outline" className="w-full">
+            <Link href={"/pricing?slug=" + encodeURIComponent(publishedSlug)}>
+              See all plans
+            </Link>
+          </Button>
+          {!stripeConfigured && (
+            <p className="text-xs text-muted-foreground">
+              Stripe not configured. Ian must set STRIPE_SECRET_KEY,
+              NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, STRIPE_PRICE_STARTER,
+              NEXT_PUBLIC_APP_URL in Vercel, then redeploy.
+            </p>
+          )}
+        </CardContent>
+      </Card>
+    );
   }
 
   return (
@@ -252,7 +302,7 @@ export function OnboardingWizard() {
             <p><span className="font-medium">City:</span> {city}</p>
             <p><span className="font-medium">Services:</span> {services.filter((s) => s.name).length}</p>
             <p className="text-muted-foreground">
-              Saves to local JSON (or Supabase when configured). Public site at /s/[slug].
+              After publish you can start Starter checkout ($49/mo) via Stripe, or view the public site.
             </p>
           </div>
         )}

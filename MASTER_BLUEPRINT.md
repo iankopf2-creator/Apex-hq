@@ -19,7 +19,7 @@
 ### Layer 0 — Foundations
 - [x] 0.1 Local Business Front Door — Next.js scaffold + onboarding wizard (this run)
 - [ ] 0.2 Supabase wired (migrations present; live client optional / stub)
-- [ ] 0.3 Stripe live checkout (stub only this run)
+- [x] 0.3 Stripe Checkout Session API wired (Starter $49/mo) — live keys/Price IDs pending Ian
 - [ ] 0.4 Auth / owner accounts
 
 ### Layer 1 — Front Door
