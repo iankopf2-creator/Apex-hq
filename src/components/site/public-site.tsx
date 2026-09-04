@@ -12,7 +12,7 @@ const TAP = 48; // Apex Research: 44–48px; we use 48
 
 /**
  * Public Front Door page. Theme tokens via CSS vars; credited niche stock when
- * no custom photos. Sticky mobile dual CTA modes: call_first / book_first / hybrid.
+ * no custom photos. Sticky CTA modes: call_first / book_first / hybrid / quote_first.
  * Phone is the business public number only (never LSA-only tracking numbers).
  */
 export function PublicSite({ business }: Props) {

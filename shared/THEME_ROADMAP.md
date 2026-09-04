@@ -27,3 +27,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
 - 48px tap targets; trust chips from research notes
+
+## Added 2026-09-04 (research feed)
+- Garage door + Locksmith — call_first emergency
+- Cleaning residential book_first; Janitorial/commercial quote_first

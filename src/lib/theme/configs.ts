@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial";
 
 export type ThemePalette = {
   primary: string;
@@ -39,7 +39,7 @@ export type CopyTone = {
    * call_first = emergency/home-service; book_first = salon/beauty;
    * hybrid = seasonal/recurring (quote vs schedule vs call).
    */
-  ctaPriority: "call_first" | "book_first" | "hybrid";
+  ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
 
 /** Credited stock hero — local path for <2s load; sourceUrl is the public reference. */
@@ -425,11 +425,11 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
     },
     copyTone: {
-      voice: "fresh, careful, easy to trust",
-      heroStyle: "recurring-first clean — weekly savings vs one-time deep clean",
-      ctaStyle: "book recurring or get a quote",
-      ctaPriority: "hybrid",
-      avoid: [...baseAvoid, "guilt-trip mess shaming"],
+      voice: "fresh, careful, easy to trust — residential",
+      heroStyle: "recurring-first home clean — weekly savings vs one-time deep clean",
+      ctaStyle: "book recurring (default) or one-time",
+      ctaPriority: "book_first",
+      avoid: [...baseAvoid, "guilt-trip mess shaming", "emergency-orange panic chrome"],
     },
     cssVars: {
       "--theme-primary": "#0f766e",
@@ -574,6 +574,135 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+  garage: {
+    niche: "garage",
+    label: "Garage door",
+    palette: {
+      // High-urgency outdoor contrast — emergency OK for panic trades
+      primary: "#f97316",
+      primaryForeground: "#431407",
+      accent: "#1c1917",
+      accentForeground: "#fff7ed",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#ffedd5",
+      mutedForeground: "#9a3412",
+      border: "#fed7aa",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "urgent, clear, honest about hours",
+      heroStyle: "stuck door help — open-now if true, service area in seconds",
+      ctaStyle: "call now — hours honesty over fake 24/7",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "fake 24/7", "guaranteed ETA claims"],
+    },
+    cssVars: {
+      "--theme-primary": "#f97316",
+      "--theme-primary-fg": "#431407",
+      "--theme-accent": "#1c1917",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    heroImages: [
+      {
+        src: "/niches/garage.jpg",
+        alt: "Residential garage door and driveway",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1558618666-fcd25c85cd64",
+        license: "unsplash",
+      },
+    ],
+  },
+  locksmith: {
+    niche: "locksmith",
+    label: "Locksmith",
+    palette: {
+      primary: "#f59e0b",
+      primaryForeground: "#451a03",
+      accent: "#0c0a09",
+      accentForeground: "#fffbeb",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "calm under pressure, credible, no scam cues",
+      heroStyle: "locked out help — sticky call, service area, real license when required",
+      ctaStyle: "call now — show TX DPS PSB # when licensed",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "fake 24/7", "bait flat fees", "invented MO locksmith license"],
+    },
+    cssVars: {
+      "--theme-primary": "#f59e0b",
+      "--theme-primary-fg": "#451a03",
+      "--theme-accent": "#0c0a09",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    heroImages: [
+      {
+        src: "/niches/locksmith.jpg",
+        alt: "Lock and key hardware close-up",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1582139329536-e7284fece509",
+        license: "unsplash",
+      },
+    ],
+  },
+  janitorial: {
+    niche: "janitorial",
+    label: "Commercial cleaning",
+    palette: {
+      // Softer trust chrome — not trades panic orange
+      primary: "#0e7490",
+      primaryForeground: "#ecfeff",
+      accent: "#164e63",
+      accentForeground: "#ecfeff",
+      background: "#f0f9ff",
+      foreground: "#0c4a6e",
+      muted: "#e0f2fe",
+      mutedForeground: "#0369a1",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "professional, bonded, facility-ready",
+      heroStyle: "commercial quote-first — facility type, sqft, frequency",
+      ctaStyle: "request a commercial quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "emergency-orange panic chrome", "residential-only booking assumptions"],
+    },
+    cssVars: {
+      "--theme-primary": "#0e7490",
+      "--theme-primary-fg": "#ecfeff",
+      "--theme-accent": "#164e63",
+      "--theme-bg": "#f0f9ff",
+      "--theme-fg": "#0c4a6e",
+    },
+    heroImages: [
+      {
+        src: "/niches/janitorial.jpg",
+        alt: "Commercial cleaning supplies in a facility",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1628177142898-93e36e4e3a50",
+        license: "unsplash",
+      },
+    ],
+  },
+
 };
 
 export function getNicheThemeConfig(niche: string): NicheThemeConfig | undefined {

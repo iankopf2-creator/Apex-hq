@@ -19,3 +19,6 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Pest control | `pest-control.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1563453392212-326f5e854473 |
 | Moving | `moving.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1600518464441-9154a4dea21b |
 | Painting | `painting.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1562259949-e8e7689d7828 |
+| Garage door | `garage.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1558618666-fcd25c85cd64 |
+| Locksmith | `locksmith.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1582139329536-e7284fece509 |
+| Commercial cleaning | `janitorial.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1628177142898-93e36e4e3a50 |

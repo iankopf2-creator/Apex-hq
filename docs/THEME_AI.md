@@ -13,7 +13,7 @@
 - No payments / Stripe / money collection
 - No competitor brand cloning — generic trade imagery + original palettes
 - Mobile-first touch targets ≥48px on public CTAs (research bar; 44px was prior floor)
-- Niche `ctaPriority`: `call_first` | `book_first` | `hybrid` (Apex Research CTA modes)
+- Niche `ctaPriority`: `call_first` | `book_first` | `hybrid` | `quote_first` (Apex Research CTA modes)
 
 ## Merge note
 Stacked theme PRs: merge bottom-up when reviewing (#2 → tip) to keep history clean.
@@ -30,6 +30,8 @@ Source notes: `/workspace/grok-work-study/notes/research-*.md` (Apex Research fe
 `copyTone.ctaPriority` drives sticky chrome on public `/s/[slug]`:
 - **call_first** — HVAC, plumber, electrician, roofing, pest: sticky `tel:` primary + estimate/book secondary. High-contrast / emergency-orange OK for panic trades.
 - **book_first** — salon (+ quote-led trucking/auto_detail/moving): sticky Book primary; soft calm chrome; call secondary.
-- **hybrid** — landscaping, cleaning, painting: quote/schedule primary + Call secondary (forked intents; seasonal chips in hints).
+- **hybrid** — landscaping, painting: quote/schedule primary + Call secondary.
+- **quote_first** — commercial cleaning (`janitorial`): Get a quote primary + Call beside form path.
+- **cleaning** (residential) is `book_first` recurring-default; garage/locksmith are `call_first` emergency.
 - Trust chips near CTAs; 48px targets; sticky max 2 actions; never put LSA-only numbers on public pages (`business.phone` = public DNI only).
 - A/B verbs in `generate.ts` match each mode.

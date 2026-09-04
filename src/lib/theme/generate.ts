@@ -65,8 +65,8 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "benefit-led showroom shine", ctaVerb: "Schedule detailing" },
   },
   cleaning: {
-    A: { heroEmphasis: "hybrid recurring-first", ctaVerb: "Book recurring" },
-    B: { heroEmphasis: "hybrid one-time deep clean", ctaVerb: "Get a quote" },
+    A: { heroEmphasis: "book-first residential recurring", ctaVerb: "Book recurring" },
+    B: { heroEmphasis: "book-first one-time deep clean", ctaVerb: "Book deep clean" },
   },
   pest_control: {
     A: { heroEmphasis: "call-first panic pests", ctaVerb: "Call now" },
@@ -79,6 +79,18 @@ const NICHE_VARIANT_TWEAKS: Record<
   painting: {
     A: { heroEmphasis: "hybrid estimate path", ctaVerb: "Request estimate" },
     B: { heroEmphasis: "hybrid schedule path", ctaVerb: "Schedule paint job" },
+  },
+  garage: {
+    A: { heroEmphasis: "call-first stuck door", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led repair estimate", ctaVerb: "Get a repair quote" },
+  },
+  locksmith: {
+    A: { heroEmphasis: "call-first lockout", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led rekey visit", ctaVerb: "Request lockout help" },
+  },
+  janitorial: {
+    A: { heroEmphasis: "quote-first facility scope", ctaVerb: "Request commercial quote" },
+    B: { heroEmphasis: "quote-first recurring contract", ctaVerb: "Get a facility quote" },
   },
 };
 
