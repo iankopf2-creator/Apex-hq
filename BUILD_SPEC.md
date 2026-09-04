@@ -28,3 +28,16 @@ Spawn only after Front Door demo is live and tested. Do not scaffold here.
 - [ ] Sales agent scaffolded
 - [ ] First 20 leads sourced
 - [ ] First closed customer
+
+## Legal & Insurance AI (NOT THIS RUN)
+
+Spawn only after Front Door demo is green. Audit agents only — they do not build features.
+
+- [ ] Legal AI scaffolded
+- [ ] Insurance AI scaffolded
+- [ ] REVIEWS section in use for Module 0.1
+
+See docs/LEGAL_INSURANCE_PROTOCOL.md
+
+## REVIEWS
+(none yet — Legal/Insurance AIs not spawned)
