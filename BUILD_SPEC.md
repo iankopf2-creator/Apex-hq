@@ -1,7 +1,7 @@
 --- EVE HANDOFF ---
-DONE: Verified live Stripe checkout after Ian's reported Vercel env + redeploy.
-NEXT: Ian confirm env vars are on the Production environment with exact names, then redeploy and retest.
-BLOCKER: FAIL — production still reports Stripe not configured (all four required env names empty at runtime).
+DONE: free audit live (`/audit`); work-study SSOT + OPERATOR_DIGEST in flight
+NEXT: Ian Stripe Production env then re-verify $49
+BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
 --- END HANDOFF ---
@@ -25,6 +25,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme AI scaffolded
 - [x] Theme/action-log JSON store Vercel-safe (`shared/json-store.ts`; live verified 2026-09-04)
 - [x] Lead Magnet Engine scaffolded
+- [x] Public Free Audit page (`/audit`, `/audit/[slug]`) — ESTIMATE report + demo/pricing CTAs
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 

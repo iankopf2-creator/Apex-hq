@@ -19,6 +19,9 @@ export default function HomePage() {
             <Link href="/onboarding">Start onboarding</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
+            <Link href="/audit">Free audit</Link>
+          </Button>
+          <Button asChild variant="outline" size="lg">
             <Link href="/pricing">View pricing</Link>
           </Button>
           <form action="/api/demo" method="post">
@@ -32,6 +35,7 @@ export default function HomePage() {
       <section aria-labelledby="routes-heading" className="grid gap-4 sm:grid-cols-2">
         <h2 id="routes-heading" className="sr-only">Key routes</h2>
         {[
+          { href: "/audit", title: "Free audit", desc: "Lead magnet ESTIMATE report — no live outreach" },
           { href: "/onboarding", title: "Onboarding wizard", desc: "Name, niche, city, hours, services, photos" },
           { href: "/s/demo-dallas-hvac", title: "Public site", desc: "/s/[slug] branded front door" },
           { href: "/booking/demo-dallas-hvac", title: "Booking", desc: "Stub booking flow per slug" },
