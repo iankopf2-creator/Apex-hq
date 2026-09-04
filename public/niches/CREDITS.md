@@ -17,3 +17,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Auto detailing | `auto-detail.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1601362840469-51e4d8d58785 |
 | Cleaning | `cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581578731548-c64695cc6952 |
 | Pest control | `pest-control.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1563453392212-326f5e854473 |
+| Moving | `moving.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1600518464441-9154a4dea21b |

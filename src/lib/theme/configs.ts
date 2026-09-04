@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving";
 
 export type ThemePalette = {
   primary: string;
@@ -469,6 +469,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Clean home exterior and property care",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1563453392212-326f5e854473",
+        license: "unsplash",
+      },
+    ],
+  },
+  moving: {
+    niche: "moving",
+    label: "Moving",
+    palette: {
+      primary: "#6366f1",
+      primaryForeground: "#eef2ff",
+      accent: "#312e81",
+      accentForeground: "#eef2ff",
+      background: "#eef2ff",
+      foreground: "#1e1b4b",
+      muted: "#e0e7ff",
+      mutedForeground: "#4338ca",
+      border: "#c7d2fe",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "organized, careful, low-stress",
+      heroStyle: "moves that stay on plan — pack, load, deliver",
+      ctaStyle: "get a moving quote",
+      avoid: [...baseAvoid, "fake same-day guarantees"],
+    },
+    cssVars: {
+      "--theme-primary": "#6366f1",
+      "--theme-primary-fg": "#eef2ff",
+      "--theme-accent": "#312e81",
+      "--theme-bg": "#eef2ff",
+      "--theme-fg": "#1e1b4b",
+    },
+    heroImages: [
+      {
+        src: "/niches/moving.jpg",
+        alt: "Moving boxes and careful packing",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1600518464441-9154a4dea21b",
         license: "unsplash",
       },
     ],

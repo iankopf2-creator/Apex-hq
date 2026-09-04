@@ -201,6 +201,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book a pest inspection",
     accentHint: "lime",
   },
+  {
+    id: "moving",
+    label: "Moving",
+    defaultTagline: "Moves that stay on plan — pack, load, deliver",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 4:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Local Move", description: "Apartment or home within the metro", priceFrom: 0 },
+      { name: "Packing Help", description: "Full or partial packing labor", priceFrom: 199 },
+      { name: "Long-Distance Quote", description: "Interstate move estimate", priceFrom: 0 },
+    ],
+    heroHints: ["Licensed & insured", "Fixed-scope options", "Arrival windows"],
+    ctaLabel: "Get a moving quote",
+    accentHint: "indigo",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
