@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { listBusinesses } from "@/lib/store";
 import { listAiLogs } from "@/lib/ai-log";
+import { listBookingRequests } from "@/lib/booking/store";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -9,6 +10,7 @@ export const dynamic = "force-dynamic";
 export default async function DashboardPage() {
   const businesses = await listBusinesses();
   const logs = listAiLogs();
+  const bookings = (await listBookingRequests()).slice(-8).reverse();
 
   return (
     <main id="main" className="mx-auto max-w-5xl space-y-8 px-4 py-10 sm:px-6">
@@ -16,12 +18,17 @@ export default async function DashboardPage() {
         <div>
           <h1 className="text-2xl font-bold">Dashboard</h1>
           <p className="text-sm text-muted-foreground">
-            Module 0.1 shell — AI receptionist / calls live elsewhere later.
+            Module 0.1 shell — stub bookings + AI log helper. Live receptionist later.
           </p>
         </div>
-        <Button asChild variant="outline">
-          <Link href="/onboarding">New business</Link>
-        </Button>
+        <div className="flex flex-wrap gap-2">
+          <Button asChild variant="outline">
+            <Link href="/audit">Free audit</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/onboarding">New business</Link>
+          </Button>
+        </div>
       </header>
 
       <section aria-labelledby="biz-heading">
@@ -37,7 +44,7 @@ export default async function DashboardPage() {
                   <CardTitle className="text-base">{b.name}</CardTitle>
                   <CardDescription>{b.city} · {b.niche}</CardDescription>
                 </CardHeader>
-                <CardContent className="flex gap-2 text-sm">
+                <CardContent className="flex flex-wrap gap-3 text-sm">
                   <Link className="text-primary underline-offset-4 hover:underline" href={"/s/" + b.slug}>
                     View site
                   </Link>
@@ -49,6 +56,42 @@ export default async function DashboardPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <section aria-labelledby="booking-heading">
+        <h2 id="booking-heading" className="mb-3 text-lg font-semibold">
+          Recent booking requests (stub)
+        </h2>
+        <Card>
+          <CardContent className="space-y-3 pt-6 text-sm">
+            {bookings.length === 0 ? (
+              <p className="text-muted-foreground">
+                No stub requests yet. Try{" "}
+                <Link className="underline-offset-4 hover:underline" href="/booking/demo-dallas-hvac">
+                  /booking/demo-dallas-hvac
+                </Link>
+                .
+              </p>
+            ) : (
+              <ul className="space-y-3">
+                {bookings.map((r) => (
+                  <li key={r.id} className="border-b border-border pb-3 last:border-0 last:pb-0">
+                    <p className="font-medium">
+                      {r.customerName}{" "}
+                      <span className="font-normal text-muted-foreground">→ {r.businessName}</span>
+                    </p>
+                    <p className="text-muted-foreground">
+                      {r.serviceName ? r.serviceName + " · " : ""}
+                      {r.preferredTime}
+                      {" · "}
+                      <time dateTime={r.createdAt}>{new Date(r.createdAt).toLocaleString()}</time>
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </CardContent>
+        </Card>
       </section>
 
       <section aria-labelledby="ai-heading">

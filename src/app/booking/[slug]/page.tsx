@@ -2,12 +2,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBusinessBySlug } from "@/lib/store";
 import { getTemplate } from "@/templates/niches";
-import { Button } from "@/components/ui/button";
+import { BookingForm } from "@/components/booking/booking-form";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 
 type Props = { params: { slug: string } };
+
+export function generateMetadata({ params }: Props) {
+  return {
+    title: `Book · ${params.slug} | Apex HQ`,
+    description: "Booking stub — request intake only, no calendar sync or payments.",
+  };
+}
 
 export default async function BookingPage({ params }: Props) {
   const business = await getBusinessBySlug(params.slug);
@@ -30,24 +35,12 @@ export default async function BookingPage({ params }: Props) {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form className="space-y-4" action="#" method="post" aria-describedby="booking-stub-note">
-            <p id="booking-stub-note" className="text-sm text-muted-foreground">
-              Submitting shows a confirmation message only (no backend booking yet).
-            </p>
-            <div className="space-y-2">
-              <Label htmlFor="customer-name">Your name</Label>
-              <Input id="customer-name" name="name" required autoComplete="name" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="customer-phone">Phone</Label>
-              <Input id="customer-phone" name="phone" type="tel" autoComplete="tel" />
-            </div>
-            <div className="space-y-2">
-              <Label htmlFor="preferred">Preferred time</Label>
-              <Input id="preferred" name="preferred" placeholder="e.g. Tomorrow afternoon" />
-            </div>
-            <Button type="submit">Request appointment (stub)</Button>
-          </form>
+          <BookingForm
+            businessSlug={business.slug}
+            businessName={business.name}
+            services={business.services.map((s) => ({ id: s.id, name: s.name }))}
+            ctaLabel={template?.ctaLabel ?? "Request appointment"}
+          />
         </CardContent>
       </Card>
     </main>
