@@ -135,6 +135,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a yard estimate",
     accentHint: "lime",
   },
+  {
+    id: "auto_detail",
+    label: "Auto detailing",
+    defaultTagline: "Showroom-clean without the showroom price",
+    defaultHours: {
+      mon: "9:00 AM – 6:00 PM",
+      tue: "9:00 AM – 6:00 PM",
+      wed: "9:00 AM – 6:00 PM",
+      thu: "9:00 AM – 6:00 PM",
+      fri: "9:00 AM – 6:00 PM",
+      sat: "9:00 AM – 4:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Exterior Wash & Wax", description: "Hand wash, dry, and protect", priceFrom: 79 },
+      { name: "Interior Detail", description: "Vacuum, wipe-down, glass", priceFrom: 99 },
+      { name: "Full Detail", description: "Inside + outside package", priceFrom: 179 },
+    ],
+    heroHints: ["Mobile options", "Clear package pricing", "Photo before/after"],
+    ctaLabel: "Book a detail",
+    accentHint: "blue",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

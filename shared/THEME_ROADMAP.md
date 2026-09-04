@@ -12,7 +12,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 1. Electrician — **in PR**
 2. Roofing — **in PR**
 3. Landscaping / lawn — **in PR**
-4. Auto repair / detailing
+4. Auto repair / detailing — **in PR**
 5. Cleaning / janitorial
 6. Pest control
 7. Moving

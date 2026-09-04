@@ -14,3 +14,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Electrician | `electrician.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1621905252507-b35492cc74b4 |
 | Roofing | `roofing.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1600585154340-be6161a56a0c |
 | Landscaping | `landscaping.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1558904541-efa843a96f01 |
+| Auto detailing | `auto-detail.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1601362840469-51e4d8d58785 |

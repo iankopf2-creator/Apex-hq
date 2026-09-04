@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail";
 
 export type ThemePalette = {
   primary: string;
@@ -346,6 +346,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Maintained lawn and landscaping",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1558904541-efa843a96f01",
+        license: "unsplash",
+      },
+    ],
+  },
+  auto_detail: {
+    niche: "auto_detail",
+    label: "Auto detailing",
+    palette: {
+      primary: "#3b82f6",
+      primaryForeground: "#eff6ff",
+      accent: "#111827",
+      accentForeground: "#f9fafb",
+      background: "#f9fafb",
+      foreground: "#111827",
+      muted: "#e5e7eb",
+      mutedForeground: "#4b5563",
+      border: "#d1d5db",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "sharp, clean, proud of the finish",
+      heroStyle: "showroom-clean without the showroom price",
+      ctaStyle: "book a detail",
+      avoid: [...baseAvoid, "fake limited-time flash sales"],
+    },
+    cssVars: {
+      "--theme-primary": "#3b82f6",
+      "--theme-primary-fg": "#eff6ff",
+      "--theme-accent": "#111827",
+      "--theme-bg": "#f9fafb",
+      "--theme-fg": "#111827",
+    },
+    heroImages: [
+      {
+        src: "/niches/auto-detail.jpg",
+        alt: "Clean car exterior detailing finish",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1601362840469-51e4d8d58785",
         license: "unsplash",
       },
     ],

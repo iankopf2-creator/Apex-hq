@@ -60,6 +60,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "clarity-first curb appeal", ctaVerb: "Request estimate" },
     B: { heroEmphasis: "benefit-led tidy yard", ctaVerb: "Get a yard quote" },
   },
+  auto_detail: {
+    A: { heroEmphasis: "clarity-first clean finish", ctaVerb: "Book a detail" },
+    B: { heroEmphasis: "benefit-led showroom shine", ctaVerb: "Schedule detailing" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
