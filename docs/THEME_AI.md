@@ -16,3 +16,9 @@
 
 ## Merge note
 Stacked theme PRs: merge bottom-up when reviewing (#2 → tip) to keep history clean.
+
+## Research notes (2026 service-site color)
+- Prefer **60-30-10**: neutral canvas ~60%, brand ~30%, high-contrast CTA accent ~10%.
+- Soft neutrals (`#fafafa` / `#f8fafc`) beat pure white for fatigue; trust blues for HVAC/home services; warmth for beauty.
+- **Contrast beats hue magic** for CTAs — the winning button is the one that stands out (CXL / service-site guides).
+- WCAG AA: ≥4.5:1 body text, ≥3:1 large UI / CTAs. Use `contrastRatio` / `meetsWcagAa` in `src/lib/theme/contrast.ts`.

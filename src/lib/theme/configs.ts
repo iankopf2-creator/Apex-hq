@@ -314,8 +314,8 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "landscaping",
     label: "Landscaping",
     palette: {
-      primary: "#65a30d",
-      primaryForeground: "#14532d",
+      primary: "#4d7c0f",
+      primaryForeground: "#f7fee7",
       accent: "#14532d",
       accentForeground: "#f7fee7",
       background: "#f7fee7",
@@ -335,8 +335,8 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       avoid: [...baseAvoid, "overselling overnight makeovers"],
     },
     cssVars: {
-      "--theme-primary": "#65a30d",
-      "--theme-primary-fg": "#14532d",
+      "--theme-primary": "#4d7c0f",
+      "--theme-primary-fg": "#f7fee7",
       "--theme-accent": "#14532d",
       "--theme-bg": "#f7fee7",
       "--theme-fg": "#14532d",
@@ -396,7 +396,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "cleaning",
     label: "Cleaning",
     palette: {
-      primary: "#14b8a6",
+      primary: "#0f766e",
       primaryForeground: "#f0fdfa",
       accent: "#134e4a",
       accentForeground: "#f0fdfa",
@@ -417,7 +417,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       avoid: [...baseAvoid, "guilt-trip mess shaming"],
     },
     cssVars: {
-      "--theme-primary": "#14b8a6",
+      "--theme-primary": "#0f766e",
       "--theme-primary-fg": "#f0fdfa",
       "--theme-accent": "#134e4a",
       "--theme-bg": "#f0fdfa",

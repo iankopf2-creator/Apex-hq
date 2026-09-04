@@ -6,3 +6,4 @@
 export * from "./configs";
 export * from "./ab";
 export * from "./generate";
+export * from "./contrast";

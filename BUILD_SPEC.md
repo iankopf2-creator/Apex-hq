@@ -32,6 +32,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme AI moving niche (palette + template + hero)
 - [x] Theme AI painting niche (palette + template + hero)
 - [x] Theme AI A/B helpers: pickAbVariant + isAbWindowOpen (7-day stub)
+- [x] Theme AI WCAG contrast audit + contrast.ts helpers; landscaping/cleaning CTA fixes
 - [x] Theme AI niche hero stock photos (credited Unsplash; local `/public/niches`)
 - [x] Theme AI plumber + salon palette refine + themed CTAs on public site
 - [x] Theme AI HVAC polish + niche-aware A/B verbs (all 4 niches)
