@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -387,6 +387,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Clean car exterior detailing finish",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1601362840469-51e4d8d58785",
+        license: "unsplash",
+      },
+    ],
+  },
+  cleaning: {
+    niche: "cleaning",
+    label: "Cleaning",
+    palette: {
+      primary: "#14b8a6",
+      primaryForeground: "#f0fdfa",
+      accent: "#134e4a",
+      accentForeground: "#f0fdfa",
+      background: "#f0fdfa",
+      foreground: "#134e4a",
+      muted: "#ccfbf1",
+      mutedForeground: "#0f766e",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "fresh, careful, easy to trust",
+      heroStyle: "spotless spaces on a schedule you can count on",
+      ctaStyle: "book a cleaning",
+      avoid: [...baseAvoid, "guilt-trip mess shaming"],
+    },
+    cssVars: {
+      "--theme-primary": "#14b8a6",
+      "--theme-primary-fg": "#f0fdfa",
+      "--theme-accent": "#134e4a",
+      "--theme-bg": "#f0fdfa",
+      "--theme-fg": "#134e4a",
+    },
+    heroImages: [
+      {
+        src: "/niches/cleaning.jpg",
+        alt: "Clean bright interior after professional cleaning",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1581578731548-c64695cc6952",
         license: "unsplash",
       },
     ],

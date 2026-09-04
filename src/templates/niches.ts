@@ -157,6 +157,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book a detail",
     accentHint: "blue",
   },
+  {
+    id: "cleaning",
+    label: "Cleaning",
+    defaultTagline: "Spotless spaces on a schedule you can count on",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Standard Clean", description: "Recurring home or office clean", priceFrom: 120 },
+      { name: "Deep Clean", description: "Baseboards, appliances, detail work", priceFrom: 220 },
+      { name: "Move-in / Move-out", description: "Empty-home reset", priceFrom: 250 },
+    ],
+    heroHints: ["Background-checked team", "Supplies included", "Easy reschedule"],
+    ctaLabel: "Book a cleaning",
+    accentHint: "teal",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
