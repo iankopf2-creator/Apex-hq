@@ -21,12 +21,34 @@ export type ThemePackage = {
   notes: string[];
 };
 
-const VARIANT_TWEAKS: Record<
+const DEFAULT_VARIANT_TWEAKS: Record<
   "A" | "B",
   { heroEmphasis: string; ctaVerb: string }
 > = {
   A: { heroEmphasis: "clarity-first hero", ctaVerb: "Book" },
   B: { heroEmphasis: "benefit-led hero", ctaVerb: "Get started" },
+};
+
+/** Niche-specific A/B verbs so trucking doesn't say "Book". */
+const NICHE_VARIANT_TWEAKS: Partial<
+  Record<ThemeNicheId, Record<"A" | "B", { heroEmphasis: string; ctaVerb: string }>>
+> = {
+  trucking: {
+    A: { heroEmphasis: "clarity-first lanes + coverage", ctaVerb: "Request a quote" },
+    B: { heroEmphasis: "benefit-led on-time freight", ctaVerb: "Get a quote" },
+  },
+  salon: {
+    A: { heroEmphasis: "clarity-first booking", ctaVerb: "Book" },
+    B: { heroEmphasis: "benefit-led look & feel", ctaVerb: "Book now" },
+  },
+  plumber: {
+    A: { heroEmphasis: "clarity-first help", ctaVerb: "Schedule" },
+    B: { heroEmphasis: "benefit-led fast help", ctaVerb: "Get help" },
+  },
+  hvac: {
+    A: { heroEmphasis: "clarity-first comfort", ctaVerb: "Book" },
+    B: { heroEmphasis: "benefit-led reliability", ctaVerb: "Get started" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
@@ -42,13 +64,15 @@ export async function generateThemePackage(
   if (!config) {
     throw new Error("Unknown niche: " + niche);
   }
+  const tweaks =
+    NICHE_VARIANT_TWEAKS[niche]?.[variant] ?? DEFAULT_VARIANT_TWEAKS[variant];
   const pkg: ThemePackage = {
     id: crypto.randomUUID(),
     niche,
     label: config.label,
     variant,
     config,
-    tweaks: VARIANT_TWEAKS[variant],
+    tweaks,
     generatedAt: new Date().toISOString(),
     notes: [
       "Mobile-first layout expected on /s/[slug]",
@@ -58,7 +82,7 @@ export async function generateThemePackage(
   };
   await logThemeAction(
     "theme_generate",
-    0.85,
+    0.9,
     `Generated variant ${variant} for ${niche}`,
     { variant }
   );

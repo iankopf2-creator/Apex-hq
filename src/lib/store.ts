@@ -51,6 +51,41 @@ export function getDemoBusiness(): BusinessProfile {
   };
 }
 
+/** Fictional Midwest trucking demo — template-only, always available on cold start. */
+export function getDemoTruckingBusiness(): BusinessProfile {
+  const template = getTemplate("trucking");
+  const now = "2026-09-04T00:00:00.000Z";
+  return {
+    id: "demo-midwest-trucking-id",
+    slug: "demo-midwest-trucking",
+    name: "Demo Midwest Trucking",
+    niche: "trucking",
+    city: "Kansas City",
+    hours: template?.defaultHours ?? {
+      mon: "6:00 AM – 6:00 PM",
+      tue: "6:00 AM – 6:00 PM",
+      wed: "6:00 AM – 6:00 PM",
+      thu: "6:00 AM – 6:00 PM",
+      fri: "6:00 AM – 6:00 PM",
+      sat: "7:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    services: (template?.defaultServices ?? []).map((s, i) => ({
+      id: "svc-truck-" + i,
+      name: s.name,
+      description: s.description,
+      priceFrom: s.priceFrom,
+    })),
+    photos: ["/placeholders/storefront.svg"],
+    tagline: template?.defaultTagline ?? "On-time freight you can count on",
+    primaryColor: template?.accentHint ?? "amber",
+    phone: "(555) 010-4000",
+    email: "demo-trucking@example.com",
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
 async function dirIsWritable(dir: string): Promise<boolean> {
   try {
     await fs.mkdir(dir, { recursive: true });
@@ -86,9 +121,10 @@ function businessesPath(): string {
 
 function seedDemoIntoMemory(): void {
   if (seeded) return;
-  const demo = getDemoBusiness();
-  if (!memoryStore.has(demo.slug)) {
-    memoryStore.set(demo.slug, demo);
+  for (const demo of [getDemoBusiness(), getDemoTruckingBusiness()]) {
+    if (!memoryStore.has(demo.slug)) {
+      memoryStore.set(demo.slug, demo);
+    }
   }
   seeded = true;
 }
@@ -160,6 +196,9 @@ export async function getBusinessBySlug(slug: string): Promise<BusinessProfile |
 
   if (slug === "demo-dallas-hvac") {
     return getDemoBusiness();
+  }
+  if (slug === "demo-midwest-trucking") {
+    return getDemoTruckingBusiness();
   }
   return null;
 }

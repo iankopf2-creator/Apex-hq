@@ -16,7 +16,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] supabase/migrations SQL for businesses, profiles, calls, appointments, leads, subscriptions, templates, ai_response_logs (+ RLS stubs)
 - [x] .env.example for all services
 - [x] Onboarding wizard at /onboarding
-- [x] Template library: HVAC, plumber, salon (config-driven)
+- [x] Template library: HVAC, plumber, salon, trucking (config-driven)
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
 - [x] Demo seed (Dallas HVAC from templates)
@@ -24,6 +24,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Production build succeeds (verified this run)
 - [x] Theme AI scaffolded
 - [x] Theme/action-log JSON store Vercel-safe (`shared/json-store.ts`; live verified 2026-09-04)
+- [x] Theme AI trucking refine: fleet navy + amber, niche A/B verbs, demo-midwest-trucking
 - [x] Lead Magnet Engine scaffolded
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)

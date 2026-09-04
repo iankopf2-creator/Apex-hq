@@ -69,6 +69,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book an appointment",
     accentHint: "rose",
   },
+  {
+    id: "trucking",
+    label: "Trucking",
+    defaultTagline: "On-time freight you can count on",
+    defaultHours: {
+      mon: "6:00 AM – 6:00 PM",
+      tue: "6:00 AM – 6:00 PM",
+      wed: "6:00 AM – 6:00 PM",
+      thu: "6:00 AM – 6:00 PM",
+      fri: "6:00 AM – 6:00 PM",
+      sat: "7:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Regional Haul", description: "Short-haul and regional freight lanes", priceFrom: 0 },
+      { name: "Long-Haul", description: "Cross-country loads with clear ETAs", priceFrom: 0 },
+      { name: "Quote Request", description: "Lane coverage and rate response", priceFrom: 0 },
+    ],
+    heroHints: ["Clear lane coverage", "Quote requests online", "Phone fallback when you need a human"],
+    ctaLabel: "Request a quote",
+    accentHint: "amber",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
