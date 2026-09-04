@@ -1,6 +1,6 @@
 --- EVE HANDOFF ---
-DONE: improved booking stub (API + form + dashboard list) after free audit ship
-NEXT: further dashboard polish; Ian Stripe Production env then re-verify $49
+DONE: dashboard shell polish (stats + Stripe status names-only + demo always listed)
+NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
@@ -20,6 +20,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
 - [x] Booking stub intake (`POST /api/booking`) + form confirmation + dashboard list
+- [x] Dashboard shell polish (snapshot stats, Stripe configured flag without secrets)
 - [x] Demo seed (Dallas HVAC from templates)
 - [x] README + MASTER_BLUEPRINT + sub-agent protocol
 - [x] Production build succeeds (verified this run)
