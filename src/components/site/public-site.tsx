@@ -20,6 +20,7 @@ export function PublicSite({ business }: Props) {
   const theme = getNicheThemeConfig(business.niche);
   const cta = template?.ctaLabel ?? "Book now";
   const hints = template?.heroHints ?? [];
+  const badges = theme?.trustBadges ?? [];
   const cssVars = (theme?.cssVars ?? {}) as CSSProperties;
   const customPhoto = business.photos[0];
   const hero = theme?.heroImages?.[0];
@@ -104,11 +105,23 @@ export function PublicSite({ business }: Props) {
                   </li>
                 ))}
               </ul>
+              {badges.length > 0 && (
+                <ul className="flex flex-wrap gap-2 text-xs font-medium sm:text-sm" aria-label="Credentials and insurance trust">
+                  {badges.map((b) => (
+                    <li
+                      key={b}
+                      className="rounded border border-white/40 bg-black/25 px-3 py-1.5"
+                    >
+                      {b}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div className="flex flex-wrap gap-3 pt-1">
                 {callPrimary && telHref ? (
                   <>
                     <Button asChild size="lg" style={primaryStyle}>
-                      <a href={telHref}>Call now</a>
+                      <a href={telHref}>{business.phone ? `Call ${business.phone}` : "Call now"}</a>
                     </Button>
                     <Button asChild size="lg" variant="outline" style={secondaryStyle}>
                       <Link href={bookHref}>{cta}</Link>
@@ -229,7 +242,7 @@ export function PublicSite({ business }: Props) {
           {callPrimary && telHref ? (
             <>
               <Button asChild className="flex-1" style={primaryStyle}>
-                <a href={telHref}>Call now</a>
+                <a href={telHref}>{business.phone ? `Call ${business.phone}` : "Call now"}</a>
               </Button>
               <Button asChild variant="outline" className="flex-1" style={secondaryStyle}>
                 <Link href={bookHref}>{cta}</Link>

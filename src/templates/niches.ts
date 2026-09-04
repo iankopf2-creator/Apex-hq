@@ -311,6 +311,50 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request commercial quote",
     accentHint: "cyan",
   },
+  {
+    id: "towing",
+    label: "Towing / roadside",
+    defaultTagline: "Stranded? Tap to call — ETA honesty, real coverage",
+    defaultHours: {
+      mon: "24 hours — ask who answers",
+      tue: "24 hours — ask who answers",
+      wed: "24 hours — ask who answers",
+      thu: "24 hours — ask who answers",
+      fri: "24 hours — ask who answers",
+      sat: "24 hours — ask who answers",
+      sun: "24 hours — ask who answers",
+    },
+    defaultServices: [
+      { name: "Emergency Tow", description: "Local tow to shop or home", priceFrom: 0 },
+      { name: "Jump Start", description: "Battery boost roadside", priceFrom: 69 },
+      { name: "Flatbed / Winch-Out", description: "Flatbed or stuck-vehicle help", priceFrom: 0 },
+    ],
+    heroHints: ["Text ZIP / mile-marker coverage", "TX TDLR # when licensed", "Dispatch quotes ETA on call"],
+    ctaLabel: "Request dispatch callback",
+    accentHint: "red",
+  },
+  {
+    id: "water_damage",
+    label: "Water damage",
+    defaultTagline: "Water emergency? Call now — we work with insurance",
+    defaultHours: {
+      mon: "24 hours — ask who answers",
+      tue: "24 hours — ask who answers",
+      wed: "24 hours — ask who answers",
+      thu: "24 hours — ask who answers",
+      fri: "24 hours — ask who answers",
+      sat: "24 hours — ask who answers",
+      sun: "24 hours — ask who answers",
+    },
+    defaultServices: [
+      { name: "Emergency Water Extraction", description: "Stop and remove standing water", priceFrom: 0 },
+      { name: "Drying & Dehumidification", description: "Equipment and moisture monitoring", priceFrom: 0 },
+      { name: "Insurance Documentation Help", description: "Photos and paperwork support — not claim approval", priceFrom: 0 },
+    ],
+    heroHints: ["IICRC credential when true", "Insurance process help (not coverage guarantees)", "Optional photo — never required"],
+    ctaLabel: "Request callback",
+    accentHint: "red",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

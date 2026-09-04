@@ -92,6 +92,14 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first facility scope", ctaVerb: "Request commercial quote" },
     B: { heroEmphasis: "quote-first recurring contract", ctaVerb: "Get a facility quote" },
   },
+  towing: {
+    A: { heroEmphasis: "extreme call-first roadside", ctaVerb: "Call now" },
+    B: { heroEmphasis: "ETA honesty + coverage text", ctaVerb: "Call for dispatch" },
+  },
+  water_damage: {
+    A: { heroEmphasis: "panic call-first + insurance trust", ctaVerb: "Call now" },
+    B: { heroEmphasis: "IICRC trust + optional photo path", ctaVerb: "Emergency call" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

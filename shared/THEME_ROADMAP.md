@@ -31,3 +31,4 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 ## Added 2026-09-04 (research feed)
 - Garage door + Locksmith — call_first emergency
 - Cleaning residential book_first; Janitorial/commercial quote_first
+- Towing/roadside + Water damage — extreme call_first (2026-09-04)

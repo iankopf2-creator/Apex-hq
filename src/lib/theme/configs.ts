@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage";
 
 export type ThemePalette = {
   primary: string;
@@ -61,6 +61,8 @@ export type NicheThemeConfig = {
   cssVars: Record<string, string>;
   /** Trade/job reference photos with attribution (not business-specific). */
   heroImages: ThemeHeroImage[];
+  /** Optional badge/slot labels near CTA (e.g. IICRC, TX TDLR) — fill with real #s per business later. */
+  trustBadges?: string[];
 };
 
 const baseAvoid = ["fake urgency", "impersonating a human", "guaranteed results claims"];
@@ -698,6 +700,93 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Commercial cleaning supplies in a facility",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1628177142898-93e36e4e3a50",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  towing: {
+    niche: "towing",
+    label: "Towing / roadside",
+    palette: {
+      primary: "#ef4444",
+      primaryForeground: "#450a0a",
+      accent: "#171717",
+      accentForeground: "#fafafa",
+      background: "#fafafa",
+      foreground: "#171717",
+      muted: "#fee2e2",
+      mutedForeground: "#b91c1c",
+      border: "#fecaca",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "direct, roadside-calm, no fluff",
+      heroStyle: "stranded help — sticky text tel:, ETA honesty, mile-marker/ZIP coverage in text",
+      ctaStyle: "call now — phone is the product",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "fake 24/7", "guaranteed ETA minutes", "phone-only-in-image"],
+    },
+    cssVars: {
+      "--theme-primary": "#ef4444",
+      "--theme-primary-fg": "#450a0a",
+      "--theme-accent": "#171717",
+      "--theme-bg": "#fafafa",
+      "--theme-fg": "#171717",
+    },
+    trustBadges: ["TX TDLR # when licensed", "Insured trucks", "Dispatch quotes ETA on call"],
+    heroImages: [
+      {
+        src: "/niches/towing.jpg",
+        alt: "Vehicle on the road — roadside assistance context",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1449965408869-eaa3f722e40d",
+        license: "unsplash",
+      },
+    ],
+  },
+  water_damage: {
+    niche: "water_damage",
+    label: "Water damage",
+    palette: {
+      primary: "#dc2626",
+      primaryForeground: "#fef2f2",
+      accent: "#0c4a6e",
+      accentForeground: "#e0f2fe",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#fee2e2",
+      mutedForeground: "#991b1b",
+      border: "#fecaca",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "urgent, reassuring, insurance-aware",
+      heroStyle: "panic water help — call-first, insurance-trust near CTA, IICRC slot, 24/7 honesty",
+      ctaStyle: "call now — optional photo upload later, never required",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "coverage guarantees", "required photo upload", "fake response times"],
+    },
+    cssVars: {
+      "--theme-primary": "#dc2626",
+      "--theme-primary-fg": "#fef2f2",
+      "--theme-accent": "#0c4a6e",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["IICRC credential slot", "We work with your insurance", "24/7 honesty — say who answers"],
+    heroImages: [
+      {
+        src: "/niches/water-damage.jpg",
+        alt: "Restoration and construction work context",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1541888946425-d81bb19240f5",
         license: "unsplash",
       },
     ],
