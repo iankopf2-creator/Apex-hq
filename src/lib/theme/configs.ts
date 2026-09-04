@@ -1,6 +1,7 @@
 /**
- * Niche theme configs — templated palettes/fonts/copy tone only.
+ * Niche theme configs — templated palettes/fonts/copy tone + credited hero imagery.
  * No hardcoded business names, phones, or addresses.
+ * Imagery is stock trade/job reference (Unsplash License) — not competitor brand cloning.
  *
  * Mobile-first / WCAG notes:
  * - Prefer contrast-safe primary/onPrimary pairs (aim AA: 4.5:1 body text).
@@ -35,6 +36,15 @@ export type CopyTone = {
   avoid: string[];
 };
 
+/** Credited stock hero — local path for <2s load; sourceUrl is the public reference. */
+export type ThemeHeroImage = {
+  src: string;
+  alt: string;
+  credit: string;
+  sourceUrl: string;
+  license: "unsplash";
+};
+
 export type NicheThemeConfig = {
   niche: ThemeNicheId;
   label: string;
@@ -43,6 +53,8 @@ export type NicheThemeConfig = {
   copyTone: CopyTone;
   /** CSS custom-property map for optional /s/[slug] wiring */
   cssVars: Record<string, string>;
+  /** Trade/job reference photos with attribution (not business-specific). */
+  heroImages: ThemeHeroImage[];
 };
 
 const baseAvoid = ["fake urgency", "impersonating a human", "guaranteed results claims"];
@@ -79,6 +91,15 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       "--theme-bg": "#f8fafc",
       "--theme-fg": "#0f172a",
     },
+    heroImages: [
+      {
+        src: "/niches/hvac.jpg",
+        alt: "Technician working with electronics and tools",
+        credit: "ThisisEngineering on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/32PpagSzeGs",
+        license: "unsplash",
+      },
+    ],
   },
   plumber: {
     niche: "plumber",
@@ -111,6 +132,15 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       "--theme-bg": "#f0fdfa",
       "--theme-fg": "#083344",
     },
+    heroImages: [
+      {
+        src: "/niches/plumber.jpg",
+        alt: "Plumbing tools and pipes at a job site",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1607472586893-edb57bdc0e39",
+        license: "unsplash",
+      },
+    ],
   },
   salon: {
     niche: "salon",
@@ -143,6 +173,15 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       "--theme-bg": "#fff7f8",
       "--theme-fg": "#4c0519",
     },
+    heroImages: [
+      {
+        src: "/niches/salon.jpg",
+        alt: "Salon chairs and styling stations",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1560066984-138dadb4c035",
+        license: "unsplash",
+      },
+    ],
   },
   trucking: {
     niche: "trucking",
@@ -175,6 +214,15 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       "--theme-bg": "#fffbeb",
       "--theme-fg": "#1c1917",
     },
+    heroImages: [
+      {
+        src: "/niches/trucking.jpg",
+        alt: "Semi truck on the highway",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1601584115197-04ecc0da31d7",
+        license: "unsplash",
+      },
+    ],
   },
 };
 
