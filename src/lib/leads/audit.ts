@@ -24,7 +24,9 @@ export async function generateAuditReport(lead: Lead): Promise<AuditReport> {
     personalizedFix:
       "Add an online booking page + clear hours so customers can reach you without calling. Apex HQ Front Door demo: " +
       DEMO_LINK +
-      "/onboarding",
+      " · pricing: " +
+      DEMO_LINK +
+      "/pricing.",
     demoLink: DEMO_LINK,
     confidence: Math.min(0.75, 0.4 + lead.fitScore / 200),
     disclaimer: DISCLAIMER,

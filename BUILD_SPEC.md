@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: free audit live (`/audit`); work-study SSOT + OPERATOR_DIGEST in flight
+DONE: shipped free audit page
 NEXT: Ian Stripe Production env then re-verify $49
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no

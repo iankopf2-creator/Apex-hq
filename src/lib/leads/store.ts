@@ -1,28 +1,13 @@
-import { promises as fs } from "fs";
-import path from "path";
+import { readJsonArray, writeJsonArray } from "../../../shared/json-store";
 import type { AuditReport, Lead } from "./types";
 
-const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), "data");
-const LEADS_FILE = path.join(DATA_DIR, "leads.json");
-const AUDITS_FILE = path.join(DATA_DIR, "audits.json");
+const LEADS_FILENAME = "leads.json";
+const AUDITS_FILENAME = "audits.json";
 
 type LeadsStore = { leads: Lead[]; audits: AuditReport[] };
 
-async function ensureFiles(): Promise<void> {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-  for (const file of [LEADS_FILE, AUDITS_FILE]) {
-    try {
-      await fs.access(file);
-    } catch {
-      await fs.writeFile(file, "[]\n", "utf8");
-    }
-  }
-}
-
 export async function listLeads(): Promise<Lead[]> {
-  await ensureFiles();
-  const raw = await fs.readFile(LEADS_FILE, "utf8");
-  return JSON.parse(raw) as Lead[];
+  return readJsonArray<Lead>(LEADS_FILENAME);
 }
 
 export async function getLead(id: string): Promise<Lead | null> {
@@ -31,30 +16,35 @@ export async function getLead(id: string): Promise<Lead | null> {
 }
 
 export async function upsertLead(lead: Lead): Promise<Lead> {
-  await ensureFiles();
   const all = await listLeads();
   const idx = all.findIndex((l) => l.id === lead.id);
+  const next: Lead = {
+    ...lead,
+    updatedAt: new Date().toISOString(),
+  };
   if (idx >= 0) {
-    all[idx] = { ...all[idx], ...lead, updatedAt: new Date().toISOString() };
+    all[idx] = { ...all[idx], ...next };
   } else {
-    all.push(lead);
+    all.push(next);
   }
-  await fs.writeFile(LEADS_FILE, JSON.stringify(all, null, 2) + "\n", "utf8");
-  return lead;
+  await writeJsonArray(LEADS_FILENAME, all);
+  return all[idx >= 0 ? idx : all.length - 1];
 }
 
 export async function listAudits(): Promise<AuditReport[]> {
-  await ensureFiles();
-  const raw = await fs.readFile(AUDITS_FILE, "utf8");
-  return JSON.parse(raw) as AuditReport[];
+  return readJsonArray<AuditReport>(AUDITS_FILENAME);
 }
 
 export async function saveAudit(report: AuditReport): Promise<AuditReport> {
-  await ensureFiles();
   const all = await listAudits();
   all.push(report);
-  await fs.writeFile(AUDITS_FILE, JSON.stringify(all, null, 2) + "\n", "utf8");
+  await writeJsonArray(AUDITS_FILENAME, all);
   return report;
+}
+
+export async function getAudit(id: string): Promise<AuditReport | null> {
+  const all = await listAudits();
+  return all.find((a) => a.id === id) ?? null;
 }
 
 export async function readLeadsStore(): Promise<LeadsStore> {
