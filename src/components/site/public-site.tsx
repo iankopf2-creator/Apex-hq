@@ -11,6 +11,7 @@ type Props = { business: BusinessProfile };
 /**
  * Public Front Door page. Optional Theme AI tokens applied via CSS vars when
  * a niche theme config exists (mobile-first / WCAG-minded contrast pairs).
+ * Hero uses credited niche stock imagery when the business has no custom photos.
  */
 export function PublicSite({ business }: Props) {
   const template = getTemplate(business.niche);
@@ -18,6 +19,9 @@ export function PublicSite({ business }: Props) {
   const cta = template?.ctaLabel ?? "Book now";
   const hints = template?.heroHints ?? [];
   const cssVars = (theme?.cssVars ?? {}) as CSSProperties;
+  const customPhoto = business.photos[0];
+  const hero = theme?.heroImages?.[0];
+  const showStock = !customPhoto || customPhoto.includes("placeholders/");
 
   return (
     <div className="min-h-screen" style={cssVars}>
@@ -32,7 +36,19 @@ export function PublicSite({ business }: Props) {
               <li><a className="hover:underline" href="#services">Services</a></li>
               <li><a className="hover:underline" href="#hours">Hours</a></li>
               <li>
-                <Button asChild size="sm">
+                <Button
+                  asChild
+                  size="sm"
+                  style={
+                    theme
+                      ? {
+                          backgroundColor: theme.palette.primary,
+                          color: theme.palette.primaryForeground,
+                          minHeight: 44,
+                        }
+                      : { minHeight: 44 }
+                  }
+                >
                   <Link href={"/booking/" + business.slug}>{cta}</Link>
                 </Button>
               </li>
@@ -65,18 +81,60 @@ export function PublicSite({ business }: Props) {
                   <li key={h}>• {h}</li>
                 ))}
               </ul>
-              <Button asChild size="lg" variant="secondary">
+              <Button
+                asChild
+                size="lg"
+                style={
+                  theme
+                    ? {
+                        backgroundColor: theme.palette.primary,
+                        color: theme.palette.primaryForeground,
+                        minHeight: 44,
+                      }
+                    : { minHeight: 44 }
+                }
+              >
                 <Link href={"/booking/" + business.slug}>{cta}</Link>
               </Button>
             </div>
-            <div
-              className="flex min-h-[180px] items-end rounded-lg p-4 text-sm opacity-90"
-              style={{ backgroundColor: "rgba(0,0,0,0.25)" }}
-              role="img"
-              aria-label="Business photo placeholder"
-            >
-              {(business.photos[0] || "/placeholders/storefront.svg").replace(/^\//, "")}
-            </div>
+            <figure className="relative min-h-[180px] overflow-hidden rounded-lg bg-black/25">
+              {showStock && hero ? (
+                <>
+                  {/* Local niche JPEG — no remote hop for <2s target */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={hero.src}
+                    alt={hero.alt}
+                    className="h-full min-h-[180px] w-full object-cover"
+                    width={960}
+                    height={640}
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <figcaption className="absolute bottom-0 left-0 right-0 bg-black/55 px-3 py-1.5 text-[11px] leading-snug text-white/90">
+                    Photo:{" "}
+                    <a
+                      className="underline underline-offset-2 hover:text-white"
+                      href={hero.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {hero.credit}
+                    </a>
+                    {" · "}reference only
+                  </figcaption>
+                </>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={customPhoto || "/placeholders/storefront.svg"}
+                  alt=""
+                  className="h-full min-h-[180px] w-full object-cover"
+                  width={960}
+                  height={640}
+                />
+              )}
+            </figure>
           </div>
         </section>
 
