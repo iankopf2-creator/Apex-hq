@@ -1,7 +1,7 @@
 --- EVE HANDOFF ---
-DONE: Reconfirmed live Front Door — / onboarding /pricing /s/demo-dallas-hvac all 200; git main clean; Stripe code present but not configured in production.
-NEXT: Ian adds Stripe env vars on Vercel and redeploys, then verify Starter $49 Checkout Session opens.
-BLOCKER: Missing production env — STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, STRIPE_PRICE_STARTER, NEXT_PUBLIC_APP_URL.
+DONE: Verified live Stripe checkout after Ian's reported Vercel env + redeploy.
+NEXT: Ian confirm env vars are on the Production environment with exact names, then redeploy and retest.
+BLOCKER: FAIL — production still reports Stripe not configured (all four required env names empty at runtime).
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
 --- END HANDOFF ---
