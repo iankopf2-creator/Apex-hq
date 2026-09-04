@@ -10,7 +10,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## Next high-ROI trades (US local SMB)
 1. Electrician — **in PR**
-2. Roofing
+2. Roofing — **in PR**
 3. Landscaping / lawn
 4. Auto repair / detailing
 5. Cleaning / janitorial

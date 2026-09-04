@@ -4,7 +4,7 @@ import { generateThemePackage, isThemeNiche } from "@/lib/theme";
 import { startAbExperiment } from "@/lib/theme/ab";
 
 const bodySchema = z.object({
-  niche: z.enum(["hvac", "plumber", "salon", "trucking", "electrician"]),
+  niche: z.enum(["hvac", "plumber", "salon", "trucking", "electrician", "roofing"]),
   variant: z.enum(["A", "B"]).optional().default("A"),
   /** If true, also stub-start a 7-day A/B with A+B packages */
   startAb: z.boolean().optional().default(false),

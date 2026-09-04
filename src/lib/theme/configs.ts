@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing";
 
 export type ThemePalette = {
   primary: string;
@@ -264,6 +264,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Electrical tools and wiring work",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1621905252507-b35492cc74b4",
+        license: "unsplash",
+      },
+    ],
+  },
+  roofing: {
+    niche: "roofing",
+    label: "Roofing",
+    palette: {
+      primary: "#ea580c",
+      primaryForeground: "#fff7ed",
+      accent: "#292524",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "solid, protective, plain-spoken",
+      heroStyle: "a roof that holds — inspect, repair, replace",
+      ctaStyle: "request a roof inspection",
+      avoid: [...baseAvoid, "storm-chaser scare tactics"],
+    },
+    cssVars: {
+      "--theme-primary": "#ea580c",
+      "--theme-primary-fg": "#fff7ed",
+      "--theme-accent": "#292524",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    heroImages: [
+      {
+        src: "/niches/roofing.jpg",
+        alt: "Residential home exterior and roof line",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1600585154340-be6161a56a0c",
         license: "unsplash",
       },
     ],

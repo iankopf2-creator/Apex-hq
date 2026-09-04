@@ -91,6 +91,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book an electrical visit",
     accentHint: "amber",
   },
+  {
+    id: "roofing",
+    label: "Roofing",
+    defaultTagline: "Inspect, repair, replace — clear next steps",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Roof Inspection", description: "Full visual inspection with written notes", priceFrom: 0 },
+      { name: "Leak Repair", description: "Find and fix active leaks", priceFrom: 199 },
+      { name: "Full Re-Roof Quote", description: "Material options and timeline", priceFrom: 0 },
+    ],
+    heroHints: ["Licensed crews", "Clear written scope", "Insurance-friendly docs"],
+    ctaLabel: "Request a roof inspection",
+    accentHint: "orange",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

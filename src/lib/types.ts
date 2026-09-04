@@ -1,4 +1,4 @@
-export type NicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician";
+export type NicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing";
 
 export type BusinessHours = {
   mon: string;
