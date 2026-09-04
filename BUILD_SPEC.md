@@ -24,6 +24,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Production build succeeds (verified this run)
 - [x] Theme AI scaffolded
 - [x] Theme AI niche hero stock photos (credited Unsplash; local `/public/niches`)
+- [x] Theme AI plumber + salon palette refine + themed CTAs on public site
 - [x] Theme/action-log JSON store Vercel-safe (`shared/json-store.ts`; live verified 2026-09-04)
 - [x] Lead Magnet Engine scaffolded
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs

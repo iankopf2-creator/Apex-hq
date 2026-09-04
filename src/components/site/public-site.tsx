@@ -36,7 +36,19 @@ export function PublicSite({ business }: Props) {
               <li><a className="hover:underline" href="#services">Services</a></li>
               <li><a className="hover:underline" href="#hours">Hours</a></li>
               <li>
-                <Button asChild size="sm">
+                <Button
+                  asChild
+                  size="sm"
+                  style={
+                    theme
+                      ? {
+                          backgroundColor: theme.palette.primary,
+                          color: theme.palette.primaryForeground,
+                          minHeight: 44,
+                        }
+                      : { minHeight: 44 }
+                  }
+                >
                   <Link href={"/booking/" + business.slug}>{cta}</Link>
                 </Button>
               </li>
@@ -69,7 +81,19 @@ export function PublicSite({ business }: Props) {
                   <li key={h}>• {h}</li>
                 ))}
               </ul>
-              <Button asChild size="lg" variant="secondary">
+              <Button
+                asChild
+                size="lg"
+                style={
+                  theme
+                    ? {
+                        backgroundColor: theme.palette.primary,
+                        color: theme.palette.primaryForeground,
+                        minHeight: 44,
+                      }
+                    : { minHeight: 44 }
+                }
+              >
                 <Link href={"/booking/" + business.slug}>{cta}</Link>
               </Button>
             </div>
