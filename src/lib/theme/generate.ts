@@ -33,16 +33,16 @@ const NICHE_VARIANT_TWEAKS: Record<
   Record<"A" | "B", { heroEmphasis: string; ctaVerb: string }>
 > = {
   hvac: {
-    A: { heroEmphasis: "clarity-first comfort", ctaVerb: "Book a visit" },
-    B: { heroEmphasis: "benefit-led reliability", ctaVerb: "Schedule service" },
+    A: { heroEmphasis: "call-first comfort + trust strip", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led same-day reliability", ctaVerb: "Book a visit" },
   },
   plumber: {
-    A: { heroEmphasis: "clarity-first help", ctaVerb: "Schedule help" },
-    B: { heroEmphasis: "benefit-led fast fix", ctaVerb: "Get help" },
+    A: { heroEmphasis: "emergency call-first help", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led free estimate", ctaVerb: "Free estimate" },
   },
   salon: {
-    A: { heroEmphasis: "clarity-first booking", ctaVerb: "Book" },
-    B: { heroEmphasis: "benefit-led look & feel", ctaVerb: "Book now" },
+    A: { heroEmphasis: "book-first starting prices", ctaVerb: "Book now" },
+    B: { heroEmphasis: "portfolio-led look & feel", ctaVerb: "Book appointment" },
   },
   trucking: {
     A: { heroEmphasis: "clarity-first lanes + coverage", ctaVerb: "Request a quote" },

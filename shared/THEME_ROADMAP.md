@@ -23,3 +23,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Credited stock or customer photos only
 - Mobile-first, WCAG, <2s
 - Money stays with Stripe / Ian
+
+## UX polish (2026-09-04)
+- Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
+- 48px tap targets; trust chips from research notes

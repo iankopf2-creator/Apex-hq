@@ -5,7 +5,7 @@
  *
  * Mobile-first / WCAG notes:
  * - Prefer contrast-safe primary/onPrimary pairs (aim AA: 4.5:1 body text).
- * - Keep touch targets ≥ 44px via site components; avoid tiny CTA text.
+ * - Keep touch targets ≥ 48px via site components; avoid tiny CTA text.
  * - Font stacks include system fallbacks for fast load (<2s target).
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
@@ -34,6 +34,11 @@ export type CopyTone = {
   heroStyle: string;
   ctaStyle: string;
   avoid: string[];
+  /**
+   * Mobile sticky primary action (Front Door UX research 2026-09-04):
+   * home-service = call-first; salon/beauty = book-first.
+   */
+  ctaPriority: "call" | "book";
 };
 
 /** Credited stock hero — local path for <2s load; sourceUrl is the public reference. */
@@ -81,8 +86,9 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "trustworthy, practical, calm",
-      heroStyle: "comfort you can schedule — clear next step",
-      ctaStyle: "book a service visit",
+      heroStyle: "same-day comfort help — licensed, insured, clear next step",
+      ctaStyle: "call now or book a visit",
+      ctaPriority: "call",
       avoid: [...baseAvoid, "scare tactics about broken AC"],
     },
     cssVars: {
@@ -123,8 +129,9 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "straightforward, clean, respectful",
-      heroStyle: "fast help without the mess — clear price, clear next step",
-      ctaStyle: "schedule plumbing help",
+      heroStyle: "fast help without the mess — call for emergencies, book for planned work",
+      ctaStyle: "call now — free estimate",
+      ctaPriority: "call",
       avoid: [...baseAvoid, "flood scare tactics"],
     },
     cssVars: {
@@ -165,9 +172,10 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     },
     copyTone: {
       voice: "warm, polished, welcoming",
-      heroStyle: "look your best — book with ease, no pressure",
-      ctaStyle: "book an appointment",
-      avoid: [...baseAvoid, "body-shaming language", "FOMO booking pressure"],
+      heroStyle: "look your best — Book Now with clear starting prices, no pressure",
+      ctaStyle: "book now",
+      ctaPriority: "book",
+      avoid: [...baseAvoid, "body-shaming language", "FOMO booking pressure", "call-for-pricing as the only path"],
     },
     cssVars: {
       "--theme-primary": "#fb7185",
@@ -209,6 +217,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "direct, dependable, no-nonsense",
       heroStyle: "lanes you can count on — clear coverage, clear next step",
       ctaStyle: "request a freight quote",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "fake on-time guarantees", "broker scare tactics"],
     },
     cssVars: {
@@ -250,6 +259,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "precise, safety-minded, clear",
       heroStyle: "licensed work you can schedule — no guesswork",
       ctaStyle: "book an electrical visit",
+      ctaPriority: "call",
       avoid: [...baseAvoid, "scare tactics about fire risk"],
     },
     cssVars: {
@@ -291,6 +301,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "solid, protective, plain-spoken",
       heroStyle: "a roof that holds — inspect, repair, replace",
       ctaStyle: "request a roof inspection",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "storm-chaser scare tactics"],
     },
     cssVars: {
@@ -332,6 +343,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "fresh, reliable, outdoor-ready",
       heroStyle: "yards that look cared for — mow, mulch, maintain",
       ctaStyle: "request a yard estimate",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "overselling overnight makeovers"],
     },
     cssVars: {
@@ -373,6 +385,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "sharp, clean, proud of the finish",
       heroStyle: "showroom-clean without the showroom price",
       ctaStyle: "book a detail",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "fake limited-time flash sales"],
     },
     cssVars: {
@@ -414,6 +427,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "fresh, careful, easy to trust",
       heroStyle: "spotless spaces on a schedule you can count on",
       ctaStyle: "book a cleaning",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "guilt-trip mess shaming"],
     },
     cssVars: {
@@ -455,6 +469,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "calm, factual, protective",
       heroStyle: "keep pests out — inspect, treat, prevent",
       ctaStyle: "book a pest inspection",
+      ctaPriority: "call",
       avoid: [...baseAvoid, "gross-out scare photos", "fake infestation panic"],
     },
     cssVars: {
@@ -496,6 +511,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "organized, careful, low-stress",
       heroStyle: "moves that stay on plan — pack, load, deliver",
       ctaStyle: "get a moving quote",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "fake same-day guarantees"],
     },
     cssVars: {
@@ -537,6 +553,7 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       voice: "clean, careful, finish-focused",
       heroStyle: "fresh walls, clean lines — estimate, prep, paint",
       ctaStyle: "request a painting estimate",
+      ctaPriority: "book",
       avoid: [...baseAvoid, "overselling overnight whole-house flips"],
     },
     cssVars: {
