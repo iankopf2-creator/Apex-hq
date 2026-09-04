@@ -16,6 +16,8 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Production build succeeds (verified this run)
 - [x] Theme AI scaffolded
 - [x] Lead Magnet Engine scaffolded
+- [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
+- [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 
 ### Demo / live URL
 Front Door LIVE: https://apex-hq-five.vercel.app
@@ -80,6 +82,21 @@ See docs/THEME_LEAD_MAGNET_PROTOCOL.md
 
 Front Door is live; scaffolding authorized by Ian for this run.
 
+
+## Stripe Checkout (Module 0.1)
+
+**JOB:** Let a stranger pay Starter $49/mo after onboarding via Stripe Checkout only.
+
+**STATUS**
+- [x] `stripe` package dependency
+- [x] `POST /api/stripe/checkout` — subscription mode; body may include `businessSlug` / `email`
+- [x] Pricing UI + end-of-onboarding Starter CTA (shows “Stripe not configured” + required env when unset)
+- [x] `POST /api/stripe/webhook` stub — verifies signature when `STRIPE_WEBHOOK_SECRET` set; logs subscription events; no fake success
+- [x] `.env.example` documents Stripe vars
+- [ ] Ian creates Price IDs in Stripe Dashboard and sets Vercel env, then redeploys
+
+**Vercel env Ian must set:** `STRIPE_SECRET_KEY`, `NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY`, `STRIPE_PRICE_STARTER`, `NEXT_PUBLIC_APP_URL` (plus optional `STRIPE_PRICE_GROWTH`, `STRIPE_PRICE_PRO`, `STRIPE_WEBHOOK_SECRET`).
+
 ## Lead Scout Agent (NOT THIS RUN)
 
 Spawn only after Front Door is confirmed live AND Stripe checkout works. Never contacts businesses — Ian pitches.
@@ -88,3 +105,13 @@ Spawn only after Front Door is confirmed live AND Stripe checkout works. Never c
 - [ ] First daily leads/YYYY-MM-DD.md produced
 
 See docs/LEAD_SCOUT_PROTOCOL.md
+
+## Human-Sounding Outreach Voice Agent (NOT THIS RUN)
+
+Spawn only after Lead Scout has 20 real leads AND free audit page is live.
+
+- [ ] Voice outreach agent scaffolded
+- [ ] First 20 calls logged
+- [ ] First demo booked with Ian
+
+See docs/VOICE_OUTREACH_PROTOCOL.md
