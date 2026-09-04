@@ -1,6 +1,5 @@
-import { promises as fs } from "fs";
-import path from "path";
 import { appendActionLog } from "@/lib/action-log";
+import { readJsonArray, writeJsonArray } from "../../../shared/json-store";
 import type { ThemeNicheId } from "./configs";
 
 /** A/B variant experiment stub — 7-day default window, winner optional. */
@@ -28,26 +27,15 @@ export type ThemeActionRecord = {
   variant?: AbVariant;
 };
 
-const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), "data");
-const THEME_ACTIONS_FILE = path.join(DATA_DIR, "theme-actions.json");
+const THEME_ACTIONS_FILENAME = "theme-actions.json";
 
-async function ensureThemeActions(): Promise<void> {
-  await fs.mkdir(DATA_DIR, { recursive: true });
-  try {
-    await fs.access(THEME_ACTIONS_FILE);
-  } catch {
-    await fs.writeFile(THEME_ACTIONS_FILE, "[]\n", "utf8");
-  }
-}
-
-/** Log a theme action with timestamp + confidence to data/theme-actions.json and shared action log. */
+/** Log a theme action with timestamp + confidence to theme-actions.json and shared action log. */
 export async function logThemeAction(
   action: string,
   confidence: number,
   notes?: string,
   extra?: { experimentId?: string; variant?: AbVariant }
 ): Promise<ThemeActionRecord> {
-  await ensureThemeActions();
   const record: ThemeActionRecord = {
     id: crypto.randomUUID(),
     timestamp: new Date().toISOString(),
@@ -57,10 +45,9 @@ export async function logThemeAction(
     experimentId: extra?.experimentId,
     variant: extra?.variant,
   };
-  const raw = await fs.readFile(THEME_ACTIONS_FILE, "utf8");
-  const list = JSON.parse(raw) as ThemeActionRecord[];
+  const list = await readJsonArray<ThemeActionRecord>(THEME_ACTIONS_FILENAME);
   list.push(record);
-  await fs.writeFile(THEME_ACTIONS_FILE, JSON.stringify(list, null, 2) + "\n", "utf8");
+  await writeJsonArray(THEME_ACTIONS_FILENAME, list);
 
   await appendActionLog({
     agent: "theme-ai",
