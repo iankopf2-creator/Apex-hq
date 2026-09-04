@@ -16,7 +16,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 5. Cleaning / janitorial — **in PR**
 6. Pest control — **in PR**
 7. Moving — **in PR**
-8. Painting
+8. Painting — **in PR**
 
 ## Rules
 - No competitor brand cloning

@@ -18,3 +18,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Cleaning | `cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581578731548-c64695cc6952 |
 | Pest control | `pest-control.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1563453392212-326f5e854473 |
 | Moving | `moving.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1600518464441-9154a4dea21b |
+| Painting | `painting.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1562259949-e8e7689d7828 |

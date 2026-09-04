@@ -223,6 +223,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a moving quote",
     accentHint: "indigo",
   },
+  {
+    id: "painting",
+    label: "Painting",
+    defaultTagline: "Fresh walls, clean lines — estimate, prep, paint",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Interior Paint", description: "Rooms, trim, and ceilings", priceFrom: 0 },
+      { name: "Exterior Paint", description: "Siding and outdoor surfaces", priceFrom: 0 },
+      { name: "Cabinet Refinish", description: "Kitchen or bath cabinet refresh", priceFrom: 499 },
+    ],
+    heroHints: ["Written color plan", "Prep included options", "Clean jobsite standards"],
+    ctaLabel: "Request a painting estimate",
+    accentHint: "purple",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

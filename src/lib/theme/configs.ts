@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting";
 
 export type ThemePalette = {
   primary: string;
@@ -510,6 +510,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Moving boxes and careful packing",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1600518464441-9154a4dea21b",
+        license: "unsplash",
+      },
+    ],
+  },
+  painting: {
+    niche: "painting",
+    label: "Painting",
+    palette: {
+      primary: "#a855f7",
+      primaryForeground: "#faf5ff",
+      accent: "#4c1d95",
+      accentForeground: "#faf5ff",
+      background: "#faf5ff",
+      foreground: "#2e1065",
+      muted: "#f3e8ff",
+      mutedForeground: "#6b21a8",
+      border: "#e9d5ff",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "clean, careful, finish-focused",
+      heroStyle: "fresh walls, clean lines — estimate, prep, paint",
+      ctaStyle: "request a painting estimate",
+      avoid: [...baseAvoid, "overselling overnight whole-house flips"],
+    },
+    cssVars: {
+      "--theme-primary": "#a855f7",
+      "--theme-primary-fg": "#faf5ff",
+      "--theme-accent": "#4c1d95",
+      "--theme-bg": "#faf5ff",
+      "--theme-fg": "#2e1065",
+    },
+    heroImages: [
+      {
+        src: "/niches/painting.jpg",
+        alt: "Paint supplies and freshly finished walls",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1562259949-e8e7689d7828",
         license: "unsplash",
       },
     ],

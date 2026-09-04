@@ -76,6 +76,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "clarity-first timeline", ctaVerb: "Get a quote" },
     B: { heroEmphasis: "benefit-led low-stress move", ctaVerb: "Plan my move" },
   },
+  painting: {
+    A: { heroEmphasis: "clarity-first prep + paint", ctaVerb: "Request estimate" },
+    B: { heroEmphasis: "benefit-led fresh finish", ctaVerb: "Get a paint quote" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
