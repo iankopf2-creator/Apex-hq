@@ -49,36 +49,36 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "benefit-led on-time freight", ctaVerb: "Get a quote" },
   },
   electrician: {
-    A: { heroEmphasis: "clarity-first licensed work", ctaVerb: "Book a visit" },
-    B: { heroEmphasis: "benefit-led safe + scheduled", ctaVerb: "Schedule service" },
+    A: { heroEmphasis: "call-first licensed emergency", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led planned electrical", ctaVerb: "Get an estimate" },
   },
   roofing: {
-    A: { heroEmphasis: "clarity-first inspection", ctaVerb: "Request inspection" },
-    B: { heroEmphasis: "benefit-led protection", ctaVerb: "Get a roof quote" },
+    A: { heroEmphasis: "call-first storm damage", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led planned roof work", ctaVerb: "Get a roof estimate" },
   },
   landscaping: {
-    A: { heroEmphasis: "clarity-first curb appeal", ctaVerb: "Request estimate" },
-    B: { heroEmphasis: "benefit-led tidy yard", ctaVerb: "Get a yard quote" },
+    A: { heroEmphasis: "hybrid seasonal recurring", ctaVerb: "Get a lawn quote" },
+    B: { heroEmphasis: "hybrid one-off project", ctaVerb: "Schedule service" },
   },
   auto_detail: {
     A: { heroEmphasis: "clarity-first clean finish", ctaVerb: "Book a detail" },
     B: { heroEmphasis: "benefit-led showroom shine", ctaVerb: "Schedule detailing" },
   },
   cleaning: {
-    A: { heroEmphasis: "clarity-first schedule", ctaVerb: "Book a cleaning" },
-    B: { heroEmphasis: "benefit-led fresh space", ctaVerb: "Schedule cleaning" },
+    A: { heroEmphasis: "hybrid recurring-first", ctaVerb: "Book recurring" },
+    B: { heroEmphasis: "hybrid one-time deep clean", ctaVerb: "Get a quote" },
   },
   pest_control: {
-    A: { heroEmphasis: "clarity-first inspection", ctaVerb: "Book inspection" },
-    B: { heroEmphasis: "benefit-led prevention", ctaVerb: "Schedule treatment" },
+    A: { heroEmphasis: "call-first panic pests", ctaVerb: "Call now" },
+    B: { heroEmphasis: "benefit-led inspection plan", ctaVerb: "Book inspection" },
   },
   moving: {
     A: { heroEmphasis: "clarity-first timeline", ctaVerb: "Get a quote" },
     B: { heroEmphasis: "benefit-led low-stress move", ctaVerb: "Plan my move" },
   },
   painting: {
-    A: { heroEmphasis: "clarity-first prep + paint", ctaVerb: "Request estimate" },
-    B: { heroEmphasis: "benefit-led fresh finish", ctaVerb: "Get a paint quote" },
+    A: { heroEmphasis: "hybrid estimate path", ctaVerb: "Request estimate" },
+    B: { heroEmphasis: "hybrid schedule path", ctaVerb: "Schedule paint job" },
   },
 };
 

@@ -8,13 +8,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = { business: BusinessProfile };
 
-const TAP = 48; // Front Door UX research 2026-09-04 — prefer 48×48 tap targets
+const TAP = 48; // Apex Research: 44–48px; we use 48
 
 /**
- * Public Front Door page. Optional Theme AI tokens applied via CSS vars when
- * a niche theme config exists (mobile-first / WCAG-minded contrast pairs).
- * Hero uses credited niche stock imagery when the business has no custom photos.
- * Sticky mobile dual CTA: call-first (HVAC/plumber) vs book-first (salon).
+ * Public Front Door page. Theme tokens via CSS vars; credited niche stock when
+ * no custom photos. Sticky mobile dual CTA modes: call_first / book_first / hybrid.
+ * Phone is the business public number only (never LSA-only tracking numbers).
  */
 export function PublicSite({ business }: Props) {
   const template = getTemplate(business.niche);
@@ -25,11 +24,16 @@ export function PublicSite({ business }: Props) {
   const customPhoto = business.photos[0];
   const hero = theme?.heroImages?.[0];
   const showStock = !customPhoto || customPhoto.includes("placeholders/");
+  // Public DNI / GBP-matched number only — never put an LSA-only line here.
   const telHref = business.phone
     ? "tel:" + business.phone.replace(/[^\d+]/g, "")
     : null;
   const bookHref = "/booking/" + business.slug;
-  const callFirst = theme?.copyTone.ctaPriority === "call";
+  const mode = theme?.copyTone.ctaPriority ?? "book_first";
+  const callPrimary = mode === "call_first";
+  // hybrid + book_first: book/quote leads; call is secondary when present
+  const bookPrimary = !callPrimary;
+
   const primaryStyle = theme
     ? {
         backgroundColor: theme.palette.primary,
@@ -37,28 +41,7 @@ export function PublicSite({ business }: Props) {
         minHeight: TAP,
       }
     : { minHeight: TAP };
-  const secondaryStyle = {
-    minHeight: TAP,
-  };
-
-  const CallBtn = ({ className }: { className?: string }) =>
-    telHref ? (
-      <Button asChild size="lg" style={callFirst ? primaryStyle : secondaryStyle} variant={callFirst ? "default" : "outline"} className={className}>
-        <a href={telHref}>Call now</a>
-      </Button>
-    ) : null;
-
-  const BookBtn = ({ className, size = "lg" as const }: { className?: string; size?: "sm" | "lg" }) => (
-    <Button
-      asChild
-      size={size}
-      style={!callFirst || !telHref ? primaryStyle : secondaryStyle}
-      variant={!callFirst || !telHref ? "default" : "outline"}
-      className={className}
-    >
-      <Link href={bookHref}>{cta}</Link>
-    </Button>
-  );
+  const secondaryStyle = { minHeight: TAP };
 
   return (
     <div className="min-h-screen pb-24 sm:pb-0" style={cssVars}>
@@ -78,7 +61,14 @@ export function PublicSite({ business }: Props) {
                 </li>
               )}
               <li className="hidden sm:list-item">
-                <BookBtn size="sm" />
+                <Button
+                  asChild
+                  size="sm"
+                  style={bookPrimary || !telHref ? primaryStyle : secondaryStyle}
+                  variant={bookPrimary || !telHref ? "default" : "outline"}
+                >
+                  <Link href={bookHref}>{cta}</Link>
+                </Button>
               </li>
             </ul>
           </nav>
@@ -104,7 +94,6 @@ export function PublicSite({ business }: Props) {
                 {business.name}
               </h1>
               <p className="text-lg opacity-90">{business.tagline || template?.defaultTagline}</p>
-              {/* Trust strip — stars/licence pattern from UX research */}
               <ul className="flex flex-wrap gap-2 text-xs sm:text-sm" aria-label="Trust signals">
                 {hints.map((h) => (
                   <li
@@ -116,15 +105,25 @@ export function PublicSite({ business }: Props) {
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3 pt-1">
-                {callFirst && telHref ? (
+                {callPrimary && telHref ? (
                   <>
-                    <CallBtn />
-                    <BookBtn />
+                    <Button asChild size="lg" style={primaryStyle}>
+                      <a href={telHref}>Call now</a>
+                    </Button>
+                    <Button asChild size="lg" variant="outline" style={secondaryStyle}>
+                      <Link href={bookHref}>{cta}</Link>
+                    </Button>
                   </>
                 ) : (
                   <>
-                    <BookBtn />
-                    {telHref && <CallBtn />}
+                    <Button asChild size="lg" style={primaryStyle}>
+                      <Link href={bookHref}>{cta}</Link>
+                    </Button>
+                    {telHref && (
+                      <Button asChild size="lg" variant="outline" style={secondaryStyle}>
+                        <a href={telHref}>{mode === "hybrid" ? "Call" : "Call now"}</a>
+                      </Button>
+                    )}
                   </>
                 )}
               </div>
@@ -132,7 +131,6 @@ export function PublicSite({ business }: Props) {
             <figure className="relative min-h-[180px] overflow-hidden rounded-lg bg-black/25">
               {showStock && hero ? (
                 <>
-                  {/* Local niche JPEG — no remote hop for <2s target */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={hero.src}
@@ -220,7 +218,7 @@ export function PublicSite({ business }: Props) {
         </div>
       </footer>
 
-      {/* Sticky mobile dual CTA — research: highest-leverage mobile pattern */}
+      {/* Sticky: max 2 actions; does not cover focus on sm+ (hidden) */}
       <div
         className="fixed inset-x-0 bottom-0 z-40 border-t bg-white/95 p-2 backdrop-blur sm:hidden"
         style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
@@ -228,7 +226,7 @@ export function PublicSite({ business }: Props) {
         aria-label="Quick actions"
       >
         <div className="mx-auto flex max-w-5xl gap-2">
-          {callFirst && telHref ? (
+          {callPrimary && telHref ? (
             <>
               <Button asChild className="flex-1" style={primaryStyle}>
                 <a href={telHref}>Call now</a>
@@ -244,7 +242,7 @@ export function PublicSite({ business }: Props) {
               </Button>
               {telHref && (
                 <Button asChild variant="outline" className="flex-1" style={secondaryStyle}>
-                  <a href={telHref}>Call</a>
+                  <a href={telHref}>{mode === "hybrid" ? "Call" : "Call"}</a>
                 </Button>
               )}
             </>
