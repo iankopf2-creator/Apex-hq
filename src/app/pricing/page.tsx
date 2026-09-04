@@ -4,7 +4,6 @@ import {
   isStripeConfigured,
   missingStripeEnvVars,
   REQUIRED_STRIPE_ENV_VARS,
-  OPTIONAL_STRIPE_ENV_VARS,
 } from "@/lib/stripe";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckoutButton } from "@/components/pricing/checkout-button";
@@ -33,34 +32,27 @@ export default function PricingPage({ searchParams }: Props) {
         <p className="text-sm">
           {stripeReady
             ? "Stripe configured — checkout sessions create live Stripe subscriptions."
-            : "Stripe not configured — checkout disabled until Ian sets Vercel env vars and redeploys."}
+            : "Checkout unavailable — payment provider not configured."}
         </p>
         {!stripeReady && (
           <div
             role="status"
             className="rounded-md border border-dashed bg-muted/40 px-3 py-3 text-sm space-y-2"
           >
-            <p className="font-medium">Required Vercel env vars</p>
-            <ul className="list-disc pl-5 text-muted-foreground">
-              {REQUIRED_STRIPE_ENV_VARS.map((k) => (
-                <li key={k}>
-                  <code>{k}</code>
-                  {missing.includes(k) ? " (missing)" : ""}
-                </li>
-              ))}
-            </ul>
-            <p className="font-medium pt-1">Optional</p>
-            <ul className="list-disc pl-5 text-muted-foreground">
-              {OPTIONAL_STRIPE_ENV_VARS.map((k) => (
-                <li key={k}>
-                  <code>{k}</code>
-                </li>
-              ))}
-            </ul>
             <p className="text-muted-foreground">
-              Create recurring Price IDs in Stripe Dashboard (Products → Prices), paste them into
-              env, set <code>NEXT_PUBLIC_APP_URL</code> to the deploy URL, then redeploy.
+              Subscription checkout will unlock once Stripe is configured for this deployment.
+              Owners can confirm setup from the{" "}
+              <Link href="/dashboard" className="underline-offset-4 hover:underline">
+                dashboard
+              </Link>
+              .
             </p>
+            {missing.length > 0 ? (
+              <p className="text-xs text-muted-foreground">
+                Setup checklist uses env names only (no secret values):{" "}
+                {REQUIRED_STRIPE_ENV_VARS.join(", ")}.
+              </p>
+            ) : null}
           </div>
         )}
         {checkoutStatus === "success" && (

@@ -18,6 +18,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Onboarding wizard at /onboarding
 - [x] Template library: HVAC, plumber, salon (config-driven)
 - [x] Persist (local JSON) + public site /s/[slug]
+- [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
 - [x] Booking stub intake (`POST /api/booking`) + form confirmation + dashboard list
 - [x] Dashboard shell polish (snapshot stats, Stripe configured flag without secrets)

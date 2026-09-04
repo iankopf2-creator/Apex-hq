@@ -27,6 +27,17 @@ export type BusinessProfile = {
   services: ServiceItem[];
   photos: string[];
   phone?: string;
+  /**
+   * CallRail (or similar) website swap-target / public click-to-call number.
+   * Prefer this for all /s/[slug] tel: links when set.
+   */
+  trackingPhone?: string;
+  /**
+   * LSA-only destination number for ops — NEVER render on /s/[slug] HTML.
+   */
+  lsaPhone?: string;
+  /** When true, tenant opted in to load call-tracking JS (off by default). */
+  callTrackingOptIn?: boolean;
   email?: string;
   tagline?: string;
   primaryColor?: string;
