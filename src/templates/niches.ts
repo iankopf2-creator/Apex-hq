@@ -179,6 +179,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book a cleaning",
     accentHint: "teal",
   },
+  {
+    id: "pest_control",
+    label: "Pest control",
+    defaultTagline: "Inspect, treat, prevent — without the scare tactics",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Home Inspection", description: "Identify activity and entry points", priceFrom: 0 },
+      { name: "General Treatment", description: "Interior/exterior service visit", priceFrom: 149 },
+      { name: "Quarterly Plan", description: "Ongoing prevention schedule", priceFrom: 99 },
+    ],
+    heroHints: ["Licensed technicians", "Pet-aware options", "Clear follow-ups"],
+    ctaLabel: "Book a pest inspection",
+    accentHint: "lime",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

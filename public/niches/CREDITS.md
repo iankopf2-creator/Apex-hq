@@ -16,3 +16,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Landscaping | `landscaping.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1558904541-efa843a96f01 |
 | Auto detailing | `auto-detail.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1601362840469-51e4d8d58785 |
 | Cleaning | `cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581578731548-c64695cc6952 |
+| Pest control | `pest-control.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1563453392212-326f5e854473 |

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control";
 
 export type ThemePalette = {
   primary: string;
@@ -428,6 +428,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Clean bright interior after professional cleaning",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1581578731548-c64695cc6952",
+        license: "unsplash",
+      },
+    ],
+  },
+  pest_control: {
+    niche: "pest_control",
+    label: "Pest control",
+    palette: {
+      primary: "#84cc16",
+      primaryForeground: "#1a2e05",
+      accent: "#365314",
+      accentForeground: "#f7fee7",
+      background: "#f7fee7",
+      foreground: "#1a2e05",
+      muted: "#ecfccb",
+      mutedForeground: "#4d7c0f",
+      border: "#bef264",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "calm, factual, protective",
+      heroStyle: "keep pests out — inspect, treat, prevent",
+      ctaStyle: "book a pest inspection",
+      avoid: [...baseAvoid, "gross-out scare photos", "fake infestation panic"],
+    },
+    cssVars: {
+      "--theme-primary": "#84cc16",
+      "--theme-primary-fg": "#1a2e05",
+      "--theme-accent": "#365314",
+      "--theme-bg": "#f7fee7",
+      "--theme-fg": "#1a2e05",
+    },
+    heroImages: [
+      {
+        src: "/niches/pest-control.jpg",
+        alt: "Clean home exterior and property care",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1563453392212-326f5e854473",
         license: "unsplash",
       },
     ],

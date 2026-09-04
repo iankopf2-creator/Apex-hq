@@ -68,6 +68,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "clarity-first schedule", ctaVerb: "Book a cleaning" },
     B: { heroEmphasis: "benefit-led fresh space", ctaVerb: "Schedule cleaning" },
   },
+  pest_control: {
+    A: { heroEmphasis: "clarity-first inspection", ctaVerb: "Book inspection" },
+    B: { heroEmphasis: "benefit-led prevention", ctaVerb: "Schedule treatment" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
