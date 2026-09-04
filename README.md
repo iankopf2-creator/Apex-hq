@@ -31,7 +31,8 @@ Copy `.env.example` → `.env.local` and fill keys when ready. **Do not invent A
 | Twilio / Resend / Vercel AI SDK | Env stubs only |
 | Voice (Bland AI **or** Retell) | **Choice documented below** — not wired |
 | Google Calendar | Not wired — next step |
-| Dashboard / booking | Shell stubs |
+| Dashboard / booking | Live stub intake (`POST /api/booking`) + dashboard list/stats |
+| Free audit `/audit` | Live ESTIMATE lead magnet (no SMS/email send) |
 
 ## Voice provider choice
 
@@ -43,11 +44,13 @@ Set `VOICE_PROVIDER=bland` or `retell` in env when you start Layer 2. Do not pur
 ## Key routes
 
 - `/` — landing + demo seed
+- `/audit`, `/audit/[slug]` — free ESTIMATE audit (no live outreach)
 - `/onboarding` — multi-step wizard
 - `/s/[slug]` — public branded site
-- `/booking/[slug]` — booking stub
-- `/dashboard` — owner shell + AI log helper
+- `/booking/[slug]` — booking stub with confirmation + `POST /api/booking`
+- `/dashboard` — owner shell, stub bookings, Stripe configured flag (names only)
 - `/pricing` — Stripe tiers + Checkout CTAs
+- `POST /api/leads/audit` — generate ESTIMATE audit report
 - `POST /api/stripe/checkout` — create subscription Checkout Session
 - `POST /api/stripe/webhook` — signature-verified event log stub
 
