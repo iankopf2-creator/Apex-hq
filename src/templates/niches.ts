@@ -113,6 +113,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a roof inspection",
     accentHint: "orange",
   },
+  {
+    id: "landscaping",
+    label: "Landscaping",
+    defaultTagline: "Yards that look cared for — week after week",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Lawn Mowing", description: "Weekly or biweekly cuts", priceFrom: 45 },
+      { name: "Mulch & Beds", description: "Clean beds and fresh mulch", priceFrom: 150 },
+      { name: "Seasonal Cleanup", description: "Spring or fall yard reset", priceFrom: 199 },
+    ],
+    heroHints: ["Recurring schedules", "Clear property notes", "Text when on the way"],
+    ctaLabel: "Request a yard estimate",
+    accentHint: "lime",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

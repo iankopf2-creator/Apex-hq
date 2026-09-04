@@ -25,6 +25,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme AI scaffolded
 - [x] Theme AI electrician niche (palette + template + hero)
 - [x] Theme AI roofing niche (palette + template + hero)
+- [x] Theme AI landscaping niche (palette + template + hero)
 - [x] Theme AI niche hero stock photos (credited Unsplash; local `/public/niches`)
 - [x] Theme AI plumber + salon palette refine + themed CTAs on public site
 - [x] Theme AI HVAC polish + niche-aware A/B verbs (all 4 niches)

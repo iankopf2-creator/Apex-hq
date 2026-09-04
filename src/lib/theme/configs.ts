@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping";
 
 export type ThemePalette = {
   primary: string;
@@ -305,6 +305,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Residential home exterior and roof line",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1600585154340-be6161a56a0c",
+        license: "unsplash",
+      },
+    ],
+  },
+  landscaping: {
+    niche: "landscaping",
+    label: "Landscaping",
+    palette: {
+      primary: "#65a30d",
+      primaryForeground: "#14532d",
+      accent: "#14532d",
+      accentForeground: "#f7fee7",
+      background: "#f7fee7",
+      foreground: "#14532d",
+      muted: "#d9f99d",
+      mutedForeground: "#3f6212",
+      border: "#bef264",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "fresh, reliable, outdoor-ready",
+      heroStyle: "yards that look cared for — mow, mulch, maintain",
+      ctaStyle: "request a yard estimate",
+      avoid: [...baseAvoid, "overselling overnight makeovers"],
+    },
+    cssVars: {
+      "--theme-primary": "#65a30d",
+      "--theme-primary-fg": "#14532d",
+      "--theme-accent": "#14532d",
+      "--theme-bg": "#f7fee7",
+      "--theme-fg": "#14532d",
+    },
+    heroImages: [
+      {
+        src: "/niches/landscaping.jpg",
+        alt: "Maintained lawn and landscaping",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1558904541-efa843a96f01",
         license: "unsplash",
       },
     ],
