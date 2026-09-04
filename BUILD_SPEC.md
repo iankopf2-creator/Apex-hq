@@ -115,3 +115,13 @@ Spawn only after Lead Scout has 20 real leads AND free audit page is live.
 - [ ] First demo booked with Ian
 
 See docs/VOICE_OUTREACH_PROTOCOL.md
+
+## Paid Diagnostic Offer (NOT THIS RUN)
+
+After free audit curiosity. Requires signed agreement before POS access.
+
+- [ ] Diagnostic offer page / Stripe price
+- [ ] Agreement gate before POS connect
+- [ ] Aggregate-only analytics path
+
+See docs/PAID_DIAGNOSTIC_OFFER.md
