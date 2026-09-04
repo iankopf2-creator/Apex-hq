@@ -69,6 +69,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Book an appointment",
     accentHint: "rose",
   },
+  {
+    id: "electrician",
+    label: "Electrician",
+    defaultTagline: "Licensed electrical work you can schedule",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Outlet / Switch Repair", description: "Diagnose and fix common electrical issues", priceFrom: 89 },
+      { name: "Panel Upgrade Consult", description: "Safety check and upgrade options", priceFrom: 0 },
+      { name: "Lighting Install", description: "Indoor/outdoor fixture installation", priceFrom: 129 },
+    ],
+    heroHints: ["Licensed & insured", "Clear scheduling", "Upfront scope"],
+    ctaLabel: "Book an electrical visit",
+    accentHint: "amber",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

@@ -48,6 +48,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "clarity-first lanes + coverage", ctaVerb: "Request a quote" },
     B: { heroEmphasis: "benefit-led on-time freight", ctaVerb: "Get a quote" },
   },
+  electrician: {
+    A: { heroEmphasis: "clarity-first licensed work", ctaVerb: "Book a visit" },
+    B: { heroEmphasis: "benefit-led safe + scheduled", ctaVerb: "Schedule service" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

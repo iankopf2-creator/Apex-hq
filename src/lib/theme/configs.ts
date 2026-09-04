@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician";
 
 export type ThemePalette = {
   primary: string;
@@ -223,6 +223,47 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Semi truck on the highway",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1601584115197-04ecc0da31d7",
+        license: "unsplash",
+      },
+    ],
+  },
+  electrician: {
+    niche: "electrician",
+    label: "Electrician",
+    palette: {
+      primary: "#facc15",
+      primaryForeground: "#1c1917",
+      accent: "#1e293b",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "precise, safety-minded, clear",
+      heroStyle: "licensed work you can schedule — no guesswork",
+      ctaStyle: "book an electrical visit",
+      avoid: [...baseAvoid, "scare tactics about fire risk"],
+    },
+    cssVars: {
+      "--theme-primary": "#facc15",
+      "--theme-primary-fg": "#1c1917",
+      "--theme-accent": "#1e293b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    heroImages: [
+      {
+        src: "/niches/electrician.jpg",
+        alt: "Electrical tools and wiring work",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1621905252507-b35492cc74b4",
         license: "unsplash",
       },
     ],

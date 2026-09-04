@@ -11,3 +11,4 @@ License: [Unsplash License](https://unsplash.com/license) (free commercial use; 
 | Trucking | `trucking.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1601584115197-04ecc0da31d7 |
 
 Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with credits, or the business’s own Google Photos / Drive (with Ian’s approval).
+| Electrician | `electrician.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1621905252507-b35492cc74b4 |

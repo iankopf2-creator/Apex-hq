@@ -9,7 +9,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Trucking — fleet navy / amber (PR #2)
 
 ## Next high-ROI trades (US local SMB)
-1. Electrician
+1. Electrician — **in PR**
 2. Roofing
 3. Landscaping / lawn
 4. Auto repair / detailing
