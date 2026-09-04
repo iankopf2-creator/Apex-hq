@@ -41,3 +41,12 @@ See docs/LEGAL_INSURANCE_PROTOCOL.md
 
 ## REVIEWS
 (none yet — Legal/Insurance AIs not spawned)
+
+## Theme & Lead Magnet Agents (NOT THIS RUN)
+
+Spawn only after Front Door demo is live and tested. Do not scaffold here.
+
+- [ ] Theme AI scaffolded
+- [ ] Lead Magnet Engine scaffolded
+
+See docs/THEME_LEAD_MAGNET_PROTOCOL.md
