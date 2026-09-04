@@ -1,3 +1,11 @@
+--- EVE HANDOFF ---
+DONE: Live Front Door confirmed (/ onboarding /s/demo-dallas-hvac 200); Theme AI + Lead Magnet + Stripe checkout code on main.
+NEXT: Ian sets Stripe env on Vercel and redeploys so $49 Starter Checkout works in production.
+BLOCKER: Production Stripe not configured — missing STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, STRIPE_PRICE_STARTER, NEXT_PUBLIC_APP_URL.
+NEED FROM EVE: no
+LIVE URL: https://apex-hq-five.vercel.app
+--- END HANDOFF ---
+
 # Apex HQ — Build Spec (Module 0.1)
 
 Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
