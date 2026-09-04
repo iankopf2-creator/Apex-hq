@@ -1,7 +1,7 @@
 /**
  * Theme AI module — importable theme tokens + generators.
  * Optional wiring: PublicSite applies cssVars when niche matches.
- * See docs/THEME_LEAD_MAGNET_PROTOCOL.md for mobile-first / WCAG notes.
+ * See docs/THEME_LEAD_MAGNET_PROTOCOL.md and docs/THEME_AI.md.
  */
 export * from "./configs";
 export * from "./ab";
