@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: dashboard shell polish (stats + Stripe status names-only + demo always listed)
+DONE: niche-aware free audit estimates + CRM status API (still ESTIMATES ONLY)
 NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no

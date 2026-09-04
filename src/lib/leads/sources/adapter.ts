@@ -1,6 +1,5 @@
 /**
- * Lead source adapter interface — NO real Google/Yelp scraping yet.
- * Mock fixture adapter returns 2–3 sample public-style leads marked as fixtures.
+ * Lead source adapter — NO real Google/Yelp scraping yet.
  */
 import type { Lead, LeadSource } from "../types";
 
@@ -18,13 +17,10 @@ export type RawLeadCandidate = {
 
 export interface LeadSourceAdapter {
   id: LeadSource;
-  /** Human-readable name */
   label: string;
-  /** Fetch candidates — real adapters not implemented */
   fetchCandidates(): Promise<RawLeadCandidate[]>;
 }
 
-/** Fixture samples — clearly marked; not scraped; not real outreach targets. */
 export const FIXTURE_LEADS: RawLeadCandidate[] = [
   {
     businessName: "[FIXTURE] Sample HVAC Co — No Website",
@@ -58,6 +54,49 @@ export const FIXTURE_LEADS: RawLeadCandidate[] = [
     source: "fixture",
     isFixture: true,
   },
+  {
+    businessName: "[FIXTURE] Sample Trucking LLC — Maps Pin Only",
+    niche: "trucking",
+    city: "Kansas City",
+    phone: "+1-555-0104",
+    email: "fixture-trucking@example.com",
+    website: null,
+    listingNote: "call for hours · no quote form",
+    source: "fixture",
+    isFixture: true,
+  },
+  {
+    businessName: "[FIXTURE] Sample Electrician — Call for Hours",
+    niche: "electrician",
+    city: "St. Louis",
+    phone: "+1-555-0106",
+    email: "fixture-electric@example.com",
+    website: null,
+    listingNote: "call for hours",
+    source: "fixture",
+    isFixture: true,
+  },
+  {
+    businessName: "[FIXTURE] Sample Roofing Co — Maps Only",
+    niche: "roofing",
+    city: "Springfield",
+    phone: "+1-555-0107",
+    website: null,
+    listingNote: "call for hours · no online estimate",
+    source: "fixture",
+    isFixture: true,
+  },
+  {
+    businessName: "[FIXTURE] Already-Has-Site HVAC",
+    niche: "hvac",
+    city: "Dallas",
+    phone: "+1-555-0105",
+    email: "fixture-hassite@example.com",
+    website: "https://example-hvac.example",
+    listingNote: "full website + online booking",
+    source: "fixture",
+    isFixture: true,
+  },
 ];
 
 export const mockFixtureAdapter: LeadSourceAdapter = {
@@ -68,13 +107,11 @@ export const mockFixtureAdapter: LeadSourceAdapter = {
   },
 };
 
-/** Stub adapters for future sources — throw / empty until implemented. */
 function stubAdapter(id: LeadSource, label: string): LeadSourceAdapter {
   return {
     id,
     label,
     async fetchCandidates() {
-      // NO real scraping — return empty and rely on fixtures for demos
       return [];
     },
   };
@@ -92,7 +129,9 @@ export const SOURCE_ADAPTERS: LeadSourceAdapter[] = [
   yelpStubAdapter,
 ];
 
-export async function loadFixtureCandidatesAsLeads(): Promise<Omit<Lead, "id" | "fitScore" | "status" | "optedOut" | "createdAt" | "updatedAt">[]> {
+export async function loadFixtureCandidatesAsLeads(): Promise<
+  Omit<Lead, "id" | "fitScore" | "status" | "optedOut" | "createdAt" | "updatedAt">[]
+> {
   const candidates = await mockFixtureAdapter.fetchCandidates();
   return candidates.map((c) => ({
     businessName: c.businessName,

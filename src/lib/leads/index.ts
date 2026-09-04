@@ -5,3 +5,5 @@ export * from "./audit";
 export * from "./compliance";
 export * from "./outbound";
 export * from "./sources/adapter";
+export * from "./status";
+export * from "./templates";
