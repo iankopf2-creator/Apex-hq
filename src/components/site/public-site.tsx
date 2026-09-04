@@ -8,9 +8,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = { business: BusinessProfile };
 
+const TAP = 48; // Front Door UX research 2026-09-04 — prefer 48×48 tap targets
+
 /**
  * Public Front Door page. Optional Theme AI tokens applied via CSS vars when
  * a niche theme config exists (mobile-first / WCAG-minded contrast pairs).
+ * Hero uses credited niche stock imagery when the business has no custom photos.
+ * Sticky mobile dual CTA: call-first (HVAC/plumber) vs book-first (salon).
  */
 export function PublicSite({ business }: Props) {
   const template = getTemplate(business.niche);
@@ -18,9 +22,46 @@ export function PublicSite({ business }: Props) {
   const cta = template?.ctaLabel ?? "Book now";
   const hints = template?.heroHints ?? [];
   const cssVars = (theme?.cssVars ?? {}) as CSSProperties;
+  const customPhoto = business.photos[0];
+  const hero = theme?.heroImages?.[0];
+  const showStock = !customPhoto || customPhoto.includes("placeholders/");
+  const telHref = business.phone
+    ? "tel:" + business.phone.replace(/[^\d+]/g, "")
+    : null;
+  const bookHref = "/booking/" + business.slug;
+  const callFirst = theme?.copyTone.ctaPriority === "call";
+  const primaryStyle = theme
+    ? {
+        backgroundColor: theme.palette.primary,
+        color: theme.palette.primaryForeground,
+        minHeight: TAP,
+      }
+    : { minHeight: TAP };
+  const secondaryStyle = {
+    minHeight: TAP,
+  };
+
+  const CallBtn = ({ className }: { className?: string }) =>
+    telHref ? (
+      <Button asChild size="lg" style={callFirst ? primaryStyle : secondaryStyle} variant={callFirst ? "default" : "outline"} className={className}>
+        <a href={telHref}>Call now</a>
+      </Button>
+    ) : null;
+
+  const BookBtn = ({ className, size = "lg" as const }: { className?: string; size?: "sm" | "lg" }) => (
+    <Button
+      asChild
+      size={size}
+      style={!callFirst || !telHref ? primaryStyle : secondaryStyle}
+      variant={!callFirst || !telHref ? "default" : "outline"}
+      className={className}
+    >
+      <Link href={bookHref}>{cta}</Link>
+    </Button>
+  );
 
   return (
-    <div className="min-h-screen" style={cssVars}>
+    <div className="min-h-screen pb-24 sm:pb-0" style={cssVars}>
       <header className="border-b bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
           <div>
@@ -31,10 +72,13 @@ export function PublicSite({ business }: Props) {
             <ul className="flex flex-wrap items-center gap-3 text-sm">
               <li><a className="hover:underline" href="#services">Services</a></li>
               <li><a className="hover:underline" href="#hours">Hours</a></li>
-              <li>
-                <Button asChild size="sm">
-                  <Link href={"/booking/" + business.slug}>{cta}</Link>
-                </Button>
+              {telHref && (
+                <li className="hidden sm:list-item">
+                  <a className="font-medium hover:underline" href={telHref}>{business.phone}</a>
+                </li>
+              )}
+              <li className="hidden sm:list-item">
+                <BookBtn size="sm" />
               </li>
             </ul>
           </nav>
@@ -60,23 +104,69 @@ export function PublicSite({ business }: Props) {
                 {business.name}
               </h1>
               <p className="text-lg opacity-90">{business.tagline || template?.defaultTagline}</p>
-              <ul className="space-y-1 text-sm opacity-80">
+              {/* Trust strip — stars/licence pattern from UX research */}
+              <ul className="flex flex-wrap gap-2 text-xs sm:text-sm" aria-label="Trust signals">
                 {hints.map((h) => (
-                  <li key={h}>• {h}</li>
+                  <li
+                    key={h}
+                    className="rounded-full border border-white/30 bg-white/10 px-3 py-1"
+                  >
+                    {h}
+                  </li>
                 ))}
               </ul>
-              <Button asChild size="lg" variant="secondary">
-                <Link href={"/booking/" + business.slug}>{cta}</Link>
-              </Button>
+              <div className="flex flex-wrap gap-3 pt-1">
+                {callFirst && telHref ? (
+                  <>
+                    <CallBtn />
+                    <BookBtn />
+                  </>
+                ) : (
+                  <>
+                    <BookBtn />
+                    {telHref && <CallBtn />}
+                  </>
+                )}
+              </div>
             </div>
-            <div
-              className="flex min-h-[180px] items-end rounded-lg p-4 text-sm opacity-90"
-              style={{ backgroundColor: "rgba(0,0,0,0.25)" }}
-              role="img"
-              aria-label="Business photo placeholder"
-            >
-              {(business.photos[0] || "/placeholders/storefront.svg").replace(/^\//, "")}
-            </div>
+            <figure className="relative min-h-[180px] overflow-hidden rounded-lg bg-black/25">
+              {showStock && hero ? (
+                <>
+                  {/* Local niche JPEG — no remote hop for <2s target */}
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={hero.src}
+                    alt={hero.alt}
+                    className="h-full min-h-[180px] w-full object-cover"
+                    width={960}
+                    height={640}
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <figcaption className="absolute bottom-0 left-0 right-0 bg-black/55 px-3 py-1.5 text-[11px] leading-snug text-white/90">
+                    Photo:{" "}
+                    <a
+                      className="underline underline-offset-2 hover:text-white"
+                      href={hero.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {hero.credit}
+                    </a>
+                    {" · "}reference only
+                  </figcaption>
+                </>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={customPhoto || "/placeholders/storefront.svg"}
+                  alt=""
+                  className="h-full min-h-[180px] w-full object-cover"
+                  width={960}
+                  height={640}
+                />
+              )}
+            </figure>
           </div>
         </section>
 
@@ -119,12 +209,48 @@ export function PublicSite({ business }: Props) {
       <footer className="border-t">
         <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-8 text-sm text-muted-foreground sm:px-6">
           <p>{business.name} · {business.city}</p>
-          {business.phone && <p><a className="hover:underline" href={"tel:" + business.phone.replace(/[^\d+]/g, "")}>{business.phone}</a></p>}
+          {business.phone && (
+            <p>
+              <a className="hover:underline" href={telHref ?? undefined}>{business.phone}</a>
+            </p>
+          )}
           <p>
             <Link className="underline-offset-4 hover:underline" href="/">Powered by Apex HQ</Link>
           </p>
         </div>
       </footer>
+
+      {/* Sticky mobile dual CTA — research: highest-leverage mobile pattern */}
+      <div
+        className="fixed inset-x-0 bottom-0 z-40 border-t bg-white/95 p-2 backdrop-blur sm:hidden"
+        style={{ paddingBottom: "max(0.5rem, env(safe-area-inset-bottom))" }}
+        role="region"
+        aria-label="Quick actions"
+      >
+        <div className="mx-auto flex max-w-5xl gap-2">
+          {callFirst && telHref ? (
+            <>
+              <Button asChild className="flex-1" style={primaryStyle}>
+                <a href={telHref}>Call now</a>
+              </Button>
+              <Button asChild variant="outline" className="flex-1" style={secondaryStyle}>
+                <Link href={bookHref}>{cta}</Link>
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button asChild className="flex-1" style={primaryStyle}>
+                <Link href={bookHref}>{cta}</Link>
+              </Button>
+              {telHref && (
+                <Button asChild variant="outline" className="flex-1" style={secondaryStyle}>
+                  <a href={telHref}>Call</a>
+                </Button>
+              )}
+            </>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

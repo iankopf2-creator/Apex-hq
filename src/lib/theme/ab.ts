@@ -100,3 +100,32 @@ export async function declareAbWinner(
   });
   return next;
 }
+
+
+/** Deterministic A/B pick for a 7-day stub window (no live traffic router yet). */
+export function pickAbVariant(
+  experiment: Pick<AbExperiment, "startDate" | "endDate" | "winner" | "status">,
+  at: Date = new Date()
+): AbVariant {
+  if (experiment.status === "completed" && experiment.winner) {
+    return experiment.winner;
+  }
+  const start = new Date(experiment.startDate).getTime();
+  const day = Math.floor((at.getTime() - start) / (24 * 60 * 60 * 1000));
+  // Alternate by day index inside the window
+  return day % 2 === 0 ? "A" : "B";
+}
+
+/** True while the 7-day stub window is open. */
+export function isAbWindowOpen(
+  experiment: Pick<AbExperiment, "startDate" | "endDate" | "status">,
+  at: Date = new Date()
+): boolean {
+  if (experiment.status !== "running") return false;
+  const start = new Date(experiment.startDate).getTime();
+  const end = experiment.endDate
+    ? new Date(experiment.endDate).getTime()
+    : start + 7 * 24 * 60 * 60 * 1000;
+  const t = at.getTime();
+  return t >= start && t <= end;
+}
