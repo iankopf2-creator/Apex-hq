@@ -59,8 +59,7 @@ export function CheckoutButton({
           Stripe not configured
         </Button>
         <p className="text-xs text-muted-foreground">
-          Set STRIPE_SECRET_KEY, NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
-          STRIPE_PRICE_STARTER, NEXT_PUBLIC_APP_URL in Vercel, then redeploy.
+          Checkout unlocks after payments are configured. See the dashboard for setup.
         </p>
       </div>
     );

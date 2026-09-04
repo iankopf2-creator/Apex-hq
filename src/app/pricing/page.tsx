@@ -2,8 +2,6 @@ import Link from "next/link";
 import {
   STRIPE_TIERS,
   isStripeConfigured,
-  missingStripeEnvVars,
-  REQUIRED_STRIPE_ENV_VARS,
 } from "@/lib/stripe";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckoutButton } from "@/components/pricing/checkout-button";
@@ -18,7 +16,6 @@ type Props = {
 
 export default function PricingPage({ searchParams }: Props) {
   const stripeReady = isStripeConfigured();
-  const missing = missingStripeEnvVars();
   const checkoutStatus = searchParams?.checkout;
   const slug = searchParams?.slug;
 
@@ -37,22 +34,16 @@ export default function PricingPage({ searchParams }: Props) {
         {!stripeReady && (
           <div
             role="status"
-            className="rounded-md border border-dashed bg-muted/40 px-3 py-3 text-sm space-y-2"
+            className="rounded-md border border-dashed bg-muted/40 px-3 py-3 text-sm"
           >
             <p className="text-muted-foreground">
-              Subscription checkout will unlock once Stripe is configured for this deployment.
-              Owners can confirm setup from the{" "}
+              Subscription checkout will unlock once payments are configured for this
+              deployment. Setup details stay on the{" "}
               <Link href="/dashboard" className="underline-offset-4 hover:underline">
                 dashboard
               </Link>
               .
             </p>
-            {missing.length > 0 ? (
-              <p className="text-xs text-muted-foreground">
-                Setup checklist uses env names only (no secret values):{" "}
-                {REQUIRED_STRIPE_ENV_VARS.join(", ")}.
-              </p>
-            ) : null}
           </div>
         )}
         {checkoutStatus === "success" && (

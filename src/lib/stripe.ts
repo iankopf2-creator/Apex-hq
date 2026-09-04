@@ -25,7 +25,7 @@ export const STRIPE_TIERS = [
     name: "Pro",
     priceMonthly: 199,
     priceEnv: "STRIPE_PRICE_PRO",
-    features: ["Everything in Growth", "Voice AI (stub)", "Priority onboarding"],
+    features: ["Everything in Growth", "Priority onboarding", "Advanced add-ons later"],
   },
 ] as const;
 
