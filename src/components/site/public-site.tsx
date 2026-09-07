@@ -6,22 +6,18 @@ import { getNicheThemeConfig } from "@/lib/theme/configs";
 import {
   getPublicPhoneDigits,
   getPublicPhoneDisplay,
-  isCallFirstNiche,
 } from "@/lib/public-phone";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 type Props = { business: BusinessProfile };
 
+const TAP = "min-h-12 min-w-[48px]";
+
 /**
- * Public Front Door page. Optional Theme AI tokens applied via CSS vars when
- * a niche theme config exists (mobile-first / WCAG-minded contrast pairs).
- *
- * CTA rules (Research + QA):
- * - Call-first niches (HVAC/plumber/electrical/roofing/pest): sticky Call primary.
- * - Salon: Book primary, Call secondary when a public number exists.
- * - tel: uses trackingPhone || phone only — never lsaPhone.
- * - No CallRail snippet unless callTrackingOptIn.
+ * Public Front Door. Theme tokens via CSS vars; credited niche stock when no
+ * custom photos. Sticky dual CTA uses theme ctaPriority (call_first / book_first /
+ * hybrid). tel: uses trackingPhone || phone only — never lsaPhone.
  */
 export function PublicSite({ business }: Props) {
   const template = getTemplate(business.niche);
@@ -29,46 +25,65 @@ export function PublicSite({ business }: Props) {
   const bookLabel = template?.ctaLabel ?? "Book now";
   const hints = template?.heroHints ?? [];
   const cssVars = (theme?.cssVars ?? {}) as CSSProperties;
-  const callFirst = isCallFirstNiche(business.niche);
+  const customPhoto = business.photos[0];
+  const hero = theme?.heroImages?.[0];
+  const showStock = !customPhoto || customPhoto.includes("placeholders/");
   const phoneDigits = getPublicPhoneDigits(business);
   const phoneDisplay = getPublicPhoneDisplay(business);
   const telHref = phoneDigits ? "tel:" + phoneDigits : null;
   const bookHref = "/booking/" + business.slug;
-  // lsaPhone must never appear in HTML (ops/LSA destination only).
-  // CallRail JS snippet intentionally omitted unless callTrackingOptIn — not injected here.
+  const mode = theme?.copyTone.ctaPriority ?? "book_first";
+  const callPrimary = mode === "call_first";
+  // hybrid + book_first: book leads; call secondary when present
+  const bookPrimary = !callPrimary;
 
-  const callButton = telHref ? (
-    <Button asChild size="lg" className="min-h-12 min-w-[48px] flex-1 sm:flex-none">
+  const primaryStyle = theme
+    ? {
+        backgroundColor: theme.palette.primary,
+        color: theme.palette.primaryForeground,
+      }
+    : undefined;
+  const accentStyle = theme
+    ? {
+        backgroundColor: theme.palette.accent,
+        color: theme.palette.accentForeground,
+      }
+    : undefined;
+
+  const callBtn = telHref ? (
+    <Button
+      asChild
+      size="lg"
+      className={`${TAP} flex-1 sm:flex-none`}
+      style={callPrimary ? primaryStyle : undefined}
+      variant={callPrimary ? "default" : "secondary"}
+    >
       <a href={telHref}>Call now</a>
     </Button>
   ) : null;
 
-  const bookButton = (
+  const bookBtn = (
     <Button
       asChild
       size="lg"
-      variant={callFirst && telHref ? "secondary" : "default"}
-      className="min-h-12 min-w-[48px] flex-1 sm:flex-none"
+      className={`${TAP} flex-1 sm:flex-none`}
+      style={bookPrimary || !telHref ? primaryStyle : undefined}
+      variant={bookPrimary || !telHref ? "default" : "secondary"}
     >
       <Link href={bookHref}>{bookLabel}</Link>
     </Button>
   );
 
-  const heroPrimary = callFirst && callButton ? callButton : bookButton;
+  const heroPrimary = callPrimary && callBtn ? callBtn : bookBtn;
   const heroSecondary =
-    callFirst && callButton
-      ? bookButton
-      : callButton
-        ? (
-            <Button asChild size="lg" variant="secondary" className="min-h-12 min-w-[48px] flex-1 sm:flex-none">
-              <a href={telHref!}>Call now</a>
-            </Button>
-          )
+    callPrimary && callBtn
+      ? bookBtn
+      : callBtn
+        ? callBtn
         : null;
 
   return (
     <div className="min-h-screen pb-24" style={cssVars}>
-      {/* scroll-padding so sticky CTA does not obscure focused controls */}
       <style>{`html { scroll-padding-bottom: 6rem; }`}</style>
       <header className="border-b bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
@@ -89,12 +104,12 @@ export function PublicSite({ business }: Props) {
                 </a>
               </li>
               <li className="hidden sm:block">
-                {callFirst && telHref ? (
-                  <Button asChild size="sm" className="min-h-11">
+                {callPrimary && telHref ? (
+                  <Button asChild size="sm" className="min-h-11" style={primaryStyle}>
                     <a href={telHref}>Call</a>
                   </Button>
                 ) : (
-                  <Button asChild size="sm" className="min-h-11">
+                  <Button asChild size="sm" className="min-h-11" style={primaryStyle}>
                     <Link href={bookHref}>{bookLabel}</Link>
                   </Button>
                 )}
@@ -107,10 +122,12 @@ export function PublicSite({ business }: Props) {
       <main id="main">
         <section
           className="text-white"
-          style={{
-            backgroundColor: theme?.palette.accent ?? "#0f172a",
-            color: theme?.palette.accentForeground ?? "#ffffff",
-          }}
+          style={
+            accentStyle ?? {
+              backgroundColor: "#0f172a",
+              color: "#ffffff",
+            }
+          }
           aria-labelledby="hero-heading"
         >
           <div className="mx-auto grid max-w-5xl gap-8 px-4 py-14 sm:grid-cols-2 sm:px-6">
@@ -123,23 +140,53 @@ export function PublicSite({ business }: Props) {
                 {business.name}
               </h1>
               <p className="text-lg opacity-90">{business.tagline || template?.defaultTagline}</p>
-              <ul className="space-y-1 text-sm opacity-80" aria-label="Highlights">
-                {hints.map((h) => (
-                  <li key={h}>• {h}</li>
+              <ul className="flex flex-wrap gap-2 text-xs" aria-label="Trust">
+                {hints.slice(0, 3).map((h) => (
+                  <li
+                    key={h}
+                    className="rounded-full bg-black/25 px-3 py-1 opacity-95"
+                  >
+                    {h}
+                  </li>
                 ))}
               </ul>
               <div className="flex flex-wrap gap-3">
                 {heroPrimary}
-                {heroSecondary}
+                {heroSecondary && heroSecondary !== heroPrimary ? heroSecondary : null}
               </div>
             </div>
             <div
-              className="flex min-h-[180px] items-end rounded-lg p-4 text-sm opacity-90"
+              className="relative flex min-h-[180px] items-end overflow-hidden rounded-lg text-sm"
               style={{ backgroundColor: "rgba(0,0,0,0.25)" }}
-              role="img"
-              aria-label="Business photo placeholder"
             >
-              {(business.photos[0] || "/placeholders/storefront.svg").replace(/^\//, "")}
+              {showStock && hero?.src ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={hero.src}
+                  alt={hero.alt || `${business.niche} trade photo`}
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : (
+                <p className="relative z-10 p-4 opacity-90">
+                  {(customPhoto || "/placeholders/storefront.svg").replace(/^\//, "")}
+                </p>
+              )}
+              {showStock && hero?.credit ? (
+                <p className="relative z-10 w-full bg-black/50 p-2 text-[10px] opacity-90">
+                  {hero.sourceUrl ? (
+                    <a
+                      className="underline-offset-2 hover:underline"
+                      href={hero.sourceUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {hero.credit}
+                    </a>
+                  ) : (
+                    hero.credit
+                  )}
+                </p>
+              ) : null}
             </div>
           </div>
         </section>
@@ -208,29 +255,28 @@ export function PublicSite({ business }: Props) {
         </div>
       </footer>
 
-      {/* Sticky mobile dual CTA — max 2 actions, ~48px taps, reserves bottom space via pb-24 */}
       <div
         className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 p-3 backdrop-blur supports-[backdrop-filter]:bg-background/80 sm:hidden"
         role="region"
         aria-label="Quick actions"
       >
         <div className="mx-auto flex max-w-5xl gap-3">
-          {callFirst && telHref ? (
+          {callPrimary && telHref ? (
             <>
-              <Button asChild className="min-h-12 min-w-[48px] flex-1">
+              <Button asChild className={`${TAP} flex-1`} style={primaryStyle}>
                 <a href={telHref}>Call now</a>
               </Button>
-              <Button asChild variant="secondary" className="min-h-12 min-w-[48px] flex-1">
+              <Button asChild variant="secondary" className={`${TAP} flex-1`}>
                 <Link href={bookHref}>{bookLabel}</Link>
               </Button>
             </>
           ) : (
             <>
-              <Button asChild className="min-h-12 min-w-[48px] flex-1">
+              <Button asChild className={`${TAP} flex-1`} style={primaryStyle}>
                 <Link href={bookHref}>{bookLabel}</Link>
               </Button>
               {telHref ? (
-                <Button asChild variant="secondary" className="min-h-12 min-w-[48px] flex-1">
+                <Button asChild variant="secondary" className={`${TAP} flex-1`}>
                   <a href={telHref}>Call now</a>
                 </Button>
               ) : null}
