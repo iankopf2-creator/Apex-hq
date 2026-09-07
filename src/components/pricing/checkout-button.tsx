@@ -56,10 +56,11 @@ export function CheckoutButton({
     return (
       <div className="space-y-2">
         <Button type="button" className={className} disabled variant="secondary">
-          Stripe not configured
+          Checkout unavailable
         </Button>
         <p className="text-xs text-muted-foreground">
-          Checkout unlocks after payments are configured. See the dashboard for setup.
+          Want a walkthrough? Start free onboarding or open the demo. Billing unlocks after
+          payments are configured.
         </p>
       </div>
     );
@@ -73,7 +74,7 @@ export function CheckoutButton({
         disabled={loading}
         onClick={startCheckout}
       >
-        {loading ? "Redirecting…" : `Choose ${tierName}`}
+        {loading ? "Redirecting…" : tierId === "starter" ? "Start Starter — $49/mo" : `Choose ${tierName}`}
       </Button>
       {error && (
         <p role="alert" className="text-xs text-destructive">

@@ -109,11 +109,11 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
             ESTIMATE report
           </p>
           <CardTitle className="text-xl sm:text-2xl">
-            Missed-call snapshot for {result.lead?.businessName ?? "your business"}
+            Your missed-call ESTIMATE
           </CardTitle>
           <CardDescription>
-            Figures below are labeled ESTIMATES — illustrative projections, not measured
-            lost revenue or guarantees.
+            Below is an ESTIMATE for {result.lead?.businessName ?? "your business"} based on niche
+            placeholders and your inputs. Treat it as a planning snapshot, not a promise.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -124,7 +124,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
           >
             <div className="rounded-lg border bg-muted/40 p-4">
               <p className="text-xs font-medium uppercase text-muted-foreground">
-                ESTIMATE · missed calls / month
+                ESTIMATED missed calls / month
               </p>
               <p className="mt-1 text-3xl font-bold tabular-nums">
                 {report.estimatedMissedCallsPerMonth}
@@ -132,7 +132,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
             </div>
             <div className="rounded-lg border bg-muted/40 p-4">
               <p className="text-xs font-medium uppercase text-muted-foreground">
-                ESTIMATE · lost revenue / month
+                ESTIMATED revenue at risk / month
               </p>
               <p className="mt-1 text-3xl font-bold tabular-nums">
                 ${report.estimatedLostRevenueUsd.toLocaleString("en-US")}
@@ -152,11 +152,14 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button asChild size="lg" className="min-h-12">
               <Link href={DEMO_URL} target="_blank" rel="noopener noreferrer">
-                See Front Door demo
+                Preview a Front Door demo
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg" className="min-h-12">
-              <Link href="/pricing">View pricing</Link>
+              <Link href="/pricing">See Starter pricing</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg" className="min-h-12">
+              <Link href="/onboarding">Start onboarding (free preview)</Link>
             </Button>
             <Button
               type="button"
@@ -179,10 +182,10 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl sm:text-2xl">Free missed-call revenue snapshot</CardTitle>
+        <CardTitle className="text-xl sm:text-2xl">Free missed-call revenue ESTIMATE</CardTitle>
         <CardDescription>
-          About two minutes. We return an ESTIMATE-labeled report — assumptions visible, no live
-          SMS or email from this page. If leakage looks low, the numbers will say so.
+          About two minutes. We return an ESTIMATE-labeled snapshot with the math assumptions shown.
+          If leakage looks low, the numbers will say so.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -316,7 +319,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
             className="min-h-12 w-full sm:w-auto"
             disabled={submitting || businessName.trim().length < 2 || city.trim().length < 2}
           >
-            {submitting ? "Generating ESTIMATE…" : "Get free ESTIMATE snapshot"}
+            {submitting ? "Building your ESTIMATE…" : "Get free ESTIMATE snapshot"}
           </Button>
         </form>
       </CardContent>
