@@ -4,6 +4,24 @@ import { appendActionLog } from "@/lib/action-log";
 
 const PROD_DEMO = "https://apex-hq-five.vercel.app";
 
+/** Conservative miss-rate used for ESTIMATES ONLY projections. */
+export const AUDIT_MISS_RATE = 0.3;
+
+/**
+ * Niche placeholder job USD for demo math (not Apex measurements).
+ * Unknown niches fall back to DEFAULT_JOB_USD.
+ */
+export const NICHE_JOB_USD: Record<string, number> = {
+  hvac: 275,
+  plumber: 225,
+  salon: 85,
+  trucking: 150,
+  electrician: 200,
+  roofing: 350,
+};
+
+export const DEFAULT_JOB_USD = 120;
+
 function resolveDemoLink(): string {
   const raw = process.env.NEXT_PUBLIC_APP_URL?.replace(/\/$/, "") || "";
   if (!raw || /localhost|127\.0\.0\.1/i.test(raw)) return PROD_DEMO;
@@ -17,7 +35,7 @@ function resolveDemoLink(): string {
  * republished by call-tracking vendors). CONSERVATIVE 30% miss rate —
  * NOT measured Apex HQ data. Job values are niche placeholders for demos.
  */
-const DISCLAIMER =
+export const AUDIT_DISCLAIMER =
   "ESTIMATES ONLY — illustrative projections using a conservative ~30% missed-call assumption within commonly cited public SMB ranges (~25–62%), not Apex HQ measurements or guarantees. Sources are vendor-republished industry summaries, not audited studies we independently verified.";
 
 const NICHE_FIX: Record<string, string> = {
@@ -35,16 +53,7 @@ const NICHE_FIX: Record<string, string> = {
     "Add storm/estimate request form + real hours — stop losing insurance jobs to the contractor with a form.",
 };
 
-const NICHE_JOB_USD: Record<string, number> = {
-  hvac: 275,
-  plumber: 225,
-  salon: 85,
-  trucking: 150,
-  electrician: 200,
-  roofing: 350,
-};
-
-function personalizedFix(lead: Lead, demoLink: string): string {
+function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {
   const niche = (lead.niche || "").toLowerCase();
   const tip =
     NICHE_FIX[niche] ||
@@ -52,27 +61,62 @@ function personalizedFix(lead: Lead, demoLink: string): string {
   return `${tip} Apex HQ demo: ${demoLink}/s/demo-dallas-hvac · start yours: ${demoLink}/onboarding`;
 }
 
-export async function generateAuditReport(lead: Lead): Promise<AuditReport> {
+/** Pure audit estimate math — no store/log I/O. */
+export type AuditEstimate = {
+  missRate: number;
+  inboundAssumed: number;
+  estimatedMissedCallsPerMonth: number;
+  jobUsd: number;
+  estimatedLostRevenueUsd: number;
+  demoLink: string;
+  disclaimer: string;
+  personalizedFix: string;
+  confidence: number;
+};
+
+/**
+ * Pure estimate contract for Vitest / QA regression.
+ * Same math previously inline in generateAuditReport.
+ */
+export function computeAuditEstimate(
+  lead: Pick<Lead, "niche" | "fitScore">
+): AuditEstimate {
   const demoLink = resolveDemoLink();
   const niche = (lead.niche || "").toLowerCase();
   const inboundAssumed = 28 + Math.round(lead.fitScore / 5);
-  const missRate = 0.3;
+  const missRate = AUDIT_MISS_RATE;
   const estimatedMissedCallsPerMonth = Math.max(
     6,
     Math.round(inboundAssumed * missRate)
   );
-  const job = NICHE_JOB_USD[niche] ?? 120;
-  const estimatedLostRevenueUsd = estimatedMissedCallsPerMonth * job;
+  const jobUsd = NICHE_JOB_USD[niche] ?? DEFAULT_JOB_USD;
+  const estimatedLostRevenueUsd = estimatedMissedCallsPerMonth * jobUsd;
+
+  return {
+    missRate,
+    inboundAssumed,
+    estimatedMissedCallsPerMonth,
+    jobUsd,
+    estimatedLostRevenueUsd,
+    demoLink,
+    disclaimer: AUDIT_DISCLAIMER,
+    personalizedFix: personalizedFix(lead, demoLink),
+    confidence: Math.min(0.72, 0.38 + lead.fitScore / 220),
+  };
+}
+
+export async function generateAuditReport(lead: Lead): Promise<AuditReport> {
+  const estimate = computeAuditEstimate(lead);
 
   const report: AuditReport = {
     id: crypto.randomUUID(),
     leadId: lead.id,
-    estimatedMissedCallsPerMonth,
-    estimatedLostRevenueUsd,
-    personalizedFix: personalizedFix(lead, demoLink),
-    demoLink,
-    confidence: Math.min(0.72, 0.38 + lead.fitScore / 220),
-    disclaimer: DISCLAIMER,
+    estimatedMissedCallsPerMonth: estimate.estimatedMissedCallsPerMonth,
+    estimatedLostRevenueUsd: estimate.estimatedLostRevenueUsd,
+    personalizedFix: estimate.personalizedFix,
+    demoLink: estimate.demoLink,
+    confidence: estimate.confidence,
+    disclaimer: estimate.disclaimer,
     createdAt: new Date().toISOString(),
   };
 
@@ -88,14 +132,14 @@ export async function generateAuditReport(lead: Lead): Promise<AuditReport> {
     agent: "lead-magnet",
     action: "audit_generate",
     confidence: report.confidence,
-    notes: `Audit for ${lead.businessName} (estimates; missRate=${missRate})`,
+    notes: `Audit for ${lead.businessName} (estimates; missRate=${estimate.missRate})`,
     meta: {
       leadId: lead.id,
       auditId: report.id,
       niche: lead.niche,
-      inboundAssumed,
-      missRate,
-      jobUsd: job,
+      inboundAssumed: estimate.inboundAssumed,
+      missRate: estimate.missRate,
+      jobUsd: estimate.jobUsd,
     },
   });
 
