@@ -30,6 +30,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme/action-log JSON store Vercel-safe (`shared/json-store.ts`; live verified 2026-09-04)
 - [x] Lead Magnet Engine scaffolded
 - [x] Public Free Audit page (`/audit`, `/audit/[slug]`) — ESTIMATE report + demo/pricing CTAs
+- [x] Creator audit/Starter copy pack (Ian-approved ESTIMATE honesty + Stripe-dark CTAs)
 - [x] Free audit lead-magnet UX polish (dollarize headline, ESTIMATE trust copy, 48px CTAs)
 - [x] Audit/pricing regression tests (Vitest: stripe tiers/gates + audit estimate math)
 - [x] Call AI dry-run stub (CALL_AI_LIVE=false; HVAC receptionist script pack; no live dials)

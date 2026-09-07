@@ -24,12 +24,13 @@ export default function PricingPage({ searchParams }: Props) {
       <header className="mb-8 space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">Pricing</h1>
         <p className="text-muted-foreground">
-          Starter $49 · Growth $99 · Pro $199 / month. Payments go through Stripe Checkout only.
+          Starter $49 · Growth $99 · Pro $199 / month. Intended pricing — charges only when
+          checkout is live.
         </p>
         <p className="text-sm">
           {stripeReady
-            ? "Stripe configured — checkout sessions create live Stripe subscriptions."
-            : "Checkout unavailable — payment provider not configured."}
+            ? "Secure checkout via Stripe. Starter $49/mo · Growth $99/mo · Pro $199/mo."
+            : "Checkout unavailable — payment provider not configured. Plans below show intended pricing; you cannot be charged from this page until checkout is live."}
         </p>
         {!stripeReady && (
           <div
@@ -37,8 +38,8 @@ export default function PricingPage({ searchParams }: Props) {
             className="rounded-md border border-dashed bg-muted/40 px-3 py-3 text-sm"
           >
             <p className="text-muted-foreground">
-              Subscription checkout will unlock once payments are configured for this
-              deployment. Setup details stay on the{" "}
+              Payments are not configured yet. You can preview onboarding and demos now; $49/mo
+              checkout unlocks after the payment provider is set up. Ops details stay on the{" "}
               <Link href="/dashboard" className="underline-offset-4 hover:underline">
                 dashboard
               </Link>

@@ -7,7 +7,13 @@ export const STRIPE_TIERS = [
     name: "Starter",
     priceMonthly: 49,
     priceEnv: "STRIPE_PRICE_STARTER",
-    features: ["Branded site", "Basic booking form", "Email leads"],
+    features: [
+      "Branded /s/[slug] site for your niche and city",
+      "Mobile-first layout with clear call and form paths",
+      "Basic booking form for service requests",
+      "Email lead notifications (when you connect your inbox settings)",
+      "Onboarding wizard to stand up a preview without code",
+    ],
   },
   {
     id: "growth",

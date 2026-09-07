@@ -11,15 +11,15 @@ export default function HomePage() {
           Local Business Front Door
         </h1>
         <p className="max-w-2xl text-muted-foreground">
-          Spin up a mobile-first branded site, capture leads, and take bookings for HVAC,
+          Spin up a mobile-first branded site, capture leads, and take booking requests for HVAC,
           plumbers, salons, and more — templated, not hardcoded.
         </p>
         <div className="flex flex-wrap gap-3">
           <Button asChild size="lg">
-            <Link href="/onboarding">Start onboarding</Link>
+            <Link href="/audit">Free ESTIMATE audit</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
-            <Link href="/audit">Free audit</Link>
+            <Link href="/onboarding">Start onboarding</Link>
           </Button>
           <Button asChild variant="outline" size="lg">
             <Link href="/pricing">View pricing</Link>
@@ -35,9 +35,10 @@ export default function HomePage() {
       <section aria-labelledby="routes-heading" className="grid gap-4 sm:grid-cols-2">
         <h2 id="routes-heading" className="sr-only">Key routes</h2>
         {[
-          { href: "/audit", title: "Free audit", desc: "Lead magnet ESTIMATE report — no live outreach" },
+          { href: "/audit", title: "Free ESTIMATE audit", desc: "Illustrative missed-call / revenue snapshot — no live outreach" },
           { href: "/onboarding", title: "Onboarding wizard", desc: "Name, niche, city, hours, services, photos" },
-          { href: "/s/demo-dallas-hvac", title: "Public site", desc: "/s/[slug] branded front door" },
+          { href: "/pricing", title: "Starter from $49/mo", desc: "Intended plans; checkout only when payments are configured" },
+          { href: "/s/demo-dallas-hvac", title: "Public Front Door", desc: "Branded /s/[slug] preview" },
           { href: "/booking/demo-dallas-hvac", title: "Booking", desc: "Stub booking flow per slug" },
           { href: "/dashboard", title: "Dashboard", desc: "Owner stub — Module 0.1 shell only" },
         ].map((item) => (
