@@ -150,19 +150,19 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
           </p>
 
           <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Button asChild size="lg" className="min-h-11">
+            <Button asChild size="lg" className="min-h-12">
               <Link href={DEMO_URL} target="_blank" rel="noopener noreferrer">
                 See Front Door demo
               </Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="min-h-11">
+            <Button asChild variant="outline" size="lg" className="min-h-12">
               <Link href="/pricing">View pricing</Link>
             </Button>
             <Button
               type="button"
               variant="secondary"
               size="lg"
-              className="min-h-11"
+              className="min-h-12"
               onClick={() => {
                 setResult(null);
                 setError(null);
@@ -179,10 +179,10 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-xl sm:text-2xl">Free missed-call audit</CardTitle>
+        <CardTitle className="text-xl sm:text-2xl">Free missed-call revenue snapshot</CardTitle>
         <CardDescription>
-          Enter a few public details. We return an ESTIMATE-labeled report — no live SMS or
-          email outreach from this page.
+          About two minutes. We return an ESTIMATE-labeled report — assumptions visible, no live
+          SMS or email from this page. If leakage looks low, the numbers will say so.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -204,7 +204,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
               value={businessName}
               onChange={(e) => setBusinessName(e.target.value)}
               placeholder="Acme Heating & Cooling"
-              className="min-h-11"
+              className="min-h-12"
             />
           </div>
 
@@ -214,7 +214,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
               <Select value={niche || undefined} onValueChange={setNiche}>
                 <SelectTrigger
                   id={`${formId}-niche`}
-                  className="min-h-11"
+                  className="min-h-12"
                   aria-label="Business niche"
                 >
                   <SelectValue placeholder="Select niche" />
@@ -247,7 +247,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
                 placeholder="St. Louis"
-                className="min-h-11"
+                className="min-h-12"
               />
             </div>
           </div>
@@ -265,7 +265,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="(555) 555-0100"
-                className="min-h-11"
+                className="min-h-12"
               />
             </div>
             <div className="space-y-2">
@@ -280,7 +280,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
                 placeholder="https://example.com"
-                className="min-h-11"
+                className="min-h-12"
               />
             </div>
           </div>
@@ -293,7 +293,7 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
               value={listingNote}
               onChange={(e) => setListingNote(e.target.value)}
               placeholder='e.g. "call for hours" or no website listed'
-              className="min-h-11"
+              className="min-h-12"
             />
             <p id={`${formId}-note-hint`} className="text-xs text-muted-foreground">
               Optional public listing hint used only for ESTIMATE scoring — not sent outbound.
@@ -313,10 +313,10 @@ export function FreeAuditForm({ defaultNiche = "", defaultCity = "" }: Props) {
           <Button
             type="submit"
             size="lg"
-            className="min-h-11 w-full sm:w-auto"
+            className="min-h-12 w-full sm:w-auto"
             disabled={submitting || businessName.trim().length < 2 || city.trim().length < 2}
           >
-            {submitting ? "Generating ESTIMATE…" : "Get free ESTIMATE audit"}
+            {submitting ? "Generating ESTIMATE…" : "Get free ESTIMATE snapshot"}
           </Button>
         </form>
       </CardContent>
