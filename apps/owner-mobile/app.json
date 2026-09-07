@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "Apex Owner",
+    "slug": "apex-owner-mobile",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "scheme": "apex-owner",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": false,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.apexhq.owner.stub"
+    },
+    "android": {
+      "package": "com.apexhq.owner.stub"
+    },
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "phase": "0-stub",
+      "storeSubmitAllowed": false
+    }
+  }
+}
