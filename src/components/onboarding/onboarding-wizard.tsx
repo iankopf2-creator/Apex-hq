@@ -216,12 +216,24 @@ export function OnboardingWizard() {
                 Template: {template.label} — {template.defaultTagline}
               </p>
             )}
+            {niche === "hvac" && (
+              <p className="rounded-md border border-amber-200 bg-amber-50 px-3 py-2 text-sm text-amber-950">
+                No website yet? Hours plus dual Call/Book CTAs are the Front Door win for
+                HVAC. On the next step, edit the prefilled hours before you publish.
+              </p>
+            )}
           </div>
         )}
 
         {step === 2 && (
           <fieldset className="space-y-3">
             <legend className="text-sm font-medium">Hours</legend>
+            {niche === "hvac" && (
+              <p className="text-sm text-muted-foreground">
+                Confirm these hours before publish — callers and the sticky Call/Book bar
+                rely on them when you do not have a separate website yet.
+              </p>
+            )}
             {(Object.keys(hours) as (keyof BusinessHours)[]).map((day) => (
               <div key={day} className="grid grid-cols-[4rem_1fr] items-center gap-2">
                 <Label htmlFor={"hours-" + day} className="capitalize">

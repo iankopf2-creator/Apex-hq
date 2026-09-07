@@ -103,6 +103,13 @@ export function PublicSite({ business }: Props) {
                   Hours
                 </a>
               </li>
+              {business.city?.trim() ? (
+                <li>
+                  <a className="hover:underline" href="#service-area">
+                    Service area
+                  </a>
+                </li>
+              ) : null}
               <li className="hidden sm:block">
                 {callPrimary && telHref ? (
                   <Button asChild size="sm" className="min-h-11" style={primaryStyle}>
@@ -217,6 +224,24 @@ export function PublicSite({ business }: Props) {
             ))}
           </ul>
         </section>
+
+        {business.city?.trim() ? (
+          <section
+            id="service-area"
+            className="border-t bg-slate-50"
+            aria-labelledby="service-area-heading"
+          >
+            <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
+              <h2 id="service-area-heading" className="mb-4 text-2xl font-semibold">
+                Service area
+              </h2>
+              <p className="max-w-2xl text-sm text-muted-foreground">
+                Serving {business.city.trim()} and nearby areas. Call or book a visit to
+                confirm we cover your address.
+              </p>
+            </div>
+          </section>
+        ) : null}
 
         <section id="hours" className="border-t bg-white" aria-labelledby="hours-heading">
           <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
