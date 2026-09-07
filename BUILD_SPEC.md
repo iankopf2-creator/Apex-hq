@@ -17,6 +17,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] .env.example for all services
 - [x] Onboarding wizard at /onboarding
 - [x] Template library: HVAC, plumber, salon (config-driven)
+- [x] Theme niches through painting (+ heroes, CTA modes call_first/book_first/hybrid) on CallRail-safe public site
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
