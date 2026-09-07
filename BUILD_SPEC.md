@@ -31,6 +31,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Lead Magnet Engine scaffolded
 - [x] Public Free Audit page (`/audit`, `/audit/[slug]`) — ESTIMATE report + demo/pricing CTAs
 - [x] Free audit lead-magnet UX polish (dollarize headline, ESTIMATE trust copy, 48px CTAs)
+- [x] Call AI dry-run stub (CALL_AI_LIVE=false; HVAC receptionist script pack; no live dials)
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 
