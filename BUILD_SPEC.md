@@ -1,6 +1,6 @@
 --- EVE HANDOFF ---
-DONE: Call AI dry-run stub (PR #17; CALL_AI_LIVE=false hard gate); prior #15/#16 ships live; Stripe still dark
-NEXT: Ian Stripe Production env then re-verify $49
+DONE: niche-aware free audit estimates + CRM status API (still ESTIMATES ONLY)
+NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
@@ -32,7 +32,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Public Free Audit page (`/audit`, `/audit/[slug]`) — ESTIMATE report + demo/pricing CTAs
 - [x] Free audit lead-magnet UX polish (dollarize headline, ESTIMATE trust copy, 48px CTAs)
 - [x] Audit/pricing regression tests (Vitest: stripe tiers/gates + audit estimate math)
-- [x] Call AI dry-run stub (CALL_AI_LIVE=false **hard gate**; HVAC receptionist script pack; no live dials)
+- [x] Call AI dry-run stub (CALL_AI_LIVE=false; HVAC receptionist script pack; no live dials)
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 
