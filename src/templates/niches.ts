@@ -355,6 +355,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request callback",
     accentHint: "red",
   },
+  {
+    id: "fire_smoke",
+    label: "Fire / smoke restoration",
+    defaultTagline: "After the fire — call for board-up, soot, and water help",
+    defaultHours: {
+      mon: "24 hours — ask who answers",
+      tue: "24 hours — ask who answers",
+      wed: "24 hours — ask who answers",
+      thu: "24 hours — ask who answers",
+      fri: "24 hours — ask who answers",
+      sat: "24 hours — ask who answers",
+      sun: "24 hours — ask who answers",
+    },
+    defaultServices: [
+      { name: "Emergency Board-Up", description: "Secure openings and limit secondary loss", priceFrom: 0 },
+      { name: "Soot & Smoke Cleaning", description: "Structure and contents cleaning after fire", priceFrom: 0 },
+      { name: "Insurance Documentation Help", description: "Photos and paperwork support — not claim approval", priceFrom: 0 },
+    ],
+    heroHints: ["Board-up Day-1", "FSRT / IICRC when true", "Firefighting water treated as second loss"],
+    ctaLabel: "Request emergency callback",
+    accentHint: "red",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

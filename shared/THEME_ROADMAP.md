@@ -17,6 +17,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Janitorial / commercial cleaning — quote_first (softer trust palette; residential cleaning stays book_first)
 - Towing / roadside — call_first (hours honesty, no fake ETA)
 - Water damage / restoration — call_first + insurance-trust (IICRC when true)
+- Fire / smoke restoration — call_first + board-up / FSRT slot (IICRC when true)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes

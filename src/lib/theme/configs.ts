@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke";
 
 export type ThemePalette = {
   primary: string;
@@ -788,6 +788,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Restoration and construction work context",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1541888946425-d81bb19240f5",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  fire_smoke: {
+    niche: "fire_smoke",
+    label: "Fire / smoke restoration",
+    palette: {
+      primary: "#b91c1c",
+      primaryForeground: "#fef2f2",
+      accent: "#1c1917",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#fee2e2",
+      mutedForeground: "#991b1b",
+      border: "#fecaca",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "urgent, calm, insurance-aware — board-up first",
+      heroStyle: "post-fire call-first — board-up / secure, soot+water honesty, FSRT slot when true",
+      ctaStyle: "call now — secondary free inspection never equals the emergency line",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "coverage guarantees", "fake 24/7", "DIY soot wipe advice as substitute for call", "required photo upload"],
+    },
+    cssVars: {
+      "--theme-primary": "#b91c1c",
+      "--theme-primary-fg": "#fef2f2",
+      "--theme-accent": "#1c1917",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["IICRC FSRT slot when current", "Board-up / secure Day-1", "Insurance docs help — not claim approval"],
+    heroImages: [
+      {
+        src: "/niches/fire-smoke.jpg",
+        alt: "Construction and restoration work context after structural damage",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1503387762-592deb58ef4e",
         license: "unsplash",
       },
     ],

@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niches towing+water_damage (call_first) merged PR #23 (clean rebase of #14); prior garage+locksmith+janitorial PR #22; free audit estimates + CRM status API (ESTIMATES ONLY)
+DONE: theme niche fire_smoke (call_first) shipped; prior towing+water PR #23; garage+locksmith+janitorial PR #22; free audit estimates + CRM status API (ESTIMATES ONLY)
 NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -20,6 +20,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme niches through painting (+ heroes, CTA modes call_first/book_first/hybrid) on CallRail-safe public site
 - [x] Theme niches garage + locksmith (call_first) + janitorial (quote_first) — PR #22
 - [x] Theme niches towing + water_damage (call_first) — Builder clean rebase of #14
+- [x] Theme niche fire_smoke (call_first) — board-up / FSRT honesty
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
