@@ -2,21 +2,24 @@
 
 Ship unique visual identity per local trade. Each niche = palette + fonts + tone + credited hero + A/B verbs.
 
-## Live / in PR
+## Live on main
 - HVAC — cool ocean hero, sky CTA
 - Plumber — deep water navy, cyan CTA
 - Salon — deep rose, blush CTA
-- Trucking — fleet navy / amber (PR #2)
+- Trucking — fleet navy / amber
+- Electrician, Roofing, Landscaping, Auto detailing
+- Cleaning (residential book_first), Pest control, Moving
+- Painting — hybrid estimate/schedule (merged PR #15)
+
+## In this PR
+- Garage door — call_first emergency (hours honesty)
+- Locksmith — call_first emergency (TX DPS PSB hint when licensed)
+- Janitorial / commercial cleaning — quote_first (softer trust palette; residential cleaning stays book_first)
 
 ## Next high-ROI trades (US local SMB)
-1. Electrician — **in PR**
-2. Roofing — **in PR**
-3. Landscaping / lawn — **in PR**
-4. Auto repair / detailing — **in PR**
-5. Cleaning / janitorial — **in PR**
-6. Pest control — **in PR**
-7. Moving — **in PR**
-8. Painting — **in PR**
+1. Towing / roadside — extreme call_first
+2. Water damage / restoration — call_first + trust badges
+3. More as Lead Scout / Research feed prioritizes
 
 ## Rules
 - No competitor brand cloning
@@ -26,4 +29,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
+- quote_first for commercial janitorial
 - 48px tap targets; trust chips from research notes
