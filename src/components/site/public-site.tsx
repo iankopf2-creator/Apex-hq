@@ -16,8 +16,8 @@ const TAP = "min-h-12 min-w-[48px]";
 
 /**
  * Public Front Door. Theme tokens via CSS vars; credited niche stock when no
- * custom photos. Sticky dual CTA uses theme ctaPriority (call_first / book_first /
- * hybrid). tel: uses trackingPhone || phone only — never lsaPhone.
+ * custom photos. Sticky CTA modes: call_first / book_first / hybrid / quote_first.
+ * tel: uses trackingPhone || phone only — never lsaPhone.
  */
 export function PublicSite({ business }: Props) {
   const template = getTemplate(business.niche);
@@ -34,7 +34,7 @@ export function PublicSite({ business }: Props) {
   const bookHref = "/booking/" + business.slug;
   const mode = theme?.copyTone.ctaPriority ?? "book_first";
   const callPrimary = mode === "call_first";
-  // hybrid + book_first: book leads; call secondary when present
+  // hybrid + book_first + quote_first: book/quote leads; call secondary when present
   const bookPrimary = !callPrimary;
 
   const primaryStyle = theme
