@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak";
 
 export type ThemePalette = {
   primary: string;
@@ -927,6 +927,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  slab_leak: {
+    niche: "slab_leak",
+    label: "Slab leak detection",
+    palette: {
+      // Cool slate + detection cyan — distinct from plumber navy / water_damage / mold teal
+      primary: "#475569",
+      primaryForeground: "#f8fafc",
+      accent: "#06b6d4",
+      accentForeground: "#083344",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#cffafe",
+      mutedForeground: "#0e7490",
+      border: "#a5f3fc",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "detection-first, calm proof-before-cut — no sight-unseen jackhammer",
+      heroStyle: "call-first detection LP — sticky tel:, prove leak before cut; method cards educational after",
+      ctaStyle: "call to schedule detection — secondary form never equals the sticky tel:",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "sight-unseen cut CTAs", "invented flat detection prices as Apex benchmarks", "coverage / claim approval guarantees", "fake 24/7", "TX clay-soil/copper copy as universal", "method cards as competing primary CTAs"],
+    },
+    cssVars: {
+      "--theme-primary": "#475569",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#06b6d4",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["TSBPE + RMP # slot when true (TX)", "Verify-license link idea", "Insurance educational only — not claim approval", "Locate / prove before you cut"],
+    heroImages: [
+      {
+        src: "/niches/slab-leak.jpg",
+        alt: "Construction / floor work context for slab leak detection",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1504307651254-35680f356dfd",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

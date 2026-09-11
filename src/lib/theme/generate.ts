@@ -112,6 +112,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "storm call-first + powerline honesty", ctaVerb: "Call now" },
     B: { heroEmphasis: "ISA/TRAQ when true + HOA/insurance education", ctaVerb: "Emergency call" },
   },
+  slab_leak: {
+    A: { heroEmphasis: "detection-first call + prove-before-cut", ctaVerb: "Call to schedule detection" },
+    B: { heroEmphasis: "TSBPE/RMP when true + insurance education", ctaVerb: "Call now" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
