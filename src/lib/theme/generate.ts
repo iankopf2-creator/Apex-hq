@@ -104,6 +104,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "board-up call-first + FSRT trust", ctaVerb: "Call now" },
     B: { heroEmphasis: "soot+water honesty + insurance docs", ctaVerb: "Emergency call" },
   },
+  mold_remediation: {
+    A: { heroEmphasis: "calm call-first + IICRC process trust", ctaVerb: "Call now" },
+    B: { heroEmphasis: "inspection honesty + insurance docs", ctaVerb: "Request callback" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

@@ -377,6 +377,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request emergency callback",
     accentHint: "red",
   },
+  {
+    id: "mold_remediation",
+    label: "Mold remediation",
+    defaultTagline: "Suspected mold? Call for calm next steps — inspection honesty, no scare tactics",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Mold Assessment Guidance", description: "When to inspect, contain, or remediate — honest scope talk", priceFrom: 0 },
+      { name: "Containment & Remediation", description: "Moisture source, containment, remove/treat porous materials", priceFrom: 0 },
+      { name: "Insurance Documentation Help", description: "Photos and paperwork support — not claim approval", priceFrom: 0 },
+    ],
+    heroHints: ["IICRC when true", "TX TDLR assessor vs remediator separation", "Insurance docs help — not claim approval", "No same-visit inspect+remediate hero"],
+    ctaLabel: "Request callback",
+    accentHint: "teal",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
