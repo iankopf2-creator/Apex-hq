@@ -20,6 +20,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Fire / smoke restoration — call_first + board-up / FSRT slot (IICRC when true)
 - Mold remediation — call_first + calm trust (IICRC when true; TX assessor/remediator honesty)
 - Tree service — call_first storm/emergency (powerline honesty; ISA/TRAQ when true)
+- Slab leak detection — call_first detection-first (TSBPE/RMP when true; TX clay/copper geo-gated; insurance educational only)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes

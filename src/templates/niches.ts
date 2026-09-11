@@ -421,6 +421,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Call for storm help",
     accentHint: "amber",
   },
+  {
+    id: "slab_leak",
+    label: "Slab leak detection",
+    defaultTagline: "Warm floors or a spiking bill? Call first — detect and prove the leak before any cut",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Emergency call-out when staffed — ask who answers",
+    },
+    defaultServices: [
+      { name: "Slab Leak Detection", description: "Non-invasive locate — acoustic / thermal / pressure honesty; prove before cut", priceFrom: 0 },
+      { name: "Repair / Tunnel / Reroute Guidance", description: "Method cards after proof — educational, not competing primary CTAs", priceFrom: 0 },
+      { name: "Insurance Documentation Help", description: "Photos and paperwork support — educational only, not claim approval", priceFrom: 0 },
+    ],
+    heroHints: ["Sticky tel: primary", "Detection-first — no sight-unseen cut", "TSBPE + RMP # when true (TX)", "Clay/copper copy TX geos only", "Insurance educational only"],
+    ctaLabel: "Call to schedule detection",
+    accentHint: "cyan",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

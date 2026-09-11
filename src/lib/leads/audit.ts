@@ -18,6 +18,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   trucking: 150,
   electrician: 200,
   roofing: 350,
+  slab_leak: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -51,6 +52,8 @@ const NICHE_FIX: Record<string, string> = {
     "Publish clear service hours + emergency booking so panel/outage calls don't bounce to whoever picks up first.",
   roofing:
     "Add storm/estimate request form + real hours — stop losing insurance jobs to the contractor with a form.",
+  slab_leak:
+    "Ship a detection-first call page (sticky tel:) so warm-floor / bill-spike callers book locate-before-cut — not a form maze.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {
