@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service";
 
 export type ThemePalette = {
   primary: string;
@@ -878,6 +878,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Calm interior construction / moisture restoration work context",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1541888946425-d81bb19240f5",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  tree_service: {
+    niche: "tree_service",
+    label: "Tree service",
+    palette: {
+      primary: "#44403c",
+      primaryForeground: "#fafaf9",
+      accent: "#c2410c",
+      accentForeground: "#fff7ed",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#ffedd5",
+      mutedForeground: "#9a3412",
+      border: "#fed7aa",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "storm-honest, safety-first, outdoor-calm — no fake ETAs",
+      heroStyle: "call-first storm LP — sticky tel:, powerline honesty, ISA/TRAQ only when true",
+      ctaStyle: "call now — secondary quote never equals the emergency line",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "fake ETA minutes", "powerline DIY claims", "ISA/TRAQ when not credentialed", "coverage guarantees", "HOA approval guarantees", "fake 24/7"],
+    },
+    cssVars: {
+      "--theme-primary": "#44403c",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#c2410c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["ISA / TRAQ slot when current", "Powerline — call utility first when lines involved", "Insurance / HOA docs educational only"],
+    heroImages: [
+      {
+        src: "/niches/tree-service.jpg",
+        alt: "Forest canopy / tree care outdoor work context",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1448375240586-882707db888b",
         license: "unsplash",
       },
     ],

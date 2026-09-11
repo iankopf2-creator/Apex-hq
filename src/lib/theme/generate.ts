@@ -108,6 +108,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "calm call-first + IICRC process trust", ctaVerb: "Call now" },
     B: { heroEmphasis: "inspection honesty + insurance docs", ctaVerb: "Request callback" },
   },
+  tree_service: {
+    A: { heroEmphasis: "storm call-first + powerline honesty", ctaVerb: "Call now" },
+    B: { heroEmphasis: "ISA/TRAQ when true + HOA/insurance education", ctaVerb: "Emergency call" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
