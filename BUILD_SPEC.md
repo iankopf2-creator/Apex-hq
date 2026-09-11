@@ -1,6 +1,6 @@
 --- EVE HANDOFF ---
-DONE: theme niche slab_leak (call_first) shipped; prior tree_service; mold_remediation; fire_smoke; towing+water PR #23; garage+locksmith+janitorial PR #22; free audit estimates + CRM status API (ESTIMATES ONLY)
-NEXT: Front Door SEO robots/sitemap + Ian Stripe Production env then re-verify $49
+DONE: theme niche slab_leak (call_first) + prior tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28)
+NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
