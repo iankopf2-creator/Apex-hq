@@ -22,3 +22,5 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Garage door | `garage.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1558618666-fcd25c85cd64 |
 | Locksmith | `locksmith.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1582139329536-e7284fece509 |
 | Commercial cleaning | `janitorial.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1628177142898-93e36e4e3a50 |
+| Towing / roadside | `towing.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1449965408869-eaa3f722e40d |
+| Water damage | `water-damage.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1541888946425-d81bb19240f5 |
