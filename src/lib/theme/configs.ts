@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation";
 
 export type ThemePalette = {
   primary: string;
@@ -837,6 +837,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  mold_remediation: {
+    niche: "mold_remediation",
+    label: "Mold remediation",
+    palette: {
+      primary: "#0f766e",
+      primaryForeground: "#f0fdfa",
+      accent: "#334155",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#ccfbf1",
+      mutedForeground: "#115e59",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "calm, educational, insurance-aware — process over panic",
+      heroStyle: "call-first trust LP — IICRC when true, moisture+process honesty, no scare heroes",
+      ctaStyle: "call now — secondary free inspection never equals the emergency line",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "scare tactics", "health/medical guarantees", "coverage guarantees", "fake spore stats", "same-visit inspect and remediate", "fake 24/7", "required photo upload"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f766e",
+      "--theme-primary-fg": "#f0fdfa",
+      "--theme-accent": "#334155",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["IICRC credential slot when current", "Insurance docs help — not claim approval", "TX: assessor vs remediator separation when licensed"],
+    heroImages: [
+      {
+        src: "/niches/mold-remediation.jpg",
+        alt: "Calm interior construction / moisture restoration work context",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1541888946425-d81bb19240f5",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 };
 

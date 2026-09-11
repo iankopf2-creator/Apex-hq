@@ -18,6 +18,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Towing / roadside — call_first (hours honesty, no fake ETA)
 - Water damage / restoration — call_first + insurance-trust (IICRC when true)
 - Fire / smoke restoration — call_first + board-up / FSRT slot (IICRC when true)
+- Mold remediation — call_first + calm trust (IICRC when true; TX assessor/remediator honesty)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
