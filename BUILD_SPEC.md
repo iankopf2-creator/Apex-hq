@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niches garage+locksmith (call_first) + janitorial (quote_first) merged PR #22; prior free audit estimates + CRM status API (ESTIMATES ONLY)
+DONE: theme niches towing+water_damage (call_first) merged PR #23 (clean rebase of #14); prior garage+locksmith+janitorial PR #22; free audit estimates + CRM status API (ESTIMATES ONLY)
 NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
