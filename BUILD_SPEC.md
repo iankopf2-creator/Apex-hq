@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: niche-aware free audit estimates + CRM status API (still ESTIMATES ONLY)
+DONE: theme niches garage+locksmith (call_first) + janitorial (quote_first) merged PR #22; prior free audit estimates + CRM status API (ESTIMATES ONLY)
 NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -18,7 +18,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Onboarding wizard at /onboarding
 - [x] Template library: HVAC, plumber, salon (config-driven)
 - [x] Theme niches through painting (+ heroes, CTA modes call_first/book_first/hybrid) on CallRail-safe public site
-- [ ] Theme niches garage + locksmith (call_first) + janitorial (quote_first) — this PR
+- [x] Theme niches garage + locksmith (call_first) + janitorial (quote_first) — PR #22
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
