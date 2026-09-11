@@ -19,6 +19,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Template library: HVAC, plumber, salon (config-driven)
 - [x] Theme niches through painting (+ heroes, CTA modes call_first/book_first/hybrid) on CallRail-safe public site
 - [x] Theme niches garage + locksmith (call_first) + janitorial (quote_first) — PR #22
+- [x] Theme niches towing + water_damage (call_first) — Builder clean rebase of #14
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing

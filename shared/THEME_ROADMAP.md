@@ -11,15 +11,15 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Cleaning (residential book_first), Pest control, Moving
 - Painting — hybrid estimate/schedule (merged PR #15)
 
-## In this PR
+## Live on main (continued)
 - Garage door — call_first emergency (hours honesty)
 - Locksmith — call_first emergency (TX DPS PSB hint when licensed)
 - Janitorial / commercial cleaning — quote_first (softer trust palette; residential cleaning stays book_first)
+- Towing / roadside — call_first (hours honesty, no fake ETA)
+- Water damage / restoration — call_first + insurance-trust (IICRC when true)
 
 ## Next high-ROI trades (US local SMB)
-1. Towing / roadside — extreme call_first
-2. Water damage / restoration — call_first + trust badges
-3. More as Lead Scout / Research feed prioritizes
+1. More as Lead Scout / Research feed prioritizes
 
 ## Rules
 - No competitor brand cloning
