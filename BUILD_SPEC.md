@@ -1,6 +1,6 @@
 --- EVE HANDOFF ---
 DONE: theme niche slab_leak (call_first) shipped; prior tree_service; mold_remediation; fire_smoke; towing+water PR #23; garage+locksmith+janitorial PR #22; free audit estimates + CRM status API (ESTIMATES ONLY)
-NEXT: Ian Stripe Production env then re-verify $49; keep Front Door hardening
+NEXT: Front Door SEO robots/sitemap + Ian Stripe Production env then re-verify $49
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
 LIVE URL: https://apex-hq-five.vercel.app
@@ -42,6 +42,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Call AI dry-run stub (CALL_AI_LIVE=false; HVAC receptionist script pack; no live dials)
 - [x] Owner mobile Expo Phase 0 stub (apps/owner-mobile)
 - [x] Public /s/[slug] SEO meta (title/description, OG/Twitter, canonical, LocalBusiness JSON-LD)
+- [x] App Router robots.ts + sitemap.ts (public Front Door crawl + stable public URLs)
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 
