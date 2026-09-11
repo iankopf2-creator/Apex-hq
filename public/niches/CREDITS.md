@@ -26,3 +26,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Water damage | `water-damage.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1541888946425-d81bb19240f5 |
 | Fire / smoke restoration | `fire-smoke.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1503387762-592deb58ef4e |
 | Mold remediation | `mold-remediation.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1541888946425-d81bb19240f5 |
+| Tree service | `tree-service.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1448375240586-882707db888b |

@@ -399,6 +399,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request callback",
     accentHint: "teal",
   },
+  {
+    id: "tree_service",
+    label: "Tree service",
+    defaultTagline: "Storm damage or a risky limb? Call first — honest next steps, no fake ETAs",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Storm call-out when staffed — ask who answers",
+    },
+    defaultServices: [
+      { name: "Storm / Emergency Tree Response", description: "Downed trees and hazardous limbs — dispatch honesty, no fake ETAs", priceFrom: 0 },
+      { name: "Hazardous Tree Assessment", description: "Risk talk for leaning/damaged trees; ISA/TRAQ only when credentialed", priceFrom: 0 },
+      { name: "Pruning & Removal", description: "Scheduled pruning, removals, and cleanup — HOA/insurance educational only", priceFrom: 0 },
+    ],
+    heroHints: ["Sticky tel: primary", "Powerline — utility first when lines involved", "ISA/TRAQ only when true", "No fake ETAs", "Insurance/HOA educational only"],
+    ctaLabel: "Call for storm help",
+    accentHint: "amber",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
