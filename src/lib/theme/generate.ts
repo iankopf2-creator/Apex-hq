@@ -100,6 +100,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "panic call-first + insurance trust", ctaVerb: "Call now" },
     B: { heroEmphasis: "IICRC trust + optional photo path", ctaVerb: "Emergency call" },
   },
+  fire_smoke: {
+    A: { heroEmphasis: "board-up call-first + FSRT trust", ctaVerb: "Call now" },
+    B: { heroEmphasis: "soot+water honesty + insurance docs", ctaVerb: "Emergency call" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

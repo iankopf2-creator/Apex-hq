@@ -24,3 +24,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Commercial cleaning | `janitorial.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1628177142898-93e36e4e3a50 |
 | Towing / roadside | `towing.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1449965408869-eaa3f722e40d |
 | Water damage | `water-damage.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1541888946425-d81bb19240f5 |
+| Fire / smoke restoration | `fire-smoke.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1503387762-592deb58ef4e |
