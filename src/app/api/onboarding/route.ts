@@ -7,7 +7,7 @@ import type { BusinessProfile, NicheId } from "@/lib/types";
 
 const bodySchema = z.object({
   name: z.string().min(2),
-  niche: z.enum(["hvac","plumber","salon","trucking","electrician","roofing","landscaping","auto_detail","cleaning","pest_control","moving","painting","garage","locksmith","janitorial","towing","water_damage","fire_smoke","mold_remediation","tree_service","slab_leak","junk_removal","pressure_washing","gutter_cleaning"]),
+  niche: z.enum(["hvac","plumber","salon","trucking","electrician","roofing","landscaping","auto_detail","cleaning","pest_control","moving","painting","garage","locksmith","janitorial","towing","water_damage","fire_smoke","mold_remediation","tree_service","slab_leak","junk_removal","pressure_washing","gutter_cleaning","window_cleaning"]),
   city: z.string().min(2),
   hours: z.object({
     mon: z.string(),

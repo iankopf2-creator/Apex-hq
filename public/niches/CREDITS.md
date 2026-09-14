@@ -31,3 +31,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Junk removal | `junk-removal.jpg` | Alethia Briones | https://unsplash.com/photos/mKn6ZSztAT4 |
 | Pressure washing | `pressure-washing.jpg` | Kyle E | https://unsplash.com/photos/gSVlcoE_ES0 |
 | Gutter cleaning | `gutter-cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/kBc9SXXjezA |
+| Window cleaning | `window-cleaning.jpg` | Jimmy Phillips | https://unsplash.com/photos/_yEbjgmV3ww |

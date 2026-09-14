@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1121,6 +1121,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
 
 
 
+
+
+
+
+  window_cleaning: {
+    niche: "window_cleaning",
+    label: "Window cleaning",
+    palette: {
+      // Clear-glass cool blue-gray + daylight ice — not gutter copper, pressure sky, junk lime
+      primary: "#334155",
+      primaryForeground: "#f8fafc",
+      accent: "#0891b2",
+      accentForeground: "#ecfeff",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e0f2fe",
+      mutedForeground: "#0e7490",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "daylight-honest, glass-safe methods, quote before climb",
+      heroStyle: "quote-first window LP — clear glass, soft vs aggressive honesty, no fake same-day",
+      ctaStyle: "request a window quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat fees", "competitor brand cloning", "fake 24/7", "fake insurance claims"],
+    },
+    cssVars: {
+      "--theme-primary": "#334155",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#0891b2",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Insured height work when true", "Glass-safe methods", "Quote before climb"],
+    heroImages: [
+      {
+        src: "/niches/window-cleaning.jpg",
+        alt: "Worker cleaning exterior windows on a modern building in daylight",
+        credit: "Photo by Jimmy Phillips on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/_yEbjgmV3ww",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 

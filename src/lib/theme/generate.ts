@@ -128,6 +128,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first clogged downspout + soft-wash honesty", ctaVerb: "Request a gutter quote" },
     B: { heroEmphasis: "quote-first roof-edge / downspout flush", ctaVerb: "Get a gutter quote" },
   },
+  window_cleaning: {
+    A: { heroEmphasis: "quote-first clear glass + glass-safe honesty", ctaVerb: "Request a window quote" },
+    B: { heroEmphasis: "quote-first storefront / interior-exterior panes", ctaVerb: "Get a window quote" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

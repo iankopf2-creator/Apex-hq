@@ -509,6 +509,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a gutter quote",
     accentHint: "copper",
   },
+  {
+    id: "window_cleaning",
+    label: "Window cleaning",
+    defaultTagline: "Clear glass, honest methods — quote before climb",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Interior / Exterior Windows", description: "Pane-by-pane clean — quote by count, stories, and access", priceFrom: 0 },
+      { name: "Storefront / Commercial Glass", description: "Storefront and lobby glass — quote before climb", priceFrom: 0 },
+      { name: "Screens & Soft Detail", description: "Glass-safe methods vs aggressive scrub — screens and tracks quoted honestly", priceFrom: 0 },
+    ],
+    heroHints: ["Insured height work when true", "Glass-safe methods", "Quote before climb"],
+    ctaLabel: "Request a window quote",
+    accentHint: "glass",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
