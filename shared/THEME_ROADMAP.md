@@ -21,6 +21,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Mold remediation — call_first + calm trust (IICRC when true; TX assessor/remediator honesty)
 - Tree service — call_first storm/emergency (powerline honesty; ISA/TRAQ when true)
 - Slab leak detection — call_first detection-first (TSBPE/RMP when true; TX clay/copper geo-gated; insurance educational only)
+- Junk removal — quote_first (charcoal/slate + lime CTA; dump fees up front; no fake same-day)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -33,5 +34,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial
+- quote_first for commercial janitorial + junk_removal
 - 48px tap targets; trust chips from research notes
