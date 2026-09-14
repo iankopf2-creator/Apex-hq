@@ -132,6 +132,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first clear glass + glass-safe honesty", ctaVerb: "Request a window quote" },
     B: { heroEmphasis: "quote-first storefront / interior-exterior panes", ctaVerb: "Get a window quote" },
   },
+  carpet_cleaning: {
+    A: { heroEmphasis: "quote-first room/rug scope + pet-safe honesty", ctaVerb: "Request a carpet quote" },
+    B: { heroEmphasis: "quote-first steam / spot / area-rug honesty", ctaVerb: "Get a carpet quote" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

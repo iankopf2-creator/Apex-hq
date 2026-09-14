@@ -23,6 +23,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   pressure_washing: 225,
   gutter_cleaning: 185,
   window_cleaning: 175,
+  carpet_cleaning: 185,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -66,6 +67,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first gutter page (clogged downspouts + soft-wash vs power + height honesty) so callers get a real quote before climb — not bait flat fees.",
   window_cleaning:
     "Add a quote-first window page (clear glass + glass-safe methods + quote before climb) so callers get a real quote — not bait flat fees or fake same-day.",
+  carpet_cleaning:
+    "Add a quote-first carpet page (room/rug scope + pet/kid-safe methods when true + quote before steam) so callers get a real quote — not bait flat fees or fake same-day.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

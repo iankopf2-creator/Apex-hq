@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1165,6 +1165,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Worker cleaning exterior windows on a modern building in daylight",
         credit: "Photo by Jimmy Phillips on Unsplash",
         sourceUrl: "https://unsplash.com/photos/_yEbjgmV3ww",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
+  carpet_cleaning: {
+    niche: "carpet_cleaning",
+    label: "Carpet cleaning",
+    palette: {
+      // Warm soft-gray + seafoam/teal — not window ice-cyan, gutter copper, pressure sky, junk lime
+      primary: "#57534e",
+      primaryForeground: "#fafaf9",
+      accent: "#0f766e",
+      accentForeground: "#f0fdfa",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#ccfbf1",
+      mutedForeground: "#115e59",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "warm-honest, pet/kid-safe methods when true, quote before steam",
+      heroStyle: "quote-first carpet LP — room/rug scope, no fake same-day, no bait flat fees",
+      ctaStyle: "request a carpet quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat fees", "competitor brand cloning", "fake 24/7", "fake insurance claims"],
+    },
+    cssVars: {
+      "--theme-primary": "#57534e",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#0f766e",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Pet/kid-safe methods when true", "Quote before steam", "Room & rug honesty"],
+    heroImages: [
+      {
+        src: "/niches/carpet-cleaning.jpg",
+        alt: "Person vacuuming a carpet in a bright home interior",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/cpIgNaazQ6w",
         license: "unsplash",
       },
     ],

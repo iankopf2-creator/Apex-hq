@@ -25,6 +25,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Pressure washing — quote_first (wet-concrete slate + sky-spray CTA; surface-safe; quote before wash)
 - Gutter cleaning — quote_first (zinc roof-edge + deep copper; clogged downspouts; soft-wash vs power; height honesty)
 - Window cleaning — quote_first (clear-glass cool blue-gray + daylight ice; glass-safe; quote before climb)
+- Carpet cleaning — quote_first (warm soft-gray + seafoam/teal; quote before steam; pet/kid-safe when true)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -37,5 +38,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning
 - 48px tap targets; trust chips from research notes

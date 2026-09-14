@@ -531,6 +531,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a window quote",
     accentHint: "glass",
   },
+  {
+    id: "carpet_cleaning",
+    label: "Carpet cleaning",
+    defaultTagline: "Clean carpet, honest methods — quote before steam",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Room Carpet Clean", description: "Whole-room carpet clean — quote by rooms, soil level, and furniture move", priceFrom: 0 },
+      { name: "Area Rugs & Spot Treat", description: "Rugs and spots quoted honestly — no bait flat fees", priceFrom: 0 },
+      { name: "Pet / Kid-Safe Methods", description: "Pet- and kid-safe methods when true — quote before steam or pretreat", priceFrom: 0 },
+    ],
+    heroHints: ["Pet/kid-safe methods when true", "Quote before steam", "Room & rug honesty"],
+    ctaLabel: "Request a carpet quote",
+    accentHint: "seafoam",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
