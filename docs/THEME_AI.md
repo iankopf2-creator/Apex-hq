@@ -31,7 +31,7 @@ Source notes: `/workspace/grok-work-study/notes/research-*.md` (Apex Research fe
 - **call_first** — HVAC, plumber, electrician, roofing, pest: sticky `tel:` primary + estimate/book secondary. High-contrast / emergency-orange OK for panic trades.
 - **book_first** — salon (+ quote-led trucking/auto_detail/moving): sticky Book primary; soft calm chrome; call secondary.
 - **hybrid** — landscaping, painting: quote/schedule primary + Call secondary.
-- **quote_first** — commercial cleaning (`janitorial`): Get a quote primary + Call beside form path.
+- **quote_first** — commercial cleaning (`janitorial`) + `junk_removal`: Get a quote primary + Call beside form path.
 - **cleaning** (residential) is `book_first` recurring-default; garage/locksmith/towing/water_damage are `call_first` emergency.
 - Trust chips near CTAs; 48px targets; sticky max 2 actions; never put LSA-only numbers on public pages (`business.phone` = public DNI only).
 - A/B verbs in `generate.ts` match each mode.

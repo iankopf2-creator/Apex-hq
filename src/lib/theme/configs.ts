@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -970,6 +970,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Construction / floor work context for slab leak detection",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1504307651254-35680f356dfd",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
+  junk_removal: {
+    niche: "junk_removal",
+    label: "Junk removal",
+    palette: {
+      // Charcoal/slate canvas + lime CTA — not towing red/black, not landscaping olive
+      primary: "#a3e635",
+      primaryForeground: "#14532d",
+      accent: "#1e293b",
+      accentForeground: "#f8fafc",
+      background: "#f1f5f9",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "straightforward, load-honest, dump-fee transparent",
+      heroStyle: "quote-first haul LP — item/volume scope, dump fees up front, no fake same-day",
+      ctaStyle: "request a junk quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat fees", "competitor brand cloning", "fake 24/7"],
+    },
+    cssVars: {
+      "--theme-primary": "#a3e635",
+      "--theme-primary-fg": "#14532d",
+      "--theme-accent": "#1e293b",
+      "--theme-bg": "#f1f5f9",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Insured trucks", "Dump fees quoted up front", "No fake same-day promises"],
+    heroImages: [
+      {
+        src: "/niches/junk-removal.jpg",
+        alt: "Crane truck loading debris into a haul bin",
+        credit: "Photo by Alethia Briones on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/mKn6ZSztAT4",
         license: "unsplash",
       },
     ],

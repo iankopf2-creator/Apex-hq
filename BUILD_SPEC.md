@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niche slab_leak (call_first) + prior tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28)
+DONE: theme niche junk_removal (quote_first) + prior slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28)
 NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -24,6 +24,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme niche mold_remediation (call_first) — calm trust / IICRC / TX assessor-remediator honesty
 - [x] Theme niche tree_service (call_first) — storm/emergency honesty / powerline / ISA-TRAQ when true
 - [x] Theme niche slab_leak (call_first) — detection-first / TSBPE-RMP honesty / TX geo-gated clay copy
+- [x] Theme niche junk_removal (quote_first) — charcoal/slate + lime; dump fees up front; no fake same-day
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing

@@ -443,6 +443,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Call to schedule detection",
     accentHint: "cyan",
   },
+  {
+    id: "junk_removal",
+    label: "Junk removal",
+    defaultTagline: "Haul it out — clear volume quotes, dump fees up front",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Single-Item Pickup", description: "Couch, appliance, or mattress haul — quote by item/load", priceFrom: 0 },
+      { name: "Garage / Estate Cleanout", description: "Whole-space cleanouts with load-based pricing", priceFrom: 0 },
+      { name: "Construction Debris", description: "Job-site debris haul — dump fees quoted up front", priceFrom: 0 },
+    ],
+    heroHints: ["Insured trucks", "Dump fees quoted up front", "No fake same-day promises"],
+    ctaLabel: "Request a junk quote",
+    accentHint: "lime",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

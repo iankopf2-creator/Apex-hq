@@ -116,6 +116,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "detection-first call + prove-before-cut", ctaVerb: "Call to schedule detection" },
     B: { heroEmphasis: "TSBPE/RMP when true + insurance education", ctaVerb: "Call now" },
   },
+  junk_removal: {
+    A: { heroEmphasis: "quote-first load scope + dump-fee honesty", ctaVerb: "Request a junk quote" },
+    B: { heroEmphasis: "quote-first cleanout / debris haul", ctaVerb: "Get a haul quote" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
