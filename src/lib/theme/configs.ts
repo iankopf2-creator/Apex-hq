@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1068,6 +1068,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  gutter_cleaning: {
+    niche: "gutter_cleaning",
+    label: "Gutter cleaning",
+    palette: {
+      // Zinc roof-edge + deep copper leaf — not pressure sky, junk lime, landscaping olive, cleaning teal
+      primary: "#78350f",
+      primaryForeground: "#fef3c7",
+      accent: "#57534e",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "roof-edge honest, soft-wash vs power clear, height/insurance when true",
+      heroStyle: "quote-first gutter LP — clogged downspouts, soft-wash vs power honesty, no fake same-day",
+      ctaStyle: "request a gutter quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat fees", "competitor brand cloning", "fake 24/7"],
+    },
+    cssVars: {
+      "--theme-primary": "#78350f",
+      "--theme-primary-fg": "#fef3c7",
+      "--theme-accent": "#57534e",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Insured height work when true", "Soft-wash vs power honesty", "Quote before climb"],
+    heroImages: [
+      {
+        src: "/niches/gutter-cleaning.jpg",
+        alt: "Dirty residential rain gutter and roof edge against a clear sky",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/kBc9SXXjezA",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
 
 
 
