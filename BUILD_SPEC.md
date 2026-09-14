@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niche junk_removal (quote_first) + prior slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28)
+DONE: theme niche junk_removal (quote_first) + prior slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
 NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -44,6 +44,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Owner mobile Expo Phase 0 stub (apps/owner-mobile)
 - [x] Public /s/[slug] SEO meta (title/description, OG/Twitter, canonical, LocalBusiness JSON-LD)
 - [x] App Router robots.ts + sitemap.ts (public Front Door crawl + stable public URLs)
+- [x] Front Door security headers (nosniff, Referrer-Policy, X-Frame-Options DENY, Permissions-Policy)
 - [x] Stripe Checkout Session API (Starter $49/mo) + Pricing/onboarding CTAs
 - [ ] Stripe live in production (Ian: Price IDs + Vercel env + redeploy)
 
