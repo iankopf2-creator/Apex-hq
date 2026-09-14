@@ -30,3 +30,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Slab leak detection | `slab-leak.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1504307651254-35680f356dfd |
 | Junk removal | `junk-removal.jpg` | Alethia Briones | https://unsplash.com/photos/mKn6ZSztAT4 |
 | Pressure washing | `pressure-washing.jpg` | Kyle E | https://unsplash.com/photos/gSVlcoE_ES0 |
+| Gutter cleaning | `gutter-cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/kBc9SXXjezA |

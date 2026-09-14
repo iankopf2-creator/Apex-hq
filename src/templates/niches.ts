@@ -487,6 +487,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a wash quote",
     accentHint: "sky",
   },
+  {
+    id: "gutter_cleaning",
+    label: "Gutter cleaning",
+    defaultTagline: "Clear gutters & downspouts — soft-wash honesty, quote before climb",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Gutter Cleanout", description: "Hand-clear debris from gutters — quote by linear feet / access", priceFrom: 0 },
+      { name: "Downspout Flush", description: "Clear clogged downspouts so water exits where it should", priceFrom: 0 },
+      { name: "Soft Wash / Edge Rinse", description: "Soft-wash vs power honesty for fascia and roof edge — quote before climb", priceFrom: 0 },
+    ],
+    heroHints: ["Insured height work when true", "Soft-wash vs power honesty", "Quote before climb"],
+    ctaLabel: "Request a gutter quote",
+    accentHint: "copper",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
