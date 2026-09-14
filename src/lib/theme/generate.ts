@@ -120,6 +120,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first load scope + dump-fee honesty", ctaVerb: "Request a junk quote" },
     B: { heroEmphasis: "quote-first cleanout / debris haul", ctaVerb: "Get a haul quote" },
   },
+  pressure_washing: {
+    A: { heroEmphasis: "quote-first wash scope + surface-safe honesty", ctaVerb: "Request a wash quote" },
+    B: { heroEmphasis: "quote-first driveway / soft wash / patio", ctaVerb: "Get a wash quote" },
+  },
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

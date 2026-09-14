@@ -20,6 +20,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   roofing: 350,
   slab_leak: 450,
   junk_removal: 275,
+  pressure_washing: 225,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -57,6 +58,8 @@ const NICHE_FIX: Record<string, string> = {
     "Ship a detection-first call page (sticky tel:) so warm-floor / bill-spike callers book locate-before-cut — not a form maze.",
   junk_removal:
     "Add a quote-first haul page (volume/item + dump fees up front) so cleanout callers get a real load quote — not bait flat fees.",
+  pressure_washing:
+    "Add a quote-first wash page (driveway/house/patio + surface-safe methods) so callers get a real quote before wash — not bait flat fees.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

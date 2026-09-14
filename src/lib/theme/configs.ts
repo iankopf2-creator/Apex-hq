@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1022,6 +1022,56 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  pressure_washing: {
+    niche: "pressure_washing",
+    label: "Pressure washing",
+    palette: {
+      // Wet-concrete slate + sky-spray CTA — not landscaping olive, cleaning teal, junk lime, or auto blue
+      primary: "#0284c7",
+      primaryForeground: "#f0f9ff",
+      accent: "#334155",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e0f2fe",
+      mutedForeground: "#0369a1",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "clean, surface-safe, quote-honest",
+      heroStyle: "quote-first wash LP — driveway/house/patio scope, surface-safe methods, no bait flat fees",
+      ctaStyle: "request a wash quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat fees", "competitor brand cloning", "fake 24/7"],
+    },
+    cssVars: {
+      "--theme-primary": "#0284c7",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#334155",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Insured crew", "Surface-safe methods", "Quote before wash"],
+    heroImages: [
+      {
+        src: "/niches/pressure-washing.jpg",
+        alt: "Person pressure washing a patio with a spray wand",
+        credit: "Photo by Kyle E on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/gSVlcoE_ES0",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
 
 
 

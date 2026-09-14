@@ -465,6 +465,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a junk quote",
     accentHint: "lime",
   },
+  {
+    id: "pressure_washing",
+    label: "Pressure washing",
+    defaultTagline: "Driveways, siding, decks — surface-safe wash quotes first",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Driveway / Walk Wash", description: "Concrete and walkway wash — quote by size/soil", priceFrom: 0 },
+      { name: "House Soft Wash", description: "Siding soft wash with surface-safe methods", priceFrom: 0 },
+      { name: "Patio / Deck Clean", description: "Patio, deck, or outdoor living clean — quote before wash", priceFrom: 0 },
+    ],
+    heroHints: ["Insured crew", "Surface-safe methods", "Quote before wash"],
+    ctaLabel: "Request a wash quote",
+    accentHint: "sky",
+  },
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
