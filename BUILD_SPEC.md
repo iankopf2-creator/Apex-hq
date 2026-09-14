@@ -119,7 +119,7 @@ Front Door is live; scaffolding authorized by Ian for this run.
 **STATUS**
 - [x] `stripe` package dependency
 - [x] `POST /api/stripe/checkout` — subscription mode; body may include `businessSlug` / `email`
-- [x] Pricing UI + end-of-onboarding Starter CTA (shows “Stripe not configured” + required env when unset)
+- [x] Pricing UI + end-of-onboarding Starter CTA (stranger-safe dark copy when unset; env names stay off public UI)
 - [x] `POST /api/stripe/webhook` stub — verifies signature when `STRIPE_WEBHOOK_SECRET` set; logs subscription events; no fake success
 - [x] `.env.example` documents Stripe vars
 - [ ] Ian creates Price IDs in Stripe Dashboard and sets Vercel env, then redeploys

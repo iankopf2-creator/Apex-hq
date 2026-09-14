@@ -127,9 +127,12 @@ export function OnboardingWizard() {
           </Button>
           {!stripeConfigured && (
             <p className="text-xs text-muted-foreground">
-              Stripe not configured. Ian must set STRIPE_SECRET_KEY,
-              NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, STRIPE_PRICE_STARTER,
-              NEXT_PUBLIC_APP_URL in Vercel, then redeploy.
+              Checkout unavailable — payment provider not configured. You cannot be
+              charged from this page until checkout is live. Ops details stay on the{" "}
+              <Link href="/dashboard" className="underline-offset-4 hover:underline">
+                dashboard
+              </Link>
+              .
             </p>
           )}
         </CardContent>
