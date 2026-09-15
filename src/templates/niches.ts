@@ -685,6 +685,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a siding quote",
     accentHint: "clapboard-coastal",
   },
+  {
+    id: "decking",
+    label: "Decking",
+    defaultTagline: "Decks & patio decks — quote before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Wood Deck Build / Rebuild", description: "New or replace — quote after sqft, height, access, footing, and material", priceFrom: 0 },
+      { name: "Composite / PVC Decking", description: "Low-maintenance boards when true — firm price after site + footing check", priceFrom: 0 },
+      { name: "Railings / Stairs / Landing", description: "Code-aware when required — no bait flat $/sqft or fake same-day build", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/height/access/footing assessed before firm price", "Quote before build", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a deck quote",
+    accentHint: "teak-charcoal-sage",
+  },
 
 ];
 

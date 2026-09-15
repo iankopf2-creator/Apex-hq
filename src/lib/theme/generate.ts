@@ -160,6 +160,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first material/grade/sqft/stories + access/substrate assess", ctaVerb: "Get a siding quote" },
     B: { heroEmphasis: "quote-first vinyl / fiber-cement / wood / engineered honesty", ctaVerb: "Request a siding quote" },
   },
+  decking: {
+    A: { heroEmphasis: "quote-first sqft/height/access/footing + material assess", ctaVerb: "Get a deck quote" },
+    B: { heroEmphasis: "quote-first wood / composite / PVC honesty", ctaVerb: "Request a decking quote" },
+  },
 
 };
 
