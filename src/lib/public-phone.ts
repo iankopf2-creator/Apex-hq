@@ -8,6 +8,7 @@ import type { BusinessProfile } from "@/lib/types";
  * - No CallRail JS snippet without explicit tenant opt-in (`callTrackingOptIn`).
  */
 
+// Hybrid niches (painting, landscaping, handyman) intentionally omit — quote/schedule primary + Call secondary via ctaPriority.
 const CALL_FIRST_NICHES = new Set([
   "hvac",
   "plumber",
