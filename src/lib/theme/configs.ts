@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1441,6 +1441,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Construction worker smoothing a wet concrete slab with hand tools",
         credit: "TROY ALLEN on Unsplash",
         sourceUrl: "https://unsplash.com/photos/GNClKls4ok8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  siding: {
+    niche: "siding",
+    label: "Siding",
+    palette: {
+      // Cool clapboard slate/gray + soft coastal blue-gray CTA — not fencing sage, concrete amber, painting, roofing
+      primary: "#556370",
+      primaryForeground: "#f8fafc",
+      accent: "#6b8fa3",
+      accentForeground: "#f0f7fa",
+      background: "#f3f5f7",
+      foreground: "#1e293b",
+      muted: "#e6ecf0",
+      mutedForeground: "#556370",
+      border: "#c5d0d8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest material/grade/sqft-first, assess stories access and substrate before firm price, quote before install",
+      heroStyle: "quote-first siding LP — vinyl/fiber-cement/wood/engineered chips when true, no bait flat $/sqft, no fake same-day install",
+      ctaStyle: "get a siding quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day install guarantees", "competitor brand cloning", "fake 24/7", "firm price before material/grade/sqft/stories/access/substrate assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#556370",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#6b8fa3",
+      "--theme-bg": "#f3f5f7",
+      "--theme-fg": "#1e293b",
+    },
+    trustBadges: ["Material/grade/sqft assessed before firm price", "Quote before install", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/siding.jpg",
+        alt: "White and brown wooden clapboard house exterior near green trees under blue sky",
+        credit: "Wayne Darden on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/6KG7tDW2mNc",
         license: "unsplash",
       },
     ],

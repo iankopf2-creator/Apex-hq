@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niche concrete (quote_first) + prior fencing (quote_first) + prior flooring (quote_first) + prior handyman (hybrid) + prior appliance_repair (call_first) + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
+DONE: theme niche siding (quote_first) + prior concrete (quote_first) + prior fencing (quote_first) + prior flooring (quote_first) + prior handyman (hybrid) + prior appliance_repair (call_first) + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
 NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -34,6 +34,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme niche flooring (quote_first) — warm oak/charcoal slate + copper/bronze; material/subfloor assess before firm price; no bait flat sqft
 - [x] Theme niche fencing (quote_first) — cedar/fence-stain warm brown + charcoal slate + forest sage; length/height/terrain/HOA assess before firm price; no bait flat $/ft
 - [x] Theme niche concrete (quote_first) — wet-concrete cool gray/slate + warm amber; sqft/access/thickness/prep/drainage assess before firm price; no bait flat $/sqft; no fake same-day pour
+- [x] Theme niche siding (quote_first) — cool clapboard slate/gray + soft coastal blue-gray; material/grade/sqft/stories/access/substrate assess before firm price; no bait flat $/sqft; no fake same-day install; vinyl/fiber-cement/wood/engineered when true
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing

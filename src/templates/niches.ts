@@ -663,6 +663,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a concrete quote",
     accentHint: "slate-amber",
   },
+  {
+    id: "siding",
+    label: "Siding",
+    defaultTagline: "Exterior siding — quote before we install",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Vinyl / Engineered Siding", description: "Replace or install — quote after material, grade, sqft, stories, and access", priceFrom: 0 },
+      { name: "Fiber-Cement Clapboard", description: "Durable wood-look panels — firm price after substrate + site check", priceFrom: 0 },
+      { name: "Wood / Cedar Siding", description: "Classic clapboard when true — no bait flat $/sqft or fake same-day install", priceFrom: 0 },
+    ],
+    heroHints: ["Material/grade/sqft/stories assessed before firm price", "Quote before install", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a siding quote",
+    accentHint: "clapboard-coastal",
+  },
 
 ];
 
