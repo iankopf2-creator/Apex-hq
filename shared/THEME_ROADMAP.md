@@ -32,6 +32,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Fencing — quote_first (cedar/fence-stain warm brown + charcoal slate + forest sage CTA; length/height/terrain/posts/HOA assess before firm price; no bait flat $/ft; wood/vinyl/chain-link/ornamental when true)
 - Concrete — quote_first (wet-concrete cool gray/slate + warm amber CTA; sqft/access/thickness/prep/drainage assess before firm price; no bait flat $/sqft; no fake same-day pour; driveway/patio/flatwork)
 - Siding — quote_first (cool clapboard slate/gray + soft coastal blue-gray CTA; material/grade/sqft/stories/access/substrate assess before firm price; no bait flat $/sqft; no fake same-day install; vinyl/fiber-cement/wood/engineered when true)
+- Decking — quote_first (warm deck-board teak + charcoal slate + soft sage accent; sqft/height/access/footing/material wood-composite-PVC assess before firm price; no bait flat $/sqft or $/lf; no fake same-day build; HOA/permit honesty when true)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -44,5 +45,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking
 - 48px tap targets; trust chips from research notes

@@ -30,6 +30,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   fencing: 450,
   concrete: 475,
   siding: 550,
+  decking: 650,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -87,6 +88,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first concrete page (driveway/patio/flatwork + sqft/access/thickness/prep/drainage assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day pour.",
   siding:
     "Add a quote-first siding page (vinyl/fiber-cement/wood/engineered + material/grade/sqft/stories/access/substrate assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day install.",
+  decking:
+    "Add a quote-first decking page (wood/composite/PVC + sqft/height/access/footing/material assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day build.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

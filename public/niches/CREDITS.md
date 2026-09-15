@@ -39,3 +39,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Fencing | `fencing.jpg` | Lisa McIntyre | https://unsplash.com/photos/fg4YC5tGaGo |
 | Concrete | `concrete.jpg` | TROY ALLEN | https://unsplash.com/photos/GNClKls4ok8 |
 | Siding | `siding.jpg` | Wayne Darden | https://unsplash.com/photos/6KG7tDW2mNc |
+| Decking | `decking.jpg` | Masood Aslami | https://unsplash.com/photos/UNhrUkdivWs |

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1490,6 +1490,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  decking: {
+    niche: "decking",
+    label: "Decking",
+    palette: {
+      // Warm deck-board teak + charcoal slate + soft sage accent — not fencing forest-sage, siding coastal, concrete amber, flooring oak-copper
+      primary: "#2d3439",
+      primaryForeground: "#f8fafc",
+      accent: "#7a9e8a",
+      accentForeground: "#f0fdf4",
+      background: "#f5f2ed",
+      foreground: "#1c1917",
+      muted: "#ebe4d9",
+      mutedForeground: "#5c5348",
+      border: "#d4cbbf",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/height/access/footing-first, assess material (wood/composite/PVC) before firm price, quote before build",
+      heroStyle: "quote-first decking LP — wood/composite/PVC chips when true, no bait flat $/sqft or $/lf, no fake same-day build",
+      ctaStyle: "get a deck quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf fees", "fake same-day build guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/height/access/footing/material assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#2d3439",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#7a9e8a",
+      "--theme-bg": "#f5f2ed",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/height/access/footing assessed before firm price", "Quote before build", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/decking.jpg",
+        alt: "Wooden deck with chairs and plants overlooking a backyard",
+        credit: "Masood Aslami on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/UNhrUkdivWs",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 
