@@ -152,6 +152,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first length/height/terrain + HOA assess", ctaVerb: "Get a fence quote" },
     B: { heroEmphasis: "quote-first wood / vinyl / chain-link / ornamental honesty", ctaVerb: "Request a fencing quote" },
   },
+  concrete: {
+    A: { heroEmphasis: "quote-first sqft/access/thickness/prep + drainage assess", ctaVerb: "Get a concrete quote" },
+    B: { heroEmphasis: "quote-first driveway / patio / flatwork honesty", ctaVerb: "Request a concrete quote" },
+  },
 
 };
 

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1396,6 +1396,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Close-up of warm cedar wooden fence panels",
         credit: "Lisa McIntyre on Unsplash",
         sourceUrl: "https://unsplash.com/photos/fg4YC5tGaGo",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  concrete: {
+    niche: "concrete",
+    label: "Concrete",
+    palette: {
+      // Wet-concrete cool gray/slate + warm amber CTA — not pressure_washing sky-spray, fencing sage, flooring oak-copper
+      primary: "#475569",
+      primaryForeground: "#f8fafc",
+      accent: "#d97706",
+      accentForeground: "#fffbeb",
+      background: "#f1f5f9",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/prep-first, assess thickness and drainage before firm price, quote before pour",
+      heroStyle: "quote-first concrete LP — driveway/patio/flatwork chips when true, no bait flat $/sqft, no fake same-day pour",
+      ctaStyle: "get a concrete quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day pour guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/thickness/prep/drainage assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#475569",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#f1f5f9",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Sqft/access/prep assessed before firm price", "Quote before pour", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/concrete.jpg",
+        alt: "Construction worker smoothing a wet concrete slab with hand tools",
+        credit: "TROY ALLEN on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/GNClKls4ok8",
         license: "unsplash",
       },
     ],
