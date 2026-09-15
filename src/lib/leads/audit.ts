@@ -27,6 +27,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   appliance_repair: 195,
   handyman: 175,
   flooring: 375,
+  fencing: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -78,6 +79,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a hybrid quote/schedule handyman page (punch-list scope + Call secondary) so odd-job callers get a real estimate — not fake same-day promises.",
   flooring:
     "Add a quote-first flooring page (LVP/hardwood/tile + subfloor assess before firm price) so callers get a real quote — not bait flat sqft fees or fake same-day.",
+  fencing:
+    "Add a quote-first fencing page (wood/vinyl/chain-link/ornamental + length/height/terrain/HOA assess before firm price) so callers get a real quote — not bait flat $/ft or fake same-day.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

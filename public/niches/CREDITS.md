@@ -36,3 +36,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Appliance repair | `appliance-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/FXpJW_wdMdk |
 | Handyman | `handyman.jpg` | Bermix Studio | https://unsplash.com/photos/iwz5tmhjl7o |
 | Flooring | `flooring.jpg` | Maria Kovalets | https://unsplash.com/photos/l3qaat24Cv4 |
+| Fencing | `fencing.jpg` | Lisa McIntyre | https://unsplash.com/photos/fg4YC5tGaGo |

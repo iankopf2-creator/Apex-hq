@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1355,6 +1355,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  fencing: {
+    niche: "fencing",
+    label: "Fencing",
+    palette: {
+      // Cedar/fence-stain warm brown + charcoal slate + forest sage CTA — not flooring copper, handyman gold, junk lime
+      primary: "#3f2e1f",
+      primaryForeground: "#faf8f5",
+      accent: "#3f6b4f",
+      accentForeground: "#f0fdf4",
+      background: "#faf8f5",
+      foreground: "#1c1917",
+      muted: "#ecf3ee",
+      mutedForeground: "#3d5a45",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest length/height/terrain-first, assess posts and HOA before firm price, quote before build",
+      heroStyle: "quote-first fencing LP — wood/vinyl/chain-link/ornamental chips when true, no bait flat $/ft, no fake same-day",
+      ctaStyle: "get a fence quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/ft fees", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "firm price before length/height/terrain/HOA assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#3f2e1f",
+      "--theme-primary-fg": "#faf8f5",
+      "--theme-accent": "#3f6b4f",
+      "--theme-bg": "#faf8f5",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Length/height/terrain assessed before firm price", "Quote before build", "No bait flat $/ft fees"],
+    heroImages: [
+      {
+        src: "/niches/fencing.jpg",
+        alt: "Close-up of warm cedar wooden fence panels",
+        credit: "Lisa McIntyre on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/fg4YC5tGaGo",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
 
 
 };

@@ -619,6 +619,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a flooring quote",
     accentHint: "oak-copper",
   },
+  {
+    id: "fencing",
+    label: "Fencing",
+    defaultTagline: "Fences built right — quote before we dig",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Wood / Cedar Fence", description: "Privacy and picket — quote after linear footage, height, terrain, posts", priceFrom: 0 },
+      { name: "Vinyl / Composite Fence", description: "Low-maintenance panels — firm price after HOA + site check", priceFrom: 0 },
+      { name: "Chain-Link / Ornamental", description: "Security or decorative — no bait flat $/ft fees", priceFrom: 0 },
+    ],
+    heroHints: ["Length/height/terrain assessed before firm price", "Quote before build", "No bait flat $/ft fees"],
+    ctaLabel: "Get a fence quote",
+    accentHint: "cedar-sage",
+  },
 
 ];
 
