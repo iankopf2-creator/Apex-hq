@@ -27,6 +27,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Window cleaning — quote_first (clear-glass cool blue-gray + daylight ice; glass-safe; quote before climb)
 - Carpet cleaning — quote_first (warm soft-gray + seafoam/teal; quote before steam; pet/kid-safe when true)
 - Appliance repair — call_first (slate + orange CTA; diagnose-before-parts; licensed tech when true)
+- Handyman — hybrid (warm workbench taupe/slate + amber/gold CTA; quote/schedule primary + Call secondary; no fake same-day)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes

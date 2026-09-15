@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman";
 
 export type ThemePalette = {
   primary: string;
@@ -1265,6 +1265,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  handyman: {
+    niche: "handyman",
+    label: "Handyman",
+    palette: {
+      // Warm workbench — taupe/slate neutrals + amber/gold CTA (not painting lilac, appliance orange, garage steel)
+      primary: "#ca8a04",
+      primaryForeground: "#422006",
+      accent: "#57534e",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#78716c",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "practical, reliable, no-overpromise — estimate then schedule",
+      heroStyle: "hybrid quote/schedule — odd jobs and punch lists without fake same-day",
+      ctaStyle: "request a handyman quote or schedule (call secondary)",
+      ctaPriority: "hybrid",
+      avoid: [...baseAvoid, "fake same-day guarantees", "licensed/insured claims unless true", "competitor brand cloning", "LSA numbers on public pages"],
+    },
+    cssVars: {
+      "--theme-primary": "#ca8a04",
+      "--theme-primary-fg": "#422006",
+      "--theme-accent": "#57534e",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Licensed & insured when true", "Written scope before work", "No fake same-day"],
+    heroImages: [
+      {
+        src: "/niches/handyman.jpg",
+        alt: "Assorted handyman tools laid out on a wooden workbench",
+        credit: "Bermix Studio on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/iwz5tmhjl7o",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

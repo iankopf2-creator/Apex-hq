@@ -575,6 +575,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Call for appliance repair",
     accentHint: "slate-orange",
   },
+  {
+    id: "handyman",
+    label: "Handyman",
+    defaultTagline: "Odd jobs done right — quote, then schedule",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Punch List / Odd Jobs", description: "Mounting, patching, small fixes — written scope before work", priceFrom: 0 },
+      { name: "Door / Trim / Hardware", description: "Adjustments and installs when in scope", priceFrom: 0 },
+      { name: "Drywall Patch & Touch-up", description: "Small holes and paint match when materials available", priceFrom: 125 },
+    ],
+    heroHints: ["Written scope before work", "Licensed & insured when true", "No fake same-day"],
+    ctaLabel: "Request a handyman quote",
+    accentHint: "workbench-gold",
+  },
 
 ];
 

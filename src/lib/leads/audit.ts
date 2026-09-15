@@ -25,6 +25,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   window_cleaning: 175,
   carpet_cleaning: 185,
   appliance_repair: 195,
+  handyman: 175,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -72,6 +73,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first carpet page (room/rug scope + pet/kid-safe methods when true + quote before steam) so callers get a real quote — not bait flat fees or fake same-day.",
   appliance_repair:
     "Ship a call-first appliance page (sticky tel: + diagnose-before-parts) so broken fridge/washer callers reach a tech — not bait flat diagnostic fees.",
+  handyman:
+    "Add a hybrid quote/schedule handyman page (punch-list scope + Call secondary) so odd-job callers get a real estimate — not fake same-day promises.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

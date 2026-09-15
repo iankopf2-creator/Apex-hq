@@ -140,6 +140,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "call-first broken appliance + diagnose-before-parts", ctaVerb: "Call now" },
     B: { heroEmphasis: "licensed tech when true + honest diagnostic", ctaVerb: "Emergency call" },
   },
+  handyman: {
+    A: { heroEmphasis: "hybrid estimate / punch-list path", ctaVerb: "Request a handyman quote" },
+    B: { heroEmphasis: "hybrid schedule path", ctaVerb: "Schedule handyman visit" },
+  },
 
 };
 
