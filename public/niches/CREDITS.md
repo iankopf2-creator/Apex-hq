@@ -38,3 +38,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Flooring | `flooring.jpg` | Maria Kovalets | https://unsplash.com/photos/l3qaat24Cv4 |
 | Fencing | `fencing.jpg` | Lisa McIntyre | https://unsplash.com/photos/fg4YC5tGaGo |
 | Concrete | `concrete.jpg` | TROY ALLEN | https://unsplash.com/photos/GNClKls4ok8 |
+| Siding | `siding.jpg` | Wayne Darden | https://unsplash.com/photos/6KG7tDW2mNc |
