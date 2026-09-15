@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niche appliance_repair (call_first) PR pending + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
+DONE: theme niche appliance_repair (call_first) + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
 NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
