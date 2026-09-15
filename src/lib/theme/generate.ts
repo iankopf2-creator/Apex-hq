@@ -144,6 +144,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "hybrid estimate / punch-list path", ctaVerb: "Request a handyman quote" },
     B: { heroEmphasis: "hybrid schedule path", ctaVerb: "Schedule handyman visit" },
   },
+  flooring: {
+    A: { heroEmphasis: "quote-first material/subfloor assess + no bait sqft", ctaVerb: "Request a flooring quote" },
+    B: { heroEmphasis: "quote-first LVP / hardwood / tile honesty", ctaVerb: "Get a flooring quote" },
+  },
 
 };
 

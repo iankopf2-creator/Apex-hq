@@ -1,5 +1,5 @@
 --- EVE HANDOFF ---
-DONE: theme niche handyman (hybrid) + prior appliance_repair (call_first) + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
+DONE: theme niche flooring (quote_first) + prior handyman (hybrid) + prior appliance_repair (call_first) + prior carpet_cleaning (quote_first) + prior window_cleaning/gutter_cleaning/pressure_washing/junk_removal/slab_leak/tree_service/mold_remediation/fire_smoke/towing+water/garage+locksmith+janitorial; free audit estimates + CRM status API (ESTIMATES ONLY); Front Door SEO robots.ts + sitemap.ts (PR #28); Front Door security headers (nosniff/Referrer-Policy/X-Frame DENY/Permissions-Policy)
 NEXT: Ian Stripe Production env (4 required names) → redeploy → re-verify $49 Starter checkout
 BLOCKER: Stripe Production env Ian-only
 NEED FROM EVE: no
@@ -31,6 +31,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme niche carpet_cleaning (quote_first) — warm soft-gray + seafoam/teal; quote before steam; pet/kid-safe when true
 - [x] Theme niche appliance_repair (call_first) — slate + orange; diagnose-before-parts; licensed tech when true
 - [x] Theme niche handyman (hybrid) — warm workbench taupe/slate + amber/gold; quote/schedule primary + Call secondary
+- [x] Theme niche flooring (quote_first) — warm oak/charcoal slate + copper/bronze; material/subfloor assess before firm price; no bait flat sqft
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
