@@ -641,6 +641,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a fence quote",
     accentHint: "cedar-sage",
   },
+  {
+    id: "concrete",
+    label: "Concrete",
+    defaultTagline: "Driveways & flatwork — quote before we pour",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Driveway Pour / Replace", description: "New or tear-out — quote after sqft, access, thickness, and prep", priceFrom: 0 },
+      { name: "Patio / Sidewalk Flatwork", description: "Walks and outdoor pads — firm price after drainage + site check", priceFrom: 0 },
+      { name: "Garage Floor / Broom Finish", description: "Interior slab or broom finish — no bait flat $/sqft fees", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/prep assessed before firm price", "Quote before pour", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a concrete quote",
+    accentHint: "slate-amber",
+  },
 
 ];
 
