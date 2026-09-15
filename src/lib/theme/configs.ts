@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair";
 
 export type ThemePalette = {
   primary: string;
@@ -1218,6 +1218,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+
+  appliance_repair: {
+    niche: "appliance_repair",
+    label: "Appliance repair",
+    palette: {
+      // Slate + orange CTA — distinct from HVAC sky, electrician yellow, locksmith steel
+      primary: "#1e293b",
+      primaryForeground: "#f8fafc",
+      accent: "#ea580c",
+      accentForeground: "#fff7ed",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#ffedd5",
+      mutedForeground: "#9a3412",
+      border: "#fed7aa",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "calm licensed-honest, diagnose-before-parts, no fake OEM claims",
+      heroStyle: "call-first appliance LP — broken fridge/washer urgency, honest diagnostic",
+      ctaStyle: "call for appliance repair (sticky tel primary)",
+      ctaPriority: "call_first",
+      avoid: [...baseAvoid, "fake OEM certification", "bait flat diagnostic fees", "competitor brand cloning", "fake 24/7", "fake same-day guarantees"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e293b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#ea580c",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Licensed tech when true", "Diagnose before parts", "Honest diagnostic fee"],
+    heroImages: [
+      {
+        src: "/niches/appliance-repair.jpg",
+        alt: "Washer and dryer in a bright laundry room ready for service",
+        credit: "Photo via Unsplash",
+        sourceUrl: "https://unsplash.com/photos/FXpJW_wdMdk",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 };

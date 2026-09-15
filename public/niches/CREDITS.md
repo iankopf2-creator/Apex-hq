@@ -33,3 +33,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Gutter cleaning | `gutter-cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/kBc9SXXjezA |
 | Window cleaning | `window-cleaning.jpg` | Jimmy Phillips | https://unsplash.com/photos/_yEbjgmV3ww |
 | Carpet cleaning | `carpet-cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/cpIgNaazQ6w |
+| Appliance repair | `appliance-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/FXpJW_wdMdk |

@@ -553,6 +553,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a carpet quote",
     accentHint: "seafoam",
   },
+  {
+    id: "appliance_repair",
+    label: "Appliance repair",
+    defaultTagline: "Broken appliance? Call first — diagnose before parts",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Refrigerator / Freezer", description: "Diagnose cooling, seals, ice — call before parts order", priceFrom: 0 },
+      { name: "Washer / Dryer", description: "Spin, drain, heat issues — diagnose before parts", priceFrom: 0 },
+      { name: "Oven / Range / Dishwasher", description: "Heat and cycle faults — honest diagnostic fee when true", priceFrom: 0 },
+    ],
+    heroHints: ["Licensed tech when true", "Diagnose before parts", "Honest diagnostic fee"],
+    ctaLabel: "Call for appliance repair",
+    accentHint: "slate-orange",
+  },
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

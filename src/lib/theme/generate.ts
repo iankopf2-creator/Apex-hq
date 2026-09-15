@@ -136,6 +136,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first room/rug scope + pet-safe honesty", ctaVerb: "Request a carpet quote" },
     B: { heroEmphasis: "quote-first steam / spot / area-rug honesty", ctaVerb: "Get a carpet quote" },
   },
+  appliance_repair: {
+    A: { heroEmphasis: "call-first broken appliance + diagnose-before-parts", ctaVerb: "Call now" },
+    B: { heroEmphasis: "licensed tech when true + honest diagnostic", ctaVerb: "Emergency call" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
