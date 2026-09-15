@@ -28,10 +28,10 @@ Stacked theme PRs: merge bottom-up when reviewing (#2 → tip) to keep history c
 Source notes: `/workspace/grok-work-study/notes/research-*.md` (Apex Research feed).
 
 `copyTone.ctaPriority` drives sticky chrome on public `/s/[slug]`:
-- **call_first** — HVAC, plumber, electrician, roofing, pest: sticky `tel:` primary + estimate/book secondary. High-contrast / emergency-orange OK for panic trades.
+- **call_first** — HVAC, plumber, electrician, roofing, pest, appliance_repair: sticky `tel:` primary + estimate/book secondary. High-contrast / emergency-orange OK for panic trades.
 - **book_first** — salon (+ quote-led trucking/auto_detail/moving): sticky Book primary; soft calm chrome; call secondary.
 - **hybrid** — landscaping, painting: quote/schedule primary + Call secondary.
 - **quote_first** — commercial cleaning (`janitorial`) + `junk_removal` + `pressure_washing` + `gutter_cleaning` + `window_cleaning` + `carpet_cleaning`: Get a quote primary + Call beside form path.
-- **cleaning** (residential) is `book_first` recurring-default; garage/locksmith/towing/water_damage are `call_first` emergency.
+- **cleaning** (residential) is `book_first` recurring-default; garage/locksmith/towing/water_damage/appliance_repair are `call_first` emergency.
 - Trust chips near CTAs; 48px targets; sticky max 2 actions; never put LSA-only numbers on public pages (`business.phone` = public DNI only).
 - A/B verbs in `generate.ts` match each mode.

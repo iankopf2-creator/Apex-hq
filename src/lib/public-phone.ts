@@ -16,6 +16,7 @@ const CALL_FIRST_NICHES = new Set([
   "roofing",
   "pest",
   "slab_leak",
+  "appliance_repair",
 ]);
 
 export function isCallFirstNiche(niche: string): boolean {
