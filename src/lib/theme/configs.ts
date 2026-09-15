@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1311,6 +1311,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  flooring: {
+    niche: "flooring",
+    label: "Flooring",
+    palette: {
+      // Warm oak / charcoal slate + copper/bronze CTA — not carpet seafoam, handyman gold, gutter copper-roof
+      primary: "#292524",
+      primaryForeground: "#fafaf9",
+      accent: "#b45309",
+      accentForeground: "#fffbeb",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest materials-first, assess subfloor before firm price, quote before install",
+      heroStyle: "quote-first flooring LP — LVP/hardwood/tile scope, no bait flat sqft, no fake same-day",
+      ctaStyle: "request a flooring quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat sqft fees", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "firm price before material/subfloor assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#292524",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b45309",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Subfloor assessed before firm price", "Quote before install", "No bait flat sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/flooring.jpg",
+        alt: "Close-up of warm hardwood flooring boards",
+        credit: "Maria Kovalets on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/l3qaat24Cv4",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 };

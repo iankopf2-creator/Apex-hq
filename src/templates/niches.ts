@@ -597,6 +597,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Request a handyman quote",
     accentHint: "workbench-gold",
   },
+  {
+    id: "flooring",
+    label: "Flooring",
+    defaultTagline: "Hard floors done right — quote before install",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "LVP / Laminate Install", description: "Click-lock and glue-down — quote after material + subfloor check", priceFrom: 0 },
+      { name: "Hardwood Install / Refinish", description: "Sand, stain, or new hardwood — firm price after assessment", priceFrom: 0 },
+      { name: "Tile / Stone Flooring", description: "Layout and set — no bait flat sqft fees", priceFrom: 0 },
+    ],
+    heroHints: ["Subfloor assessed before firm price", "Quote before install", "No bait flat sqft fees"],
+    ctaLabel: "Request a flooring quote",
+    accentHint: "oak-copper",
+  },
 
 ];
 

@@ -35,3 +35,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Carpet cleaning | `carpet-cleaning.jpg` | Unsplash contributor | https://unsplash.com/photos/cpIgNaazQ6w |
 | Appliance repair | `appliance-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/FXpJW_wdMdk |
 | Handyman | `handyman.jpg` | Bermix Studio | https://unsplash.com/photos/iwz5tmhjl7o |
+| Flooring | `flooring.jpg` | Maria Kovalets | https://unsplash.com/photos/l3qaat24Cv4 |
