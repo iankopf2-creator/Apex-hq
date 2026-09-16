@@ -42,3 +42,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Decking | `decking.jpg` | Masood Aslami | https://unsplash.com/photos/UNhrUkdivWs |
 | Masonry | `masonry.jpg` | Solømen | https://unsplash.com/photos/i6V6diaf71A |
 | Drywall | `drywall.jpg` | Olek Buzunov | https://unsplash.com/photos/GIubG5JhDV4 |
+| Insulation | `insulation.jpg` | Brett Jordan | https://unsplash.com/photos/1_l6uH9lcJ0 |
