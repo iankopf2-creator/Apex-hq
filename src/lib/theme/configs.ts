@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1535,6 +1535,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  masonry: {
+    niche: "masonry",
+    label: "Masonry",
+    palette: {
+      // Kiln brick + limestone/sand — not decking teak-sage, concrete amber-slate, fencing forest-sage, siding coastal, flooring oak-copper
+      primary: "#5a3428",
+      primaryForeground: "#faf7f2",
+      accent: "#c9b896",
+      accentForeground: "#2c2416",
+      background: "#f6f1e8",
+      foreground: "#1f1914",
+      muted: "#ebe3d6",
+      mutedForeground: "#6b5d4d",
+      border: "#d9cebc",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/material/mortar/height-first, assess brick/stone/block before firm price, quote before build or repair",
+      heroStyle: "quote-first masonry LP — brick/stone/block chips when true, no bait flat $/sqft, no fake same-day build",
+      ctaStyle: "get a masonry quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day build guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/material/mortar/height assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#5a3428",
+      "--theme-primary-fg": "#faf7f2",
+      "--theme-accent": "#c9b896",
+      "--theme-bg": "#f6f1e8",
+      "--theme-fg": "#1f1914",
+    },
+    trustBadges: ["Sqft/access/material/mortar/height assessed before firm price", "Quote before build or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/masonry.jpg",
+        alt: "Mason applying mortar to a brick wall during construction",
+        credit: "Solømen on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/i6V6diaf71A",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 

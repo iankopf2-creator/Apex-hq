@@ -40,3 +40,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Concrete | `concrete.jpg` | TROY ALLEN | https://unsplash.com/photos/GNClKls4ok8 |
 | Siding | `siding.jpg` | Wayne Darden | https://unsplash.com/photos/6KG7tDW2mNc |
 | Decking | `decking.jpg` | Masood Aslami | https://unsplash.com/photos/UNhrUkdivWs |
+| Masonry | `masonry.jpg` | Solømen | https://unsplash.com/photos/i6V6diaf71A |
