@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1584,6 +1584,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
 
 
 
+
+
+  drywall: {
+    niche: "drywall",
+    label: "Drywall",
+    palette: {
+      // Cool gypsum / joint-compound white-gray + soft paper-tape beige — not masonry kiln-brick/limestone, concrete amber-slate, flooring oak-copper, decking teak-sage
+      primary: "#5e6a73",
+      primaryForeground: "#f8fafb",
+      accent: "#d8c9b0",
+      accentForeground: "#2a2418",
+      background: "#f7f6f4",
+      foreground: "#1c2126",
+      muted: "#ebe9e5",
+      mutedForeground: "#5c6570",
+      border: "#d5d1cb",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/rooms/texture/damage/height-first, assess smooth/orange-peel/knockdown and water/nail pops/seam before firm price, quote before hang/finish/repair",
+      heroStyle: "quote-first drywall LP — hang/finish/repair chips when true, no bait flat $/sqft, no fake same-day",
+      ctaStyle: "get a drywall quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day hang or finish guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/rooms/texture/damage/height assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#5e6a73",
+      "--theme-primary-fg": "#f8fafb",
+      "--theme-accent": "#d8c9b0",
+      "--theme-bg": "#f7f6f4",
+      "--theme-fg": "#1c2126",
+    },
+    trustBadges: ["Sqft/access/rooms/texture/damage/height assessed before firm price", "Quote before hang, finish, or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/drywall.jpg",
+        alt: "Room under construction with metal studs and drywall sheets",
+        credit: "Olek Buzunov on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/GIubG5JhDV4",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 };

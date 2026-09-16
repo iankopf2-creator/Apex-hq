@@ -168,6 +168,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/access/material/mortar/height assess", ctaVerb: "Get a masonry quote" },
     B: { heroEmphasis: "quote-first brick / stone / block honesty", ctaVerb: "Request a masonry quote" },
   },
+  drywall: {
+    A: { heroEmphasis: "quote-first sqft/access/rooms/texture/damage/height assess", ctaVerb: "Get a drywall quote" },
+    B: { heroEmphasis: "quote-first hang / finish / repair honesty", ctaVerb: "Request a drywall quote" },
+  },
 
 };
 

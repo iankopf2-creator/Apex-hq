@@ -729,6 +729,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a masonry quote",
     accentHint: "kiln-brick-limestone",
   },
+  {
+    id: "drywall",
+    label: "Drywall",
+    defaultTagline: "Hang, finish & repair — quote before we start",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Drywall Hang / New Walls", description: "Sheetrock hang — quote after sqft, access, rooms, texture, and height", priceFrom: 0 },
+      { name: "Finish / Texture Match", description: "Smooth, orange-peel, or knockdown when true — firm price after site check", priceFrom: 0 },
+      { name: "Patch / Water / Nail Pops / Seams", description: "Repair honesty — no bait flat $/sqft or fake same-day hang", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/rooms/texture/damage/height assessed before firm price", "Quote before hang, finish, or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a drywall quote",
+    accentHint: "gypsum-tape-beige",
+  },
 
 ];
 
