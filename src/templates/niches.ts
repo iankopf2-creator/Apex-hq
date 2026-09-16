@@ -707,6 +707,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a deck quote",
     accentHint: "teak-charcoal-sage",
   },
+  {
+    id: "masonry",
+    label: "Masonry",
+    defaultTagline: "Brick, stone & block — quote before we build or repair",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Brick Build / Repair", description: "New or tuckpoint — quote after sqft, access, mortar, height, and material", priceFrom: 0 },
+      { name: "Stone / Block Masonry", description: "Natural stone or CMU when true — firm price after site + access check", priceFrom: 0 },
+      { name: "Chimney / Veneer / Retaining", description: "Code-aware when required — no bait flat $/sqft or fake same-day build", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/material/mortar/height assessed before firm price", "Quote before build or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a masonry quote",
+    accentHint: "kiln-brick-limestone",
+  },
 
 ];
 
