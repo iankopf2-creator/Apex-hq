@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "pool_service";
 
 export type ThemePalette = {
   primary: string;
@@ -37,7 +37,7 @@ export type CopyTone = {
   /**
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
-   * hybrid = seasonal/recurring (quote vs schedule vs call);
+   * hybrid = seasonal/recurring (quote vs schedule vs call; painting/handyman/pool_service);
    * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
@@ -1955,6 +1955,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+  pool_service: {
+    niche: "pool_service",
+    label: "Pool service",
+    palette: {
+      // Pool-navy + aqua — not plumber cyan, water_damage steel, landscaping green
+      primary: "#0c4a6e",
+      primaryForeground: "#f0f9ff",
+      accent: "#06b6d4",
+      accentForeground: "#ecfeff",
+      background: "#f0f9ff",
+      foreground: "#0f172a",
+      muted: "#e0f2fe",
+      mutedForeground: "#475569",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest water-balance / equipment-first; assess chemistry + equipment before firm repair price; schedule route without fake same-day; seasonal open/close honesty",
+      heroStyle: "hybrid route/schedule + chemistry/equipment assess — weekly/biweekly care without fake same-day or bait flat fees",
+      ctaStyle: "schedule pool service (call secondary)",
+      ctaPriority: "hybrid",
+      avoid: [...baseAvoid, "fake same-day guarantees", "bait flat repair fees before chemistry/equipment assess", "competitor brand cloning", "fake 24/7", "firm repair price before chemistry + equipment assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c4a6e",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#06b6d4",
+      "--theme-bg": "#f0f9ff",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Chemistry/equipment assessed before firm repair price", "Route schedule honesty", "No fake same-day guarantees", "Licensed when required"],
+    heroImages: [
+      {
+        src: "/niches/pool-service.jpg",
+        alt: "Residential backyard swimming pool with fence and clear water",
+        credit: "Alex Tyson on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/a-swimming-pool-in-a-backyard-with-a-fenced-in-area-zcQFERnpYxk",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 

@@ -861,6 +861,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a foundation quote",
     accentHint: "foundation-charcoal-copper",
   },
+  {
+    id: "pool_service",
+    label: "Pool service",
+    defaultTagline: "Pool care & equipment — schedule the route, quote repairs honestly",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Weekly / biweekly pool care", description: "Route schedule for chemistry balance and skimming — no fake same-day guarantees", priceFrom: 0 },
+      { name: "Seasonal open & close", description: "Open/close honesty by season — schedule on the route when true", priceFrom: 0 },
+      { name: "Equipment repair / leak check", description: "Quote after chemistry + equipment assess — no bait flat repair fees", priceFrom: 0 },
+    ],
+    heroHints: ["Chemistry/equipment assessed before firm repair price", "Route schedule honesty", "No fake same-day guarantees", "Licensed when required"],
+    ctaLabel: "Schedule pool service",
+    accentHint: "pool-navy-aqua",
+  },
 
 
   {
