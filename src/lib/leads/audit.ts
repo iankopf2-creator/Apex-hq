@@ -34,6 +34,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   masonry: 600,
   drywall: 375,
   insulation: 450,
+  tile: 425,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -99,6 +100,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first drywall page (hang/finish/repair + sqft/access/rooms/texture/damage/height assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day.",
   insulation:
     "Add a quote-first insulation page (blow-in/batts/spray-foam + sqft/access/attic-vs-wall-vs-crawl/existing R-value/moisture-ventilation/height assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day.",
+  tile:
+    "Add a quote-first tile page (floor/wall/shower + sqft/access/substrate/material porcelain-ceramic-natural-stone/grout/height/waterproofing assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day.",
 };
 
 function personalizedFix(lead: Pick<Lead, "niche">, demoLink: string): string {

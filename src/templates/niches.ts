@@ -773,6 +773,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get an insulation quote",
     accentHint: "attic-taupe-insulation-pink",
   },
+  {
+    id: "tile",
+    label: "Tile",
+    defaultTagline: "Floor, wall & shower — quote before we set",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Floor / Large-Format Tile", description: "Porcelain or ceramic floors — quote after sqft, access, substrate, material, and grout", priceFrom: 0 },
+      { name: "Wall / Backsplash / Shower", description: "Wall and wet-area tile when true — firm price after waterproofing/height site check", priceFrom: 0 },
+      { name: "Repair / Regrout / Natural Stone", description: "Repair honesty — no bait flat $/sqft or fake same-day install", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/substrate/material/grout/height/waterproofing assessed before firm price", "Quote before install or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    ctaLabel: "Get a tile quote",
+    accentHint: "porcelain-slate-grout-beige",
+  },
+
+
 
 ];
 
