@@ -41,3 +41,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Siding | `siding.jpg` | Wayne Darden | https://unsplash.com/photos/6KG7tDW2mNc |
 | Decking | `decking.jpg` | Masood Aslami | https://unsplash.com/photos/UNhrUkdivWs |
 | Masonry | `masonry.jpg` | Solømen | https://unsplash.com/photos/i6V6diaf71A |
+| Drywall | `drywall.jpg` | Olek Buzunov | https://unsplash.com/photos/GIubG5JhDV4 |
