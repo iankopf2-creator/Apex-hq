@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1630,6 +1630,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  insulation: {
+    niche: "insulation",
+    label: "Insulation",
+    palette: {
+      // Warm cellulose/attic taupe-slate + soft insulation-pink — not drywall gypsum/tape-beige, masonry kiln-brick/limestone, concrete amber-slate, flooring oak-copper, siding coastal blue-gray
+      primary: "#6a5f56",
+      primaryForeground: "#faf8f6",
+      accent: "#e0b8bc",
+      accentForeground: "#3a2428",
+      background: "#f6f3f0",
+      foreground: "#241f1c",
+      muted: "#ebe6e1",
+      mutedForeground: "#6a615a",
+      border: "#d4cbc4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/attic-vs-wall-vs-crawl/existing R-value/moisture-ventilation/height-first, assess blow-in/batts/spray-foam before firm price, quote before install",
+      heroStyle: "quote-first insulation LP — attic/wall/crawl chips when true, no bait flat $/sqft, no fake same-day",
+      ctaStyle: "get an insulation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day blow-in or spray-foam guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/attic-vs-wall-vs-crawl/existing R-value/moisture-ventilation/height assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#6a5f56",
+      "--theme-primary-fg": "#faf8f6",
+      "--theme-accent": "#e0b8bc",
+      "--theme-bg": "#f6f3f0",
+      "--theme-fg": "#241f1c",
+    },
+    trustBadges: ["Sqft/access/attic-vs-wall-vs-crawl/R-value/moisture/height assessed before firm price", "Quote before blow-in, batts, or spray foam", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/insulation.jpg",
+        alt: "Attic insulation under roof framing with two skylights",
+        credit: "Brett Jordan on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/1_l6uH9lcJ0",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

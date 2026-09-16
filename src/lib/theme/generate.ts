@@ -172,6 +172,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/access/rooms/texture/damage/height assess", ctaVerb: "Get a drywall quote" },
     B: { heroEmphasis: "quote-first hang / finish / repair honesty", ctaVerb: "Request a drywall quote" },
   },
+  insulation: {
+    A: { heroEmphasis: "quote-first sqft/access/attic-vs-wall-vs-crawl/R-value/moisture/height assess", ctaVerb: "Get an insulation quote" },
+    B: { heroEmphasis: "quote-first blow-in / batts / spray-foam honesty", ctaVerb: "Request an insulation quote" },
+  },
 
 };
 

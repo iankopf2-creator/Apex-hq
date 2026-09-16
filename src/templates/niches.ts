@@ -751,6 +751,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a drywall quote",
     accentHint: "gypsum-tape-beige",
   },
+  {
+    id: "insulation",
+    label: "Insulation",
+    defaultTagline: "Attic, walls & crawl — quote before we install",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Attic Blow-In / Cellulose", description: "Loose-fill attic — quote after sqft, access, existing R-value, moisture/ventilation, and height", priceFrom: 0 },
+      { name: "Batts / Fiberglass", description: "Wall or attic batts when true — firm price after attic-vs-wall-vs-crawl site check", priceFrom: 0 },
+      { name: "Spray Foam / Crawl / Walls", description: "Closed/open cell when true — no bait flat $/sqft or fake same-day install", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/attic-vs-wall-vs-crawl/R-value/moisture/height assessed before firm price", "Quote before blow-in, batts, or spray foam", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    ctaLabel: "Get an insulation quote",
+    accentHint: "attic-taupe-insulation-pink",
+  },
 
 ];
 
