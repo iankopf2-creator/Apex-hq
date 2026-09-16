@@ -177,6 +177,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first blow-in / batts / spray-foam honesty", ctaVerb: "Request an insulation quote" },
   },
 
+  tile: {
+    A: { heroEmphasis: "quote-first sqft/access/substrate/material/grout/height/waterproofing assess", ctaVerb: "Get a tile quote" },
+    B: { heroEmphasis: "quote-first porcelain / ceramic / natural-stone honesty", ctaVerb: "Request a tile quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

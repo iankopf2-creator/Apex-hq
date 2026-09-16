@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1676,6 +1676,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+
+  tile: {
+    niche: "tile",
+    label: "Tile",
+    palette: {
+      // Cool porcelain gray/slate + soft grout-beige — not flooring oak-copper, insulation attic-pink, drywall gypsum/tape-beige
+      primary: "#3d4f5f",
+      primaryForeground: "#f7f9fb",
+      accent: "#cbbba3",
+      accentForeground: "#2c261c",
+      background: "#f3f5f7",
+      foreground: "#1a2229",
+      muted: "#e8ebef",
+      mutedForeground: "#5a6672",
+      border: "#cdd2d8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/substrate/material porcelain-ceramic-natural-stone/grout/height/waterproofing-first, assess before firm price, quote before install/repair",
+      heroStyle: "quote-first tile LP — floor/wall/shower chips when true, no bait flat $/sqft, no fake same-day",
+      ctaStyle: "get a tile quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft fees", "fake same-day install or repair guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/substrate/material/grout/height/waterproofing assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#3d4f5f",
+      "--theme-primary-fg": "#f7f9fb",
+      "--theme-accent": "#cbbba3",
+      "--theme-bg": "#f3f5f7",
+      "--theme-fg": "#1a2229",
+    },
+    trustBadges: ["Sqft/access/substrate/material/grout/height/waterproofing assessed before firm price", "Quote before install or repair", "HOA/permit honesty when required", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/tile.jpg",
+        alt: "Polished white porcelain floor tiles with natural light and sheer curtains",
+        credit: "Glen Ardi on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/yg-nrRoZcw0",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 };
