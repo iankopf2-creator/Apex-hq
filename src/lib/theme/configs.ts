@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -373,12 +373,13 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "auto_detail",
     label: "Auto detailing",
     palette: {
-      primary: "#3b82f6",
-      primaryForeground: "#eff6ff",
-      accent: "#111827",
-      accentForeground: "#f9fafb",
-      background: "#f9fafb",
-      foreground: "#111827",
+      // Deep automotive graphite + cool chrome — not pressure sky, cleaning teal, landscaping forest
+      primary: "#1c2433",
+      primaryForeground: "#f4f6f9",
+      accent: "#a8b4c4",
+      accentForeground: "#12161e",
+      background: "#f3f4f6",
+      foreground: "#12161e",
       muted: "#e5e7eb",
       mutedForeground: "#4b5563",
       border: "#d1d5db",
@@ -388,23 +389,24 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
     },
     copyTone: {
-      voice: "sharp, clean, proud of the finish",
-      heroStyle: "showroom-clean without the showroom price",
-      ctaStyle: "book a detail",
-      ctaPriority: "book_first",
-      avoid: [...baseAvoid, "fake limited-time flash sales"],
+      voice: "honest vehicle-size/condition/location/package-first, assess before firm price, quote before wash or ceramic; interior/exterior and ceramic-vs-wash honesty",
+      heroStyle: "quote-first auto detail LP — interior / exterior / full package chips when true, no bait flat package fees, no fake same-day, ceramic is not a wash",
+      ctaStyle: "get a detail quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat package fees", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "calling ceramic coating a wash", "firm price before vehicle size/condition/location/package assessment"],
     },
     cssVars: {
-      "--theme-primary": "#3b82f6",
-      "--theme-primary-fg": "#eff6ff",
-      "--theme-accent": "#111827",
-      "--theme-bg": "#f9fafb",
-      "--theme-fg": "#111827",
+      "--theme-primary": "#1c2433",
+      "--theme-primary-fg": "#f4f6f9",
+      "--theme-accent": "#a8b4c4",
+      "--theme-bg": "#f3f4f6",
+      "--theme-fg": "#12161e",
     },
+    trustBadges: ["Vehicle size/condition/location/package assessed before firm price", "Quote before wash or ceramic", "Interior/exterior honesty", "Ceramic ≠ wash — no bait flat package fees"],
     heroImages: [
       {
         src: "/niches/auto-detail.jpg",
-        alt: "Clean car exterior detailing finish",
+        alt: "Clean car exterior detailing finish with polished paint",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1601362840469-51e4d8d58785",
         license: "unsplash",

@@ -10,6 +10,7 @@ import type { BusinessProfile } from "@/lib/types";
 
 // Hybrid niches (painting, handyman) intentionally omit — quote/schedule primary + Call secondary via ctaPriority.
 // Landscaping is quote_first (assess lawn size/access/beds/irrigation/season before firm price).
+// Auto detailing is quote_first (assess vehicle size/condition/location/package; ceramic ≠ wash).
 const CALL_FIRST_NICHES = new Set([
   "hvac",
   "plumber",
