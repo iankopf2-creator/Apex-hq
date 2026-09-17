@@ -7,7 +7,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Plumber — deep water navy, cyan CTA
 - Salon — deep rose, blush CTA
 - Trucking — fleet navy / amber
-- Electrician, Roofing, Landscaping, Auto detailing
+- Electrician, Roofing, Auto detailing
 - Cleaning (residential book_first), Pest control, Moving
 - Painting — hybrid estimate/schedule (merged PR #15)
 
@@ -39,6 +39,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Tile — quote_first (cool porcelain gray/slate + soft grout-beige; sqft/access/substrate/material porcelain-ceramic-natural-stone/grout/height/waterproofing assess before firm price; no bait flat $/sqft; no fake same-day; HOA/permit honesty when true; quote before install/repair)
 - Cabinets — quote_first (warm walnut/charcoal + soft brass; linear-ft/access/existing-vs-new/material paint-stain-soft-close/layout kitchen-bath measure before firm price; no bait flat $/lf or $/cabinet; no fake same-day; HOA/permit honesty when true; quote before install/refacing)
 - Countertops — quote_first (cool quartz/stone gray-slate + soft warm veining/brass; sqft/linear/edge/sink-cutout/existing-vs-new/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price; no bait flat $/sqft or $/lf; no fake same-day; HOA/permit honesty when true; quote before install)
+- Landscaping — quote_first (outdoor forest green + warm earth; lawn size/access/existing beds/irrigation/season assess before firm price; no bait flat $/visit or $/acre; no fake same-day; seasonal/recurring honesty; quote before mow or install)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -51,5 +52,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping
 - 48px tap targets; trust chips from research notes

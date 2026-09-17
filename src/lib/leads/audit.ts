@@ -18,6 +18,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   trucking: 150,
   electrician: 200,
   roofing: 350,
+  landscaping: 225,
   slab_leak: 450,
   junk_removal: 275,
   pressure_washing: 225,
@@ -70,6 +71,8 @@ const NICHE_FIX: Record<string, string> = {
     "Publish clear service hours + emergency booking so panel/outage calls don't bounce to whoever picks up first.",
   roofing:
     "Add storm/estimate request form + real hours — stop losing insurance jobs to the contractor with a form.",
+  landscaping:
+    "Add a quote-first landscaping page (lawn/beds/seasonal + lawn size/access/existing beds/irrigation/season assess before firm price) so callers get a real quote — not bait flat $/visit or $/acre or fake same-day.",
   slab_leak:
     "Ship a detection-first call page (sticky tel:) so warm-floor / bill-spike callers book locate-before-cut — not a form maze.",
   junk_removal:

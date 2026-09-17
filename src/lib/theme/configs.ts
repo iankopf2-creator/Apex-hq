@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -329,38 +329,40 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "landscaping",
     label: "Landscaping",
     palette: {
-      primary: "#4d7c0f",
-      primaryForeground: "#f7fee7",
-      accent: "#14532d",
-      accentForeground: "#f7fee7",
-      background: "#f7fee7",
-      foreground: "#14532d",
-      muted: "#d9f99d",
-      mutedForeground: "#3f6212",
-      border: "#bef264",
+      // Outdoor forest green + warm earth — not fencing cedar/sage, junk lime, decking teak, pressure sky
+      primary: "#2f4a35",
+      primaryForeground: "#f4f7f2",
+      accent: "#a67c52",
+      accentForeground: "#1c140c",
+      background: "#f6f3ee",
+      foreground: "#1a211c",
+      muted: "#e8e4db",
+      mutedForeground: "#4a5548",
+      border: "#d4cfc4",
     },
     fonts: {
       heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
       body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
     },
     copyTone: {
-      voice: "fresh, reliable, outdoor-ready",
-      heroStyle: "seasonal curb appeal — recurring care or one-off projects",
-      ctaStyle: "get a lawn quote or schedule service",
-      ctaPriority: "hybrid",
-      avoid: [...baseAvoid, "overselling overnight makeovers"],
+      voice: "honest lawn-size/access/existing-beds/irrigation/season-first, assess before firm price, quote before mow or install; seasonal and recurring honesty",
+      heroStyle: "quote-first landscaping LP — lawn care / beds / seasonal cleanup chips when true, no bait flat $/visit or $/acre, no fake same-day",
+      ctaStyle: "get a landscaping quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/visit or $/acre fees", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "overselling overnight makeovers", "firm price before lawn size/access/existing beds/irrigation/season assessment"],
     },
     cssVars: {
-      "--theme-primary": "#4d7c0f",
-      "--theme-primary-fg": "#f7fee7",
-      "--theme-accent": "#14532d",
-      "--theme-bg": "#f7fee7",
-      "--theme-fg": "#14532d",
+      "--theme-primary": "#2f4a35",
+      "--theme-primary-fg": "#f4f7f2",
+      "--theme-accent": "#a67c52",
+      "--theme-bg": "#f6f3ee",
+      "--theme-fg": "#1a211c",
     },
+    trustBadges: ["Lawn size/access/beds/irrigation/season assessed before firm price", "Quote before mow or install", "Seasonal & recurring honesty", "No bait flat $/visit or $/acre fees"],
     heroImages: [
       {
         src: "/niches/landscaping.jpg",
-        alt: "Maintained lawn and landscaping",
+        alt: "Maintained lawn and landscaping with green grass and garden beds",
         credit: "Photo via Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1558904541-efa843a96f01",
         license: "unsplash",
