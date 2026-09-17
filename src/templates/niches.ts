@@ -116,7 +116,7 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   {
     id: "landscaping",
     label: "Landscaping",
-    defaultTagline: "Yards that look cared for — week after week",
+    defaultTagline: "Lawn, beds & seasonal care — quote before we start",
     defaultHours: {
       mon: "7:00 AM – 5:00 PM",
       tue: "7:00 AM – 5:00 PM",
@@ -127,13 +127,13 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
       sun: "Closed",
     },
     defaultServices: [
-      { name: "Lawn Mowing", description: "Weekly or biweekly cuts", priceFrom: 45 },
-      { name: "Mulch & Beds", description: "Clean beds and fresh mulch", priceFrom: 150 },
-      { name: "Seasonal Cleanup", description: "Spring or fall yard reset", priceFrom: 199 },
+      { name: "Lawn Care / Mowing", description: "Weekly or biweekly when true — quote after lawn size, access, and season check; no bait flat $/visit or $/acre", priceFrom: 0 },
+      { name: "Beds / Mulch / Plantings", description: "Clean beds and plantings when true — firm price after existing beds and irrigation site check", priceFrom: 0 },
+      { name: "Seasonal Cleanup / Recurring Plans", description: "Spring/fall reset or recurring care honesty — no fake same-day makeovers", priceFrom: 0 },
     ],
-    heroHints: ["Seasonal packages", "Recurring or one-off", "Licensed & insured"],
-    ctaLabel: "Get a lawn quote",
-    accentHint: "lime",
+    heroHints: ["Lawn size/access/beds/irrigation/season assessed before firm price", "Quote before mow or install", "Seasonal & recurring honesty", "No bait flat $/visit or $/acre fees"],
+    ctaLabel: "Get a landscaping quote",
+    accentHint: "forest-green-warm-earth",
   },
   {
     id: "auto_detail",

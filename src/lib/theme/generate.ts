@@ -57,8 +57,8 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "benefit-led planned roof work", ctaVerb: "Get a roof estimate" },
   },
   landscaping: {
-    A: { heroEmphasis: "hybrid seasonal recurring", ctaVerb: "Get a lawn quote" },
-    B: { heroEmphasis: "hybrid one-off project", ctaVerb: "Schedule service" },
+    A: { heroEmphasis: "quote-first lawn-size/access/beds/irrigation/season assess", ctaVerb: "Get a landscaping quote" },
+    B: { heroEmphasis: "quote-first seasonal / recurring honesty", ctaVerb: "Request a landscaping quote" },
   },
   auto_detail: {
     A: { heroEmphasis: "clarity-first clean finish", ctaVerb: "Book a detail" },
