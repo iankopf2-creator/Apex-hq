@@ -44,3 +44,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Drywall | `drywall.jpg` | Olek Buzunov | https://unsplash.com/photos/GIubG5JhDV4 |
 | Insulation | `insulation.jpg` | Brett Jordan | https://unsplash.com/photos/1_l6uH9lcJ0 |
 | Tile | `tile.jpg` | Glen Ardi | https://unsplash.com/photos/yg-nrRoZcw0 |
+| Cabinets | `cabinets.jpg` | Sidekix Media | https://unsplash.com/photos/photo-1556912173-46c336c7fd55 |

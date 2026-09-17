@@ -795,8 +795,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a tile quote",
     accentHint: "porcelain-slate-grout-beige",
   },
-
-
+  {
+    id: "cabinets",
+    label: "Cabinets",
+    defaultTagline: "Kitchen & bath — quote before we build or reface",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "New Kitchen / Bath Cabinets", description: "Custom or semi-custom — quote after linear-ft, access, layout, and material site measure", priceFrom: 0 },
+      { name: "Cabinet Refacing / Hardware", description: "Doors, drawers, soft-close, hardware when true — firm price after existing-vs-new check", priceFrom: 0 },
+      { name: "Laundry / Garage / Built-ins", description: "Secondary spaces when true — no bait flat $/lf or $/cabinet or fake same-day install", priceFrom: 0 },
+    ],
+    heroHints: ["Linear-ft/access/existing-vs-new/material/layout measured before firm price", "Quote before install or refacing", "HOA/permit honesty when required", "No bait flat $/lf or $/cabinet fees"],
+    ctaLabel: "Get a cabinet quote",
+    accentHint: "walnut-charcoal-brass",
+  },
 
 ];
 

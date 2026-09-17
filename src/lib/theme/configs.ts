@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1724,6 +1724,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  cabinets: {
+    niche: "cabinets",
+    label: "Cabinets",
+    palette: {
+      // Warm walnut/charcoal + soft brass — not tile porcelain/grout, flooring oak-copper, drywall gypsum/tape-beige, insulation attic-pink
+      primary: "#3f2e24",
+      primaryForeground: "#faf6f1",
+      accent: "#c4a574",
+      accentForeground: "#2a2118",
+      background: "#f7f3ee",
+      foreground: "#1f1814",
+      muted: "#ebe4db",
+      mutedForeground: "#6b5d52",
+      border: "#d4c8b8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest linear-ft/access/existing-vs-new/material paint-stain-soft-close-hardware/layout kitchen-bath-laundry-first, measure before firm price, quote before install/refacing",
+      heroStyle: "quote-first cabinets LP — kitchen/bath/refacing chips when true, no bait flat $/lf or $/cabinet, no fake same-day",
+      ctaStyle: "get a cabinet quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/cabinet fees", "fake same-day install or refacing guarantees", "competitor brand cloning", "fake 24/7", "firm price before linear-ft/access/existing-vs-new/material/layout measure"],
+    },
+    cssVars: {
+      "--theme-primary": "#3f2e24",
+      "--theme-primary-fg": "#faf6f1",
+      "--theme-accent": "#c4a574",
+      "--theme-bg": "#f7f3ee",
+      "--theme-fg": "#1f1814",
+    },
+    trustBadges: ["Linear-ft/access/existing-vs-new/material/layout measured before firm price", "Quote before install or refacing", "HOA/permit honesty when required", "No bait flat $/lf or $/cabinet fees"],
+    heroImages: [
+      {
+        src: "/niches/cabinets.jpg",
+        alt: "Bright white kitchen cabinets with wood counters and open shelving",
+        credit: "Sidekix Media on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/photo-1556912173-46c336c7fd55",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 

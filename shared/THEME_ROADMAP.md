@@ -37,6 +37,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Drywall — quote_first (cool gypsum/joint-compound white-gray + soft tape-beige; sqft/access/rooms/texture/damage/height assess before firm price; no bait flat $/sqft; no fake same-day; HOA/permit honesty when true; quote before hang/finish/repair)
 - Insulation — quote_first (warm cellulose/attic taupe-slate + soft insulation-pink; sqft/access/attic-vs-wall-vs-crawl/existing R-value/moisture-ventilation/height assess before firm price; no bait flat $/sqft; no fake same-day; HOA/permit honesty when true; quote before blow-in/batts/spray-foam)
 - Tile — quote_first (cool porcelain gray/slate + soft grout-beige; sqft/access/substrate/material porcelain-ceramic-natural-stone/grout/height/waterproofing assess before firm price; no bait flat $/sqft; no fake same-day; HOA/permit honesty when true; quote before install/repair)
+- Cabinets — quote_first (warm walnut/charcoal + soft brass; linear-ft/access/existing-vs-new/material paint-stain-soft-close/layout kitchen-bath measure before firm price; no bait flat $/lf or $/cabinet; no fake same-day; HOA/permit honesty when true; quote before install/refacing)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -49,5 +50,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets
 - 48px tap targets; trust chips from research notes
