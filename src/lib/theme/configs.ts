@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1764,6 +1764,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Bright white kitchen cabinets with wood counters and open shelving",
         credit: "Sidekix Media on Unsplash",
         sourceUrl: "https://unsplash.com/photos/photo-1556912173-46c336c7fd55",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  countertops: {
+    niche: "countertops",
+    label: "Countertops",
+    palette: {
+      // Cool quartz/stone gray-slate + soft warm veining/brass — not cabinets walnut, tile porcelain/grout
+      primary: "#364554",
+      primaryForeground: "#f7f9fb",
+      accent: "#c9a882",
+      accentForeground: "#2a2318",
+      background: "#f2f4f6",
+      foreground: "#1a1f26",
+      muted: "#e6e9ed",
+      mutedForeground: "#5c6670",
+      border: "#c8ced6",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/linear/edge-profile/sink-cutout/existing-vs-new/access-stories/material quartz-granite-marble-laminate-butcher-block-first, measure/assess before firm price, quote before install",
+      heroStyle: "quote-first countertops LP — quartz/granite/marble chips when true, no bait flat $/sqft or $/lf, no fake same-day",
+      ctaStyle: "get a countertop quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf fees", "fake same-day install guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/linear/edge/sink-cutout/existing-vs-new/access/stories/material assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#364554",
+      "--theme-primary-fg": "#f7f9fb",
+      "--theme-accent": "#c9a882",
+      "--theme-bg": "#f2f4f6",
+      "--theme-fg": "#1a1f26",
+    },
+    trustBadges: ["Sqft/linear/edge/sink-cutout/access/stories/material assessed before firm price", "Quote before install", "HOA/permit honesty when required", "No bait flat $/sqft or $/lf fees"],
+    heroImages: [
+      {
+        src: "/niches/countertops.jpg",
+        alt: "Kitchen with marble countertops and warm gold accents",
+        credit: "Lisa Anna on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/B8VF4-1Krbs",
         license: "unsplash",
       },
     ],

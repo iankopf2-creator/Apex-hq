@@ -185,6 +185,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first linear-ft/access/existing-vs-new/material/layout measure", ctaVerb: "Get a cabinet quote" },
     B: { heroEmphasis: "quote-first install / refacing honesty", ctaVerb: "Request a cabinet quote" },
   },
+  countertops: {
+    A: { heroEmphasis: "quote-first sqft/linear/edge/sink-cutout/access/stories/material assess", ctaVerb: "Get a countertop quote" },
+    B: { heroEmphasis: "quote-first quartz / granite / marble / laminate honesty", ctaVerb: "Request a countertop quote" },
+  },
 
 };
 

@@ -817,6 +817,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a cabinet quote",
     accentHint: "walnut-charcoal-brass",
   },
+  {
+    id: "countertops",
+    label: "Countertops",
+    defaultTagline: "Quartz, granite & more — quote before we fabricate",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Kitchen Countertops", description: "Quartz, granite, marble, laminate, or butcher-block when true — quote after sqft/linear, edge profile, sink cutout, and access/stories", priceFrom: 0 },
+      { name: "Bath / Vanity Tops", description: "Vanity and bath tops when true — firm price after existing-vs-new and material site measure", priceFrom: 0 },
+      { name: "Fabrication / Edge / Cutouts", description: "Edge profiles and sink cutouts — no bait flat $/sqft or $/lf or fake same-day install", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/linear/edge/sink-cutout/access/stories/material assessed before firm price", "Quote before install", "HOA/permit honesty when required", "No bait flat $/sqft or $/lf fees"],
+    ctaLabel: "Get a countertop quote",
+    accentHint: "quartz-slate-brass-veining",
+  },
 
 ];
 
