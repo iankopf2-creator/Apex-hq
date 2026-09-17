@@ -61,8 +61,8 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first seasonal / recurring honesty", ctaVerb: "Request a landscaping quote" },
   },
   auto_detail: {
-    A: { heroEmphasis: "clarity-first clean finish", ctaVerb: "Book a detail" },
-    B: { heroEmphasis: "benefit-led showroom shine", ctaVerb: "Schedule detailing" },
+    A: { heroEmphasis: "quote-first vehicle-size/condition/location/package assess", ctaVerb: "Get a detail quote" },
+    B: { heroEmphasis: "quote-first interior/exterior + ceramic-vs-wash honesty", ctaVerb: "Request a detailing quote" },
   },
   cleaning: {
     A: { heroEmphasis: "book-first residential recurring", ctaVerb: "Book recurring" },

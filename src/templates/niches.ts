@@ -138,7 +138,7 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   {
     id: "auto_detail",
     label: "Auto detailing",
-    defaultTagline: "Showroom-clean without the showroom price",
+    defaultTagline: "Interior, exterior & protection — quote before we start",
     defaultHours: {
       mon: "9:00 AM – 6:00 PM",
       tue: "9:00 AM – 6:00 PM",
@@ -149,13 +149,13 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
       sun: "Closed",
     },
     defaultServices: [
-      { name: "Exterior Wash & Wax", description: "Hand wash, dry, and protect", priceFrom: 79 },
-      { name: "Interior Detail", description: "Vacuum, wipe-down, glass", priceFrom: 99 },
-      { name: "Full Detail", description: "Inside + outside package", priceFrom: 179 },
+      { name: "Exterior Wash / Paint Care", description: "Hand wash and protect when true — quote after vehicle size, condition, and location check; no bait flat package fees", priceFrom: 0 },
+      { name: "Interior Detail", description: "Vacuum, wipe-down, glass when true — firm price after interior condition assessment", priceFrom: 0 },
+      { name: "Full Detail / Ceramic Protection", description: "Inside + outside or ceramic when true — ceramic ≠ wash; no fake same-day shine guarantees", priceFrom: 0 },
     ],
-    heroHints: ["Mobile options", "Clear package pricing", "Photo before/after"],
-    ctaLabel: "Book a detail",
-    accentHint: "blue",
+    heroHints: ["Vehicle size/condition/location/package assessed before firm price", "Quote before wash or ceramic", "Interior/exterior honesty", "Ceramic ≠ wash — no bait flat package fees"],
+    ctaLabel: "Get a detail quote",
+    accentHint: "graphite-chrome",
   },
   {
     id: "cleaning",
