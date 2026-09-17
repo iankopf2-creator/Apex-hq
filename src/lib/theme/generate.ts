@@ -181,7 +181,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/access/substrate/material/grout/height/waterproofing assess", ctaVerb: "Get a tile quote" },
     B: { heroEmphasis: "quote-first porcelain / ceramic / natural-stone honesty", ctaVerb: "Request a tile quote" },
   },
-
+  cabinets: {
+    A: { heroEmphasis: "quote-first linear-ft/access/existing-vs-new/material/layout measure", ctaVerb: "Get a cabinet quote" },
+    B: { heroEmphasis: "quote-first install / refacing honesty", ctaVerb: "Request a cabinet quote" },
+  },
 
 };
 
