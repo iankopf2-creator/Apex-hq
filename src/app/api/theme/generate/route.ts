@@ -4,7 +4,7 @@ import { generateThemePackage, isThemeNiche } from "@/lib/theme";
 import { startAbExperiment } from "@/lib/theme/ab";
 
 const bodySchema = z.object({
-  niche: z.enum(["hvac","plumber","salon","trucking","electrician","roofing","landscaping","auto_detail","cleaning","pest_control","moving","painting","garage","locksmith","janitorial","towing","water_damage","fire_smoke","mold_remediation","tree_service","slab_leak","junk_removal","pressure_washing","gutter_cleaning","window_cleaning","carpet_cleaning","appliance_repair","handyman","flooring","fencing","concrete","siding","decking","masonry","drywall","insulation","tile","cabinets"]),
+  niche: z.enum(["hvac","plumber","salon","trucking","electrician","roofing","landscaping","auto_detail","cleaning","pest_control","moving","painting","garage","locksmith","janitorial","towing","water_damage","fire_smoke","mold_remediation","tree_service","slab_leak","junk_removal","pressure_washing","gutter_cleaning","window_cleaning","carpet_cleaning","appliance_repair","handyman","flooring","fencing","concrete","siding","decking","masonry","drywall","insulation","tile","cabinets","countertops"]),
   variant: z.enum(["A", "B"]).optional().default("A"),
   /** If true, also stub-start a 7-day A/B with A+B packages */
   startAb: z.boolean().optional().default(false),
