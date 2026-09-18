@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair";
 
 export type ThemePalette = {
   primary: string;
@@ -1813,6 +1813,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Kitchen with marble countertops and warm gold accents",
         credit: "Lisa Anna on Unsplash",
         sourceUrl: "https://unsplash.com/photos/B8VF4-1Krbs",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  foundation_repair: {
+    niche: "foundation_repair",
+    label: "Foundation repair",
+    palette: {
+      // Deep foundation charcoal/slate + warm structural copper — not concrete wet-gray+amber, slab_leak detection blue, masonry brick
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#b45309",
+      accentForeground: "#fffbeb",
+      background: "#f5f5f4",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest soil/drainage/crack-pattern/pier-vs-slab/access/stories assess-first, inspection before firm price, quote before repair",
+      heroStyle: "quote-first foundation LP — structural assess chips when true, no bait flat $/lf or $/pier, no fake same-day fix",
+      ctaStyle: "get a foundation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/pier package fees", "fake same-day foundation fix guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before soil/drainage/crack-pattern/pier-vs-slab/access/stories assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b45309",
+      "--theme-bg": "#f5f5f4",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Soil/drainage/crack/pier-vs-slab/access assessed before firm price", "Quote before repair", "Licensed contractor / engineer honesty when true", "No bait flat $/lf or $/pier fees"],
+    heroImages: [
+      {
+        src: "/niches/foundation-repair.jpg",
+        alt: "Construction worker inspecting structural concrete and foundation forms",
+        credit: "Unsplash contributor",
+        sourceUrl: "https://unsplash.com/photos/photo-1581094794329-c8112a89af12",
         license: "unsplash",
       },
     ],
