@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1908,6 +1908,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  epoxy_flooring: {
+    niche: "epoxy_flooring",
+    label: "Epoxy flooring",
+    palette: {
+      // Deep epoxy charcoal + gloss resin teal/cyan — not solar gold, concrete cool-gray, flooring oak, garage door chrome
+      primary: "#0c0a09",
+      primaryForeground: "#fafaf9",
+      accent: "#0d9488",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#0c0a09",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/prep/moisture/existing-coating/access assess-first for garage and commercial epoxy floor coating, quote before coat",
+      heroStyle: "quote-first epoxy LP — sqft/prep/moisture chips when true, no bait flat $/sqft, no fake same-day cure",
+      ctaStyle: "get an epoxy flooring quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day cure guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/prep/moisture/existing-coating/access assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c0a09",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#0d9488",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#0c0a09",
+    },
+    trustBadges: ["Sqft/prep/moisture/existing-coating/access assessed before firm price", "Quote before coat", "Garage & commercial epoxy honesty — no fake same-day cure", "No bait flat $/sqft fees"],
+    heroImages: [
+      {
+        src: "/niches/epoxy-flooring.jpg",
+        alt: "Glossy polished industrial floor coating in a modern commercial space",
+        credit: "Shahabudin Ibragimov on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 };
 

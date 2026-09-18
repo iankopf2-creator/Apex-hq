@@ -887,6 +887,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "epoxy_flooring",
+    label: "Epoxy flooring",
+    defaultTagline: "Garage & commercial epoxy — assess before we quote the coat",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Garage Epoxy Coat", description: "Full garage floor coating — quote after sqft, prep, moisture, and existing-coating check; illustrative From $1,200 after assess (not bait flat $/sqft)", priceFrom: 1200 },
+      { name: "Commercial Epoxy Floor", description: "Warehouse/shop/showroom coating — firm price after access, prep, and moisture assessment; illustrative From $2,500", priceFrom: 2500 },
+      { name: "Flake / Metallic Finish Option", description: "Decorative flake or metallic top system after substrate assess — no fake same-day cure", priceFrom: 1800 },
+    ],
+    heroHints: ["Sqft/prep/moisture/existing-coating/access assessed before firm price", "Quote before coat", "Garage & commercial epoxy honesty — no fake same-day cure", "No bait flat $/sqft fees"],
+    ctaLabel: "Get an epoxy flooring quote",
+    accentHint: "epoxy-charcoal-resin-teal",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
