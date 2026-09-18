@@ -839,6 +839,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a countertop quote",
     accentHint: "quartz-slate-brass-veining",
   },
+  {
+    id: "foundation_repair",
+    label: "Foundation repair",
+    defaultTagline: "Inspection-first foundation repair — quote before we dig",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Foundation Inspection", description: "Soil, drainage, crack pattern, pier vs slab, access, and stories assessed before firm price", priceFrom: 0 },
+      { name: "Pier & Beam / Slab Repair", description: "Repair scope after inspection — no bait flat $/lf or $/pier packages", priceFrom: 0 },
+      { name: "Drainage & Stabilization", description: "Drainage and stabilization when true — licensed contractor / engineer honesty; no fake same-day fix", priceFrom: 0 },
+    ],
+    heroHints: ["Soil/drainage/crack/pier-vs-slab/access assessed before firm price", "Quote before repair", "Licensed contractor / engineer honesty when true", "No bait flat $/lf or $/pier fees"],
+    ctaLabel: "Get a foundation quote",
+    accentHint: "foundation-charcoal-copper",
+  },
+
 
 ];
 

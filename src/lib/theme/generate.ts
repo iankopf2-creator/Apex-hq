@@ -190,6 +190,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first quartz / granite / marble / laminate honesty", ctaVerb: "Request a countertop quote" },
   },
 
+  foundation_repair: {
+    A: { heroEmphasis: "quote-first soil/drainage/crack/pier-vs-slab/access/stories assess", ctaVerb: "Get a foundation quote" },
+    B: { heroEmphasis: "quote-first inspection before firm price honesty", ctaVerb: "Request a foundation inspection quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
