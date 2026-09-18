@@ -201,6 +201,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first roof/utility assess before firm price honesty", ctaVerb: "Request a solar quote" },
   },
 
+
+  epoxy_flooring: {
+    A: { heroEmphasis: "quote-first sqft/prep/moisture/existing-coating/access assess for garage & commercial epoxy", ctaVerb: "Get an epoxy flooring quote" },
+    B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
