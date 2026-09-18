@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "irrigation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / irrigation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1904,6 +1904,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Solar panels on a green field under clear sky",
         credit: "American Public Power Association on Unsplash",
         sourceUrl: "https://unsplash.com/photos/513dBrMJ_5w",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  irrigation: {
+    niche: "irrigation",
+    label: "Irrigation",
+    palette: {
+      // Deep irrigation green + sky-spray blue — not landscaping forest+earth, plumber cyan, pool navy+aqua, pressure_washing wet-concrete
+      primary: "#14532d",
+      primaryForeground: "#f0fdf4",
+      accent: "#0284c7",
+      accentForeground: "#f0f9ff",
+      background: "#f0fdf4",
+      foreground: "#14532d",
+      muted: "#dcfce7",
+      mutedForeground: "#166534",
+      border: "#bbf7d0",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest zone-count/lawn-size/existing-vs-new/controller/drip-vs-spray/winterization/access assess-first, quote before install or repair",
+      heroStyle: "quote-first irrigation LP — sprinkler repair/install chips when true, no bait flat $/zone or $/head, no fake same-day install",
+      ctaStyle: "get an irrigation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/zone or $/head fees", "fake same-day install guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before zone count/lawn size/existing vs new/controller/drip vs spray/winterization/access assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#14532d",
+      "--theme-primary-fg": "#f0fdf4",
+      "--theme-accent": "#0284c7",
+      "--theme-bg": "#f0fdf4",
+      "--theme-fg": "#14532d",
+    },
+    trustBadges: ["Zones/lawn size/existing vs new/controller assessed before firm price", "Quote before install or repair", "HOA/permit & licensed plumber/irrigation honesty when required", "No bait flat $/zone or $/head fees"],
+    heroImages: [
+      {
+        src: "/niches/irrigation.jpg",
+        alt: "Lawn sprinkler watering green grass during daytime",
+        credit: "Maxim Tolchinskiy on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/rCQfBD2Yg0k",
         license: "unsplash",
       },
     ],

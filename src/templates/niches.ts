@@ -861,6 +861,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a foundation quote",
     accentHint: "foundation-charcoal-copper",
   },
+  {
+    id: "irrigation",
+    label: "Irrigation",
+    defaultTagline: "Zone-first irrigation quotes — assess before we dig or rewire",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Sprinkler Repair", description: "Zone count, lawn size, existing system, controller type, and access assessed before firm price — no bait flat $/zone or $/head", priceFrom: 0 },
+      { name: "New System Install", description: "Drip vs spray, winterization, and layout after site assess — HOA/permit honesty when true; no fake same-day install", priceFrom: 0 },
+      { name: "Controller / Winterization", description: "Controller upgrades and seasonal winterization when true — licensed plumber/irrigation honesty when required", priceFrom: 0 },
+    ],
+    heroHints: ["Zones/lawn size/existing vs new/controller assessed before firm price", "Quote before install or repair", "HOA/permit & licensed plumber/irrigation honesty when required", "No bait flat $/zone or $/head fees"],
+    ctaLabel: "Get an irrigation quote",
+    accentHint: "irrigation-green-sky-spray",
+  },
 
 
   {
