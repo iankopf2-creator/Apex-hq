@@ -40,6 +40,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   cabinets: 550,
   countertops: 650,
   foundation_repair: 2200,
+  pool_service: 180,
   solar: 450,
 };
 
