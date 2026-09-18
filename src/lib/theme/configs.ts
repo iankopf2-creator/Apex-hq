@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1858,6 +1858,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Construction worker inspecting structural concrete and foundation forms",
         credit: "Unsplash contributor",
         sourceUrl: "https://unsplash.com/photos/photo-1581094794329-c8112a89af12",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  solar: {
+    niche: "solar",
+    label: "Solar",
+    palette: {
+      // Deep slate + solar gold/amber CTA — not landscaping forest+earth, electrician yellow-primary, foundation charcoal+copper
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#f59e0b",
+      accentForeground: "#1c1917",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess-first, quote before install",
+      heroStyle: "quote-first solar LP — roof/utility assess chips when true, no bait flat $/watt, no fake same-day install",
+      ctaStyle: "get a solar quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/watt as Apex benchmark", "fake same-day install guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before roof/utility/net-metering/interconnect/battery/HOA assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Roof/utility/net-metering/battery assessed before firm price", "Quote before install", "HOA/permit & licensed electrician/solar contractor honesty when required", "No bait flat $/watt fees"],
+    heroImages: [
+      {
+        src: "/niches/solar.jpg",
+        alt: "Solar panels on a green field under clear sky",
+        credit: "American Public Power Association on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/513dBrMJ_5w",
         license: "unsplash",
       },
     ],

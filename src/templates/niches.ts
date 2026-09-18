@@ -863,6 +863,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "solar",
+    label: "Solar",
+    defaultTagline: "Roof-and-utility-first solar quotes — assess before we price panels",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Solar Site Assessment", description: "Roof size/condition/orientation/shading, utility/net-metering/interconnect, existing vs new, and battery storage assessed before firm price — no bait flat $/watt", priceFrom: 0 },
+      { name: "Panel + Inverter Quote", description: "System scope after roof/utility assess — HOA/permit honesty when true; no fake same-day install", priceFrom: 0 },
+      { name: "Battery Storage Option", description: "Battery yes/no after load and interconnect review — licensed electrician/solar contractor honesty when required", priceFrom: 0 },
+    ],
+    heroHints: ["Roof/utility/net-metering/battery assessed before firm price", "Quote before install", "HOA/permit & licensed electrician/solar contractor honesty when required", "No bait flat $/watt fees"],
+    ctaLabel: "Get a solar quote",
+    accentHint: "solar-slate-gold-amber",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
