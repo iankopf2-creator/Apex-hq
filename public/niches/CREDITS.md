@@ -47,3 +47,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Cabinets | `cabinets.jpg` | Sidekix Media | https://unsplash.com/photos/photo-1556912173-46c336c7fd55 |
 | Countertops | `countertops.jpg` | Lisa Anna | https://unsplash.com/photos/B8VF4-1Krbs |
 | Foundation repair | `foundation-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581094794329-c8112a89af12 |
+| Solar | `solar.jpg` | American Public Power Association | https://unsplash.com/photos/513dBrMJ_5w |

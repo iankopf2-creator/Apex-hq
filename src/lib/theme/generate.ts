@@ -195,6 +195,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first inspection before firm price honesty", ctaVerb: "Request a foundation inspection quote" },
   },
 
+
+  solar: {
+    A: { heroEmphasis: "quote-first roof size/condition/orientation/shading + utility/net-metering/interconnect/battery/HOA assess", ctaVerb: "Get a solar quote" },
+    B: { heroEmphasis: "quote-first roof/utility assess before firm price honesty", ctaVerb: "Request a solar quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
