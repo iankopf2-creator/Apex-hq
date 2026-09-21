@@ -42,6 +42,9 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Landscaping — quote_first (outdoor forest green + warm earth; lawn size/access/existing beds/irrigation/season assess before firm price; no bait flat $/visit or $/acre; no fake same-day; seasonal/recurring honesty; quote before mow or install)
 - Auto detailing — quote_first (deep automotive graphite + cool chrome; vehicle size/condition/location/package assess before firm price; interior/exterior honesty; ceramic ≠ wash; no bait flat package fees; no fake same-day; quote before wash or ceramic)
 - Foundation repair — quote_first (deep foundation charcoal `#1c1917` + structural copper `#b45309`; soil/drainage/crack/pier-vs-slab/access/stories assess before firm price; no bait flat $/lf or $/pier; no fake same-day; licensed contractor/engineer honesty when true; quote before repair)
+- Solar — quote_first (deep slate + solar gold/amber; roof/utility/net-metering/battery/HOA assess before firm price; no bait flat $/watt; no fake same-day install; licensed electrician/solar contractor honesty when required)
+- Epoxy flooring — quote_first (deep epoxy charcoal + gloss resin teal/cyan; sqft/prep/moisture/existing-coating/access assess before firm price; no bait flat $/sqft; no fake same-day cure; garage & commercial epoxy honesty)
+- Lawn care — quote_first (fresh lawn green `#14532d` + soft lime/sun `#a3e635`; lot size/turf condition/access/obstacles/frequency assess before firm price; no bait flat $/visit; no fake same-day; no overnight lawn makeovers; residential & commercial mow; quote before schedule)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -54,5 +57,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + lawn_care
 - 48px tap targets; trust chips from research notes

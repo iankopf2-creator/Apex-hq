@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "lawn_care",
+    label: "Lawn care",
+    defaultTagline: "Residential & commercial mow — assess before we quote the visit",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 4:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Weekly / Biweekly Mow", description: "Recurring mow — quote after lot size, turf condition, access, obstacles, and frequency check; no bait flat $/visit", priceFrom: 0 },
+      { name: "Lawn Cleanup / Leaf & Debris", description: "Leaf, clipping, and debris cleanup — firm price after lot size and access assessment; no bait flat $", priceFrom: 0 },
+      { name: "Seasonal Fertilization / Overseed Option", description: "Fertilization or overseed when turf and season warrant after site assess — no overnight makeover promises; no fake same-day", priceFrom: 0 },
+    ],
+    heroHints: ["Lot size/turf condition/access/obstacles/frequency assessed before firm price", "Quote before schedule", "Residential & commercial mow honesty — no overnight makeovers", "No bait flat $/visit fees"],
+    ctaLabel: "Get a lawn care quote",
+    accentHint: "lawn-fresh-green-lime-sun",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
