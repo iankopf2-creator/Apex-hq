@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  sealcoating: {
+    A: { heroEmphasis: "quote-first sqft/access/cracks/oil stains/weather/cure assess for driveway & parking-lot sealcoat", ctaVerb: "Get a sealcoating quote" },
+    B: { heroEmphasis: "quote-first cracks/oil/weather/cure assess before firm price honesty — no bait flat $/sqft or fake same-day drive-on", ctaVerb: "Request a sealcoating quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
