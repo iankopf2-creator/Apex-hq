@@ -207,6 +207,14 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  roof_cleaning: {
+    A: { heroEmphasis: "quote-first stories/access/algae-vs-granule-loss/soft-wash-vs-pressure/weather assess for residential roof soft-wash", ctaVerb: "Get a roof cleaning quote" },
+    B: { heroEmphasis: "quote-first soft-wash honesty — pressure can damage granules; assess before firm price — no bait flat $/sqft or fake same-day", ctaVerb: "Request a roof cleaning quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
