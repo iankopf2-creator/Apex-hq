@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "str_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / str_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1955,6 +1955,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  str_cleaning: {
+    niche: "str_cleaning",
+    label: "STR / vacation rental cleaning",
+    palette: {
+      // Hospitality linen/warm sand + deep teal CTA — not residential cleaning soft, janitorial trust-blue, carpet seafoam
+      primary: "#0f766e",
+      primaryForeground: "#f0fdfa",
+      accent: "#f5e6d3",
+      accentForeground: "#1c1917",
+      background: "#faf8f5",
+      foreground: "#1c1917",
+      muted: "#f5ebe0",
+      mutedForeground: "#57534e",
+      border: "#e7d5c4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest beds/baths/checkout window/linen/laundry/supplies/trash/access assess-first for short-term and vacation rental turnover cleaning, quote before schedule",
+      heroStyle: "quote-first STR turnover LP — beds/baths/checkout/linen/access chips when true, no bait flat $/turnover, no fake same-day",
+      ctaStyle: "get a turnover cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/turnover fees as Apex benchmark", "fake same-day guarantees", "competitor brand cloning", "Airbnb or Vrbo brand cloning", "fake 24/7", "firm price before beds/baths/checkout window/linen/access assessment", "lodging-tax or STR permit legal advice"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f766e",
+      "--theme-primary-fg": "#f0fdfa",
+      "--theme-accent": "#f5e6d3",
+      "--theme-bg": "#faf8f5",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Beds/baths/checkout window/linen/access assessed before firm price", "Quote before schedule", "Turnover honesty — no bait flat $/turnover", "No Airbnb/Vrbo brand cloning"],
+    heroImages: [
+      {
+        src: "/niches/str-cleaning.jpg",
+        alt: "Bright kitchen and living area ready for guests",
+        credit: "Sidekix Media on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/aO-0TOpFT-k",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 

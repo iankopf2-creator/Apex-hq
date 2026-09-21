@@ -910,6 +910,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "epoxy-charcoal-resin-teal",
   },
 
+  {
+    id: "str_cleaning",
+    label: "STR / vacation rental cleaning",
+    defaultTagline: "Checkout turnovers for hosts & PMs — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "9:00 AM – 4:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Checkout Turnover Clean", description: "Full guest-ready turnover — quote after beds/baths, checkout window, linen/laundry, supplies, trash, and access/lockbox check; no bait flat $/turnover", priceFrom: 0 },
+      { name: "Mid-Stay Refresh", description: "Light mid-stay tidy — firm price after unit size and access assessment; no bait flat $", priceFrom: 0 },
+      { name: "Linen & Laundry Add-On", description: "Wash/replace linens when inventory and timing allow after assess — no fake same-day guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Beds/baths/checkout window/linen/access assessed before firm price", "Quote before schedule", "Turnover honesty — no bait flat $/turnover", "No Airbnb/Vrbo brand cloning"],
+    ctaLabel: "Get a turnover cleaning quote",
+    accentHint: "hospitality-linen-teal",
+  },
+
 
 ];
 
