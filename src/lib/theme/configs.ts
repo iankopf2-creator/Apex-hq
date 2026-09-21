@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "snow_removal";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / snow_removal (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1950,6 +1950,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Glossy polished industrial floor coating in a modern commercial space",
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  snow_removal: {
+    niche: "snow_removal",
+    label: "Snow removal",
+    palette: {
+      // Deep plow-steel midnight + frost ice cyan — not landscaping forest, concrete amber, towing red, pressure sky #0284c7, junk lime, epoxy resin teal, chimney copper, window cyan
+      primary: "#0b1f33",
+      primaryForeground: "#f0f9ff",
+      accent: "#67e8f9",
+      accentForeground: "#082f49",
+      background: "#f8fafc",
+      foreground: "#0b1f33",
+      muted: "#e0f2fe",
+      mutedForeground: "#0c4a6e",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest driveway size/access/surface/ice-vs-snow/recurring assess-first for residential and commercial snow & ice removal / plowing, quote before plow",
+      heroStyle: "quote-first snow removal LP — driveway/lot/access/surface/ice-vs-snow chips when true, salt/ice-melt honesty, no bait flat $, no fake same-day ETA",
+      ctaStyle: "get a snow removal quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $ plow fees as Apex benchmark", "fake same-day ETA guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before driveway size/access/surface/ice-vs-snow/recurring assessment", "promise salt cures all ice without conditions"],
+    },
+    cssVars: {
+      "--theme-primary": "#0b1f33",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#67e8f9",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0b1f33",
+    },
+    trustBadges: ["Driveway size/access/surface/ice-vs-snow/recurring assessed before firm price", "Quote before plow", "Salt/ice-melt honesty — conditions matter", "No bait flat $ or fake same-day ETA"],
+    heroImages: [
+      {
+        src: "/niches/snow-removal.jpg",
+        alt: "Person clearing a residential driveway with a snowblower after winter snowfall",
+        credit: "Stephen H on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/53ozS5kjXOQ",
         license: "unsplash",
       },
     ],

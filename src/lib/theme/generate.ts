@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  snow_removal: {
+    A: { heroEmphasis: "quote-first driveway size/access/surface/ice-vs-snow/recurring assess for residential & commercial plow", ctaVerb: "Get a snow removal quote" },
+    B: { heroEmphasis: "quote-first access/surface/ice-vs-snow assess before firm price honesty — salt conditions matter", ctaVerb: "Request a snow removal quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
