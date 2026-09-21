@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  irrigation: {
+    A: { heroEmphasis: "quote-first zones/lawn-size/existing-vs-new/controller/drip-vs-spray/winterization/access assess", ctaVerb: "Get an irrigation quote" },
+    B: { heroEmphasis: "quote-first sprinkler repair / install honesty", ctaVerb: "Request an irrigation quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
