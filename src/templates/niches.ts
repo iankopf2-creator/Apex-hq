@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "snow_removal",
+    label: "Snow removal",
+    defaultTagline: "Residential & commercial snow & ice — assess before we quote the plow",
+    defaultHours: {
+      mon: "5:00 AM – 8:00 PM",
+      tue: "5:00 AM – 8:00 PM",
+      wed: "5:00 AM – 8:00 PM",
+      thu: "5:00 AM – 8:00 PM",
+      fri: "5:00 AM – 8:00 PM",
+      sat: "5:00 AM – 8:00 PM",
+      sun: "5:00 AM – 6:00 PM",
+    },
+    defaultServices: [
+      { name: "Residential Driveway Plow", description: "Driveway and walkway clear — quote after size, access, surface, and ice-vs-snow check; no bait flat $", priceFrom: 0 },
+      { name: "Commercial Lot / Sidewalk Clear", description: "Parking lot and sidewalk plow — firm price after access, surface, and ice assessment; no bait flat $", priceFrom: 0 },
+      { name: "Ice Melt / Salt + Seasonal Option", description: "Ice-melt or salt when conditions warrant + recurring seasonal plans after site assess — no fake same-day ETA; equipment/insurance honesty when true", priceFrom: 0 },
+    ],
+    heroHints: ["Driveway size/access/surface/ice-vs-snow/recurring assessed before firm price", "Quote before plow", "Salt/ice-melt honesty — conditions matter", "No bait flat $ or fake same-day ETA"],
+    ctaLabel: "Get a snow removal quote",
+    accentHint: "snow-plow-steel-frost-ice",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
