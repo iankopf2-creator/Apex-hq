@@ -30,7 +30,7 @@ Source notes: `/workspace/grok-work-study/notes/research-*.md` (Apex Research fe
 `copyTone.ctaPriority` drives sticky chrome on public `/s/[slug]`:
 - **call_first** — HVAC, plumber, electrician, roofing, pest, appliance_repair: sticky `tel:` primary + estimate/book secondary. High-contrast / emergency-orange OK for panic trades.
 - **book_first** — salon (+ quote-led trucking/moving): sticky Book primary; soft calm chrome; call secondary.
-- **hybrid** — painting, handyman: quote/schedule primary + Call secondary.
+- **hybrid** — painting, handyman, pool_service: quote/schedule primary + Call secondary.
 - **quote_first** — commercial cleaning (`janitorial`) + `junk_removal` + `pressure_washing` + `gutter_cleaning` + `window_cleaning` + `carpet_cleaning` + `flooring` + `fencing` + `concrete` + `siding` + `decking` + `masonry` + `drywall` + `insulation` + `tile` + `cabinets` + `countertops` + `landscaping` + `auto_detail` + `foundation_repair` + `solar` + `epoxy_flooring`: Get a quote primary + Call beside form path.
 - **cleaning** (residential) is `book_first` recurring-default; garage/locksmith/towing/water_damage/appliance_repair are `call_first` emergency.
 - Trust chips near CTAs; 48px targets; sticky max 2 actions; never put LSA-only numbers on public pages (`business.phone` = public DNI only).

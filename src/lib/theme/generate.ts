@@ -189,6 +189,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/linear/edge/sink-cutout/access/stories/material assess", ctaVerb: "Get a countertop quote" },
     B: { heroEmphasis: "quote-first quartz / granite / marble / laminate honesty", ctaVerb: "Request a countertop quote" },
   },
+  pool_service: {
+    A: { heroEmphasis: "hybrid route/chemistry schedule", ctaVerb: "Schedule pool service" },
+    B: { heroEmphasis: "hybrid equipment/repair assess honesty", ctaVerb: "Book pool care" },
+  },
 
   foundation_repair: {
     A: { heroEmphasis: "quote-first soil/drainage/crack/pier-vs-slab/access/stories assess", ctaVerb: "Get a foundation quote" },

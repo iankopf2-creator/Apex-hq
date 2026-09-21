@@ -47,6 +47,7 @@ Companion to MASTER_BLUEPRINT.md. Worker updates STATUS only for finished work.
 - [x] Theme niche countertops (quote_first) — cool quartz/stone gray-slate + soft warm veining/brass; sqft/linear/edge/sink-cutout/existing-vs-new/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price; no bait flat $/sqft or $/lf; no fake same-day; HOA/permit honesty when true; quote before install
 - [x] Theme niche landscaping (quote_first) — outdoor forest green + warm earth; lawn size/access/existing beds/irrigation/season assess before firm price; no bait flat $/visit or $/acre; no fake same-day; seasonal/recurring honesty; quote before mow or install
 - [x] Theme niche auto_detail (quote_first) — deep automotive graphite + cool chrome; vehicle size/condition/location/package assess before firm price; interior/exterior honesty; ceramic ≠ wash; no bait flat package fees; no fake same-day; quote before wash or ceramic
+- [x] Theme niche pool_service (hybrid) — pool-navy + aqua; weekly/biweekly route + chemistry/equipment assess before firm repair price; seasonal open/close honesty; no fake same-day
 - [x] Persist (local JSON) + public site /s/[slug]
 - [x] Public site sticky dual CTA (call-first trades / book-first salon; CallRail website tel only; never LSA on page)
 - [x] Stub routes: /booking/[slug], /dashboard, /pricing
