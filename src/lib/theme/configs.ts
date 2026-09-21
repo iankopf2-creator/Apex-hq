@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "aircraft_detail";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / aircraft_detail (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  aircraft_detail: {
+    niche: "aircraft_detail",
+    label: "Aircraft detailing",
+    palette: {
+      // Deep hangar navy + aviation aluminum/sky — not auto_detail graphite/chrome
+      primary: "#0f172a",
+      primaryForeground: "#f0f9ff",
+      accent: "#38bdf8",
+      accentForeground: "#0f172a",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest aircraft size/type (GA vs turboprop vs light jet)/location (hangar/FBO/ramp)/interior-vs-exterior/oxidation-paint/access-badging assess-first, detailing only — no maintenance or FAA repair claims, quote before wash or polish",
+      heroStyle: "quote-first aircraft detail LP — size/type/location/interior-exterior/oxidation chips when true, no bait flat package $, no fake same-day, no overnight makeovers, detailing not maintenance",
+      ctaStyle: "get an aircraft detail quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat package fees as Apex benchmark", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "firm price before aircraft size/type/location/interior-exterior/oxidation/access assessment", "overselling overnight makeovers", "maintenance or FAA repair claims", "cloning RealClean or any brand"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#38bdf8",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Aircraft size/type/location/interior-exterior/oxidation/access assessed before firm price", "Quote before wash or polish", "Detailing only — no maintenance or FAA repair claims", "No bait flat package fees — no overnight makeovers"],
+    heroImages: [
+      {
+        src: "/niches/aircraft-detail.jpg",
+        alt: "Light aircraft parked in a hangar with a private jet in the background",
+        credit: "Unsplash contributor",
+        sourceUrl: "https://unsplash.com/photos/MqdQTFHfG1s",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
