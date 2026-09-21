@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "chimney",
+    label: "Chimney",
+    defaultTagline: "Chimney sweep & fireplace repair — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Chimney Inspection Quote", description: "Flue type, height, creosote, liner, cap, access, stories, and wood-stove vs fireplace assessed before firm price — no bait flat $/sweep", priceFrom: 0 },
+      { name: "Chimney Sweep Quote", description: "Sweep scope after creosote/liner/cap check — CSIA/NFI honesty when true; no fake same-day", priceFrom: 0 },
+      { name: "Fireplace & Chimney Repair Quote", description: "Repair scope after access and flue assess — quote before repair; no scare copy", priceFrom: 0 },
+    ],
+    heroHints: ["Flue type/height/creosote/liner/cap/access assessed before firm price", "Quote before sweep or repair", "CSIA/NFI / licensed honesty when true", "No bait flat $/sweep fees"],
+    ctaLabel: "Get a chimney quote",
+    accentHint: "chimney-soot-creosote-copper",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
