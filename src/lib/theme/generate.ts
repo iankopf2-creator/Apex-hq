@@ -207,6 +207,14 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  aircraft_detail: {
+    A: { heroEmphasis: "quote-first aircraft size/type/location (hangar/FBO/ramp)/interior-exterior/oxidation/access assess — detailing only", ctaVerb: "Get an aircraft detail quote" },
+    B: { heroEmphasis: "quote-first assess before firm price honesty — no overnight makeovers, no maintenance or FAA repair claims", ctaVerb: "Request an aircraft detail quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

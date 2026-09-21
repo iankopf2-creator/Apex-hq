@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "aircraft_detail",
+    label: "Aircraft detailing",
+    defaultTagline: "Hangar & ramp aircraft detail — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Exterior Wash / Detail", description: "Exterior wash and detail — quote after aircraft size/type, location (hangar/FBO/ramp), paint/oxidation, and access/badging check; no bait flat package $", priceFrom: 0 },
+      { name: "Interior Cabin Detail", description: "Cabin interior detail — firm price after aircraft type, interior condition, and access assessment; no bait flat $", priceFrom: 0 },
+      { name: "Oxidation / Paint Polish Option", description: "Oxidation correction or paint polish when condition warrants after assess — detailing only, not maintenance or FAA repair; no overnight makeovers; no fake same-day", priceFrom: 0 },
+    ],
+    heroHints: ["Aircraft size/type/location/interior-exterior/oxidation/access assessed before firm price", "Quote before wash or polish", "Detailing only — no maintenance or FAA repair claims", "No bait flat package fees — no overnight makeovers"],
+    ctaLabel: "Get an aircraft detail quote",
+    accentHint: "hangar-navy-aviation-sky",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
