@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "sealcoating",
+    label: "Sealcoating",
+    defaultTagline: "Asphalt driveway & parking-lot sealcoat — assess before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Driveway Sealcoat", description: "Asphalt driveway sealcoat — quote after sqft, access, cracks, oil stains, weather, and cure-time check; no bait flat $/sqft", priceFrom: 0 },
+      { name: "Parking Lot Sealcoat", description: "Commercial/HOA lot sealcoat — firm price after sqft, traffic, cracks, oil stains, and weather assessment; no bait flat $/sqft", priceFrom: 0 },
+      { name: "Crack Fill / Prep Add-On", description: "Crack fill and oil-spot prep when surface allows after assess — no fake same-day drive-on; sealcoat only (not full paving or concrete resurfacing)", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/access/cracks/oil stains/weather/cure assessed before firm price", "Quote before coat", "Sealcoat only — not full paving or concrete resurfacing", "No bait flat $/sqft or fake same-day drive-on"],
+    ctaLabel: "Get a sealcoating quote",
+    accentHint: "asphalt-charcoal-road-crew-orange",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

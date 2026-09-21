@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "sealcoating";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / sealcoating (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  sealcoating: {
+    niche: "sealcoating",
+    label: "Sealcoating",
+    palette: {
+      // Warm asphalt charcoal + amber/orange road-crew CTA — not concrete cool-slate+amber, pressure_washing sky-spray, epoxy resin-teal
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#ea580c",
+      accentForeground: "#fff7ed",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/cracks/oil stains/weather/cure time assess-first for asphalt driveway and parking-lot sealcoating, quote before coat — sealcoat only, not full paving or concrete resurfacing",
+      heroStyle: "quote-first sealcoating LP — driveway/parking-lot chips when true, no bait flat $/sqft, no fake same-day drive-on",
+      ctaStyle: "get a sealcoating quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day drive-on guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/cracks/oil stains/weather/cure assessment", "full paving or concrete resurfacing claims as sealcoat"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#ea580c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/access/cracks/oil stains/weather/cure assessed before firm price", "Quote before coat", "Sealcoat only — not full paving or concrete resurfacing", "No bait flat $/sqft or fake same-day drive-on"],
+    heroImages: [
+      {
+        src: "/niches/sealcoating.jpg",
+        alt: "Fresh asphalt parking lot surface after rain with painted lines",
+        credit: "Nikhilesh Boppana on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/LsCshtzQCUU",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
