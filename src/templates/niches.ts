@@ -910,6 +910,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "epoxy-charcoal-resin-teal",
   },
 
+  {
+    id: "duct_cleaning",
+    label: "Air duct cleaning",
+    defaultTagline: "Home & light-commercial ducts — assess before we quote the clean",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Whole-Home Duct Clean", description: "Supply/return duct cleaning — quote after home size, system age, access, and contamination check; no bait flat per-vent", priceFrom: 0 },
+      { name: "Dryer Vent / Exhaust Add-On", description: "Dryer or bath exhaust clean when accessible — firm price after access assess; no bait flat fees", priceFrom: 0 },
+      { name: "Sanitizer / Filter Option", description: "Optional sanitize or filter service after duct assess — no fake same-day medical air claims", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/system age/access/contamination assessed before firm price", "Quote before clean", "No bait flat per-vent fees", "Not medical or mold-remediation claims"],
+    ctaLabel: "Get an air duct cleaning quote",
+    accentHint: "duct-metal-slate-teal",
+  },
+
+
 
 ];
 
