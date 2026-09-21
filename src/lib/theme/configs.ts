@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  chimney: {
+    niche: "chimney",
+    label: "Chimney",
+    palette: {
+      // Flue soot charcoal + creosote copper-orange — not fire_smoke emergency, masonry kiln brick, foundation copper #b45309, roofing, appliance orange
+      primary: "#1f1a17",
+      primaryForeground: "#fafaf9",
+      accent: "#c2410c",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1f1a17",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest flue type / height / creosote / liner / cap / access / stories / wood-stove-vs-fireplace assess-first for chimney sweep and fireplace repair, quote before sweep or repair",
+      heroStyle: "quote-first chimney LP — flue/creosote/liner/cap chips when true, no bait flat $/sweep, no fake same-day, no scare copy",
+      ctaStyle: "get a chimney quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sweep as Apex benchmark", "fake same-day sweep or repair", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before flue type/height/creosote/liner/cap/access/stories/wood-stove-vs-fireplace assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1f1a17",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#c2410c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1f1a17",
+    },
+    trustBadges: ["Flue type/height/creosote/liner/cap/access assessed before firm price", "Quote before sweep or repair", "CSIA/NFI / licensed honesty when true", "No bait flat $/sweep fees"],
+    heroImages: [
+      {
+        src: "/niches/chimney.jpg",
+        alt: "brick chimney on a residential roof",
+        credit: "Hanna Theresia Pitter on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/a-brick-chimney-on-top-of-a-roof-QadP_RXFHSs",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

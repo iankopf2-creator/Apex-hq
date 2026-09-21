@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  chimney: {
+    A: { heroEmphasis: "quote-first flue type/height/creosote/liner/cap/access/stories / wood-stove-vs-fireplace assess", ctaVerb: "Get a chimney quote" },
+    B: { heroEmphasis: "quote-first inspection before firm price honesty", ctaVerb: "Request a chimney inspection quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
