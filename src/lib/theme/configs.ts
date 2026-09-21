@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "lawn_care";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / lawn_care (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  lawn_care: {
+    niche: "lawn_care",
+    label: "Lawn care",
+    palette: {
+      // Fresh lawn green + soft lime/sun — not landscaping forest #2f4a35/earth, junk lime, snow frost cyan, pressure sky
+      primary: "#14532d",
+      primaryForeground: "#f7fee7",
+      accent: "#a3e635",
+      accentForeground: "#14532d",
+      background: "#f7fee7",
+      foreground: "#14532d",
+      muted: "#ecfccb",
+      mutedForeground: "#3f6212",
+      border: "#d9f99d",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest lot size/turf condition/access/obstacles/frequency assess-first for residential and commercial mow / lawn care, quote before schedule",
+      heroStyle: "quote-first lawn care LP — lot size/turf/access/obstacles/frequency chips when true, no bait flat $/visit, no fake same-day",
+      ctaStyle: "get a lawn care quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/visit fees as Apex benchmark", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "firm price before lot size/turf condition/access/obstacles/frequency assessment", "overselling overnight lawn makeovers"],
+    },
+    cssVars: {
+      "--theme-primary": "#14532d",
+      "--theme-primary-fg": "#f7fee7",
+      "--theme-accent": "#a3e635",
+      "--theme-bg": "#f7fee7",
+      "--theme-fg": "#14532d",
+    },
+    trustBadges: ["Lot size/turf condition/access/obstacles/frequency assessed before firm price", "Quote before schedule", "Residential & commercial mow honesty — no overnight makeovers", "No bait flat $/visit fees"],
+    heroImages: [
+      {
+        src: "/niches/lawn-care.jpg",
+        alt: "Person mowing a residential lawn with a push mower on a sunny day",
+        credit: "arh Lee on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/zFdZJp_hpKo",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
