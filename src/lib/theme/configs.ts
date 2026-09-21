@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "duct_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / duct_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1955,6 +1955,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  duct_cleaning: {
+    niche: "duct_cleaning",
+    label: "Air duct cleaning",
+    palette: {
+      // Cool duct-metal slate + soft HVAC teal — not hvac ocean/sky, epoxy charcoal/resin-teal, pressure sky, janitorial soft trust
+      primary: "#334155",
+      primaryForeground: "#f8fafc",
+      accent: "#14b8a6",
+      accentForeground: "#042f2e",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest home size/system age/access/contamination assess-first for residential and light-commercial air duct cleaning, quote before clean",
+      heroStyle: "quote-first duct cleaning LP — home size/system age/access/contamination chips when true, no bait flat per-vent fees, no fake same-day sanitize, not medical/mold claims",
+      ctaStyle: "get an air duct cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat per-vent or whole-house fees as Apex benchmark", "fake same-day sanitize guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before home size/system age/access/contamination assessment", "medical cure or mold remediation claims", "guarantee indoor air quality medical outcomes"],
+    },
+    cssVars: {
+      "--theme-primary": "#334155",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#14b8a6",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Home size/system age/access/contamination assessed before firm price", "Quote before clean", "No bait flat per-vent fees", "Not medical or mold-remediation claims"],
+    heroImages: [
+      {
+        src: "/niches/duct-cleaning.jpg",
+        alt: "Close photography of industrial metal air duct and vent hardware",
+        credit: "Taylor Vick on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/qVXFewdVWn4",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 
