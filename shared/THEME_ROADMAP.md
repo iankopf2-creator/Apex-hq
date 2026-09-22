@@ -42,6 +42,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Landscaping — quote_first (outdoor forest green + warm earth; lawn size/access/existing beds/irrigation/season assess before firm price; no bait flat $/visit or $/acre; no fake same-day; seasonal/recurring honesty; quote before mow or install)
 - Auto detailing — quote_first (deep automotive graphite + cool chrome; vehicle size/condition/location/package assess before firm price; interior/exterior honesty; ceramic ≠ wash; no bait flat package fees; no fake same-day; quote before wash or ceramic)
 - Foundation repair — quote_first (deep foundation charcoal `#1c1917` + structural copper `#b45309`; soil/drainage/crack/pier-vs-slab/access/stories assess before firm price; no bait flat $/lf or $/pier; no fake same-day; licensed contractor/engineer honesty when true; quote before repair)
+- Kitchen hood cleaning — quote_first (commercial-kitchen grease charcoal `#171412` + copper brass `#b87333`; hood type canopy/island/pizza oven/grease load/stories or roof access/fan & duct path/after-hours schedule assess before firm price; NFPA-96/fire-code educational only; licensed/certified when true; quote before clean; no bait flat $/hood or fake same-day clear; distinct from dryer_vent_cleaning, duct_cleaning, janitorial, fire_smoke, appliance_repair, hvac, chimney)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -52,7 +53,8 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Mobile-first, WCAG, <2s
 - Money stays with Stripe / Ian
 
+
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + kitchen_hood_cleaning
 - 48px tap targets; trust chips from research notes

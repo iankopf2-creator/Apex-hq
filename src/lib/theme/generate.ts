@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  kitchen_hood_cleaning: {
+    A: { heroEmphasis: "quote-first hood-type/grease-load/roof-access/fan-duct/after-hours assess for commercial kitchen exhaust hoods", ctaVerb: "Get a kitchen hood cleaning quote" },
+    B: { heroEmphasis: "quote-first kitchen-hood honesty before firm price — not HVAC duct cleaning or dryer vent; NFPA-96 educational only", ctaVerb: "Request a kitchen hood cleaning quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

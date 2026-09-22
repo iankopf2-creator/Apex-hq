@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "kitchen_hood_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / kitchen_hood_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  kitchen_hood_cleaning: {
+    niche: "kitchen_hood_cleaning",
+    label: "Kitchen hood cleaning",
+    palette: {
+      // Commercial-kitchen grease charcoal + copper brass — deep grease charcoal #171412 + hood copper-brass #b87333 — not dryer_vent #292524/#f59e0b, duct_cleaning #334155/#14b8a6, foundation #1c1917/#b45309, janitorial teal, fire_smoke #b91c1c/#1c1917, hvac sky/ocean, chimney #1f1a17/#c2410c, appliance_repair #1e293b/#ea580c, epoxy #0c0a09/#0d9488
+      primary: "#171412",
+      primaryForeground: "#fafaf9",
+      accent: "#b87333",
+      accentForeground: "#1c1917",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5e6d3",
+      mutedForeground: "#78350f",
+      border: "#e7d3b8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest hood type (canopy vs island vs pizza oven) / grease load / stories or roof access / fan & duct path / after-hours schedule assess-first for commercial restaurant kitchen exhaust hood cleaning, quote before clean — grease hoods only, not HVAC air duct cleaning or dryer vent cleaning; NFPA-96 / fire-code educational only (no scare fake emergency); licensed or certified when true",
+      heroStyle: "quote-first kitchen hood cleaning LP — hood-type/grease-load/roof-access/fan-duct/after-hours chips when true, no bait flat $/hood, no fake same-day clear, NFPA-96 educational only",
+      ctaStyle: "get a kitchen hood cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/hood as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before hood type/grease load/stories-or-roof access/fan & duct path/after-hours schedule assessment", "HVAC air duct cleaning confusion", "dryer vent cleaning confusion", "scare fake fire emergency / fake emergency urgency as kitchen-hood sales", "janitorial floor cleaning confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#171412",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b87333",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Hood type/grease load/roof access/fan & duct path assessed before firm price", "Quote before clean — after-hours schedule honesty", "NFPA-96 / fire-code educational only — not scare fake emergency; licensed/certified when true", "No bait flat $/hood — not HVAC duct cleaning or dryer vent"],
+    heroImages: [
+      {
+        src: "/niches/kitchen-hood-cleaning.jpg",
+        alt: "Chef plating in a commercial restaurant kitchen — exhaust hood grease cleaning assess before quote",
+        credit: "Louis Hansel on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "kitchen_hood_cleaning",
+    label: "Kitchen hood cleaning",
+    defaultTagline: "Commercial kitchen exhaust hoods — assess before we quote the clean",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "Closed",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Kitchen Hood Cleaning Quote", description: "Hood type (canopy vs island vs pizza oven), grease load, stories/roof access, fan & duct path, and after-hours schedule assessed before firm price — no bait flat $/hood; not HVAC duct cleaning", priceFrom: 0 },
+      { name: "Canopy / Island / Pizza Oven Hood Assess", description: "Hood type and grease-load honesty after visual/access review — quote before clean; licensed or certified when true", priceFrom: 0 },
+      { name: "Fan & Exhaust Duct Path Review", description: "Fan and duct path from hood to roof/termination assessed before firm price — NFPA-96 / fire-code educational only (no scare fake emergency); no fake same-day clear", priceFrom: 0 },
+      { name: "After-Hours Schedule Walkthrough", description: "After-hours / overnight access honesty for restaurant ops — quote before clean; not dryer vent cleaning", priceFrom: 0 },
+    ],
+    heroHints: ["Hood type/grease load/roof access/fan & duct path assessed before firm price", "Quote before clean — after-hours schedule honesty", "NFPA-96 / fire-code educational only — not scare fake emergency; licensed/certified when true", "No bait flat $/hood — not HVAC duct cleaning or dryer vent"],
+    ctaLabel: "Get a kitchen hood cleaning quote",
+    accentHint: "commercial-kitchen-grease-charcoal-brass",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
