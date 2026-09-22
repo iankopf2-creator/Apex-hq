@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "dumpster_rental";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / dumpster_rental (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  dumpster_rental: {
+    niche: "dumpster_rental",
+    label: "Dumpster Rental",
+    palette: {
+      // Construction charcoal + caution amber — distinct from junk_removal charcoal/lime and concrete gray/amber
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#d97706",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest size/duration/debris/access/driveway-protection assess-first for dumpster and roll-off rental, quote before delivery",
+      heroStyle: "quote-first dumpster rental LP — size/duration/debris/access/driveway chips when true, no bait flat $/day, no fake same-day drop, not junk removal",
+      ctaStyle: "get a dumpster rental quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/day as Apex benchmark", "fake same-day drop guarantees", "competitor brand cloning", "fake 24/7", "junk_removal confusion", "firm price before size/duration/debris/access/driveway-protection assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA honesty when true", "No bait flat $/day fees"],
+    heroImages: [
+      {
+        src: "/niches/dumpster-rental.jpg",
+        alt: "crane lifts a dumpster onto a truck on a city street",
+        credit: "Danial Dez on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
