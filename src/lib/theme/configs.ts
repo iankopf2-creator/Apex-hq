@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "line_striping";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / line_striping (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  line_striping: {
+    niche: "line_striping",
+    label: "Line striping",
+    palette: {
+      // Deep marking charcoal + safety-yellow CTA — not asphalt_paving charcoal+amber #1c1917/#f59e0b, sealcoating orange #ea580c, or concrete cool-slate+amber
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#eab308",
+      accentForeground: "#422006",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest linear-ft/stall-count/surface condition fresh-asphalt-vs-faded-oil/paint-vs-thermoplastic/layout arrows-crosswalks-ADA/access/weather-cure/striping-over-new-sealcoat-pave wait assess-first for parking-lot and road line striping & pavement markings, quote before stripe — markings only, not mill/overlay/pave, sealcoat-only, or concrete flatwork",
+      heroStyle: "quote-first line striping LP — stall/lf/layout/ADA chips when true, no bait flat $/lf or $/stall, no fake same-day striping",
+      ctaStyle: "get a line striping quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/stall as Apex benchmark", "fake same-day striping guarantees", "competitor brand cloning", "fake 24/7", "firm price before linear-ft/stall/surface/paint-vs-thermoplastic/layout/ADA/access/weather assessment", "asphalt paving mill/overlay claims as striping", "sealcoating-only claims as striping", "concrete flatwork confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#eab308",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Linear-ft/stalls/surface/layout/ADA/access/weather assessed before firm price", "Quote before stripe — paint or thermoplastic after assess", "Markings only — not pave, sealcoat-only, or concrete flatwork", "No bait flat $/lf or $/stall — HOA/permit/municipal honesty when true"],
+    heroImages: [
+      {
+        src: "/niches/line-striping.jpg",
+        alt: "Parking lot asphalt with painted white stall lines",
+        credit: "ALEKSEY ALYPOV on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/fFSum8_ZOLY",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

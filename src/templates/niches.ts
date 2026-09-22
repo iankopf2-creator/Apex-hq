@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "line_striping",
+    label: "Line striping",
+    defaultTagline: "Lots & roads — assess before we quote the stripe",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Parking Lot Re-Stripe Quote", description: "Linear feet and stall count, surface condition (fresh asphalt vs faded/oil), paint vs thermoplastic, access/weather/cure, and striping-over-new-sealcoat/pave wait times assessed before firm price — no bait flat $/lf or $/stall; not pave, sealcoat-only, or concrete flatwork", priceFrom: 0 },
+      { name: "ADA / Handicap Stall Markings Quote", description: "Handicap stalls, access aisles, and symbols after layout/surface assess — HOA/permit/municipal marking honesty when true; no fake same-day striping", priceFrom: 0 },
+      { name: "Arrows / Crosswalks Quote", description: "Directional arrows, crosswalks, and stop bars after layout and access review — quote before stripe", priceFrom: 0 },
+      { name: "Fire-Lane / Curb Paint Quote", description: "Fire-lane and curb paint after length, color code, and municipal rules assess — no bait flat $/lf", priceFrom: 0 },
+    ],
+    heroHints: ["Linear-ft/stalls/surface/layout/ADA/access/weather assessed before firm price", "Quote before stripe — paint or thermoplastic after assess", "Markings only — not pave, sealcoat-only, or concrete flatwork", "No bait flat $/lf or $/stall — HOA/permit/municipal honesty when true"],
+    ctaLabel: "Get a line striping quote",
+    accentHint: "marking-charcoal-safety-yellow",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
