@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "basement_waterproofing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / basement_waterproofing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  basement_waterproofing: {
+    niche: "basement_waterproofing",
+    label: "Basement waterproofing",
+    palette: {
+      // Deep damp basement slate charcoal + soft waterproof teal — not water_damage red/#0c4a6e, foundation_repair #1c1917/#b45309, epoxy #0c0a09/#0d9488, plumber cyan #22d3ee, slab_leak #06b6d4, mold #0f766e
+      primary: "#1e293b",
+      primaryForeground: "#f8fafc",
+      accent: "#14b8a6",
+      accentForeground: "#042f2e",
+      background: "#f8fafc",
+      foreground: "#1e293b",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/wall-height/interior-vs-exterior/existing-drainage/sump/vapor-barrier/crawl-vs-poured-vs-block/access/mold-adjacent-referral-not-remediation/weather assess-first for basement waterproofing french drains & sump when relevant, quote before install — waterproofing only, not emergency water-damage dry-out or structural foundation piers/slabs",
+      heroStyle: "quote-first basement waterproofing LP — sqft/wall-height/interior-exterior/drainage/sump/vapor/crawl-poured-block chips when true, no bait flat $/lf or $/sqft, no fake same-day dry-out",
+      ctaStyle: "get a basement waterproofing quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/sqft as Apex benchmark", "fake same-day dry-out guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/wall-height/interior-vs-exterior/drainage/sump/vapor-barrier/crawl-vs-poured-vs-block/access/weather assessment", "emergency water damage restoration / call-first dry-out claims as waterproofing", "structural foundation pier/slab repair confusion", "mold remediation claims — referral only when mold-adjacent"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e293b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#14b8a6",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#1e293b",
+    },
+    trustBadges: ["Sqft/wall-height/interior-vs-exterior/drainage/sump/vapor/access assessed before firm price", "Quote before install — french drain / sump when relevant after assess", "Crawl vs poured vs block honesty — not emergency dry-out or foundation piers", "No bait flat $/lf or $/sqft — mold-adjacent referral only, not remediation claims"],
+    heroImages: [
+      {
+        src: "/niches/basement-waterproofing.jpg",
+        alt: "Crawlspace or basement interior with vapor barrier lining and sealed floor penetrations",
+        credit: "Brett Jordan on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/Upd68AjFQ9Y",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
