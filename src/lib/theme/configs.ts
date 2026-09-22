@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "grease_trap_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / grease_trap_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  grease_trap_cleaning: {
+    niche: "grease_trap_cleaning",
+    label: "Grease trap cleaning",
+    palette: {
+      // FOG interceptor deep slate-ink + muted trap brass — #141c26 + #a68b4b — not kitchen_hood #171412/#b87333, dryer_vent #292524/#f59e0b, duct_cleaning #334155/#14b8a6, foundation #1c1917/#b45309, janitorial teal, fire_smoke #b91c1c/#1c1917, hvac sky/ocean, chimney #1f1a17/#c2410c, appliance_repair #1e293b/#ea580c, epoxy #0c0a09/#0d9488, pressure_washing sky
+      primary: "#141c26",
+      primaryForeground: "#f8fafc",
+      accent: "#a68b4b",
+      accentForeground: "#0f172a",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#ebe6da",
+      mutedForeground: "#5c5346",
+      border: "#d4cbb8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest trap size / FOG load / indoor vs outdoor / interceptor type / access / pumping frequency / restaurant after-hours schedule assess-first for commercial grease trap and FOG interceptor cleaning, quote before pump — grease traps only, not kitchen hood exhaust cleaning, not HVAC air duct cleaning, not general janitorial mop work; local FOG / wastewater rules educational only (not legal advice); licensed or permitted when true",
+      heroStyle: "quote-first grease trap cleaning LP — trap-size/FOG-load/indoor-outdoor/interceptor-type/access/pumping-frequency/after-hours chips when true, no bait flat $/trap, no fake same-day clear, FOG/wastewater educational only",
+      ctaStyle: "get a grease trap cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/trap as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before trap size/FOG load/indoor vs outdoor/interceptor type/access/pumping frequency/after-hours schedule assessment", "kitchen hood exhaust cleaning confusion", "HVAC air duct cleaning confusion", "janitorial mop / floor cleaning confusion", "pressure washing confusion", "scare fake emergency urgency as grease-trap sales", "legal advice on FOG / wastewater rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#141c26",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#a68b4b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Trap size/FOG load/indoor vs outdoor/interceptor type/access assessed before firm price", "Quote before pump — after-hours schedule honesty", "Local FOG / wastewater rules educational only — not legal advice; licensed/permitted when true", "No bait flat $/trap — not kitchen hood exhaust, HVAC duct, or janitorial mop work"],
+    heroImages: [
+      {
+        src: "/niches/grease-trap-cleaning.jpg",
+        alt: "Chef working a commercial restaurant kitchen line — FOG grease trap and interceptor cleaning assess before quote",
+        credit: "Louis Hansel on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/ce391730fb2c",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
