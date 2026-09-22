@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  dumpster_rental: {
+    A: { heroEmphasis: "quote-first size/duration/debris/access/driveway-protection assess for dumpster & roll-off rental", ctaVerb: "Get a dumpster rental quote" },
+    B: { heroEmphasis: "quote-first size and duration before firm price honesty", ctaVerb: "Request a roll-off size quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

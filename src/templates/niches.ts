@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "dumpster_rental",
+    label: "Dumpster Rental",
+    defaultTagline: "Dumpster / roll-off rental — size and duration before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Size & Duration Quote", description: "Yard size, rental days, debris type, access, and driveway protection assessed before firm price — no bait flat $/day", priceFrom: 0 },
+      { name: "Roll-Off Delivery Quote", description: "Delivery/pickup scope after access and permit check — no fake same-day drop guarantee; not junk removal haul-away", priceFrom: 0 },
+      { name: "Permit / HOA Assist Quote", description: "Local permit or HOA note when required — honesty when true; not legal advice", priceFrom: 0 },
+    ],
+    heroHints: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA honesty when true", "No bait flat $/day fees"],
+    ctaLabel: "Get a dumpster rental quote",
+    accentHint: "dumpster-charcoal-caution-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
