@@ -214,6 +214,14 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+
+  window_replacement: {
+    A: { heroEmphasis: "quote-first count/size/stories/access / existing-vs-new / vinyl-vs-wood-vs-fiberglass-vs-aluminum / energy-rating assess", ctaVerb: "Get a window replacement quote" },
+    B: { heroEmphasis: "quote-first measure before firm price honesty", ctaVerb: "Request a window measure quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

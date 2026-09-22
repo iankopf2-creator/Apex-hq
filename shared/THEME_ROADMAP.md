@@ -46,6 +46,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Solar — quote_first (deep slate + solar gold/amber; roof/utility/net-metering/battery/HOA assess before firm price; no bait flat $/watt; no fake same-day install; licensed electrician/solar contractor honesty when required)
 - Epoxy flooring — quote_first (deep epoxy charcoal + gloss resin teal/cyan; sqft/prep/moisture/existing-coating/access assess before firm price; no bait flat $/sqft; no fake same-day cure; garage & commercial epoxy honesty)
 - Chimney — quote_first (flue soot charcoal `#1f1a17` + creosote copper-orange `#c2410c`; flue type/height/creosote/liner/cap/access/stories/wood-stove-vs-fireplace assess before firm price; no bait flat $/sweep; no fake same-day; no scare copy; CSIA/NFI / licensed honesty when true; quote before sweep or repair)
+- Window replacement — quote_first (frame slate `#1e293b` + sky accent `#0ea5e9`; count/size/stories/access/existing-vs-new/vinyl-vs-wood-vs-fiberglass-vs-aluminum/energy-rating assess before firm price; no bait flat $/window; no fake same-day; licensed honesty when true; quote before install; distinct from window cleaning)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -58,5 +59,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney + window_replacement
 - 48px tap targets; trust chips from research notes

@@ -43,6 +43,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   solar: 450,
   epoxy_flooring: 850,
   chimney: 285,
+  window_replacement: 650,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -124,6 +125,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
   chimney:
     "Add a quote-first chimney page (sweep/fireplace repair + flue type/height/creosote/liner/cap/access/stories/wood-stove-vs-fireplace assess before firm price; CSIA/NFI / licensed honesty when true) so callers get a real quote — not bait flat $/sweep or fake same-day or scare copy.",
+  window_replacement:
+    "Add a quote-first window replacement page (measure/replace/energy upgrade + count/size/stories/access/existing-vs-new/vinyl-vs-wood-vs-fiberglass-vs-aluminum/energy-rating assess before firm price; licensed honesty when true) so callers get a real quote — not bait flat $/window or fake same-day; distinct from window cleaning.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
