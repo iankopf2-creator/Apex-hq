@@ -937,6 +937,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
 
 
 
+
+  {
+    id: "window_replacement",
+    label: "Window Replacement",
+    defaultTagline: "Window replacement — measure before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Window Measure Quote", description: "Count, size, stories, access, existing vs new, vinyl vs wood vs fiberglass vs aluminum, and energy rating assessed before firm price — no bait flat $/window", priceFrom: 0 },
+      { name: "Window Replacement Quote", description: "Replacement scope after measure — licensed honesty when true; no fake same-day; not window cleaning", priceFrom: 0 },
+      { name: "Energy Upgrade Window Quote", description: "Energy-rating upgrade scope after access and material assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Count/size/stories/access/material/energy assessed before firm price", "Quote before install", "Licensed honesty when true", "No bait flat $/window fees"],
+    ctaLabel: "Get a window replacement quote",
+    accentHint: "window-slate-sky-blue",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

@@ -50,3 +50,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Solar | `solar.jpg` | American Public Power Association | https://unsplash.com/photos/513dBrMJ_5w |
 | Epoxy flooring | `epoxy-flooring.jpg` | Shahabudin Ibragimov | https://unsplash.com/photos/seEumFkina8 |
 | Chimney | `chimney.jpg` | Hanna Theresia Pitter | https://unsplash.com/photos/a-brick-chimney-on-top-of-a-roof-QadP_RXFHSs |
+| Window replacement | `window-replacement.jpg` | Griffin Wooldridge | https://unsplash.com/photos/corner-of-a-house-with-a-window-against-blue-sky-RBEn2oo_TyU |
