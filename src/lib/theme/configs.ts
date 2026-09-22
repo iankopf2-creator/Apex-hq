@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "asphalt_paving";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / asphalt_paving (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,56 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  asphalt_paving: {
+    niche: "asphalt_paving",
+    label: "Asphalt paving",
+    palette: {
+      // Wet-asphalt charcoal + traffic-amber CTA — not sealcoating charcoal+orange, concrete cool-slate+amber, epoxy resin-teal, foundation copper
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#f59e0b",
+      accentForeground: "#451a03",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/linear-ft/thickness/existing condition mill-overlay-full-replace/access/equipment/weather-cure/base-prep assess-first for driveway and parking-lot asphalt paving, quote before mill/overlay/pave — pave/overlay/mill, not sealcoat-only or concrete flatwork",
+      heroStyle: "quote-first asphalt paving LP — driveway/parking-lot mill/overlay/replace chips when true, no bait flat $/sqft or $/ton, no fake same-day pave",
+      ctaStyle: "get an asphalt paving quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/ton as Apex benchmark", "fake same-day pave guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/thickness/condition/access/equipment/weather/base-prep assessment", "sealcoating-only claims as paving", "concrete flatwork confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/thickness/condition/access/weather/base prep assessed before firm price", "Quote before mill, overlay, or pave", "Pave/overlay/mill — not sealcoat-only or concrete flatwork", "No bait flat $/sqft or $/ton — HOA/permit honesty when true"],
+    heroImages: [
+      {
+        src: "/niches/asphalt-paving.jpg",
+        alt: "Workers paving a road with an asphalt paving machine",
+        credit: "Brian J. Tromp on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/AYak7Oq4Ejw",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
 
 
 };

@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "asphalt_paving",
+    label: "Asphalt paving",
+    defaultTagline: "Driveways & lots — assess before we quote the pave",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Driveway / Parking Lot Assess Quote", description: "Sqft or linear-ft, thickness, existing condition, access/equipment, weather/cure window, and base prep assessed before firm price — no bait flat $/sqft or $/ton; not sealcoat-only or concrete flatwork", priceFrom: 0 },
+      { name: "Mill & Overlay Quote", description: "Mill existing asphalt and overlay after condition/access assess — HOA/permit honesty when true; no fake same-day pave", priceFrom: 0 },
+      { name: "Full-Depth Replace / Patch Quote", description: "Full-depth replace or targeted patch after base-prep and equipment access review — quote before dig/pave", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/thickness/condition/access/weather/base prep assessed before firm price", "Quote before mill, overlay, or pave", "Pave/overlay/mill — not sealcoat-only or concrete flatwork", "No bait flat $/sqft or $/ton — HOA/permit honesty when true"],
+    ctaLabel: "Get an asphalt paving quote",
+    accentHint: "asphalt-charcoal-traffic-amber",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
