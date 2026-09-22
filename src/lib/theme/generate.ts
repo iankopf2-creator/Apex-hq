@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  grease_trap_cleaning: {
+    A: { heroEmphasis: "quote-first trap-size/FOG-load/indoor-outdoor/interceptor-type/access/pumping-frequency/after-hours assess for grease traps", ctaVerb: "Get a grease trap cleaning quote" },
+    B: { heroEmphasis: "quote-first grease-trap honesty before firm price — not kitchen hood, HVAC duct, or janitorial; FOG/wastewater educational only", ctaVerb: "Request a grease trap cleaning quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

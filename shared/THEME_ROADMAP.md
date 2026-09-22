@@ -54,5 +54,6 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + grease_trap_cleaning
+- Grease trap cleaning — quote_first (FOG interceptor slate-ink + muted trap brass; trap size/FOG load/indoor vs outdoor/interceptor type/access/pumping frequency/after-hours assess before firm price; no bait flat $/trap; FOG/wastewater educational only — not legal advice; distinct from kitchen hood, HVAC duct, pressure washing, janitorial)
 - 48px tap targets; trust chips from research notes

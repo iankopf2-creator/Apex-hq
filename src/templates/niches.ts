@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "grease_trap_cleaning",
+    label: "Grease trap cleaning",
+    defaultTagline: "Restaurant FOG grease traps — assess before we quote the pump",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "Closed",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Grease Trap Cleaning Quote", description: "Trap size, FOG load, indoor vs outdoor, interceptor type, access, pumping frequency, and restaurant after-hours schedule assessed before firm price — no bait flat $/trap; not kitchen hood exhaust cleaning, not HVAC duct cleaning, not general janitorial mop work", priceFrom: 0 },
+      { name: "Indoor / Outdoor Interceptor Assess", description: "Trap size / FOG load / indoor vs outdoor / interceptor type honesty after access review — quote before pump; licensed or permitted when true", priceFrom: 0 },
+      { name: "Access & Pumping Frequency Review", description: "Access path and recommended pumping frequency assessed before firm price — local FOG / wastewater rules educational only (not legal advice); no fake same-day clear", priceFrom: 0 },
+      { name: "After-Hours Schedule Walkthrough", description: "Restaurant after-hours / overnight access honesty for FOG pump-outs — quote before clean; not pressure washing or kitchen hood cleaning", priceFrom: 0 },
+    ],
+    heroHints: ["Trap size/FOG load/indoor vs outdoor/interceptor type/access assessed before firm price", "Quote before pump — after-hours schedule honesty", "Local FOG / wastewater rules educational only — not legal advice; licensed/permitted when true", "No bait flat $/trap — not kitchen hood exhaust, HVAC duct, or janitorial mop work"],
+    ctaLabel: "Get a grease trap cleaning quote",
+    accentHint: "fog-interceptor-slate-brass",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
