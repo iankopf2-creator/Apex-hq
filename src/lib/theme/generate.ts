@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  asphalt_paving: {
+    A: { heroEmphasis: "quote-first sqft/thickness/condition mill-overlay-replace + access/equipment/weather/base-prep assess", ctaVerb: "Get an asphalt paving quote" },
+    B: { heroEmphasis: "quote-first mill/overlay/full-depth honesty before firm price", ctaVerb: "Request an asphalt paving quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
