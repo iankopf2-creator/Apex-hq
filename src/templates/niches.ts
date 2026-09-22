@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "dryer_vent_cleaning",
+    label: "Dryer vent cleaning",
+    defaultTagline: "Dryer exhaust vents — assess before we quote the clean",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Dryer Vent Cleaning Quote", description: "Stories/floors, vent length, exterior termination access, roof vs wall, bird nest/lint load, gas vs electric, and crawl/attic access assessed before firm price — no bait flat $/vent; not HVAC duct cleaning", priceFrom: 0 },
+      { name: "Exterior Termination / Cap Check", description: "Roof vs wall termination access and weather review after assess — quote before clean; licensed honesty when true", priceFrom: 0 },
+      { name: "Lint Load / Bird Nest Assess", description: "Lint load and nest obstruction honesty after visual/access review — fire-risk educational only (no scare fake emergency); no fake same-day clear", priceFrom: 0 },
+      { name: "Gas vs Electric Dryer Walkthrough", description: "Fuel type and dryer exhaust path reviewed before firm price — quote before clean; not chimney sweeping", priceFrom: 0 },
+    ],
+    heroHints: ["Stories/floors/vent length/termination/access assessed before firm price", "Quote before clean — gas vs electric & roof vs wall honesty", "Fire-risk educational only — not scare fake emergency; licensed when true", "No bait flat $/vent — not HVAC duct cleaning or chimney sweeping"],
+    ctaLabel: "Get a dryer vent cleaning quote",
+    accentHint: "lint-safe-warm-slate-hazard-amber",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

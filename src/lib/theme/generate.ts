@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  dryer_vent_cleaning: {
+    A: { heroEmphasis: "quote-first stories/floors/vent-length/termination/roof-vs-wall/lint-load/gas-vs-electric/access assess", ctaVerb: "Get a dryer vent cleaning quote" },
+    B: { heroEmphasis: "quote-first dryer-vent honesty before firm price — not HVAC duct cleaning or chimney sweep; fire-risk educational only", ctaVerb: "Request a dryer vent cleaning quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
