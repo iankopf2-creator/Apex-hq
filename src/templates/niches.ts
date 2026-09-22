@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "auto_parts",
+    label: "Auto Parts",
+    defaultTagline: "Parts for your year/make/model — fitment before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 6:00 PM",
+      tue: "8:00 AM – 6:00 PM",
+      wed: "8:00 AM – 6:00 PM",
+      thu: "8:00 AM – 6:00 PM",
+      fri: "8:00 AM – 6:00 PM",
+      sat: "8:00 AM – 4:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Year/Make/Model Fitment Quote", description: "Confirm year, make, model, and fitment before firm price — no bait flat $/part; not detailing or dealership sales", priceFrom: 0 },
+      { name: "OEM / Aftermarket Option Quote", description: "OEM vs aftermarket preference assessed with availability and lead time — no fake in-stock-everywhere claims", priceFrom: 0 },
+      { name: "Core Exchange / Special-Order Quote", description: "Core/return and special-order lead time honesty when true — quote before ship", priceFrom: 0 },
+    ],
+    heroHints: ["Year/make/model + fitment assessed before firm price", "Quote before ship", "OEM vs aftermarket + core/return honesty", "No bait flat $/part — not detailing, not dealership sales"],
+    ctaLabel: "Get a parts fitment quote",
+    accentHint: "parts-charcoal-signal-orange",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
