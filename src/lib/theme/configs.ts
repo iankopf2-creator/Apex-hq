@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "crack_sealing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / crack_sealing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  crack_sealing: {
+    niche: "crack_sealing",
+    label: "Crack sealing",
+    palette: {
+      // Deep crack-asphalt charcoal + hot-pour amber/copper — not asphalt_paving #1c1917/#f59e0b, sealcoating orange #ea580c, line_striping #0f172a/#eab308, or concrete cool-slate+amber
+      primary: "#18181b",
+      primaryForeground: "#fafafa",
+      accent: "#d97706",
+      accentForeground: "#451a03",
+      background: "#fafafa",
+      foreground: "#18181b",
+      muted: "#e4e4e7",
+      mutedForeground: "#52525b",
+      border: "#d4d4d8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest linear-ft of cracks/width-depth hairline-vs-alligator/surface fresh-pave-vs-oxidized/hot-pour-vs-cold-fill-vs-mastic/weather-cure/traffic-reopen/whether sealcoat-or-pave-needed-instead/access-lot-size assess-first for asphalt lot driveway & road crack fill & seal, quote before fill — crack fill/seal only, not full pave, sealcoat-only blanket, line striping, or concrete flatwork",
+      heroStyle: "quote-first crack sealing LP — lf/width-depth/surface/method chips when true, no bait flat $/lf, no fake same-day fill",
+      ctaStyle: "get a crack sealing quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf as Apex benchmark", "fake same-day crack fill guarantees", "competitor brand cloning", "fake 24/7", "firm price before linear-ft/width-depth/surface/hot-pour-vs-cold-fill/weather/access assessment", "full asphalt paving mill/overlay claims as crack sealing", "sealcoating-only blanket claims as crack sealing", "line striping / pavement marking confusion", "concrete flatwork confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#18181b",
+      "--theme-primary-fg": "#fafafa",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fafafa",
+      "--theme-fg": "#18181b",
+    },
+    trustBadges: ["Linear-ft/width-depth/surface/method/weather/access assessed before firm price", "Quote before fill — hot-pour, cold-fill, or mastic after assess", "Crack fill & seal only — not pave, sealcoat-only, striping, or concrete", "No bait flat $/lf — honesty if full sealcoat or pave is needed instead"],
+    heroImages: [
+      {
+        src: "/niches/crack-sealing.jpg",
+        alt: "Cracked asphalt pavement on a paved road showing wear needing crack fill",
+        credit: "Tim Oun on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/UW6F5jUfCC0",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

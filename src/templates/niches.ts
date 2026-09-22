@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "crack_sealing",
+    label: "Crack sealing",
+    defaultTagline: "Lots & driveways — assess before we quote the fill",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Hot / Cold Crack Fill Quote", description: "Linear feet of cracks, width/depth (hairline vs alligator), surface condition (fresh pave vs oxidized), hot-pour vs cold-fill vs mastic, weather/cure and traffic reopen windows assessed before firm price — no bait flat $/lf; not full pave, sealcoat-only, line striping, or concrete flatwork", priceFrom: 0 },
+      { name: "Alligator / Area Repair Quote", description: "Alligator or clustered crack areas after width/depth and whether full sealcoat or pave is needed instead — honesty before firm price; no fake same-day fill", priceFrom: 0 },
+      { name: "Lot / Driveway Walkthrough Assess", description: "Access, lot size, crack map, and method recommendation after on-site walkthrough — quote before fill", priceFrom: 0 },
+      { name: "Road / Parking Lot Crack Seal Quote", description: "Commercial lot or low-speed road crack seal after lf/surface/weather/access assess — HOA/permit honesty when true; no bait flat $/lf", priceFrom: 0 },
+    ],
+    heroHints: ["Linear-ft/width-depth/surface/method/weather/access assessed before firm price", "Quote before fill — hot-pour, cold-fill, or mastic after assess", "Crack fill & seal only — not pave, sealcoat-only, striping, or concrete", "No bait flat $/lf — honesty if full sealcoat or pave is needed instead"],
+    ctaLabel: "Get a crack sealing quote",
+    accentHint: "crack-charcoal-hot-pour-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
