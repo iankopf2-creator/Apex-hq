@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "auto_parts";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / auto_parts (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  auto_parts: {
+    niche: "auto_parts",
+    label: "Auto Parts",
+    palette: {
+      // Parts-counter charcoal + signal orange — distinct from auto_detail graphite/chrome and garage door chrome
+      primary: "#1f2937",
+      primaryForeground: "#f9fafb",
+      accent: "#ea580c",
+      accentForeground: "#fff7ed",
+      background: "#f9fafb",
+      foreground: "#111827",
+      muted: "#e5e7eb",
+      mutedForeground: "#4b5563",
+      border: "#d1d5db",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest year/make/model + OEM-vs-aftermarket + fitment/core-return/lead-time assess-first for local independent parts counter, quote before ship",
+      heroStyle: "quote-first auto parts LP — year/make/model + OEM/aftermarket chips when true, no bait flat $/part, no fake in-stock-everywhere, not auto_detail wash, not dealership sales",
+      ctaStyle: "get a parts fitment quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/part as Apex benchmark", "fake in-stock-everywhere claims", "competitor brand cloning", "fake 24/7", "auto_detail confusion", "dealership new-car sales confusion", "firm price before year/make/model/fitment/OEM-vs-aftermarket/core/lead-time assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1f2937",
+      "--theme-primary-fg": "#f9fafb",
+      "--theme-accent": "#ea580c",
+      "--theme-bg": "#f9fafb",
+      "--theme-fg": "#111827",
+    },
+    trustBadges: ["Year/make/model + fitment assessed before firm price", "Quote before ship", "OEM vs aftermarket + core/return honesty", "No bait flat $/part — not detailing, not dealership sales"],
+    heroImages: [
+      {
+        src: "/niches/auto-parts.jpg",
+        alt: "Industrial parts shelves with labeled bins and automotive belts in a warehouse aisle",
+        credit: "Unsplash contributor",
+        sourceUrl: "https://unsplash.com/photos/photo-1690986469727-1ed8bcdf6384",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
 
 
 };
