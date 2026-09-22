@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "basement_waterproofing",
+    label: "Basement waterproofing",
+    defaultTagline: "Basements & crawlspaces — assess before we quote the waterproofing",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Interior Waterproofing Quote", description: "Sqft, wall height, crawl vs poured vs block, existing drainage/sump/vapor barrier, and access assessed before firm price — no bait flat $/lf or $/sqft; not emergency dry-out", priceFrom: 0 },
+      { name: "Exterior Waterproofing Quote", description: "Exterior drainage / membrane scope after soil, access, weather, and interior-vs-exterior assess — quote before dig; licensed contractor honesty when true", priceFrom: 0 },
+      { name: "French Drain / Sump Assess", description: "Whether french drain and/or sump are needed after moisture and existing drainage review — honesty before firm price; no fake same-day dry-out", priceFrom: 0 },
+      { name: "Moisture / Crawlspace Walkthrough", description: "Moisture assessment, vapor barrier condition, and mold-adjacent referral when true (not mold remediation claims) — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/wall-height/interior-vs-exterior/drainage/sump/vapor/access assessed before firm price", "Quote before install — french drain / sump when relevant after assess", "Crawl vs poured vs block honesty — not emergency dry-out or foundation piers", "No bait flat $/lf or $/sqft — mold-adjacent referral only, not remediation claims"],
+    ctaLabel: "Get a basement waterproofing quote",
+    accentHint: "damp-basement-slate-waterproof-teal",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

@@ -207,6 +207,15 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+
+  basement_waterproofing: {
+    A: { heroEmphasis: "quote-first sqft/wall-height/interior-vs-exterior/drainage/sump/vapor + crawl-vs-poured-vs-block assess", ctaVerb: "Get a basement waterproofing quote" },
+    B: { heroEmphasis: "quote-first waterproofing honesty before firm price — not emergency dry-out or foundation piers", ctaVerb: "Request a basement waterproofing quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
