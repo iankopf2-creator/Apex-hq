@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "dryer_vent_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / dryer_vent_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1950,6 +1950,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Glossy polished industrial floor coating in a modern commercial space",
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  dryer_vent_cleaning: {
+    niche: "dryer_vent_cleaning",
+    label: "Dryer vent cleaning",
+    palette: {
+      // Lint-safe warm slate + hazard-amber — deep lint/duct charcoal-slate #292524 + warm safety amber #f59e0b — not duct_cleaning #334155/#14b8a6, hvac sky/ocean, chimney #1f1a17/#c2410c, appliance_repair #1e293b/#ea580c, fire_smoke #b91c1c/#1c1917, foundation #1c1917/#b45309, roofing inverted amber/charcoal, trucking amber-as-primary
+      primary: "#292524",
+      primaryForeground: "#fafaf9",
+      accent: "#f59e0b",
+      accentForeground: "#1c1917",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest stories/floors / vent length / exterior termination access / roof vs wall / bird nest/lint load / gas vs electric dryer / crawl or attic access / weather assess-first for dryer vent cleaning, quote before clean — dryer exhaust vents only, not HVAC air duct cleaning or chimney sweeping; fire-risk educational only (no scare fake emergency); licensed when true",
+      heroStyle: "quote-first dryer vent cleaning LP — stories/floors/vent-length/termination/roof-vs-wall/lint-load/gas-vs-electric/access chips when true, no bait flat $/vent, no fake same-day clear, fire-risk educational only",
+      ctaStyle: "get a dryer vent cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/vent as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before stories/floors/vent length/exterior termination access/roof-vs-wall/bird nest/lint load/gas-vs-electric/crawl-or-attic access/weather assessment", "HVAC air duct cleaning confusion", "chimney sweeping confusion", "scare fake fire emergency / fake emergency urgency as dryer-vent sales"],
+    },
+    cssVars: {
+      "--theme-primary": "#292524",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Stories/floors/vent length/termination/access assessed before firm price", "Quote before clean — gas vs electric & roof vs wall honesty", "Fire-risk educational only — not scare fake emergency; licensed when true", "No bait flat $/vent — not HVAC duct cleaning or chimney sweeping"],
+    heroImages: [
+      {
+        src: "/niches/dryer-vent-cleaning.jpg",
+        alt: "Laundry room with stacked washer and dryer — dryer exhaust vent cleaning assess before quote",
+        credit: "Lisa Anna on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/a-laundry-room-with-a-washer-and-dryer-49NwSDtEsuw",
         license: "unsplash",
       },
     ],
