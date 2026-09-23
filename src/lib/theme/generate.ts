@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  crawl_space_encapsulation: {
+    A: { heroEmphasis: "quote-first crawl height/access/soil-vs-vapor-barrier/moisture-humidity/insulation/rim-joist/sump-dehumidifier/permit assess for encapsulation", ctaVerb: "Get a crawl space encapsulation quote" },
+    B: { heroEmphasis: "quote-first crawl encapsulation honesty before firm price — not basement_waterproofing, french_drain, foundation_repair, water_damage, mold_remediation, or attic insulation; no bait $/sqft or fake same-day dry crawl", ctaVerb: "Request a crawl space encapsulation quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

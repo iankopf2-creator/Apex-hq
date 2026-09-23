@@ -910,6 +910,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "epoxy-charcoal-resin-teal",
   },
 
+  {
+    id: "crawl_space_encapsulation",
+    label: "Crawl space encapsulation",
+    defaultTagline: "Seal the crawl — assess access, moisture, and vapor barrier before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Crawl space inspection & encapsulation quote", description: "Crawl height/access (hatches, vents, debris), soil vs existing vapor barrier condition, moisture/standing water vs humidity, insulation type (faced/unfaced/foam), rim-joist and sill sealing, sump/dehumidifier need, radon educational only (not a radon-mitigation niche), pest droppings/HVAC duct when relevant, and permit/HOA when true — assessed before firm price; no bait flat $/sqft; no fake same-day dry crawl guarantee; not basement_waterproofing, french_drain, foundation_repair, water_damage, mold_remediation, or attic insulation", priceFrom: 0 },
+      { name: "Vapor barrier encapsulation plan", description: "Ground cover / wall liner plan after access and moisture assess — quote before encapsulate; licensed contractor honesty only when true", priceFrom: 0 },
+      { name: "Rim-joist seal + dehumidifier option", description: "Rim-joist/sill sealing and sump/dehumidifier options after moisture assess — permit/HOA honesty when true; no bait flat $/sqft", priceFrom: 0 },
+    ],
+    heroHints: ["Crawl height/access assessed before firm price", "Soil vs vapor barrier + moisture/humidity honesty", "Rim-joist/sill + sump/dehumidifier when true — radon educational only", "No bait flat $/sqft — no fake same-day dry crawl — not basement waterproofing, french drain, foundation, water damage, mold, or attic insulation"],
+    ctaLabel: "Get a crawl space encapsulation quote",
+    accentHint: "damp-crawl-charcoal-vapor-barrier-lime",
+  },
+
 
 ];
 
