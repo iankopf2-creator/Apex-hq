@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "wildlife_removal",
+    label: "Wildlife removal",
+    defaultTagline: "Wildlife in the attic or crawl — assess before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Wildlife inspection & quote", description: "Species ID, entry points, attic/crawl access, exclusion vs live-trap vs one-way door, cleanup/sanitation need, seasonal nesting, and local permit/wildlife rehab rules assessed before firm price — no bait flat $/animal or $/attic; not pest_control insects, not tree_service storm, not junk_removal haul, not mold_remediation, not handyman", priceFrom: 0 },
+      { name: "Exclusion / re-entry sealing plan", description: "Entry-point sealing and exclusion plan after species/access assess — quote before work; local permit/wildlife rehab educational only (not legal advice); no fake same-day guaranteed catch for every species", priceFrom: 0 },
+      { name: "Attic cleanup & sanitation option", description: "Attic/crawl cleanup and sanitation honesty after inspection — quote before cleanup; licensed/insured / state wildlife permit honesty only when true", priceFrom: 0 },
+    ],
+    heroHints: ["Species ID/entry points/attic-crawl access assessed before firm price", "Quote before removal — exclusion vs live-trap vs one-way door honesty", "Local permit/wildlife rehab educational only — not legal advice", "No bait flat $/animal or $/attic — not pest_control insects, tree_service, junk_removal, mold, or handyman"],
+    ctaLabel: "Get a wildlife removal quote",
+    accentHint: "night-attic-lantern-amber",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
