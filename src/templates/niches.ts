@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "french_drain",
+    label: "French drain",
+    defaultTagline: "Yard drainage that works — assess soil, grade, and discharge before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "French drain inspection & quote", description: "Soil type, water table, grade & slope, daylight vs sump discharge path, trench length/depth/access (fences, utilities, trees, driveways), perforated vs solid pipe, gravel, fabric, catch basins, downspout/gutter tie-in, and permit/HOA when true — assessed before firm price; no bait flat $/lf; no fake same-day dry basement guarantee; not basement_waterproofing interior, foundation_repair, water_damage emergency, concrete flatwork, landscaping, plumber, or slab_leak", priceFrom: 0 },
+      { name: "Yard / perimeter french drain plan", description: "Trench layout and discharge plan after soil/grade/access assess — quote before dig; perforated pipe + gravel + fabric honesty when true; licensed contractor honesty only when true", priceFrom: 0 },
+      { name: "Downspout & catch basin tie-in option", description: "Gutter/downspout discharge into drain or catch basins after path assess — permit/HOA honesty when true; no bait flat $/lf", priceFrom: 0 },
+    ],
+    heroHints: ["Soil/water table/grade & slope assessed before firm price", "Daylight vs sump discharge + trench access honesty", "Pipe/gravel/fabric + downspout tie-in when true", "No bait flat $/lf — no fake same-day dry basement guarantee — not basement waterproofing, foundation, water damage, concrete, landscaping, plumber, or slab leak"],
+    ctaLabel: "Get a french drain quote",
+    accentHint: "zinc-trench-wet-clay-ochre",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

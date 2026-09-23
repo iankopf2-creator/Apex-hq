@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  french_drain: {
+    A: { heroEmphasis: "quote-first soil/water-table/grade-slope/daylight-vs-sump/trench-length-depth-access/pipe-gravel-fabric/downspout/permit assess for french drain", ctaVerb: "Get a french drain quote" },
+    B: { heroEmphasis: "quote-first french drain honesty before firm price — not basement_waterproofing, foundation_repair, water_damage, concrete flatwork, landscaping, plumber, or slab_leak; no bait $/lf or fake same-day dry basement", ctaVerb: "Request a french drain quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
