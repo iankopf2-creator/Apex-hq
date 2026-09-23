@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "storage_container_rental";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / storage_container_rental (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,56 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+
+  storage_container_rental: {
+    niche: "storage_container_rental",
+    label: "Storage Container Rental",
+    palette: {
+      // Weathered steel / container corrugation zinc + muted rust — #3f3f46 + #c2410c — not dumpster #1c1917/#d97706, porta_potty #334155/#2dd4bf, junk_removal #a3e635/#1e293b, septic #252e2a/#86a373, grease_trap #141c26/#a68b4b, epoxy #0c0a09/#0d9488
+      primary: "#3f3f46",
+      primaryForeground: "#fafafa",
+      accent: "#c2410c",
+      accentForeground: "#fff7ed",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5f5f4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest container size (10/20/40 ft) / delivery-pickup access & crane-tilt-bed needs / ground-surface conditions / rental duration (days/weeks/months) / lock-security options / residential vs jobsite use assess-first for shipping-container / conex / portable storage rental, quote before delivery — temporary on-site storage only, not dumpster roll-off waste, not porta potty toilets, not junk removal haul-away, not moving labor, not septic pumping, not grease trap FOG cleaning; local permit/HOA educational only (not legal advice)",
+      heroStyle: "quote-first storage container rental LP — size/access/crane-tilt-bed/ground/duration/lock/residential-vs-jobsite chips when true, no bait flat $/day or $/month, no fake same-day delivery, permit/HOA educational only",
+      ctaStyle: "get a storage container rental quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/day as Apex benchmark", "bait flat $/month as Apex benchmark", "fake same-day delivery guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before container size/delivery-pickup access/crane-tilt-bed/ground-surface/rental duration/lock-security/residential-vs-jobsite assessment", "dumpster roll-off confusion", "porta potty toilet confusion", "junk removal haul-away confusion", "moving labor confusion", "septic pumping confusion", "grease trap FOG cleaning confusion", "legal advice on local permit/HOA rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#3f3f46",
+      "--theme-primary-fg": "#fafafa",
+      "--theme-accent": "#c2410c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Size/access/crane-tilt-bed/ground/duration/lock/use assessed before firm price", "Quote before delivery — shipping container / conex / portable storage", "Local permit/HOA educational only — not legal advice", "No bait flat $/day or $/month — not dumpster, porta potty, junk removal, moving, septic, or grease trap"],
+    heroImages: [
+      {
+        src: "/niches/storage-container-rental.jpg",
+        alt: "Shipping containers on a dirt field — size, delivery access, and ground conditions assessed before quote",
+        credit: "Markus Winkler on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/-BXq7U-Yuxw",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
 
 
 };

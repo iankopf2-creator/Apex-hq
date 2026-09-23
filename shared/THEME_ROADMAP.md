@@ -54,5 +54,6 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + storage_container_rental
+- Storage container rental — quote_first (weathered steel / container corrugation zinc + muted rust; size 10/20/40 ft / delivery-pickup access & crane-tilt-bed / ground-surface / rental duration days-weeks-months / lock-security / residential vs jobsite assess before firm price; no bait flat $/day or $/month; local permit/HOA educational only — not legal advice; distinct from dumpster rental, porta potty, junk removal, moving, septic pumping, grease trap)
 - 48px tap targets; trust chips from research notes
