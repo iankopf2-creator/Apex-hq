@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  storage_container_rental: {
+    A: { heroEmphasis: "quote-first size/access/crane-tilt-bed/ground/duration/lock/residential-vs-jobsite assess for storage container rental", ctaVerb: "Get a storage container rental quote" },
+    B: { heroEmphasis: "quote-first storage container honesty before firm price — not dumpster, porta potty, junk removal, moving, septic, or grease trap; permit/HOA educational only", ctaVerb: "Request a storage container rental quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

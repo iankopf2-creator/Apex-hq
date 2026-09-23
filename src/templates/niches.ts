@@ -911,6 +911,34 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "storage_container_rental",
+    label: "Storage Container Rental",
+    defaultTagline: "Jobsite & residential portable storage — assess before we quote the container",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Storage Container Rental Quote", description: "Container size (10/20/40 ft), delivery/pickup access & crane/tilt-bed needs, ground/surface conditions, rental duration (days/weeks/months), lock/security options, and residential vs jobsite use assessed before firm price — no bait flat $/day or $/month; not dumpster roll-off, not porta potty, not junk removal, not moving labor, not septic pumping, not grease trap FOG cleaning", priceFrom: 0 },
+      { name: "Size & Duration Assess", description: "10/20/40 ft container size and days/weeks/months rental duration honesty after scope review — quote before delivery", priceFrom: 0 },
+      { name: "Delivery Access & Ground Review", description: "Driveway/jobsite access, crane or tilt-bed needs, and ground/surface conditions assessed before firm price — local permit/HOA educational only (not legal advice); no fake same-day delivery", priceFrom: 0 },
+      { name: "Lock / Security & Use Walkthrough", description: "Lock/security options and residential vs jobsite use honesty — quote before delivery; distinct from dumpster rental, porta potty, junk removal, moving, septic pumping, and grease trap cleaning", priceFrom: 0 },
+    ],
+    heroHints: ["Size/access/crane-tilt-bed/ground/duration/lock/use assessed before firm price", "Quote before delivery — shipping container / conex / portable storage", "Local permit/HOA educational only — not legal advice", "No bait flat $/day or $/month — not dumpster, porta potty, junk removal, moving, septic, or grease trap"],
+    ctaLabel: "Get a storage container rental quote",
+    accentHint: "weathered-steel-muted-rust",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
