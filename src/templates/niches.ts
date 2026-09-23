@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "porta_potty_rental",
+    label: "Porta Potty Rental",
+    defaultTagline: "Event & construction portable toilets — assess before we quote the drop",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Porta Potty Rental Quote", description: "Unit count, event days vs jobsite duration, delivery access, ADA unit need, restock-service cadence, and waste pump-out schedule assessed before firm price — no bait flat $/day or $/weekend; not dumpster roll-off, not junk removal, not septic pumping, not grease trap FOG cleaning", priceFrom: 0 },
+      { name: "Event / Jobsite Unit Count Assess", description: "How many standard vs ADA units and event-day vs multi-week jobsite duration honesty after scope review — quote before delivery; licensed/hauler when true", priceFrom: 0 },
+      { name: "Delivery Access & Placement Review", description: "Driveway/jobsite access, placement spot, and ground conditions assessed before firm price — local permit/HOA educational only (not legal advice); no fake same-day drop", priceFrom: 0 },
+      { name: "Restock & Pump-Out Cadence Walkthrough", description: "Service/restock frequency and waste pump-out schedule honesty — quote before delivery; distinct from dumpster rental, junk removal, septic pumping, and grease trap cleaning", priceFrom: 0 },
+    ],
+    heroHints: ["Unit count/event days vs jobsite/delivery access/ADA/restock/pump-out assessed before firm price", "Quote before delivery — event & construction portable toilets", "Local permit/HOA educational only — not legal advice; licensed/hauler when true", "No bait flat $/day or $/weekend — not dumpster, junk removal, septic pumping, or grease trap"],
+    ctaLabel: "Get a porta potty rental quote",
+    accentHint: "porta-slate-sanitation-teal",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

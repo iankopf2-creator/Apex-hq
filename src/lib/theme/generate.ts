@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  porta_potty_rental: {
+    A: { heroEmphasis: "quote-first unit-count/event-days-vs-jobsite/delivery-access/ADA/restock/pump-out assess for porta potty rental", ctaVerb: "Get a porta potty rental quote" },
+    B: { heroEmphasis: "quote-first porta potty honesty before firm price — not dumpster, junk removal, septic pumping, or grease trap; permit/HOA educational only", ctaVerb: "Request a porta potty rental quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
