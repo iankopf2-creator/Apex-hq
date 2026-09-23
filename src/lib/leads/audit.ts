@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  crawl_space_encapsulation: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -121,6 +122,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
+  crawl_space_encapsulation:
+    "Add a quote-first crawl space encapsulation page (crawl height/access hatches-vents-debris + soil vs vapor barrier + moisture/standing water vs humidity + insulation type faced-unfaced-foam + rim-joist/sill sealing + sump/dehumidifier need + radon educational only + pest/HVAC duct when relevant + permit/HOA assess before firm price; licensed contractor honesty only when true) so callers get a real quote — not bait flat $/sqft or fake same-day dry crawl guarantee; distinct from basement_waterproofing, french_drain, foundation_repair, water_damage call-first, mold_remediation, and attic insulation.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

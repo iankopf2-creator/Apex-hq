@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "crawl_space_encapsulation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / crawl_space_encapsulation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  crawl_space_encapsulation: {
+    niche: "crawl_space_encapsulation",
+    label: "Crawl space encapsulation",
+    palette: {
+      // Damp-crawl charcoal + vapor-barrier lime — #292524 + #65a30d — NOT basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, foundation #1c1917/#b45309, mold #0f172a-ish, insulation pink, wildlife #0f172a/#f59e0b
+      primary: "#292524",
+      primaryForeground: "#fafaf9",
+      accent: "#65a30d",
+      accentForeground: "#f7fee7",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5f5f4",
+      mutedForeground: "#3f6212",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest crawl height/access (hatches, vents, debris)/soil-vs-vapor-barrier/moisture-standing-water-vs-humidity/insulation type faced-unfaced-foam/rim-joist-sill sealing/sump-dehumidifier need/radon educational-only/pest droppings-HVAC duct when relevant/permit-HOA assess-first, quote before encapsulate; vapor barrier encapsulation product — not basement_waterproofing interior walls/floors, french_drain exterior yard trench, foundation_repair structural, water_damage emergency restoration, mold_remediation call-first, attic insulation R-value",
+      heroStyle: "quote-first crawl space encapsulation LP — access/moisture/vapor-barrier/rim-joist chips when true, no bait flat $/sqft, no fake same-day dry crawl guarantee",
+      ctaStyle: "get a crawl space encapsulation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day dry crawl guarantee", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before crawl height/access/soil vs vapor barrier/moisture-humidity/insulation type/rim-joist-sill/sump-dehumidifier/permit-HOA assessment", "claiming radon mitigation niche (educational only)", "impersonating basement_waterproofing interior systems", "impersonating french_drain exterior yard trench", "impersonating foundation_repair structural", "impersonating water_damage call-first emergency", "impersonating mold_remediation call-first", "impersonating insulation attic R-value blow-in", "claiming licensed contractor when not true"],
+    },
+    cssVars: {
+      "--theme-primary": "#292524",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#65a30d",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Crawl height/access (hatches, vents, debris) assessed before firm price", "Soil vs vapor barrier + moisture/standing water vs humidity honesty", "Insulation type + rim-joist/sill sealing when true", "Sump/dehumidifier need honesty — radon educational only (not a radon-mitigation niche)", "Permit/HOA + pest/HVAC duct honesty when relevant", "No bait flat $/sqft — no fake same-day dry crawl guarantee"],
+    heroImages: [
+      {
+        src: "/niches/crawl-space-encapsulation.jpg",
+        alt: "Building under construction with protective plastic sheeting — vapor barrier / encapsulation reference",
+        credit: "Sebastian Schuster on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/T-ERO0eoI8I",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
