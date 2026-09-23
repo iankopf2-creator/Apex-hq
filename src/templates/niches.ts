@@ -910,6 +910,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "epoxy-charcoal-resin-teal",
   },
 
+  {
+    id: "radon_mitigation",
+    label: "Radon mitigation",
+    defaultTagline: "Test first — design mitigation after results, foundation type, and entry points",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Radon test & mitigation quote", description: "Short-term / long-term / continuous monitor test-first before mitigation design; entry points / soil gas / foundation type (slab, crawl, basement) / suction pit vs crawl membrane fan / discharge height & neighbor setbacks / electrical for fan / post-mitigation retest — assessed before firm price; NRPP/NRSB or state radon cert honesty only when true; permit/HOA when true; educational only on health risk (not a medical claim); no bait flat $/system; no fake guaranteed zero radon or same-day cure; not crawl_space_encapsulation, basement_waterproofing, french_drain, foundation_repair, water_damage, mold_remediation, insulation, or HVAC duct work", priceFrom: 0 },
+      { name: "Active soil depressurization plan", description: "Suction pit vs crawl membrane fan design after test results and foundation-type assess — quote before install; discharge height & neighbor setbacks honesty; licensed/NRPP-NRSB honesty only when true", priceFrom: 0 },
+      { name: "Post-mitigation retest option", description: "Retest after system install — electrical for fan and permit/HOA honesty when true; no bait flat $/system; no fake guaranteed zero radon", priceFrom: 0 },
+    ],
+    heroHints: ["Test first (short-term / long-term / continuous) before mitigation design", "Foundation type + entry points / soil gas honesty", "Suction vs crawl membrane fan + discharge/setbacks + post-mitigation retest", "No bait flat $/system — no fake zero radon or same-day cure — educational only on health risk — not crawl encapsulation, basement waterproofing, french drain, foundation, water damage, mold, insulation, or HVAC duct"],
+    ctaLabel: "Get a radon mitigation quote",
+    accentHint: "radon-charcoal-test-amber",
+  },
+
 
 ];
 

@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  radon_mitigation: 425,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -119,6 +120,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first foundation page (inspection + soil/drainage/crack/pier-vs-slab/access/stories assess before firm price) so callers get a real quote — not bait flat $/lf or $/pier or fake same-day fix.",
   solar:
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
+  radon_mitigation:
+    "Add a quote-first radon mitigation page (test-first short-term/long-term/continuous + entry points/soil gas/foundation type slab-crawl-basement + suction pit vs crawl membrane fan + discharge height/neighbor setbacks + electrical for fan + post-mitigation retest + NRPP/NRSB or state cert honesty when true + permit/HOA assess before firm price; educational only on health risk — not a medical claim) so callers get a real quote — not bait flat $/system or fake guaranteed zero radon or same-day cure; distinct from crawl_space_encapsulation, basement_waterproofing, french_drain, foundation_repair, water_damage, mold_remediation, insulation, and HVAC duct work.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
   countertops:
