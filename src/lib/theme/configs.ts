@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "porta_potty_rental";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / porta_potty_rental (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  porta_potty_rental: {
+    niche: "porta_potty_rental",
+    label: "Porta Potty Rental",
+    palette: {
+      // Clean portable-unit plastic slate + soft sanitation teal — #334155 + #2dd4bf — not dumpster #1c1917/#d97706, septic #252e2a/#86a373, junk_removal #a3e635/#1e293b, grease_trap #141c26/#a68b4b, plumber cyan #22d3ee/#164e63, epoxy #0c0a09/#0d9488, basement_waterproofing #1e293b/#14b8a6
+      primary: "#334155",
+      primaryForeground: "#f8fafc",
+      accent: "#2dd4bf",
+      accentForeground: "#134e4a",
+      background: "#f8fafc",
+      foreground: "#1e293b",
+      muted: "#eef2f7",
+      mutedForeground: "#475569",
+      border: "#d0d7e2",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest unit count / event days vs jobsite duration / delivery access / ADA unit need / restock-service cadence / waste pump-out schedule assess-first for portable restroom (porta potty) rental, quote before delivery — event and construction portable toilets only, not dumpster roll-off, not junk removal hauling, not septic tank pumping, not restaurant grease trap FOG cleaning; local permit/HOA educational only (not legal advice); licensed/hauler when true",
+      heroStyle: "quote-first porta potty rental LP — unit-count/event-days-vs-jobsite/delivery-access/ADA/restock/pump-out chips when true, no bait flat $/day or $/weekend, no fake same-day drop, permit/HOA educational only",
+      ctaStyle: "get a porta potty rental quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/day as Apex benchmark", "bait flat $/weekend as Apex benchmark", "fake same-day drop guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before unit count/event days vs jobsite duration/delivery access/ADA unit need/restock-service cadence/waste pump-out schedule assessment", "dumpster roll-off confusion", "junk removal hauling confusion", "septic tank pumping confusion", "grease trap FOG cleaning confusion", "legal advice on local permit/HOA rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#334155",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#2dd4bf",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#1e293b",
+    },
+    trustBadges: ["Unit count/event days vs jobsite/delivery access/ADA/restock/pump-out assessed before firm price", "Quote before delivery — event & construction portable toilets", "Local permit/HOA educational only — not legal advice; licensed/hauler when true", "No bait flat $/day or $/weekend — not dumpster, junk removal, septic pumping, or grease trap"],
+    heroImages: [
+      {
+        src: "/niches/porta-potty-rental.jpg",
+        alt: "Blue portable toilet at a construction site — unit count and delivery access assessed before quote",
+        credit: "Vadym Alyekseyenko on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/loybh0-sGwI",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

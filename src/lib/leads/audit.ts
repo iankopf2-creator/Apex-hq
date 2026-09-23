@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  porta_potty_rental: 275,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -121,6 +122,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
+  porta_potty_rental:
+    "Add a quote-first porta potty rental page (event/construction portable toilets + unit count/event days vs jobsite duration/delivery access/ADA unit need/restock-service cadence/waste pump-out schedule assess before firm price; local permit/HOA educational only — not legal advice; licensed/hauler honesty when true) so callers get a real quote — not bait flat $/day or $/weekend or fake same-day drop; distinct from dumpster rental, junk removal, septic pumping, and grease trap FOG cleaning.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
