@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  septic_pumping: {
+    A: { heroEmphasis: "quote-first tank-size/access/last-pump-date/system-type/distance/after-hours assess for septic pumping", ctaVerb: "Get a septic pumping quote" },
+    B: { heroEmphasis: "quote-first septic honesty before firm price — not plumber, slab leak, water damage, junk removal, or grease trap; septic rules educational only", ctaVerb: "Request a septic pumping quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
