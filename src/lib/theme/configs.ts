@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "septic_pumping";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / septic_pumping (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1950,6 +1950,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Glossy polished industrial floor coating in a modern commercial space",
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  septic_pumping: {
+    niche: "septic_pumping",
+    label: "Septic pumping",
+    palette: {
+      // Earthy tank-slate + soft algae/moss — #252e2a + #86a373 — not grease_trap #141c26/#a68b4b, basement_waterproofing #1e293b/#14b8a6, plumber cyan #22d3ee/#164e63, water_damage #dc2626/#0c4a6e, slab_leak #475569/#06b6d4, junk_removal #a3e635/#1e293b, foundation #1c1917/#b45309, epoxy #0c0a09/#0d9488, landscaping #2f4a35/#a67c52
+      primary: "#252e2a",
+      primaryForeground: "#f4f7f4",
+      accent: "#86a373",
+      accentForeground: "#142018",
+      background: "#f7faf7",
+      foreground: "#1a221c",
+      muted: "#e4ebe3",
+      mutedForeground: "#4d5c50",
+      border: "#c9d4c6",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest tank size / access / last pump date / system type (tank vs aerobic) / distance / after-hours schedule assess-first for residential septic pumping, quote before pump — septic pump-outs only, not plumber emergencies, not slab leak detection, not water damage restoration, not junk removal hauling, not restaurant grease trap FOG cleaning; local septic rules educational only (not legal advice); licensed or permitted when true",
+      heroStyle: "quote-first septic pumping LP — tank-size/access/last-pump-date/system-type/distance/after-hours chips when true, no bait flat $/tank, no fake same-day clear, septic rules educational only",
+      ctaStyle: "get a septic pumping quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/tank as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before tank size/access/last pump date/system type/distance/after-hours schedule assessment", "plumber emergency confusion", "slab leak detection confusion", "water damage restoration confusion", "junk removal hauling confusion", "grease trap FOG cleaning confusion", "scare fake emergency urgency as septic sales", "legal advice on local septic rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#252e2a",
+      "--theme-primary-fg": "#f4f7f4",
+      "--theme-accent": "#86a373",
+      "--theme-bg": "#f7faf7",
+      "--theme-fg": "#1a221c",
+    },
+    trustBadges: ["Tank size/access/last pump date/system type/distance assessed before firm price", "Quote before pump — tank vs aerobic honesty", "Local septic rules educational only — not legal advice; licensed/permitted when true", "No bait flat $/tank — not plumber, slab leak, water damage, junk removal, or grease trap FOG"],
+    heroImages: [
+      {
+        src: "/niches/septic-pumping.jpg",
+        alt: "Rural residential house with a large lawn — septic tank access and pump-out assess before quote",
+        credit: "Unsplash contributor on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/yCmA1T4Y3r4",
         license: "unsplash",
       },
     ],

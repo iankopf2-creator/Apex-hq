@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "septic_pumping",
+    label: "Septic pumping",
+    defaultTagline: "Residential septic pump-outs — assess before we quote the tank",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "Closed",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Septic Pumping Quote", description: "Tank size, access path, last pump date, system type (tank vs aerobic), distance, and after-hours schedule assessed before firm price — no bait flat $/tank; not plumber emergencies, not slab leak, not water damage restoration, not junk removal, not grease trap FOG cleaning", priceFrom: 0 },
+      { name: "Tank Size / Access Assess", description: "Tank size and truck access honesty after site review — quote before pump; licensed or permitted when true", priceFrom: 0 },
+      { name: "System Type & Last-Pump Review", description: "Conventional tank vs aerobic / last pump date assessed before firm price — local septic rules educational only (not legal advice); no fake same-day clear", priceFrom: 0 },
+      { name: "Distance & After-Hours Walkthrough", description: "Travel distance and after-hours / weekend access honesty — quote before pump; distinct from plumber, slab leak, water damage, junk removal, and grease trap cleaning", priceFrom: 0 },
+    ],
+    heroHints: ["Tank size/access/last pump date/system type/distance/after-hours assessed before firm price", "Quote before pump — tank vs aerobic honesty", "Local septic rules educational only — not legal advice; licensed/permitted when true", "No bait flat $/tank — not plumber, slab leak, water damage, junk removal, or grease trap FOG"],
+    ctaLabel: "Get a septic pumping quote",
+    accentHint: "tank-slate-algae-moss",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
