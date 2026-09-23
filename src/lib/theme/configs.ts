@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "stump_grinding";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / stump_grinding (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  stump_grinding: {
+    niche: "stump_grinding",
+    label: "Stump grinding",
+    palette: {
+      // Deep bark charcoal + warm stump/mulch amber — #292524 + #b45309 — not tree_service #44403c/#c2410c, landscaping #2f4a35/#a67c52, junk_removal #a3e635/#1e293b, concrete #475569/#d97706, epoxy #0c0a09/#0d9488, storage_container #3f3f46/#c2410c, porta_potty #334155/#2dd4bf, dumpster #1c1917/#d97706
+      primary: "#292524",
+      primaryForeground: "#fafaf9",
+      accent: "#b45309",
+      accentForeground: "#fffbeb",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5f5f4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest stump-count/diameter/root-flare/access/utilities/grind-depth/chips assess-first, quote before grind; distinct from tree_service storm call-first",
+      heroStyle: "quote-first stump grinding LP — stump count/diameter/access/utilities/grind-depth/haul-vs-mulch chips when true, no bait flat $/stump, no fake same-day",
+      ctaStyle: "get a stump grinding quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/stump as Apex benchmark", "fake same-day grind guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before stump count/diameter/root flare/access/utilities/grind-depth/chips assessment", "impersonating tree_service storm/emergency call-first"],
+    },
+    cssVars: {
+      "--theme-primary": "#292524",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b45309",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Stump count/diameter/root flare/access assessed before firm price", "Quote before grind", "Grind depth + haul-away vs leave-mulch honesty", "Buried utilities & permit/HOA educational only — not legal advice", "No bait flat $/stump — not tree_service storm call-first"],
+    heroImages: [
+      {
+        src: "/niches/stump-grinding.jpg",
+        alt: "Close-up of tree bark and fresh wood chips after outdoor grinding work",
+        credit: "Haberdoedas on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/xFH7QN2LejE",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };

@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  stump_grinding: {
+    A: { heroEmphasis: "quote-first stump-count/diameter/root-flare/access/utilities/grind-depth/chips assess for stump grinding", ctaVerb: "Get a stump grinding quote" },
+    B: { heroEmphasis: "quote-first stump grinding honesty before firm price — not tree_service storm, landscaping, lawn care, junk removal, concrete, or excavation; permit/HOA educational only", ctaVerb: "Request a stump grinding quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

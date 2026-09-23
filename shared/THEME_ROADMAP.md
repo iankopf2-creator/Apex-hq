@@ -54,5 +54,6 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + stump_grinding
 - 48px tap targets; trust chips from research notes
+- Stump grinding — quote_first (deep bark charcoal + warm stump/mulch amber; stump count/diameter/root flare/access/utilities/grind-depth/haul-vs-mulch assess before firm price; no bait flat $/stump; local permit/HOA educational only — not legal advice; distinct from tree_service storm call-first, landscaping, lawn care, junk removal, concrete, excavation)
