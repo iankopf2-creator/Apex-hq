@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  radon_mitigation: {
+    A: { heroEmphasis: "quote-first test-first (short/long/continuous) + foundation type/entry points/suction vs membrane/discharge/electrical/retest/permit assess for radon mitigation", ctaVerb: "Get a radon mitigation quote" },
+    B: { heroEmphasis: "quote-first radon mitigation honesty before firm price — not crawl_space_encapsulation, basement_waterproofing, french_drain, foundation_repair, water_damage, mold_remediation, insulation, or HVAC duct; no bait $/system or fake zero-radon/same-day cure", ctaVerb: "Request a radon mitigation quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
