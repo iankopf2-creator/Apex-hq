@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "stump_grinding",
+    label: "Stump grinding",
+    defaultTagline: "Stumps & roots — assess before we quote the grind",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Stump Grinding Quote", description: "Stump count and diameter, root flare, access (gate/slope/overhead lines), buried utilities, grind depth (below grade / flush), haul-away of chips vs leave mulch, and species/hardness when true assessed before firm price — no bait flat $/stump; not tree_service storm/emergency, not landscaping/lawn care mow, not junk removal haul, not concrete/excavation", priceFrom: 0 },
+      { name: "Access & Utilities Review", description: "Gate/slope/overhead lines and buried-utilities honesty after site review — quote before grind; local permit/HOA educational only (not legal advice); no fake same-day", priceFrom: 0 },
+      { name: "Grind Depth & Chips Option", description: "Below-grade vs flush grind depth and haul-away vs leave-mulch chips honesty after assess — quote before grind; distinct from tree_service call-first storm work", priceFrom: 0 },
+    ],
+    heroHints: ["Stump count/diameter/root flare/access/utilities assessed before firm price", "Quote before grind — grind depth + haul-away vs leave-mulch honesty", "Local permit/HOA educational only — not legal advice", "No bait flat $/stump — not tree_service storm, landscaping, lawn care, junk removal, concrete, or excavation"],
+    ctaLabel: "Get a stump grinding quote",
+    accentHint: "bark-charcoal-stump-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
