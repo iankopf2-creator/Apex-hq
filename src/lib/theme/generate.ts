@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  wildlife_removal: {
+    A: { heroEmphasis: "quote-first species-ID/entry-points/attic-crawl/exclusion-vs-trap/cleanup/seasonal-nesting assess for wildlife removal", ctaVerb: "Get a wildlife removal quote" },
+    B: { heroEmphasis: "quote-first wildlife removal honesty before firm price — not pest_control insects, tree_service storm, junk_removal, mold_remediation, or handyman; permit/rehab educational only", ctaVerb: "Request a wildlife removal quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
