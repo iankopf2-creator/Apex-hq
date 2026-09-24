@@ -92,3 +92,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Well pump | `well-pump.jpg` | Sergio Santana | https://unsplash.com/photos/TaYD4Y_UZCk |
 | Water filtration | `water-filtration.jpg` | RephiLe water | https://unsplash.com/photos/QJmcc6i8xAc |
 | Tankless water heater | `tankless-water-heater.jpg` | Downtowngal (Wikimedia Commons, CC BY-SA 4.0) | https://commons.wikimedia.org/wiki/File:Tankless_water_heaters.jpg |
+| Mini-split / ductless | `mini-split.jpg` | Sarah Decker | https://unsplash.com/photos/mmhHQtanBck |
