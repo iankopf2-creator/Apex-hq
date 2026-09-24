@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "tankless_water_heater",
+    label: "Tankless water heater",
+    defaultTagline: "Assess gas vs electric, BTU/kW, and GPM before we quote tankless",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Tankless / on-demand install", description: "New tankless after gas vs electric / BTU or kW sizing / simultaneous fixtures GPM / existing tank remove-dispose / gas line-meter capacity or electrical panel service / venting-combustion air / condensate drain / recirculation / location garage-closet-exterior assess — permit + licensed plumber honesty when true; no bait flat $/BTU or $/unit; no fake same-day whole-home endless-hot-water guarantees; not water_heater tank/tankless general, plumber general, water_filtration, water_softener, well_pump, sump_pump, slab_leak, or water_damage emergency", priceFrom: 0 },
+      { name: "Tank-to-tankless conversion quote", description: "Existing tank remove + gas line-meter or electrical panel + venting/condensate/recirc assess before conversion size — quote before install; no bait flat $/unit as conversion price", priceFrom: 0 },
+      { name: "Tankless service / flush / descaling", description: "Flush/descaling and service after unit age/fuel/GPM inspect — firm price after assess; no fake same-day whole-home endless-hot-water guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Gas vs electric / BTU or kW / simultaneous fixtures GPM assessed before firm price", "Existing tank remove + gas line-meter or electrical panel + venting/condensate/recirc honesty", "Permit + licensed plumber when true", "No bait flat $/BTU or $/unit — no fake same-day endless hot water — not water heater general, plumber, filtration, softener, well pump, sump pump, slab leak, or water damage"],
+    ctaLabel: "Get a tankless water heater quote",
+    accentHint: "on-demand-indigo-copper",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
