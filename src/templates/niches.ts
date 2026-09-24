@@ -911,6 +911,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "water_filtration",
+    label: "Water filtration",
+    defaultTagline: "Assess whole-home vs under-sink vs RO and water test before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Whole-home / under-sink / RO filtration", description: "Whole-home vs under-sink vs RO after water test hardness-iron-chlorine-TDS-bacteria / sediment-carbon-UV stages / existing softener-well plumbing / filter change cadence assess — permit honesty when true; no bait flat $/system or $/filter; no fake same-day whole-home pure-water guarantees; not plumber general, water_heater, water_softener, well_pump, sump_pump, water_damage emergency, or slab_leak", priceFrom: 0 },
+      { name: "Water test / filtration assess quote", description: "Hardness-iron-chlorine-TDS-bacteria water test + whole-home vs under-sink vs RO + sediment-carbon-UV stages assess before system size — quote before install; no bait flat $/system as system price", priceFrom: 0 },
+      { name: "Filter change / stage service", description: "Filter change cadence and sediment-carbon-UV stage service after existing softener-well plumbing inspect — firm price after assess; no fake same-day whole-home pure-water guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Whole-home vs under-sink vs RO assessed before firm price", "Sediment-carbon-UV stages + water test (hardness-iron-chlorine-TDS-bacteria) honesty", "Existing softener-well plumbing + filter change cadence + permit when true", "No bait flat $/system or $/filter — no fake same-day whole-home pure-water — not plumber, water heater, softener, well pump, sump pump, water damage, or slab leak"],
+    ctaLabel: "Get a water filtration quote",
+    accentHint: "crisp-filter-slate-cyan",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "water_filtration";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / water_filtration (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1955,6 +1955,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  water_filtration: {
+    niche: "water_filtration",
+    label: "Water filtration",
+    palette: {
+      // Crisp filter slate-cyan — #0c4a6e + #67e8f9 — NOT well_pump #1e3a5f/#2dd4bf, water_softener #115e59/#fcd34d, water_heater #283548/#fbbf24, sump_pump #164e63/#22d3ee, plumber cyan, window_cleaning #334155/#0891b2, epoxy #0c0a09/#0d9488, basement_waterproofing #1e293b/#14b8a6
+      primary: "#0c4a6e",
+      primaryForeground: "#f0f9ff",
+      accent: "#67e8f9",
+      accentForeground: "#083344",
+      background: "#f0f9ff",
+      foreground: "#0f172a",
+      muted: "#e0f2fe",
+      mutedForeground: "#075985",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first water filtration — whole-home vs under-sink vs RO / sediment-carbon-UV stages / water test hardness-iron-chlorine-TDS-bacteria / existing softener-well plumbing / filter change cadence / permit honesty when true; quote before install; water filtration product — not plumber general service calls, water_heater tank/tankless, water_softener mineral systems, well_pump repair/replace, sump_pump basement pit pumps, water_damage emergency extraction, or slab_leak detection",
+      heroStyle: "quote-first water filtration LP — whole-home/under-sink/RO + sediment-carbon-UV + water-test + softener-well plumbing + filter-change cadence + permit chips when true, no bait flat $/system or $/filter, no fake same-day whole-home pure-water guarantees",
+      ctaStyle: "get a water filtration quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/system as Apex benchmark", "bait flat $/filter as Apex benchmark", "fake same-day whole-home pure-water guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before whole-home vs under-sink vs RO / sediment-carbon-UV stages / water test hardness-iron-chlorine-TDS-bacteria / existing softener-well plumbing / filter change cadence / permit assessment", "claiming permit/licensed when not true", "impersonating plumber general service", "impersonating water_heater tank/tankless", "impersonating water_softener mineral systems", "impersonating well_pump repair/replace", "impersonating sump_pump basement pit pumps", "impersonating water_damage call-first emergency", "impersonating slab_leak detection"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c4a6e",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#67e8f9",
+      "--theme-bg": "#f0f9ff",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Whole-home vs under-sink vs RO assessed before firm price", "Sediment-carbon-UV stages + water test (hardness-iron-chlorine-TDS-bacteria) honesty", "Existing softener-well plumbing + filter change cadence honesty", "Permit honesty when true", "No bait flat $/system or $/filter — no fake same-day whole-home pure-water"],
+    heroImages: [
+      {
+        src: "/niches/water-filtration.jpg",
+        alt: "Direct-Pure ultrapure water purification system on a laboratory sink — filtration assess reference",
+        credit: "RephiLe water on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/QJmcc6i8xAc",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 
