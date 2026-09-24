@@ -84,6 +84,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   water_heater: 400,
   well_pump: 500,
   water_filtration: 450,
+  tankless_water_heater: 900,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -248,6 +249,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first well pump page (well type dug-drilled-driven / static water level / pump type submersible-jet-constant-pressure / depth-HP-GPM / pressure tank size-psi / control box-wiring / yield-dry-well risk / sediment-iron / access-pitless adapter / permit + licensed well contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/pump or $/ft or fake same-day whole-home water guarantees; distinct from plumber, water_heater, water_softener, sump_pump, water_damage, and slab_leak.",
   water_filtration:
     "Add a quote-first water filtration page (whole-home vs under-sink vs RO / sediment-carbon-UV stages / water test hardness-iron-chlorine-TDS-bacteria / existing softener-well plumbing / filter change cadence / permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/system or $/filter or fake same-day whole-home pure-water guarantees; distinct from plumber, water_heater, water_softener, well_pump, sump_pump, water_damage, and slab_leak.",
+  tankless_water_heater:
+    "Add a quote-first tankless water heater page (gas vs electric / BTU or kW / simultaneous fixtures GPM / existing tank remove / gas line-meter or electrical panel / venting-combustion air / condensate / recirculation / location / permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/BTU or $/unit or fake same-day whole-home endless-hot-water guarantees; distinct from water_heater, plumber, water_filtration, water_softener, well_pump, sump_pump, slab_leak, and water_damage.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
