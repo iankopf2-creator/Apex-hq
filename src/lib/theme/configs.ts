@@ -1959,11 +1959,11 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     niche: "sump_pump",
     label: "Sump pump",
     palette: {
-      // Utility slate + pump cyan — #334155 + #0891b2 — NOT basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, crawl_space #292524/#65a30d, foundation #1c1917/#b45309, radon #27272a/#d97706, wildlife #0f172a/#f59e0b, epoxy #0c0a09/#0d9488
-      primary: "#334155",
+      // Deep water-slate + bright pump cyan — #164e63 + #22d3ee — NOT window_cleaning #334155/#0891b2, basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, crawl_space #292524/#65a30d, foundation #1c1917/#b45309, radon #27272a/#d97706, wildlife #0f172a/#f59e0b, epoxy #0c0a09/#0d9488
+      primary: "#164e63",
       primaryForeground: "#f8fafc",
-      accent: "#0891b2",
-      accentForeground: "#ecfeff",
+      accent: "#22d3ee",
+      accentForeground: "#083344",
       background: "#f8fafc",
       foreground: "#0f172a",
       muted: "#f1f5f9",
@@ -1982,9 +1982,9 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       avoid: [...baseAvoid, "bait flat $/pump as Apex benchmark", "fake never-flood guarantees", "fake same-day dry basement guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before pit size/existing pump age-HP/check valve/discharge freeze risk/battery vs water-powered backup/alarm/float switch/crock/effluent route/permit-electrical assessment", "claiming licensed electrician/permit when not true", "impersonating basement_waterproofing interior systems", "impersonating french_drain exterior yard trench", "impersonating crawl_space_encapsulation vapor barrier", "impersonating plumber general service", "impersonating water_damage call-first emergency", "impersonating foundation_repair structural", "impersonating radon_mitigation fan systems"],
     },
     cssVars: {
-      "--theme-primary": "#334155",
+      "--theme-primary": "#164e63",
       "--theme-primary-fg": "#f8fafc",
-      "--theme-accent": "#0891b2",
+      "--theme-accent": "#22d3ee",
       "--theme-bg": "#f8fafc",
       "--theme-fg": "#0f172a",
     },
