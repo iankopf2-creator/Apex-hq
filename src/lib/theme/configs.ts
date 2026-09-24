@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "sump_pump";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / sump_pump (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1950,6 +1950,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Glossy polished industrial floor coating in a modern commercial space",
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  sump_pump: {
+    niche: "sump_pump",
+    label: "Sump pump",
+    palette: {
+      // Utility slate + pump cyan — #334155 + #0891b2 — NOT basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, crawl_space #292524/#65a30d, foundation #1c1917/#b45309, radon #27272a/#d97706, wildlife #0f172a/#f59e0b, epoxy #0c0a09/#0d9488
+      primary: "#334155",
+      primaryForeground: "#f8fafc",
+      accent: "#0891b2",
+      accentForeground: "#ecfeff",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#f1f5f9",
+      mutedForeground: "#155e75",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first sump pump install/replace — pit size / existing pump age-HP / check valve / discharge line freeze risk / battery backup vs water-powered backup / alarm / float switch / crock condition / effluent route / permit-electrical honesty when true; quote before install; sump pump product — not basement_waterproofing interior systems, french_drain exterior trench, crawl_space_encapsulation vapor barrier, plumber general service calls, water_damage emergency extraction, foundation_repair structural, radon_mitigation fan systems",
+      heroStyle: "quote-first sump pump LP — pit/pump age-HP/check valve/discharge freeze/backup/alarm/float/crock/effluent/permit-electrical chips when true, no bait flat $/pump, no fake never-flood or same-day dry basement",
+      ctaStyle: "get a sump pump quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/pump as Apex benchmark", "fake never-flood guarantees", "fake same-day dry basement guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before pit size/existing pump age-HP/check valve/discharge freeze risk/battery vs water-powered backup/alarm/float switch/crock/effluent route/permit-electrical assessment", "claiming licensed electrician/permit when not true", "impersonating basement_waterproofing interior systems", "impersonating french_drain exterior yard trench", "impersonating crawl_space_encapsulation vapor barrier", "impersonating plumber general service", "impersonating water_damage call-first emergency", "impersonating foundation_repair structural", "impersonating radon_mitigation fan systems"],
+    },
+    cssVars: {
+      "--theme-primary": "#334155",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#0891b2",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Pit size / existing pump age-HP / float switch / crock assessed before firm price", "Check valve + discharge line freeze risk + effluent route honesty", "Battery vs water-powered backup + alarm honesty", "Permit / electrical honesty when true", "No bait flat $/pump — no fake never-flood or same-day dry basement"],
+    heroImages: [
+      {
+        src: "/niches/sump-pump.jpg",
+        alt: "Utility pipe on concrete floor — sump pump pit, discharge, and backup assess reference",
+        credit: "Miquel Parera on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/EBkB8zWMwIA",
         license: "unsplash",
       },
     ],

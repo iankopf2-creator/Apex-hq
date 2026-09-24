@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  sump_pump: {
+    A: { heroEmphasis: "quote-first pit size/existing pump age-HP/check valve/discharge freeze risk/battery vs water-powered backup/alarm/float switch/crock/effluent/permit-electrical assess for sump pump", ctaVerb: "Get a sump pump quote" },
+    B: { heroEmphasis: "quote-first sump pump honesty before firm price — not basement_waterproofing, french_drain, crawl_space_encapsulation, plumber, water_damage, foundation_repair, or radon_mitigation; no bait $/pump or fake never-flood/same-day dry basement", ctaVerb: "Request a sump pump quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

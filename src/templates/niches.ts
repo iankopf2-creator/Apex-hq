@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "sump_pump",
+    label: "Sump pump",
+    defaultTagline: "Assess the pit before we quote the pump — install after check valve, discharge, and backup review",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Sump pump install / replace", description: "New or replacement primary pump after pit size / existing pump age-HP / float switch / crock condition / check valve / discharge line freeze risk / effluent route assess — permit & electrical honesty when true; no bait flat $/pump; no fake never-flood or same-day dry basement guarantees; not basement_waterproofing, french_drain, crawl_space_encapsulation, plumber general, water_damage emergency, foundation_repair, or radon_mitigation", priceFrom: 0 },
+      { name: "Battery backup add-on", description: "Battery backup vs water-powered backup option after primary pump and electrical assess — alarm honesty when true; quote before install; no bait flat $/backup", priceFrom: 0 },
+      { name: "Discharge / check-valve service", description: "Check valve, discharge line freeze-risk, and effluent route service after pit/crock inspect — firm price after assess; no fake never-flood guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Pit size / existing pump age-HP / float switch / crock assessed before firm price", "Check valve + discharge freeze risk + effluent route honesty", "Battery vs water-powered backup + alarm + permit/electrical when true", "No bait flat $/pump — no fake never-flood or same-day dry basement — not basement waterproofing, french drain, crawl encapsulation, plumber, water damage, foundation, or radon"],
+    ctaLabel: "Get a sump pump quote",
+    accentHint: "sump-slate-pump-cyan",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
