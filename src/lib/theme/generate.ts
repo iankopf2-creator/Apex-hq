@@ -206,6 +206,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/prep/moisture/existing-coating/access assess for garage & commercial epoxy", ctaVerb: "Get an epoxy flooring quote" },
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
+  heat_pump: {
+    A: { heroEmphasis: "quote-first home size/sqft + climate zone / existing furnace/AC vs heat-pump swap / ductwork / electrical panel/breaker / outdoor pad clearance / noise ordinance / backup heat strip vs dual-fuel / SEER2/HSPF2 / permit assess for whole-home heat pump", ctaVerb: "Get a heat pump quote" },
+    B: { heroEmphasis: "quote-first heat pump honesty before firm price — not hvac emergency, mini_split, solar, generator, insulation, electrician, plumber, water_heater, or duct_cleaning; no bait $/ton or $/sqft or fake same-day whole-home comfort", ctaVerb: "Request a heat pump quote" },
+  },
 
 };
 

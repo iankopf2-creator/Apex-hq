@@ -909,6 +909,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get an epoxy flooring quote",
     accentHint: "epoxy-charcoal-resin-teal",
   },
+  {
+    id: "heat_pump",
+    label: "Heat pump",
+    defaultTagline: "Assess home size, ductwork, and panel capacity before we quote a heat pump",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Heat pump install / replace", description: "Whole-home / ducted heat-pump install or replacement after home size/sqft + climate zone / existing furnace/AC vs heat-pump swap / ductwork condition / electrical panel/breaker capacity / outdoor pad/clearance / noise ordinance / backup heat strip vs dual-fuel / SEER2/HSPF2 when true assess — permit + licensed HVAC contractor honesty when true; no bait flat $/ton or $/sqft; no fake same-day whole-home comfort guarantees; not hvac call-first emergency, mini_split ductless, solar, generator, insulation, electrician, plumber, water_heater, or duct_cleaning", priceFrom: 0 },
+      { name: "Dual-fuel / backup-heat quote", description: "Backup heat strip vs dual-fuel + climate zone + existing furnace assess before size — quote before install; no bait flat $/ton as dual-fuel price", priceFrom: 0 },
+      { name: "Heat pump service / maintenance", description: "Service after unit age/filter/coil/duct inspect — firm price after assess; no fake same-day whole-home comfort guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/sqft + climate zone assessed before firm price", "Existing furnace/AC vs heat-pump swap + ductwork honesty", "Electrical panel/breaker + outdoor pad/clearance + noise ordinance honesty", "Backup heat strip vs dual-fuel + SEER2/HSPF2 when true", "Permit + licensed HVAC contractor when true", "No bait flat $/ton or $/sqft — no fake same-day whole-home comfort — not HVAC emergency, mini-split, solar, generator, insulation, electrician, plumber, water heater, or duct cleaning"],
+    ctaLabel: "Get a heat pump quote",
+    accentHint: "slate-indigo-heat-coral",
+  },
 
 
 ];
