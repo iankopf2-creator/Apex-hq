@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "well_pump",
+    label: "Well pump",
+    defaultTagline: "Assess well type, static level, and pump before we quote the swap",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Well pump repair / replace", description: "Submersible, jet, or constant-pressure pump service after well type dug-drilled-driven / static water level / pump type / depth-HP-GPM / pressure tank size-psi / control box-wiring / yield-dry-well risk / sediment-iron / access-pitless adapter assess — permit + licensed well contractor honesty when true; no bait flat $/pump or $/ft; no fake same-day whole-home water guarantees; not plumber general, water_heater, water_softener, sump_pump, water_damage emergency, or slab_leak", priceFrom: 0 },
+      { name: "Well diagnose / static level assess quote", description: "Well type + static water level + pump type + depth/HP/GPM assess before pump size — quote before swap; no bait flat $/pump as pump price", priceFrom: 0 },
+      { name: "Pressure tank / control box service", description: "Pressure tank size-psi and control box/wiring check after well/pump inspect — firm price after assess; yield/dry-well and sediment-iron honesty; no fake same-day whole-home water guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Well type dug-drilled-driven / static water level / pump type assessed before firm price", "Depth-HP-GPM + pressure tank size-psi + control box/wiring honesty", "Yield/dry-well risk + sediment-iron + access/pitless adapter + permit when true", "No bait flat $/pump or $/ft — no fake same-day whole-home water — not plumber, water heater, softener, sump pump, water damage, or slab leak"],
+    ctaLabel: "Get a well pump quote",
+    accentHint: "wellhead-steel-depth-teal",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

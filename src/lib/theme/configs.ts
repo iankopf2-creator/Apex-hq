@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "well_pump";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / well_pump (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  well_pump: {
+    niche: "well_pump",
+    label: "Well pump",
+    palette: {
+      // Deep well-water navy + depth teal — #1e3a5f + #2dd4bf — NOT water_heater #283548/#fbbf24, water_softener #115e59/#fcd34d, sump_pump #164e63/#22d3ee, plumber cyan, basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, crawl_space #292524/#65a30d, radon #27272a/#d97706, epoxy #0c0a09/#0d9488, wildlife/generator #0f172a/#f59e0b, window_cleaning #334155/#0891b2, concrete #475569/#d97706, appliance_repair #1e293b/#ea580c
+      primary: "#1e3a5f",
+      primaryForeground: "#f8fafc",
+      accent: "#2dd4bf",
+      accentForeground: "#042f2e",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#ccfbf1",
+      mutedForeground: "#115e59",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first well pump repair/replace — well type dug-drilled-driven / static water level / pump type submersible-jet-constant-pressure / depth-HP-GPM / pressure tank size-psi / control box-wiring / yield-dry-well risk / sediment-iron / access-pitless adapter / permit + licensed well contractor honesty when true; quote before swap; well pump product — not plumber general service calls, water_heater tank/tankless installs, water_softener mineral systems, sump_pump basement pit pumps, water_damage emergency extraction, or slab_leak detection",
+      heroStyle: "quote-first well pump LP — well-type/static-level/pump-type/depth-HP-GPM/pressure-tank/control-box/yield/sediment/access/permit chips when true, no bait flat $/pump or $/ft, no fake same-day whole-home water guarantees",
+      ctaStyle: "get a well pump quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/pump as Apex benchmark", "bait flat $/ft as Apex benchmark", "fake same-day whole-home water guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before well type dug-drilled-driven/static water level/pump type submersible-jet-constant-pressure/depth-HP-GPM/pressure tank size-psi/control box-wiring/yield-dry-well risk/sediment-iron/access-pitless adapter/permit assessment", "claiming licensed well contractor/permit when not true", "impersonating plumber general service", "impersonating water_heater tank/tankless", "impersonating water_softener mineral systems", "impersonating sump_pump basement pit pumps", "impersonating water_damage call-first emergency", "impersonating slab_leak detection"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e3a5f",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#2dd4bf",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Well type / static water level / pump type assessed before firm price", "Depth-HP-GPM + pressure tank size-psi + control box/wiring honesty", "Yield/dry-well risk + sediment-iron + access/pitless adapter honesty", "Permit + licensed well contractor honesty when true", "No bait flat $/pump or $/ft — no fake same-day whole-home water"],
+    heroImages: [
+      {
+        src: "/niches/well-pump.jpg",
+        alt: "Low-angle view down a residential water well shaft — well/pump assess reference",
+        credit: "Sergio Santana on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/TaYD4Y_UZCk",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
