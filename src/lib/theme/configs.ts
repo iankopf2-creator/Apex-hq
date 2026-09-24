@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2045,6 +2045,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "residential house corner with window against blue sky",
         credit: "Griffin Wooldridge on Unsplash",
         sourceUrl: "https://unsplash.com/photos/corner-of-a-house-with-a-window-against-blue-sky-RBEn2oo_TyU",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  generator: {
+    niche: "generator",
+    label: "Generator",
+    palette: {
+      // Deep charcoal/slate + safety amber — distinct from solar gold and electrician; standby backup power not portable camping
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#f59e0b",
+      accentForeground: "#0f172a",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest whole-home load / fuel NG-LP-diesel / automatic transfer switch / pad-setback / permit-HOA assess-first for standby generator install, quote before install",
+      heroStyle: "quote-first standby generator LP — load/fuel/ATS/pad/permit chips when true, no bait flat $/kW, no fake same-day, not solar-only or portable camping batteries",
+      ctaStyle: "get a generator install quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/kW as Apex benchmark", "fake same-day install", "competitor brand cloning", "Generac/Kohler/Atlas Copco cloning", "fake 24/7", "solar-only confusion", "portable camping power station confusion", "firm price before load/fuel/transfer-switch/pad/permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Load/fuel/ATS/pad/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/kW"],
+    heroImages: [
+      {
+        src: "/niches/generator.jpg",
+        alt: "power lines and transformers on a utility pole (backup power / outage context)",
+        credit: "Alivia Alva on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/power-lines-and-transformers-on-a-utility-pole-88Chc9OJ3sg",
         license: "unsplash",
       },
     ],

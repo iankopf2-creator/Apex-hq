@@ -961,6 +961,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "window-slate-sky-blue",
   },
 
+  {
+    id: "generator",
+    label: "Generator",
+    defaultTagline: "Standby generator — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Generator Load Assess Quote", description: "Whole-home load, fuel (NG/LP/diesel), automatic transfer switch, pad/setback, and permit/HOA assessed before firm price — no bait flat $/kW", priceFrom: 0 },
+      { name: "Standby Generator Install Quote", description: "Install scope after load/fuel/ATS/pad assess — licensed electrician honesty when true; no fake same-day; not solar-only or portable camping batteries", priceFrom: 0 },
+      { name: "Transfer Switch & Pad Quote", description: "Automatic transfer switch and pad/setback scope after assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Load/fuel/ATS/pad/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/kW"],
+    ctaLabel: "Get a generator install quote",
+    accentHint: "generator-charcoal-safety-amber",
+  },
+
 
 
 

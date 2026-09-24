@@ -220,6 +220,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first measure before firm price honesty", ctaVerb: "Request a window measure quote" },
   },
 
+  generator: {
+    A: { heroEmphasis: "quote-first whole-home load / fuel NG-LP-diesel / automatic transfer switch / pad-setback / permit-HOA assess", ctaVerb: "Get a generator install quote" },
+    B: { heroEmphasis: "quote-first backup power assess before firm price honesty", ctaVerb: "Request a backup power assess quote" },
+  },
+
 
 
 };

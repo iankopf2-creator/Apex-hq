@@ -51,3 +51,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Epoxy flooring | `epoxy-flooring.jpg` | Shahabudin Ibragimov | https://unsplash.com/photos/seEumFkina8 |
 | Chimney | `chimney.jpg` | Hanna Theresia Pitter | https://unsplash.com/photos/a-brick-chimney-on-top-of-a-roof-QadP_RXFHSs |
 | Window replacement | `window-replacement.jpg` | Griffin Wooldridge | https://unsplash.com/photos/corner-of-a-house-with-a-window-against-blue-sky-RBEn2oo_TyU |
+| Generator | `generator.jpg` | Alivia Alva | https://unsplash.com/photos/power-lines-and-transformers-on-a-utility-pole-88Chc9OJ3sg |
