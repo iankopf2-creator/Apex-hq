@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "tankless_water_heater";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / tankless_water_heater (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by-sa";
 };
 
 export type NicheThemeConfig = {
@@ -1951,6 +1951,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
         license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  tankless_water_heater: {
+    niche: "tankless_water_heater",
+    label: "Tankless water heater",
+    palette: {
+      // On-demand indigo + copper heat — #1e1b4b + #f97316 — NOT water_heater #283548/#fbbf24, water_filtration #0c4a6e/#67e8f9, water_softener #115e59/#fcd34d, well_pump #1e3a5f/#2dd4bf, sump_pump #164e63/#22d3ee, plumber cyan, epoxy #0c0a09/#0d9488
+      primary: "#1e1b4b",
+      primaryForeground: "#eef2ff",
+      accent: "#f97316",
+      accentForeground: "#1c1917",
+      background: "#fafafa",
+      foreground: "#1e1b4b",
+      muted: "#ffedd5",
+      mutedForeground: "#9a3412",
+      border: "#c7d2fe",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first tankless / on-demand water heater install — gas vs electric / BTU or kW sizing / simultaneous fixtures GPM / existing tank remove-dispose / gas line-meter capacity or electrical panel service / venting-combustion air / condensate drain / recirculation loop / location garage-closet-exterior / permit + licensed plumber honesty when true; quote before install; tankless-only product — not water_heater tank/tankless general, plumber general service calls, water_filtration RO/sediment, water_softener mineral systems, well_pump repair/replace, sump_pump basement pit pumps, slab_leak detection, or water_damage emergency extraction",
+      heroStyle: "quote-first tankless water heater LP — gas-vs-electric/BTU-kW/GPM/existing-tank-remove/gas-line-or-panel/venting/condensate/recirc/location/permit chips when true, no bait flat $/BTU or $/unit, no fake same-day whole-home endless-hot-water guarantees",
+      ctaStyle: "get a tankless water heater quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/BTU as Apex benchmark", "bait flat $/unit as Apex benchmark", "fake same-day whole-home endless-hot-water guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before gas vs electric/BTU or kW/simultaneous fixtures GPM/existing tank remove/gas line-meter or electrical panel/venting-combustion air/condensate/recirc/location/permit assessment", "claiming licensed plumber/permit when not true", "impersonating water_heater tank/tankless general", "impersonating plumber general service", "impersonating water_filtration", "impersonating water_softener mineral systems", "impersonating well_pump repair/replace", "impersonating sump_pump basement pit pumps", "impersonating slab_leak detection", "impersonating water_damage call-first emergency"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e1b4b",
+      "--theme-primary-fg": "#eef2ff",
+      "--theme-accent": "#f97316",
+      "--theme-bg": "#fafafa",
+      "--theme-fg": "#1e1b4b",
+    },
+    trustBadges: ["Gas vs electric / BTU or kW / simultaneous fixtures GPM assessed before firm price", "Existing tank remove + gas line-meter or electrical panel capacity honesty", "Venting / combustion air / condensate / recirculation honesty", "Permit + licensed plumber honesty when true", "No bait flat $/BTU or $/unit — no fake same-day whole-home endless hot water"],
+    heroImages: [
+      {
+        src: "/niches/tankless-water-heater.jpg",
+        alt: "Two outdoor wall-mounted Noritz tankless water heaters with expansion tanks and gas lines — on-demand install assess reference",
+        credit: "Downtowngal on Wikimedia Commons",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Tankless_water_heaters.jpg",
+        license: "cc-by-sa",
       },
     ],
   },

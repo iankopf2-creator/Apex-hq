@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  tankless_water_heater: {
+    A: { heroEmphasis: "quote-first gas vs electric / BTU or kW / simultaneous fixtures GPM / existing tank remove / gas line-meter or electrical panel / venting-combustion air / condensate / recirculation / location / permit assess for tankless water heater", ctaVerb: "Get a tankless water heater quote" },
+    B: { heroEmphasis: "quote-first tankless water heater honesty before firm price — not water_heater general, plumber, water_filtration, water_softener, well_pump, sump_pump, slab_leak, or water_damage; no bait $/BTU or $/unit or fake same-day whole-home endless hot water", ctaVerb: "Request a tankless water heater quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
