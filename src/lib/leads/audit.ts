@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  water_filtration: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -119,6 +120,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first foundation page (inspection + soil/drainage/crack/pier-vs-slab/access/stories assess before firm price) so callers get a real quote — not bait flat $/lf or $/pier or fake same-day fix.",
   solar:
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
+  water_filtration:
+    "Add a quote-first water filtration page (whole-home vs under-sink vs RO / sediment-carbon-UV stages / water test hardness-iron-chlorine-TDS-bacteria / existing softener-well plumbing / filter change cadence / permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/system or $/filter or fake same-day whole-home pure-water guarantees; distinct from plumber, water_heater, water_softener, well_pump, sump_pump, water_damage, and slab_leak.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
   countertops:
