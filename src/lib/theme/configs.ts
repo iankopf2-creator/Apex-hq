@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "heat_pump";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / heat_pump (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1955,6 +1955,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  heat_pump: {
+    niche: "heat_pump",
+    label: "Heat pump",
+    palette: {
+      // Deep night slate-indigo outdoor unit + warm heat rose/coral — #0c1929 + #f43f5e — NOT mini_split #0f3d3e/#5eead4, tankless #1e1b4b/#f97316, water_heater #283548/#fbbf24, water_filtration #0c4a6e/#67e8f9, well_pump #1e3a5f/#2dd4bf, water_softener #115e59/#fcd34d, sump #164e63/#22d3ee, generator #0f172a/#f59e0b, epoxy #0c0a09/#0d9488, foundation #1c1917/#b45309, HVAC sky blues
+      primary: "#0c1929",
+      primaryForeground: "#f8fafc",
+      accent: "#f43f5e",
+      accentForeground: "#fff1f2",
+      background: "#fafafa",
+      foreground: "#0c1929",
+      muted: "#ffe4e6",
+      mutedForeground: "#9f1239",
+      border: "#fecdd3",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first whole-home / ducted heat-pump install & replacement — home size/sqft + climate zone / existing furnace/AC vs heat-pump swap / ductwork condition / electrical panel/breaker capacity / outdoor pad/clearance / noise ordinance / backup heat strip vs dual-fuel / SEER2/HSPF2 when true / permit + licensed HVAC contractor honesty when true; quote before install; heat_pump product — not hvac call-first emergency, mini_split ductless, solar, generator, insulation, electrician, plumber, water_heater, or duct_cleaning",
+      heroStyle: "quote-first heat pump LP — home-sqft/climate-zone/furnace-AC-vs-swap/ductwork/panel-breaker/pad-clearance/noise/backup-strip-vs-dual-fuel/SEER2-HSPF2/permit chips when true, no bait flat $/ton or $/sqft, no fake same-day whole-home comfort guarantees",
+      ctaStyle: "get a heat pump quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/ton as Apex benchmark", "bait flat $/sqft as Apex benchmark", "fake same-day whole-home comfort guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before home size/sqft/climate zone/existing furnace/AC vs heat-pump swap/ductwork condition/electrical panel/breaker capacity/outdoor pad clearance/noise ordinance/backup heat strip vs dual-fuel/SEER2/HSPF2/permit assessment", "claiming licensed HVAC contractor/permit when not true", "claiming SEER2/HSPF2 when not true", "impersonating hvac call-first emergency", "impersonating mini_split ductless", "impersonating solar", "impersonating generator", "impersonating insulation", "impersonating electrician", "impersonating plumber", "impersonating water_heater", "impersonating duct_cleaning"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c1929",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#f43f5e",
+      "--theme-bg": "#fafafa",
+      "--theme-fg": "#0c1929",
+    },
+    trustBadges: ["Home size/sqft + climate zone assessed before firm price", "Existing furnace/AC vs heat-pump swap + ductwork honesty", "Electrical panel/breaker + outdoor pad/clearance + noise ordinance honesty", "Backup heat strip vs dual-fuel + SEER2/HSPF2 honesty when true", "Permit + licensed HVAC contractor honesty when true", "No bait flat $/ton or $/sqft — no fake same-day whole-home comfort"],
+    heroImages: [
+      {
+        src: "/niches/heat-pump.jpg",
+        alt: "Modern outdoor heat pump / condenser unit beside a residential building — assess-first install reference",
+        credit: "alpha innotec on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/TDtycnfiDa8",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 
