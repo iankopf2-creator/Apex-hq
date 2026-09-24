@@ -487,6 +487,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first mini-split / ductless honesty before firm price — not hvac emergency, duct_cleaning, insulation, electrician, plumber, water_heater, generator, or solar; no bait $/head or $/ton or fake same-day whole-home comfort", ctaVerb: "Request a mini-split quote" },
   },
 
+  furnace: {
+    A: { heroEmphasis: "quote-first home size/sqft + climate zone / existing furnace age+fuel / AFUE / ductwork / venting+combustion air / electrical or gas line / thermostat / permit assess for residential furnace", ctaVerb: "Get a furnace quote" },
+    B: { heroEmphasis: "quote-first furnace honesty before firm price — not hvac emergency, heat_pump, mini_split, boiler, generator, insulation, electrician, plumber, water_heater, duct_cleaning, or solar; no bait $/BTU or $/sqft or fake same-day whole-home heat", ctaVerb: "Request a furnace quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
