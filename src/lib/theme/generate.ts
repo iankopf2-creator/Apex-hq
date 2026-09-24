@@ -454,6 +454,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first linear-ft/stories-height/roof pitch-access/material aluminum-galvanized-copper-vinyl-steel/style K-style-half-round-box/downspout count-placement/fascia condition/existing-vs-full-replace/splash blocks/HOA-permit assess for gutter installation", ctaVerb: "Get a gutter installation quote" },
     B: { heroEmphasis: "quote-first gutter installation honesty before firm price — not gutter_cleaning, gutter_guards alone, roofing, or siding/fascia alone; no bait $/lf or fake same-day hang", ctaVerb: "Request a gutter installation quote" },
   },
+  water_heater: {
+    A: { heroEmphasis: "quote-first tank vs tankless/existing unit age-capacity-BTU or gallons/fuel type/venting-combustion air/location/drain pan-T&P-expansion tank/electrical-gas line capacity/space-access-stories/permit assess for water heater", ctaVerb: "Get a water heater quote" },
+    B: { heroEmphasis: "quote-first water heater honesty before firm price — not plumber, water_softener, appliance_repair, water_damage, slab_leak, or sump_pump; no bait $/gallon or $/heater or fake same-day whole-home hot water", ctaVerb: "Request a water heater quote" },
+  },
 
 };
 
