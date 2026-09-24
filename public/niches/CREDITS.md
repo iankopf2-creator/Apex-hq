@@ -49,3 +49,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Foundation repair | `foundation-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581094794329-c8112a89af12 |
 | Solar | `solar.jpg` | American Public Power Association | https://unsplash.com/photos/513dBrMJ_5w |
 | Epoxy flooring | `epoxy-flooring.jpg` | Shahabudin Ibragimov | https://unsplash.com/photos/seEumFkina8 |
+| Mini-split / ductless | `mini-split.jpg` | Sarah Decker | https://unsplash.com/photos/mmhHQtanBck |
