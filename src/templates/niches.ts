@@ -911,6 +911,82 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "chimney",
+    label: "Chimney",
+    defaultTagline: "Chimney sweep & fireplace repair — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Chimney Inspection Quote", description: "Flue type, height, creosote, liner, cap, access, stories, and wood-stove vs fireplace assessed before firm price — no bait flat $/sweep", priceFrom: 0 },
+      { name: "Chimney Sweep Quote", description: "Sweep scope after creosote/liner/cap check — CSIA/NFI honesty when true; no fake same-day", priceFrom: 0 },
+      { name: "Fireplace & Chimney Repair Quote", description: "Repair scope after access and flue assess — quote before repair; no scare copy", priceFrom: 0 },
+    ],
+    heroHints: ["Flue type/height/creosote/liner/cap/access assessed before firm price", "Quote before sweep or repair", "CSIA/NFI / licensed honesty when true", "No bait flat $/sweep fees"],
+    ctaLabel: "Get a chimney quote",
+    accentHint: "chimney-soot-creosote-copper",
+  },
+
+
+
+
+  {
+    id: "window_replacement",
+    label: "Window Replacement",
+    defaultTagline: "Window replacement — measure before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Window Measure Quote", description: "Count, size, stories, access, existing vs new, vinyl vs wood vs fiberglass vs aluminum, and energy rating assessed before firm price — no bait flat $/window", priceFrom: 0 },
+      { name: "Window Replacement Quote", description: "Replacement scope after measure — licensed honesty when true; no fake same-day; not window cleaning", priceFrom: 0 },
+      { name: "Energy Upgrade Window Quote", description: "Energy-rating upgrade scope after access and material assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Count/size/stories/access/material/energy assessed before firm price", "Quote before install", "Licensed honesty when true", "No bait flat $/window fees"],
+    ctaLabel: "Get a window replacement quote",
+    accentHint: "window-slate-sky-blue",
+  },
+
+  {
+    id: "generator",
+    label: "Generator",
+    defaultTagline: "Standby generator — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Generator Load Assess Quote", description: "Whole-home load, fuel (NG/LP/diesel), automatic transfer switch, pad/setback, and permit/HOA assessed before firm price — no bait flat $/kW", priceFrom: 0 },
+      { name: "Standby Generator Install Quote", description: "Install scope after load/fuel/ATS/pad assess — licensed electrician honesty when true; no fake same-day; not solar-only or portable camping batteries", priceFrom: 0 },
+      { name: "Transfer Switch & Pad Quote", description: "Automatic transfer switch and pad/setback scope after assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Load/fuel/ATS/pad/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/kW"],
+    ctaLabel: "Get a generator install quote",
+    accentHint: "generator-charcoal-safety-amber",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

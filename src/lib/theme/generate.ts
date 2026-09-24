@@ -207,6 +207,26 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  chimney: {
+    A: { heroEmphasis: "quote-first flue type/height/creosote/liner/cap/access/stories / wood-stove-vs-fireplace assess", ctaVerb: "Get a chimney quote" },
+    B: { heroEmphasis: "quote-first inspection before firm price honesty", ctaVerb: "Request a chimney inspection quote" },
+  },
+
+
+
+  window_replacement: {
+    A: { heroEmphasis: "quote-first count/size/stories/access / existing-vs-new / vinyl-vs-wood-vs-fiberglass-vs-aluminum / energy-rating assess", ctaVerb: "Get a window replacement quote" },
+    B: { heroEmphasis: "quote-first measure before firm price honesty", ctaVerb: "Request a window measure quote" },
+  },
+
+  generator: {
+    A: { heroEmphasis: "quote-first whole-home load / fuel NG-LP-diesel / automatic transfer switch / pad-setback / permit-HOA assess", ctaVerb: "Get a generator install quote" },
+    B: { heroEmphasis: "quote-first backup power assess before firm price honesty", ctaVerb: "Request a backup power assess quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
