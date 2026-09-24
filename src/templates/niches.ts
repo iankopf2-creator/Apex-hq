@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "water_heater",
+    label: "Water heater",
+    defaultTagline: "Assess tank vs tankless and the existing unit before we quote the heater",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Water heater install / replace", description: "New or replacement tank or tankless after existing unit age/capacity/BTU or gallons / fuel type gas-electric-propane-heat-pump / venting-combustion air / location garage-closet-attic / drain pan-T&P-expansion tank / electrical-gas line capacity / space-access-stories assess — permit + licensed plumber honesty when true; no bait flat $/gallon or $/heater; no fake same-day whole-home hot-water guarantees; not plumber general, water_softener, appliance_repair, water_damage emergency, slab_leak, or sump_pump", priceFrom: 0 },
+      { name: "Tank vs tankless assess quote", description: "Tank vs tankless + fuel type + capacity/BTU or gallons + venting and location assess before heater size — quote before install; no bait flat $/gallon as heater price", priceFrom: 0 },
+      { name: "Drain pan / T&P / expansion service", description: "Drain pan, T&P valve, and expansion tank check after unit inspect — firm price after assess; electrical/gas line capacity honesty; no fake same-day whole-home hot-water guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Tank vs tankless / existing age-capacity-BTU or gallons assessed before firm price", "Fuel type + venting/combustion air + location garage-closet-attic honesty", "Drain pan / T&P / expansion tank + electrical/gas line + space/access/stories + permit when true", "No bait flat $/gallon or $/heater — no fake same-day whole-home hot water — not plumber, softener, appliance repair, water damage, slab leak, or sump pump"],
+    ctaLabel: "Get a water heater quote",
+    accentHint: "tank-steel-pilot-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
