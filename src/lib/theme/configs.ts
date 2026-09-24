@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "water_heater";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / water_heater (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  water_heater: {
+    niche: "water_heater",
+    label: "Water heater",
+    palette: {
+      // Deep tank-steel blue-slate + warm pilot/ignition amber — #283548 + #fbbf24 — NOT water_softener #115e59/#fcd34d, sump_pump #164e63/#22d3ee, plumber cyan, appliance_repair #1e293b/#ea580c, wildlife/generator #0f172a/#f59e0b, window_cleaning #334155/#0891b2, basement_waterproofing #1e293b/#14b8a6, epoxy #0c0a09/#0d9488, concrete #475569/#d97706
+      primary: "#283548",
+      primaryForeground: "#f8fafc",
+      accent: "#fbbf24",
+      accentForeground: "#1c1917",
+      background: "#f8fafc",
+      foreground: "#1c2433",
+      muted: "#fef3c7",
+      mutedForeground: "#854d0e",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first water heater install/replace — tank vs tankless / existing unit age-capacity-BTU or gallons / fuel type gas-electric-propane-heat-pump / venting-combustion air / location garage-closet-attic / drain pan-T&P-expansion tank / electrical-gas line capacity / space-access-stories / permit + licensed plumber honesty when true; quote before install; water heater product — not plumber general service calls, water_softener mineral systems, appliance_repair laundry/kitchen appliances, water_damage emergency extraction, slab_leak detection, or sump_pump basement pit pumps",
+      heroStyle: "quote-first water heater LP — tank-vs-tankless/age-capacity-BTU-gallons/fuel/venting/location/drain-pan-T&P-expansion/electrical-gas/space-access/permit chips when true, no bait flat $/gallon or $/heater, no fake same-day whole-home hot-water guarantees",
+      ctaStyle: "get a water heater quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/gallon as Apex benchmark", "bait flat $/heater as Apex benchmark", "fake same-day whole-home hot-water guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before tank vs tankless/existing unit age-capacity-BTU or gallons/fuel type/venting-combustion air/location/drain pan-T&P-expansion tank/electrical-gas line capacity/space-access-stories/permit assessment", "claiming licensed plumber/permit when not true", "impersonating plumber general service", "impersonating water_softener mineral systems", "impersonating appliance_repair", "impersonating water_damage call-first emergency", "impersonating slab_leak detection", "impersonating sump_pump basement pit pumps"],
+    },
+    cssVars: {
+      "--theme-primary": "#283548",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#fbbf24",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#1c2433",
+    },
+    trustBadges: ["Tank vs tankless / existing age-capacity-BTU or gallons assessed before firm price", "Fuel type + venting/combustion air + location honesty", "Drain pan / T&P / expansion tank + electrical/gas line capacity honesty", "Permit + licensed plumber honesty when true", "No bait flat $/gallon or $/heater — no fake same-day whole-home hot water"],
+    heroImages: [
+      {
+        src: "/niches/water-heater.jpg",
+        alt: "Residential wall-mounted water heater above a utility sink — tank/install assess reference",
+        credit: "Michal Balog on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/ii5IRyypPhs",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
