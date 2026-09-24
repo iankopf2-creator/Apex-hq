@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "mini_split",
+    label: "Mini-split",
+    defaultTagline: "Assess zones, BTU load, and single vs multi-head before we quote mini-split",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Mini-split / ductless install", description: "New mini-split after zones/rooms / BTU load / single vs multi-head / existing ducted HVAC vs replacing window units / electrical panel capacity / outdoor unit pad/clearance / line-set length / wall material / stories/access assess — permit + licensed HVAC contractor honesty when true; no bait flat $/head or $/ton; no fake same-day whole-home comfort guarantees; not hvac call-first emergency, duct_cleaning, insulation, electrician, plumber, water_heater, generator, or solar", priceFrom: 0 },
+      { name: "Multi-zone / multi-head quote", description: "Additional heads + BTU load + line-set length + outdoor unit capacity assess before multi-zone size — quote before install; no bait flat $/head as multi-zone price", priceFrom: 0 },
+      { name: "Mini-split service / maintenance", description: "Service after unit age/zone count/filter/coil inspect — firm price after assess; no fake same-day whole-home comfort guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Zones/rooms + BTU load assessed before firm price", "Single vs multi-head + existing ducted HVAC vs window-unit honesty", "Electrical panel + outdoor pad/clearance + line-set length honesty", "Permit + licensed HVAC contractor when true", "No bait flat $/head or $/ton — no fake same-day whole-home comfort — not HVAC emergency, duct cleaning, insulation, electrician, plumber, water heater, generator, or solar"],
+    ctaLabel: "Get a mini-split quote",
+    accentHint: "slate-teal-mint",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
