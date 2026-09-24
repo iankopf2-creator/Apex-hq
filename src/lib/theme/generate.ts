@@ -207,6 +207,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+  water_softener: {
+    A: { heroEmphasis: "quote-first hardness grains/existing softener age-capacity/resin condition/brine tank/salt type/iron-manganese/well vs municipal/drain for backwash/space/electrical/bypass valve/permit assess for water softener", ctaVerb: "Get a water softener quote" },
+    B: { heroEmphasis: "quote-first water softener honesty before firm price — not plumber, sump_pump, water_damage, slab_leak, or appliance_repair; no bait $/softener or $/grain or fake forever-soft/same-day whole-home", ctaVerb: "Request a water softener quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

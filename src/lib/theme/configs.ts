@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "water_softener";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / water_softener (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1950,6 +1950,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Glossy polished industrial floor coating in a modern commercial space",
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  water_softener: {
+    niche: "water_softener",
+    label: "Water softener",
+    palette: {
+      // Deep mineral teal + soft salt-crystal amber — #115e59 + #fcd34d — NOT sump_pump #164e63/#22d3ee, window_cleaning #334155/#0891b2, basement_waterproofing #1e293b/#14b8a6, french_drain #3f3f46/#a16207, crawl_space #292524/#65a30d, foundation #1c1917/#b45309, radon #27272a/#d97706, wildlife #0f172a/#f59e0b, epoxy #0c0a09/#0d9488, plumber cyan, generator #0f172a/#f59e0b
+      primary: "#115e59",
+      primaryForeground: "#f0fdfa",
+      accent: "#fcd34d",
+      accentForeground: "#134e4a",
+      background: "#f0fdfa",
+      foreground: "#134e4a",
+      muted: "#ccfbf1",
+      mutedForeground: "#0f766e",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first water softener install/replace — hardness grains / existing softener age-capacity / resin condition / brine tank / salt type / iron-manganese / well vs municipal / drain for backwash / space / electrical / bypass valve / permit honesty when true; quote before install; water softener product — not plumber general service calls, sump_pump basement pit pumps, water_damage emergency extraction, slab_leak detection, or appliance_repair",
+      heroStyle: "quote-first water softener LP — hardness/grains/existing age-capacity/resin/brine/salt/iron-manganese/well-vs-municipal/drain/space/electrical/bypass/permit chips when true, no bait flat $/softener or $/grain, no fake forever-soft or same-day whole-home",
+      ctaStyle: "get a water softener quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/softener as Apex benchmark", "bait flat $/grain as Apex benchmark", "fake forever-soft guarantees", "fake same-day whole-home guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before hardness grains/existing softener age-capacity/resin condition/brine tank/salt type/iron-manganese/well vs municipal/drain for backwash/space/electrical/bypass valve/permit assessment", "claiming licensed plumber/permit when not true", "impersonating plumber general service", "impersonating sump_pump basement pit pumps", "impersonating water_damage call-first emergency", "impersonating slab_leak detection", "impersonating appliance_repair"],
+    },
+    cssVars: {
+      "--theme-primary": "#115e59",
+      "--theme-primary-fg": "#f0fdfa",
+      "--theme-accent": "#fcd34d",
+      "--theme-bg": "#f0fdfa",
+      "--theme-fg": "#134e4a",
+    },
+    trustBadges: ["Hardness grains / existing softener age-capacity / resin assessed before firm price", "Brine tank + salt type + iron-manganese + well vs municipal honesty", "Drain for backwash + space + electrical + bypass valve honesty", "Permit honesty when true", "No bait flat $/softener or $/grain — no fake forever-soft or same-day whole-home"],
+    heroImages: [
+      {
+        src: "/niches/water-softener.jpg",
+        alt: "Whole-home water filtration tank and purification equipment on a utility bench — softener assess reference",
+        credit: "RephiLe water on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/FT1i_3OA7XI",
         license: "unsplash",
       },
     ],
