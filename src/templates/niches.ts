@@ -909,7 +909,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get an epoxy flooring quote",
     accentHint: "epoxy-charcoal-resin-teal",
   },
-
+  {
+    id: "furnace",
+    label: "Furnace",
+    defaultTagline: "Assess home size, fuel type, and ductwork before we quote a furnace",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Furnace install / replace", description: "Residential furnace install or replacement after home size/sqft + climate zone / existing furnace age+fuel (gas/electric/oil/propane) / AFUE when true / ductwork condition / venting+combustion air / electrical or gas line / thermostat / permit + licensed HVAC contractor honesty when true assess — no bait flat $/BTU or $/sqft; no fake same-day whole-home heat guarantees; not hvac call-first emergency, heat_pump, mini_split, boiler, generator, insulation, electrician, plumber, water_heater, duct_cleaning, or solar", priceFrom: 0 },
+      { name: "Furnace repair quote", description: "Repair after age/fuel/AFUE/ductwork/venting/ignition assess — quote before parts/labor; no scare emergency copy (hvac owns call-first emergency)", priceFrom: 0 },
+      { name: "Furnace tune-up / maintenance", description: "Service after filter/heat-exchanger/blower/duct inspect — firm price after assess; no bait flat $/BTU", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/sqft + climate zone assessed before firm price", "Existing furnace age+fuel + AFUE honesty when true", "Ductwork + venting/combustion air + electrical or gas line honesty", "Thermostat + permit + licensed HVAC contractor when true", "No bait flat $/BTU or $/sqft — no fake same-day whole-home heat — not HVAC emergency, heat pump, mini-split, boiler, generator, insulation, electrician, plumber, water heater, duct cleaning, or solar"],
+    ctaLabel: "Get a furnace quote",
+    accentHint: "furnace-charcoal-ember",
+  },
 
 ];
 
