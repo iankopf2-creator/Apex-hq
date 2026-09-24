@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "water_softener",
+    label: "Water softener",
+    defaultTagline: "Assess hardness and the existing system before we quote the softener",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Water softener install / replace", description: "New or replacement softener after hardness grains / existing softener age-capacity / resin condition / brine tank / salt type / iron-manganese / well vs municipal / drain for backwash / space / electrical / bypass valve assess — permit honesty when true; no bait flat $/softener or $/grain; no fake forever-soft or same-day whole-home guarantees; not plumber general, sump_pump, water_damage emergency, slab_leak, or appliance_repair", priceFrom: 0 },
+      { name: "Hardness / iron assess quote", description: "Hardness grains + iron-manganese + well vs municipal water chemistry assess before softener size — quote before install; no bait flat $/test as softener price", priceFrom: 0 },
+      { name: "Resin / brine / bypass service", description: "Resin condition, brine tank, salt type, and bypass valve service after system inspect — firm price after assess; no fake forever-soft guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Hardness grains / existing softener age-capacity / resin assessed before firm price", "Brine tank + salt type + iron-manganese + well vs municipal honesty", "Drain for backwash + space + electrical + bypass valve + permit when true", "No bait flat $/softener or $/grain — no fake forever-soft or same-day whole-home — not plumber, sump pump, water damage, slab leak, or appliance repair"],
+    ctaLabel: "Get a water softener quote",
+    accentHint: "mineral-teal-salt-crystal",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
