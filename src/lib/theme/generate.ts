@@ -206,6 +206,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/prep/moisture/existing-coating/access assess for garage & commercial epoxy", ctaVerb: "Get an epoxy flooring quote" },
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
+  led_lighting: {
+    A: { heroEmphasis: "quote-first fixture count/type + lamp/ballast vs fixture swap + voltage/circuit + height/lift/access + indoor/outdoor wet-location + CCT/CRI/controls + rebate educational + permit assess for LED lighting", ctaVerb: "Get an LED lighting quote" },
+    B: { heroEmphasis: "quote-first LED lighting honesty before firm price — not electrician emergency, smart_panel, panel_upgrade, solar, or ev_charger; no bait $/fixture or $/lamp or fake same-day whole-building retrofit; ENERGY STAR/DLC/NEC educational only", ctaVerb: "Request an LED lighting quote" },
+  },
+
 
 };
 
