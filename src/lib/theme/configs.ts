@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "battery_storage";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / battery_storage (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc0";
 };
 
 export type NicheThemeConfig = {
@@ -1951,6 +1951,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
         license: "unsplash",
+      },
+    ],
+  },
+
+
+  battery_storage: {
+    niche: "battery_storage",
+    label: "Battery Storage",
+    palette: {
+      // Deep energy-storage charcoal + electric mint/cyan — #0b1220 + #2dd4bf — NOT solar #0f172a/#f59e0b, generator #0f172a/#f59e0b, geothermal #14261c/#c9782a, heat_pump #0c1929/#f43f5e, epoxy #0c0a09/#0d9488, insulation pink, foundation #1c1917/#b45309
+      primary: "#0b1220",
+      primaryForeground: "#f0fdfa",
+      accent: "#2dd4bf",
+      accentForeground: "#042f2e",
+      background: "#f0fdfa",
+      foreground: "#0b1220",
+      muted: "#ccfbf1",
+      mutedForeground: "#0f766e",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential home battery / energy storage (ESS) install — home size / electrical panel capacity + main breaker / existing solar or generator when true / backup loads critical vs whole-home / utility interconnection + net-metering educational only (no guarantee) / incentive/tax-credit educational only (no guarantee) / outdoor vs garage pad space / HOA/permit / licensed electrician-ESS contractor honesty when true; quote before install; battery storage product — not solar, generator, electrician, ev_charger, geothermal, heat_pump, mini_split, or hvac call-first emergency",
+      heroStyle: "quote-first battery storage LP — home-size/panel-capacity/main-breaker/existing-solar-or-generator/backup-loads-critical-vs-whole-home/utility-interconnect-net-metering-educational/incentive-tax-credit-educational/outdoor-vs-garage-pad/HOA-permit chips when true, no bait flat $/kWh or $/kW, no fake same-day install, no inventing rebate/ITC amounts, no scare copy",
+      ctaStyle: "get a battery storage quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/kWh as Apex benchmark", "bait flat $/kW as Apex benchmark", "fake same-day install guarantees", "scare copy / fake emergency urgency", "competitor brand cloning", "fake 24/7", "firm price before home size/electrical panel capacity/main breaker/existing solar or generator/backup loads critical vs whole-home/utility interconnection/net-metering educational/incentive tax-credit educational/outdoor vs garage pad space/HOA/permit assessment", "claiming licensed electrician-ESS contractor/permit when not true", "inventing rebate amounts or guaranteeing rebates/ITC", "inventing tax-credit amounts or guaranteeing incentives", "impersonating solar", "impersonating generator", "impersonating electrician", "impersonating ev_charger", "impersonating geothermal", "impersonating heat_pump", "impersonating mini_split", "impersonating hvac call-first emergency", "Tesla Powerwall as Apex product name", "Enphase IQ Battery as Apex product name", "LG ESS as Apex product name", "FranklinWH as Apex product name"],
+    },
+    cssVars: {
+      "--theme-primary": "#0b1220",
+      "--theme-primary-fg": "#f0fdfa",
+      "--theme-accent": "#2dd4bf",
+      "--theme-bg": "#f0fdfa",
+      "--theme-fg": "#0b1220",
+    },
+    trustBadges: ["Home size / electrical panel capacity + main breaker assessed before firm price", "Existing solar or generator + backup loads (critical vs whole-home) honesty when true", "Utility interconnection + net-metering educational only (no guarantee)", "Incentive/tax-credit educational only (no guarantee) + outdoor vs garage pad + HOA/permit honesty", "Licensed electrician-ESS contractor honesty when true", "No bait flat $/kWh or $/kW — no fake same-day install — not solar, generator, EV charger, or HVAC emergency"],
+    heroImages: [
+      {
+        src: "/niches/battery-storage.jpg",
+        alt: "Residential wall-mounted home battery energy storage system — assess-first ESS reference",
+        credit: "Rsparks3 on Wikimedia Commons (CC0 1.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Two_Tesla_power_wall_3_devices_installed_inside_in_a_residential_home.jpg",
+        license: "cc0",
       },
     ],
   },
