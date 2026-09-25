@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "led_lighting",
+    label: "LED Lighting",
+    defaultTagline: "Commercial + residential LED retrofit / install — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "LED lighting quote", description: "Commercial + residential LED retrofit / install quote after fixture count / type (recessed, troffer, high-bay, exterior, landscape) when true + existing lamp/ballast vs full fixture swap when true + voltage/circuit capacity when true + height/lift/access when true + indoor vs outdoor/wet-location rating when true + color temp / CRI / controls (0-10V, occupancy, daylight) when true + rebate/utility program honesty when true (educational only — no inventing rebate amounts as Apex guarantee) + permit + licensed electrician honesty when true assess — no bait flat $/fixture or $/lamp; no fake same-day whole-building retrofit; not electrician call-first emergency, smart_panel, panel_upgrade, solar, ev_charger, or handyman", priceFrom: 0 },
+      { name: "Lamp / ballast vs fixture swap review", description: "Existing lamp/ballast retrofit vs full fixture replacement scope after fixture count / type and voltage / circuit check when true — ENERGY STAR/DLC/NEC educational only (not Apex legal advice); quote before install", priceFrom: 0 },
+      { name: "Controls + rebate educational option", description: "0-10V / occupancy / daylight controls + rebate/utility program honesty when true (educational only — no invented Apex rebate amounts) after site assess — permit + licensed electrician honesty when true; no bait flat $/fixture", priceFrom: 0 },
+    ],
+    heroHints: ["Fixture count / type (recessed, troffer, high-bay, exterior, landscape) assessed before firm price", "Lamp/ballast vs full fixture swap honesty when true", "Voltage / circuit capacity + height / lift / access honesty when true", "Indoor vs outdoor / wet-location + CCT / CRI / controls honesty when true", "Rebate / utility program educational only — no invented Apex rebate amounts", "Permit + licensed electrician honesty when true", "No bait flat $/fixture or $/lamp — no fake same-day whole-building retrofit — not electrician emergency, smart panel, panel upgrade, solar, or EV charger"],
+    ctaLabel: "Get an LED lighting quote",
+    accentHint: "workshop-charcoal-led-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "led_lighting";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / led_lighting (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by";
 };
 
 export type NicheThemeConfig = {
@@ -1951,6 +1951,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
         license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  led_lighting: {
+    niche: "led_lighting",
+    label: "LED Lighting",
+    palette: {
+      // Deep workshop charcoal/navy + bright LED amber — #10141c + #facc15 — NOT transfer_switch #0f172a/#d97706, whole_home_surge #111827/#eab308, panel_upgrade #1e242b/#c17a3a, generator #0f172a/#f59e0b, battery_storage #0b1220/#2dd4bf, smart_panel #0c1222/#38bdf8, epoxy charcoal/teal, solar gold
+      primary: "#10141c",
+      primaryForeground: "#f8fafc",
+      accent: "#facc15",
+      accentForeground: "#10141c",
+      background: "#fefce8",
+      foreground: "#10141c",
+      muted: "#fef9c3",
+      mutedForeground: "#854d0e",
+      border: "#fde047",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first commercial + residential LED retrofit / install — fixture count / type (recessed, troffer, high-bay, exterior, landscape) when true; existing lamp/ballast vs full fixture swap when true; voltage/circuit capacity when true; height/lift/access when true; indoor vs outdoor/wet-location rating when true; color temp / CRI / controls (0-10V, occupancy, daylight) when true; rebate/utility program honesty when true (educational only — no inventing rebate amounts as Apex guarantee); permit + licensed electrician honesty when true; quote before install; LED lighting product — not electrician call-first emergency, smart_panel, panel_upgrade, solar, ev_charger, or handyman",
+      heroStyle: "quote-first LED lighting LP — fixture-count-type/lamp-ballast-vs-fixture-swap/voltage-circuit/height-lift-access/indoor-outdoor-wet-rating/CCT-CRI-controls/rebate-utility-educational/permit chips when true, no bait flat $/fixture or $/lamp, no fake same-day whole-building retrofit, no scare energy-bill copy, no inventing ENERGY STAR/DLC/NEC as Apex legal advice",
+      ctaStyle: "get an LED lighting quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/fixture as Apex benchmark", "bait flat $/lamp as Apex benchmark", "fake same-day whole-building retrofit guarantees", "scare energy-bill / fake urgency copy", "competitor brand cloning", "Philips as Apex product name", "Cree as Apex product name", "Lithonia as Apex product name", "Hubbell as Apex product name", "fake 24/7", "inventing rebate amounts as Apex guarantee", "firm price before fixture count/type/lamp-ballast vs fixture swap/voltage circuit capacity/height lift access/indoor outdoor wet-location/CCT CRI controls/rebate utility educational/permit assessment", "claiming licensed electrician/permit when not true", "inventing ENERGY STAR/DLC/NEC/code as Apex legal advice", "impersonating electrician call-first emergency", "impersonating smart_panel", "impersonating panel_upgrade", "impersonating solar", "impersonating ev_charger", "impersonating handyman"],
+    },
+    cssVars: {
+      "--theme-primary": "#10141c",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#facc15",
+      "--theme-bg": "#fefce8",
+      "--theme-fg": "#10141c",
+    },
+    trustBadges: ["Fixture count / type assessed before firm price", "Lamp/ballast vs full fixture swap honesty when true", "Voltage / circuit capacity + height / lift / access honesty when true", "Indoor vs outdoor / wet-location + CCT / CRI / controls honesty when true", "Rebate / utility program educational only — no invented Apex rebate amounts", "Permit + licensed electrician honesty when true", "No bait flat $/fixture or $/lamp — no fake same-day whole-building retrofit — not electrician emergency, smart panel, panel upgrade, solar, or EV charger"],
+    heroImages: [
+      {
+        src: "/niches/led-lighting.jpg",
+        alt: "Dropped ceiling with recessed 3000K LED T-bar fixtures — assess fixture count, type, and access before an LED lighting quote",
+        credit: "Rintojiang on Wikimedia Commons (CC BY 3.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:3000K_LED_T-Bar_Ceiling_Light.JPG",
+        license: "cc-by",
       },
     ],
   },
