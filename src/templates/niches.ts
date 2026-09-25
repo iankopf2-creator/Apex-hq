@@ -911,6 +911,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "whole_home_surge",
+    label: "Whole-Home Surge Protection",
+    defaultTagline: "Assess service entrance, SPD type, and grounding before we quote whole-home surge protection",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Whole-home surge protection quote", description: "Residential whole-home surge / SPD quote after service entrance amperage + panel main breaker size + existing surge SPD type (Type 1 vs Type 2 vs point-of-use) / already installed or not + grounding electrode system / bonding quality when true + critical loads / whole-home vs panel-only + utility / meter / outdoor vs indoor install location + generator / transfer switch / EV / solar / battery coexistence when true + permit + licensed electrician honesty when true assess — no bait flat $/panel or $/device; no fake same-day install; not electrician call-first emergency, panel_upgrade, generator, battery_storage, ev_charger, solar, or HVAC emergency", priceFrom: 0 },
+      { name: "Type 1 / Type 2 SPD install after site check", description: "Type 1 (service/meter) or Type 2 (panel) SPD scope after service entrance / panel / existing SPD / grounding site check when true — quote before install; no bait flat $/device", priceFrom: 0 },
+      { name: "Coexistence review (generator / EV / solar / battery)", description: "Surge protection review when generator / transfer switch / EV charger / solar / battery storage loads coexist when those loads are true — UL/NEC educational only (not Apex legal advice); quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Service entrance amperage + panel main breaker size assessed before firm price", "Existing surge SPD type (Type 1 vs Type 2 vs point-of-use) / already installed honesty when true", "Grounding electrode / bonding quality + critical loads / whole-home vs panel-only honesty when true", "Utility / meter / outdoor vs indoor install location + generator / transfer switch / EV / solar / battery coexistence when true", "Permit + licensed electrician honesty when true", "No bait flat $/panel or $/device — no fake same-day install — not electrician emergency, panel upgrade, generator, battery, EV charger, or solar"],
+    ctaLabel: "Get a whole-home surge quote",
+    accentHint: "whole-home-surge-charcoal-amber",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
