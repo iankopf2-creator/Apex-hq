@@ -207,6 +207,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  panel_upgrade: {
+    A: { heroEmphasis: "quote-first existing panel amperage + main breaker size + bus rating / available slots / service entrance / NEC load calc (EV / battery / solar / generator / HVAC when true) / indoor vs outdoor / Al vs Cu service / permit assess for residential panel upgrade", ctaVerb: "Get a panel upgrade quote" },
+    B: { heroEmphasis: "quote-first panel upgrade honesty before firm price — not electrician emergency, battery_storage, ev_charger, solar, generator, or hvac; no bait $/amp or $/slot or fake same-day upgrade; NEC educational only", ctaVerb: "Request a panel upgrade quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
