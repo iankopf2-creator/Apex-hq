@@ -911,6 +911,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "battery_storage",
+    label: "Battery Storage",
+    defaultTagline: "Assess panel capacity and backup loads before we quote home battery storage",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Home battery / ESS install", description: "Residential energy storage install after home size / electrical panel capacity + main breaker / existing solar or generator when true / backup loads critical vs whole-home / utility interconnection + net-metering educational only (no guarantee) / incentive/tax-credit educational only (no guarantee) / outdoor vs garage pad space / HOA/permit / licensed electrician-ESS contractor honesty when true assess — no bait flat $/kWh or $/kW; no fake same-day install guarantees; not solar, generator, electrician, ev_charger, geothermal, heat_pump, mini_split, or hvac call-first emergency", priceFrom: 0 },
+      { name: "Backup load design quote", description: "Critical-load vs whole-home backup design after panel capacity + load review — quote before install; no bait flat $/kWh", priceFrom: 0 },
+      { name: "Battery add-on to existing solar quote", description: "Storage add-on after existing solar/inverter/interconnect assess when true — incentives educational only (no guarantee); quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Home size / electrical panel capacity + main breaker assessed before firm price", "Existing solar or generator + backup loads (critical vs whole-home) honesty when true", "Utility interconnection + net-metering educational only (no guarantee)", "Incentive/tax-credit educational only (no guarantee) + outdoor vs garage pad + HOA/permit honesty", "Licensed electrician-ESS contractor honesty when true", "No bait flat $/kWh or $/kW — no fake same-day install — not solar, generator, EV charger, geothermal, heat pump, mini-split, or HVAC emergency"],
+    ctaLabel: "Get a battery storage quote",
+    accentHint: "battery-storage-charcoal-mint-cyan",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

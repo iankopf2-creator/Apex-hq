@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  battery_storage: {
+    A: { heroEmphasis: "quote-first home size / electrical panel capacity + main breaker / existing solar or generator / backup loads critical vs whole-home / utility interconnection + net-metering educational / incentive tax-credit educational / outdoor vs garage pad / HOA/permit assess for residential home battery ESS", ctaVerb: "Get a battery storage quote" },
+    B: { heroEmphasis: "quote-first battery storage honesty before firm price — not solar, generator, electrician, ev_charger, geothermal, heat_pump, mini_split, or hvac emergency; no bait $/kWh or $/kW or fake same-day install; incentives educational only", ctaVerb: "Request a battery storage quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
