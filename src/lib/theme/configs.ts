@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2095,6 +2095,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+  ev_charger: {
+    niche: "ev_charger",
+    label: "EV Charger",
+    palette: {
+      // Deep electrical slate + EV electric green — distinct from solar gold/amber, generator amber, electrician
+      primary: "#0b1220",
+      primaryForeground: "#f8fafc",
+      accent: "#22c55e",
+      accentForeground: "#0b1220",
+      background: "#f8fafc",
+      foreground: "#0b1220",
+      muted: "#e2e8f0",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest panel capacity / amperage (30–60A typical L2) / garage-vs-driveway / hardwired-vs-NEMA / permit-HOA / load calculation assess-first for Level 2 home EVSE install, quote before install",
+      heroStyle: "quote-first home EV charger LP — panel/amperage/garage-driveway/hardwired-NEMA/permit chips when true, no bait flat $/charger, no fake same-day, not solar-only or standby generator",
+      ctaStyle: "get an EV charger install quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/charger or $/port as Apex benchmark", "fake same-day install", "competitor brand cloning", "Tesla Wall Connector/ChargePoint/JuiceBox/Wallbox/Enphase cloning", "fake 24/7", "solar-only confusion", "standby generator confusion", "firm price before panel/amperage/location/permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0b1220",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#22c55e",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0b1220",
+    },
+    trustBadges: ["Panel/amperage/location/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/charger"],
+    heroImages: [
+      {
+        src: "/niches/ev-charger.jpg",
+        alt: "electric vehicle charger plugged into a car (home Level 2 EVSE context)",
+        credit: "CHUTTERSNAP on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/electric-vehicle-charger-plugged-into-car-xfaYAsMV1p8",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 

@@ -984,6 +984,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "generator-charcoal-safety-amber",
   },
 
+  {
+    id: "ev_charger",
+    label: "EV Charger",
+    defaultTagline: "Home EV charger — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Panel/Amperage Assess Quote", description: "Panel capacity, amperage (30–60A typical L2), garage vs driveway, hardwired vs NEMA, and permit/HOA/load calc assessed before firm price — no bait flat $/charger", priceFrom: 0 },
+      { name: "Level 2 EV Charger Install Quote", description: "L2 install scope after panel/amperage/location assess — licensed electrician honesty when true; no fake same-day; not solar-only or standby generator", priceFrom: 0 },
+      { name: "Permit & Load-Calc Quote", description: "Permit/HOA and load calculation scope after assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Panel/amperage/location/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/charger"],
+    ctaLabel: "Get an EV charger install quote",
+    accentHint: "ev-charger-slate-electric-green",
+  },
+
 
 
 
