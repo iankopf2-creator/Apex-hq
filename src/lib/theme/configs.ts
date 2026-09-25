@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "whole_home_surge";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / whole_home_surge (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by";
 };
 
 export type NicheThemeConfig = {
@@ -1954,6 +1954,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  whole_home_surge: {
+    niche: "whole_home_surge",
+    label: "Whole-Home Surge Protection",
+    palette: {
+      // Deep electrical-protection charcoal + protective amber/gold — #111827 + #eab308 — NOT electrician #facc15/#1e293b, panel_upgrade #1e242b/#c17a3a, battery #0b1220/#2dd4bf, ev_charger #0b1220/#22c55e, solar/generator #0f172a/#f59e0b, foundation #1c1917/#b45309
+      primary: "#111827",
+      primaryForeground: "#f8fafc",
+      accent: "#eab308",
+      accentForeground: "#111827",
+      background: "#f8fafc",
+      foreground: "#111827",
+      muted: "#e5e7eb",
+      mutedForeground: "#4b5563",
+      border: "#d1d5db",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first whole-home surge protection / SPD — service entrance amperage + panel main breaker size when true; existing surge SPD type (Type 1 vs Type 2 vs point-of-use) / already installed or not; grounding electrode system / bonding quality honesty when true; critical loads / whole-home vs panel-only; utility / meter / outdoor vs indoor install location; generator / transfer switch / EV / solar / battery coexistence when true; permit + licensed electrician honesty when true; quote before install; whole-home surge product — not electrician call-first emergency, panel_upgrade, generator, battery_storage, ev_charger, solar, or HVAC emergency",
+      heroStyle: "quote-first whole-home surge LP — service-entrance-amps/main-breaker/existing-SPD-type/grounding-bonding/critical-loads/install-location/coexistence/permit chips when true, no bait flat $/panel or $/device, no fake same-day install, no scare lightning-fire copy, no inventing UL/NEC as Apex legal advice",
+      ctaStyle: "get a whole-home surge protection quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/panel as Apex benchmark", "bait flat $/device as Apex benchmark", "fake same-day install guarantees", "scare lightning-fire copy / fake emergency urgency", "competitor brand cloning", "Eaton as Apex product name", "Siemens as Apex product name", "Square D as Apex product name", "Leviton as Apex product name", "Intermatic as Apex product name", "fake 24/7", "firm price before service entrance amps/main breaker/existing SPD type/grounding bonding/critical loads/install location/coexistence/permit assessment", "claiming licensed electrician/permit when not true", "inventing UL/NEC/code as Apex legal advice", "impersonating electrician call-first emergency", "impersonating panel_upgrade", "impersonating generator", "impersonating battery_storage", "impersonating ev_charger", "impersonating solar", "impersonating hvac call-first emergency"],
+    },
+    cssVars: {
+      "--theme-primary": "#111827",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#eab308",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#111827",
+    },
+    trustBadges: ["Service entrance amperage + panel main breaker size assessed before firm price", "Existing surge SPD type (Type 1 vs Type 2 vs point-of-use) / already installed honesty when true", "Grounding electrode / bonding quality + critical loads / whole-home vs panel-only honesty when true", "Utility / meter / outdoor vs indoor install location + generator / transfer switch / EV / solar / battery coexistence when true", "Permit + licensed electrician honesty when true", "No bait flat $/panel or $/device — no fake same-day install — not electrician emergency, panel upgrade, generator, battery, EV charger, or solar"],
+    heroImages: [
+      {
+        src: "/niches/whole-home-surge.jpg",
+        alt: "Whole-home surge protector installed on a residential electrical panel — assess service entrance, SPD type, and grounding before a surge protection quote",
+        credit: "Wtshymanski on Wikimedia Commons (CC BY-SA 3.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Whole_House_Surge_Protector.jpg",
+        license: "cc-by",
+      },
+    ],
+  },
+
+
 
 
 };

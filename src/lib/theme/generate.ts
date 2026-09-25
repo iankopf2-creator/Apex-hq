@@ -207,6 +207,14 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  whole_home_surge: {
+    A: { heroEmphasis: "quote-first service entrance amperage + panel main breaker / existing SPD type (Type 1 vs Type 2 vs point-of-use) / grounding bonding / critical loads / install location / generator-EV-solar-battery coexistence / permit assess for whole-home surge protection", ctaVerb: "Get a whole-home surge quote" },
+    B: { heroEmphasis: "quote-first whole-home surge honesty before firm price — not electrician emergency, panel_upgrade, generator, battery_storage, ev_charger, solar, or hvac; no bait $/panel or $/device or fake same-day install; UL/NEC educational only", ctaVerb: "Request a whole-home surge quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
