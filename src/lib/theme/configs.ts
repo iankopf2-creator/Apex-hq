@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "smart_panel";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / smart_panel (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by";
 };
 
 export type NicheThemeConfig = {
@@ -1955,6 +1955,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+  smart_panel: {
+    niche: "smart_panel",
+    label: "Smart Panel",
+    palette: {
+      // Deep smart-grid charcoal/navy + cool circuit sky/cyan — #0c1222 + #38bdf8 — NOT transfer_switch #0f172a/#d97706, whole_home_surge #111827/#eab308, panel_upgrade #1e242b/#c17a3a, generator #0f172a/#f59e0b, battery_storage #0b1220/#2dd4bf, electrician yellow, solar gold
+      primary: "#0c1222",
+      primaryForeground: "#f8fafc",
+      accent: "#38bdf8",
+      accentForeground: "#0c1222",
+      background: "#f0f9ff",
+      foreground: "#0c1222",
+      muted: "#e0f2fe",
+      mutedForeground: "#0369a1",
+      border: "#bae6fd",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential smart electrical panel / circuit-level load management — existing main panel amperage + main breaker size when true; full panel replacement vs smart overlay / retrofit when true; circuit count / breaker map / load inventory when true; EV / solar / battery / generator / transfer switch / surge SPD coexistence when true; utility interconnection / demand response / TOU when true; Wi-Fi / app / monitoring honesty when true (no fake always-online); permit + licensed electrician honesty when true; quote before install; smart panel product — not panel_upgrade, transfer_switch, battery_storage, generator, whole_home_surge, ev_charger, solar, electrician call-first emergency, or HVAC emergency",
+      heroStyle: "quote-first smart panel LP — main-panel-amps/main-breaker/full-replacement-vs-smart-overlay-retrofit/circuit-count-breaker-map-load-inventory/EV-solar-battery-generator-transfer-surge-coexistence/utility-interconnect-demand-response-TOU/Wi-Fi-app-monitoring-honesty/permit chips when true, no bait flat $/circuit or $/panel, no fake same-day install, no scare blackout copy, no inventing NEC/UL as Apex legal advice",
+      ctaStyle: "get a smart panel quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/circuit as Apex benchmark", "bait flat $/panel as Apex benchmark", "fake same-day install guarantees", "scare blackout / fake emergency urgency copy", "competitor brand cloning", "Span as Apex product name", "Schneider as Apex product name", "Leviton as Apex product name", "Eaton as Apex product name", "Square D as Apex product name", "Siemens as Apex product name", "fake 24/7", "fake always online / always-connected monitoring", "firm price before main panel amps/main breaker/full replacement vs smart overlay retrofit/circuit count breaker map load inventory/EV solar battery generator transfer surge coexistence/utility interconnect demand response TOU/Wi-Fi app monitoring honesty/permit assessment", "claiming licensed electrician/permit when not true", "inventing NEC/UL/code as Apex legal advice", "impersonating panel_upgrade", "impersonating transfer_switch", "impersonating battery_storage", "impersonating generator", "impersonating whole_home_surge", "impersonating ev_charger", "impersonating solar", "impersonating electrician call-first emergency", "impersonating hvac call-first emergency"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c1222",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#38bdf8",
+      "--theme-bg": "#f0f9ff",
+      "--theme-fg": "#0c1222",
+    },
+    trustBadges: ["Main panel amperage + main breaker size assessed before firm price", "Full panel replacement vs smart overlay / retrofit honesty when true", "Circuit count / breaker map / load inventory honesty when true", "EV / solar / battery / generator / transfer switch / surge SPD coexistence when true", "Utility interconnection / demand response / TOU honesty when true", "Wi-Fi / app / monitoring honesty when true — no fake always-online", "Permit + licensed electrician honesty when true", "No bait flat $/circuit or $/panel — no fake same-day install — not panel upgrade, transfer switch, battery, generator, whole-home surge, EV charger, or solar"],
+    heroImages: [
+      {
+        src: "/niches/smart-panel.jpg",
+        alt: "Interior of a modern residential electrical control panel with circuit breakers, relays, and organized wiring — assess main panel amps, circuit map, and coexistence before a smart panel quote",
+        credit: "Shixart1985 on Wikimedia Commons (CC BY 2.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Inside_a_residential_electrical_control_panel.jpg",
+        license: "cc-by",
+      },
+    ],
+  },
 
 };
 
