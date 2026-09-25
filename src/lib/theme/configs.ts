@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "panel_upgrade";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / panel_upgrade (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by";
 };
 
 export type NicheThemeConfig = {
@@ -1954,6 +1954,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  panel_upgrade: {
+    niche: "panel_upgrade",
+    label: "Panel Upgrade",
+    palette: {
+      // Deep load-center steel + copper bus-bar — #1e242b + #c17a3a — NOT electrician yellow #facc15, battery #0b1220/#2dd4bf, ev_charger #0b1220/#22c55e, solar/generator #0f172a/#f59e0b, foundation #1c1917/#b45309
+      primary: "#1e242b",
+      primaryForeground: "#faf7f2",
+      accent: "#c17a3a",
+      accentForeground: "#1e242b",
+      background: "#faf7f2",
+      foreground: "#1e242b",
+      muted: "#efe8df",
+      mutedForeground: "#6b4f35",
+      border: "#e0d4c4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential electrical panel / load-center upgrade — existing panel amperage (100A vs 200A vs 400A when true); main breaker size + bus rating; available slots / tandem vs full-size; service entrance / meter / utility disconnect; NEC load calculation (EV charger / battery storage / solar / generator / HVAC when true); indoor vs outdoor / weather location; aluminum vs copper service when true; permit + licensed electrician honesty when true; quote before install; panel upgrade product — not electrician call-first emergency, battery_storage, ev_charger, solar, generator, or HVAC emergency",
+      heroStyle: "quote-first panel upgrade LP — amp/bus-rating/slots/service-entrance/NEC-load-calc/indoor-vs-outdoor/Al-vs-Cu-service/permit chips when true, no bait flat $/amp or $/slot, no fake same-day upgrade, no scare fire-risk copy, no inventing NEC as Apex legal advice",
+      ctaStyle: "get a panel upgrade quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/amp as Apex benchmark", "bait flat $/slot as Apex benchmark", "fake same-day upgrade guarantees", "scare fire-risk copy / fake emergency urgency", "competitor brand cloning", "Square D as Apex product name", "Siemens as Apex product name", "Eaton as Apex product name", "Cutler-Hammer as Apex product name", "fake 24/7", "firm price before amp/bus rating/slots/service entrance/NEC load calc/indoor vs outdoor/Al vs Cu service/permit assessment", "claiming licensed electrician/permit when not true", "inventing NEC/code as Apex legal advice", "impersonating electrician call-first emergency", "impersonating battery_storage", "impersonating ev_charger", "impersonating solar", "impersonating generator", "impersonating hvac call-first emergency"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e242b",
+      "--theme-primary-fg": "#faf7f2",
+      "--theme-accent": "#c17a3a",
+      "--theme-bg": "#faf7f2",
+      "--theme-fg": "#1e242b",
+    },
+    trustBadges: ["Existing panel amperage + main breaker size + bus rating assessed before firm price", "Available slots / tandem vs full-size + service entrance / meter / utility disconnect honesty when true", "NEC load calculation (EV / battery / solar / generator / HVAC when true) — educational only, not Apex legal advice", "Indoor vs outdoor / weather location + aluminum vs copper service honesty when true", "Permit + licensed electrician honesty when true", "No bait flat $/amp or $/slot — no fake same-day upgrade — not electrician emergency, battery, EV charger, solar, or generator"],
+    heroImages: [
+      {
+        src: "/niches/panel-upgrade.jpg",
+        alt: "Residential electrical panel / load center with cover removed — assess amps, bus rating, and loads before a panel upgrade quote",
+        credit: "davef3138 on Wikimedia Commons (CC BY 2.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:US_wiring_basement-panel.jpg",
+        license: "cc-by",
+      },
+    ],
+  },
+
 
 
 };

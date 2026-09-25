@@ -911,6 +911,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "panel_upgrade",
+    label: "Panel Upgrade",
+    defaultTagline: "Assess amps, bus rating, and loads before we quote a panel upgrade",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Service / panel upgrade quote", description: "Residential electrical panel / load-center upgrade quote after existing panel amperage (100A vs 200A vs 400A when true) + main breaker size + bus rating + available slots / tandem vs full-size + service entrance / meter / utility disconnect + NEC load calculation (EV charger / battery storage / solar / generator / HVAC when true) + indoor vs outdoor / weather location + aluminum vs copper service when true + permit + licensed electrician honesty when true assess — no bait flat $/amp or $/slot; no fake same-day upgrade; not electrician call-first emergency, battery_storage, ev_charger, solar, generator, or HVAC emergency", priceFrom: 0 },
+      { name: "100A-to-200A upgrade after site check", description: "Ampacity upgrade scope after panel amperage / bus rating / service entrance / load-calc site check when true — quote before install; no bait flat $/amp", priceFrom: 0 },
+      { name: "Load-calc / EV-solar-battery-ready panel review", description: "Panel capacity review for EV charger / battery storage / solar / generator / HVAC loads when those loads are true — NEC load calc educational only (not Apex legal advice); quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Existing panel amperage + main breaker size + bus rating assessed before firm price", "Available slots / tandem vs full-size + service entrance / meter / utility disconnect honesty when true", "NEC load calculation (EV / battery / solar / generator / HVAC when true) — educational only, not Apex legal advice", "Indoor vs outdoor / weather location + aluminum vs copper service honesty when true", "Permit + licensed electrician honesty when true", "No bait flat $/amp or $/slot — no fake same-day upgrade — not electrician emergency, battery, EV charger, solar, or generator"],
+    ctaLabel: "Get a panel upgrade quote",
+    accentHint: "panel-upgrade-steel-copper",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
