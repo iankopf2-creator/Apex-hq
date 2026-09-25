@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "geothermal";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / geothermal (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by-sa";
 };
 
 export type NicheThemeConfig = {
@@ -1951,6 +1951,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
         license: "unsplash",
+      },
+    ],
+  },
+
+
+  geothermal: {
+    niche: "geothermal",
+    label: "Geothermal",
+    palette: {
+      // Deep earth/ground-loop charcoal-green + warm geothermal copper/amber — #14261c + #c9782a — NOT heat_pump #0c1929/#f43f5e, mini_split #0f3d3e/#5eead4, furnace #1a1210/#fb923c, boiler #1c1410/#ea580c, solar #0f172a/#f59e0b, generator #0f172a/#f59e0b, insulation #6a5f56/#e0b8bc, epoxy #0c0a09/#0d9488, foundation #1c1917/#b45309, hvac sky
+      primary: "#14261c",
+      primaryForeground: "#f4f7f5",
+      accent: "#c9782a",
+      accentForeground: "#1a1508",
+      background: "#f5f7f5",
+      foreground: "#14261c",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential ground-source geothermal install/replace — home size/heated+cooled sqft + climate zone / soil & geology suitability / lot space for ground loop (horizontal vs vertical bore) / existing HVAC type (forced-air ducts vs hydronic) / open-loop vs closed-loop vs pond when true / drilling access / utility rebates educational only (no guarantee) / electrical panel capacity / ductwork condition / permit + licensed geothermal/HVAC contractor honesty when true; quote before install; geothermal product — not air-source heat_pump, mini_split, furnace, boiler, hvac call-first emergency, solar, insulation, electrician, plumber, or generator",
+      heroStyle: "quote-first geothermal LP — home-sqft/climate-zone/soil-geology/lot-space-horizontal-vs-vertical-bore/existing-HVAC-ducts-vs-hydronic/open-closed-pond-loop/drilling-access/utility-rebates-educational/electrical-panel/ductwork/permit chips when true, no bait flat $/ton or $/sqft or $/loop, no fake same-day install, no scare copy",
+      ctaStyle: "get a geothermal quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/ton as Apex benchmark", "bait flat $/sqft as Apex benchmark", "bait flat $/loop as Apex benchmark", "fake same-day install guarantees", "scare copy / fake emergency urgency", "competitor brand cloning", "fake 24/7", "firm price before home size/heated+cooled sqft/climate zone/soil & geology/lot space for ground loop (horizontal vs vertical)/existing HVAC type/open-loop vs closed-loop vs pond/drilling access/electrical panel capacity/ductwork condition/permit assessment", "claiming licensed geothermal/HVAC contractor/permit when not true", "inventing rebate amounts or guaranteeing rebates", "impersonating heat_pump", "impersonating mini_split", "impersonating furnace", "impersonating boiler", "impersonating hvac call-first emergency", "impersonating solar", "impersonating insulation", "impersonating electrician", "impersonating plumber", "impersonating generator", "WaterFurnace as Apex product name", "ClimateMaster as Apex product name", "Bosch geothermal as Apex product name"],
+    },
+    cssVars: {
+      "--theme-primary": "#14261c",
+      "--theme-primary-fg": "#f4f7f5",
+      "--theme-accent": "#c9782a",
+      "--theme-bg": "#f5f7f5",
+      "--theme-fg": "#14261c",
+    },
+    trustBadges: ["Home size/heated+cooled sqft + climate zone assessed before firm price", "Soil/geology + lot space for horizontal vs vertical ground loop honesty", "Existing HVAC (ducts vs hydronic) + open/closed/pond loop honesty when true", "Drilling access + electrical panel capacity + ductwork condition honesty", "Utility rebates educational only (no guarantee) + permit + licensed geothermal/HVAC contractor honesty when true", "No bait flat $/ton or $/sqft or $/loop — no fake same-day install — not air-source heat pump or HVAC emergency"],
+    heroImages: [
+      {
+        src: "/niches/geothermal.jpg",
+        alt: "Residential geothermal heat pump equipment — assess-first ground-source reference",
+        credit: "Dr Tzeferis Petros on Wikimedia Commons (CC BY-SA 4.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Geothermal_heat_pump.JPG",
+        license: "cc-by-sa",
       },
     ],
   },

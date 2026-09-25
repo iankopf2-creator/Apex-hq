@@ -911,6 +911,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "geothermal",
+    label: "Geothermal",
+    defaultTagline: "Assess home size, soil, and ground-loop layout before we quote geothermal",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Geothermal install / replace", description: "Residential ground-source geothermal install or replacement after home size/heated+cooled sqft + climate zone / soil & geology suitability / lot space for ground loop (horizontal vs vertical bore) / existing HVAC type (forced-air ducts vs hydronic) / open-loop vs closed-loop vs pond when true / drilling access / utility rebates educational only (no guarantee) / electrical panel capacity / ductwork condition / permit + licensed geothermal/HVAC contractor honesty when true assess — no bait flat $/ton or $/sqft or $/loop; no fake same-day install guarantees; not air-source heat_pump, mini_split, furnace, boiler, hvac call-first emergency, solar, insulation, electrician, plumber, or generator", priceFrom: 0 },
+      { name: "Ground-loop design quote", description: "Loop design after soil/geology/lot-space/horizontal-vs-vertical/open-closed-pond assess — quote before drill; no bait flat $/loop", priceFrom: 0 },
+      { name: "Geothermal service / repair quote", description: "Service after equipment age/loop type/ducts-vs-hydronic/panel capacity assess — quote before parts/labor; no scare emergency copy (hvac owns call-first emergency)", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/heated+cooled sqft + climate zone assessed before firm price", "Soil/geology + lot space for horizontal vs vertical ground loop honesty", "Existing HVAC (ducts vs hydronic) + open/closed/pond loop honesty when true", "Drilling access + electrical panel + ductwork honesty", "Utility rebates educational only (no guarantee) + permit + licensed geothermal/HVAC contractor when true", "No bait flat $/ton or $/sqft or $/loop — no fake same-day install — not air-source heat pump, mini-split, furnace, boiler, HVAC emergency, solar, insulation, electrician, plumber, or generator"],
+    ctaLabel: "Get a geothermal quote",
+    accentHint: "geothermal-earth-copper-amber",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
