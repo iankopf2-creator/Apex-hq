@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  security_cameras: 550,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -121,6 +122,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
+  security_cameras:
+    "Add a quote-first security cameras page (commercial + residential CCTV / security camera install + basic configure; camera count + indoor vs outdoor/weather rating when true; wired PoE vs wireless/Wi-Fi when true; NVR/DVR vs cloud when true; night vision / resolution claims only when true; mounting height/access/ladder when true; network/bandwidth when true; existing alarm/panel integration honesty when true — no inventing UL/monitoring contracts as Apex product; permit/HOA educational only; licensed low-voltage/electrician honesty when required by locale — no Apex legal advice; assess before firm price) so callers get a real quote — not bait flat $/camera or fake same-day whole-property installs; no scare crime copy; distinct from locksmith, electrician, smart_panel, led_lighting, garage, and handyman.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

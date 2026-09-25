@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "security_cameras";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / security_cameras (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc0";
 };
 
 export type NicheThemeConfig = {
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  security_cameras: {
+    niche: "security_cameras",
+    label: "Security Cameras",
+    palette: {
+      // Deep security charcoal/navy + cool surveillance cyan — #0a0f1a + #22d3ee — NOT smart_panel #0c1222/#38bdf8, battery_storage #0b1220/#2dd4bf, led_lighting #10141c/#facc15, epoxy #0c0a09/#0d9488, transfer_switch #0f172a/#d97706, whole_home_surge #111827/#eab308, panel_upgrade #1e242b/#c17a3a, generator #0f172a/#f59e0b, solar gold
+      primary: "#0a0f1a",
+      primaryForeground: "#f8fafc",
+      accent: "#22d3ee",
+      accentForeground: "#0a0f1a",
+      background: "#ecfeff",
+      foreground: "#0a0f1a",
+      muted: "#cffafe",
+      mutedForeground: "#0e7490",
+      border: "#a5f3fc",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first commercial + residential security camera / CCTV system install + basic configure — camera count + indoor vs outdoor/weather rating when true; wired PoE vs wireless/Wi-Fi when true; NVR/DVR vs cloud when true; night vision / resolution claims only when true; mounting height/access/ladder when true; network/bandwidth when true; existing alarm/panel integration honesty when true (no inventing UL/monitoring contracts as Apex product); permit/HOA educational only; licensed low-voltage/electrician honesty when required by locale — no Apex legal advice; quote before install; security cameras product — not locksmith, electrician call-first emergency, smart_panel, led_lighting, garage, or handyman",
+      heroStyle: "quote-first security cameras LP — camera-count/indoor-outdoor-weather/PoE-vs-wireless/NVR-DVR-vs-cloud/night-vision-resolution-when-true/mount-height-access/network-bandwidth/alarm-panel-integration-honesty/permit-HOA-educational/licensed-low-voltage chips when true, no bait flat $/camera, no fake same-day whole-property installs, no scare crime copy, no inventing UL/monitoring contracts as Apex product",
+      ctaStyle: "get a security camera quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/camera as Apex benchmark", "fake same-day whole-property install guarantees", "scare crime / fake urgency copy", "competitor brand cloning", "Ring as Apex product name", "Nest as Apex product name", "Hikvision as Apex product name", "Dahua as Apex product name", "Lorex as Apex product name", "Arlo as Apex product name", "ADT as Apex product name", "fake 24/7", "inventing UL/monitoring contracts as Apex product", "firm price before camera count/indoor outdoor weather rating/PoE vs wireless/NVR DVR vs cloud/night vision resolution when true/mounting height access ladder/network bandwidth/alarm panel integration honesty/permit HOA educational/licensed low-voltage assessment", "claiming licensed low-voltage/electrician/permit when not true", "inventing UL/monitoring/code as Apex legal advice", "impersonating locksmith", "impersonating electrician call-first emergency", "impersonating smart_panel", "impersonating led_lighting", "impersonating garage", "impersonating handyman", "impersonating alarm monitoring company"],
+    },
+    cssVars: {
+      "--theme-primary": "#0a0f1a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#22d3ee",
+      "--theme-bg": "#ecfeff",
+      "--theme-fg": "#0a0f1a",
+    },
+    trustBadges: ["Camera count + indoor vs outdoor / weather rating assessed before firm price", "Wired PoE vs wireless/Wi-Fi honesty when true", "NVR/DVR vs cloud + night vision / resolution claims only when true", "Mounting height / access / ladder + network / bandwidth honesty when true", "Existing alarm/panel integration honesty when true — no invented UL/monitoring contracts", "Permit/HOA educational only + licensed low-voltage/electrician honesty when required by locale", "No bait flat $/camera — no fake same-day whole-property installs — no scare crime copy — not locksmith, electrician emergency, smart panel, LED lighting, garage, or handyman"],
+    heroImages: [
+      {
+        src: "/niches/security-cameras.jpg",
+        alt: "Outdoor surveillance / CCTV camera mounted on a building — assess camera count, indoor vs outdoor rating, and access before a security camera quote",
+        credit: "Neslihan_Turan on Wikimedia Commons (CC0 1.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Surveillance_camera.jpg",
+        license: "cc0",
+      },
+    ],
+  },
+
 
 
 };

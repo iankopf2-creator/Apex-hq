@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "security_cameras",
+    label: "Security Cameras",
+    defaultTagline: "Commercial + residential security camera / CCTV install — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Security camera quote", description: "Commercial + residential security camera / CCTV system install + basic configure quote after camera count + indoor vs outdoor/weather rating when true + wired PoE vs wireless/Wi-Fi when true + NVR/DVR vs cloud when true + night vision / resolution claims only when true + mounting height/access/ladder when true + network/bandwidth when true + existing alarm/panel integration honesty when true (no inventing UL/monitoring contracts as Apex product) + permit/HOA educational only + licensed low-voltage/electrician honesty when required by locale (no Apex legal advice) assess — no bait flat $/camera; no fake same-day whole-property installs; no scare crime copy; not locksmith, electrician call-first emergency, smart_panel, led_lighting, garage, or handyman", priceFrom: 0 },
+      { name: "Wired PoE vs wireless review", description: "Wired PoE vs wireless/Wi-Fi scope after camera count and indoor/outdoor weather-rating check when true — network/bandwidth honesty when true; quote before install", priceFrom: 0 },
+      { name: "NVR / DVR vs cloud + integration option", description: "NVR/DVR vs cloud recording + existing alarm/panel integration honesty when true (no inventing UL/monitoring contracts as Apex product) after site assess — permit/HOA educational only; licensed low-voltage/electrician honesty when required by locale; no bait flat $/camera", priceFrom: 0 },
+    ],
+    heroHints: ["Camera count + indoor vs outdoor / weather rating assessed before firm price", "Wired PoE vs wireless/Wi-Fi honesty when true", "NVR/DVR vs cloud + night vision / resolution claims only when true", "Mounting height / access / ladder + network / bandwidth honesty when true", "Existing alarm/panel integration honesty when true — no invented UL/monitoring contracts", "Permit/HOA educational only + licensed low-voltage/electrician honesty when required by locale", "No bait flat $/camera — no fake same-day whole-property installs — no scare crime copy — not locksmith, electrician emergency, smart panel, LED lighting, garage, or handyman"],
+    ctaLabel: "Get a security camera quote",
+    accentHint: "security-charcoal-surveillance-cyan",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

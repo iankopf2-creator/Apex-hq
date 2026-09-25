@@ -206,6 +206,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/prep/moisture/existing-coating/access assess for garage & commercial epoxy", ctaVerb: "Get an epoxy flooring quote" },
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
+  security_cameras: {
+    A: { heroEmphasis: "quote-first camera count + indoor/outdoor weather rating + PoE vs wireless + NVR/DVR vs cloud + night vision/resolution when true + mount height/access + network/bandwidth + alarm/panel integration honesty + permit/HOA educational + licensed low-voltage when required assess for security cameras / CCTV", ctaVerb: "Get a security camera quote" },
+    B: { heroEmphasis: "quote-first security cameras honesty before firm price — not locksmith, electrician emergency, smart_panel, led_lighting, garage, or handyman; no bait $/camera or fake same-day whole-property install; no scare crime copy; no Ring/Nest/Hikvision/Dahua/Lorex/Arlo/ADT as Apex product names", ctaVerb: "Request a security camera quote" },
+  },
 
 };
 
