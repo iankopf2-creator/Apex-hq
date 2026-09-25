@@ -225,6 +225,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first backup power assess before firm price honesty", ctaVerb: "Request a backup power assess quote" },
   },
 
+  ev_charger: {
+    A: { heroEmphasis: "quote-first assess panel/amperage/garage-driveway/hardwired-NEMA/permit-HOA", ctaVerb: "Get an EV charger install quote" },
+    B: { heroEmphasis: "quote-first site/load evaluation before firm price honesty", ctaVerb: "Request an EV charger site quote" },
+  },
+
 
 
 };

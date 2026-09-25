@@ -45,6 +45,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   chimney: 285,
   window_replacement: 650,
   generator: 1200,
+  ev_charger: 550,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -130,6 +131,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first window replacement page (measure/replace/energy upgrade + count/size/stories/access/existing-vs-new/vinyl-vs-wood-vs-fiberglass-vs-aluminum/energy-rating assess before firm price; licensed honesty when true) so callers get a real quote — not bait flat $/window or fake same-day; distinct from window cleaning.",
   generator:
     "Add a quote-first generator / standby backup power page (load/fuel NG-LP-diesel/automatic transfer switch/pad-setback/permit-HOA assess before firm price; licensed electrician honesty when true) so callers get a real quote — not bait flat $/kW or fake same-day install; distinct from solar-only and portable camping power stations.",
+  ev_charger:
+    "Add a quote-first EV charger / Level 2 home EVSE page (panel capacity/amperage 30–60A typical L2/garage-vs-driveway/hardwired-vs-NEMA/permit-HOA/load calculation assess before firm price; licensed electrician honesty when true) so callers get a real quote — not bait flat $/charger or fake same-day install; distinct from solar-only and standby generator.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
