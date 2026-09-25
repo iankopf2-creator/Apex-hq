@@ -911,6 +911,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "transfer_switch",
+    label: "Transfer Switch",
+    defaultTagline: "Assess main panel amps, ATS vs MTS, and critical loads before we quote a transfer switch",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Transfer switch quote", description: "Residential generator transfer switch / ATS / MTS quote after main panel amperage + main breaker size + generator type (portable vs standby) when true + ATS (automatic) vs MTS (manual) when true + critical-loads panel vs whole-home transfer + utility interlocking / breakers when true + existing generator / ATS / interlock already installed honesty when true + outdoor pad / clearance / fuel type (natural gas / propane / diesel) when true + EV / solar / battery / surge SPD coexistence when true + permit + licensed electrician honesty when true assess — no bait flat $/amp or $/switch; no fake same-day install; not generator, whole_home_surge, panel_upgrade, battery_storage, ev_charger, solar, electrician call-first emergency, or HVAC emergency", priceFrom: 0 },
+      { name: "ATS / MTS install after site check", description: "Automatic (ATS) or manual (MTS) transfer switch scope after main panel / generator type / critical-loads vs whole-home / interlock site check when true — quote before install; no bait flat $/switch", priceFrom: 0 },
+      { name: "Critical loads vs whole-home review", description: "Critical-loads subpanel vs whole-home transfer review when generator size / panel capacity / coexistence (EV / solar / battery / surge) are true — NEC/UL educational only (not Apex legal advice); quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Main panel amperage + main breaker size assessed before firm price", "Generator type (portable vs standby) + ATS vs MTS honesty when true", "Critical-loads panel vs whole-home transfer + utility interlocking / breakers honesty when true", "Existing generator / ATS / interlock already installed honesty when true", "Outdoor pad / clearance / fuel type + EV / solar / battery / surge SPD coexistence when true", "Permit + licensed electrician honesty when true", "No bait flat $/amp or $/switch — no fake same-day install — not generator, whole-home surge, panel upgrade, battery, EV charger, or solar"],
+    ctaLabel: "Get a transfer switch quote",
+    accentHint: "transfer-switch-charcoal-copper",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
