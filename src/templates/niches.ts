@@ -911,6 +911,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "smart_panel",
+    label: "Smart Panel",
+    defaultTagline: "Residential smart panel / circuit-level load management — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Smart panel quote", description: "Residential smart electrical panel / circuit-level load management quote after existing main panel amperage + main breaker size + full panel replacement vs smart overlay / retrofit when true + circuit count / breaker map / load inventory when true + EV / solar / battery / generator / transfer switch / surge SPD coexistence when true + utility interconnection / demand response / TOU when true + Wi-Fi / app / monitoring honesty when true (no fake always-online) + permit + licensed electrician honesty when true assess — no bait flat $/circuit or $/panel; no fake same-day install; not panel_upgrade, transfer_switch, battery_storage, generator, whole_home_surge, ev_charger, solar, electrician call-first emergency, or HVAC emergency", priceFrom: 0 },
+      { name: "Circuit map / load inventory review", description: "Circuit count / breaker map / load inventory review when coexistence (EV / solar / battery / generator / transfer / surge) and utility TOU / demand response are true — NEC/UL educational only (not Apex legal advice); quote before install", priceFrom: 0 },
+      { name: "Smart overlay vs full panel replacement", description: "Full panel replacement vs smart overlay / retrofit scope after main panel / circuit map site check when true — quote before install; no bait flat $/panel", priceFrom: 0 },
+    ],
+    heroHints: ["Main panel amperage + main breaker size assessed before firm price", "Full panel replacement vs smart overlay / retrofit honesty when true", "Circuit count / breaker map / load inventory honesty when true", "EV / solar / battery / generator / transfer switch / surge SPD coexistence when true", "Utility interconnection / demand response / TOU + Wi-Fi / app / monitoring honesty when true (no fake always-online)", "Permit + licensed electrician honesty when true", "No bait flat $/circuit or $/panel — no fake same-day install — not panel upgrade, transfer switch, battery, generator, whole-home surge, EV charger, or solar"],
+    ctaLabel: "Get a smart panel quote",
+    accentHint: "smart-grid-charcoal-circuit-sky",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

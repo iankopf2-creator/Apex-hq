@@ -42,6 +42,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  smart_panel: 750,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -121,6 +122,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
+  smart_panel:
+    "Add a quote-first smart panel page (main panel amperage + main breaker size; full panel replacement vs smart overlay / retrofit when true; circuit count / breaker map / load inventory when true; EV / solar / battery / generator / transfer switch / surge SPD coexistence when true; utility interconnection / demand response / TOU when true; Wi-Fi / app / monitoring honesty when true — no fake always-online; permit + licensed electrician honesty when true; assess before firm price) so callers get a real quote — not bait flat $/circuit or $/panel or fake same-day install; distinct from panel_upgrade, transfer_switch, battery_storage, generator, whole_home_surge, ev_charger, solar, and electrician call-first emergency.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

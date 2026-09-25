@@ -206,6 +206,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first sqft/prep/moisture/existing-coating/access assess for garage & commercial epoxy", ctaVerb: "Get an epoxy flooring quote" },
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
+  smart_panel: {
+    A: { heroEmphasis: "quote-first main panel amperage + main breaker / full replacement vs smart overlay retrofit / circuit count breaker map load inventory / EV-solar-battery-generator-transfer-surge coexistence / utility interconnect demand response TOU / Wi-Fi app monitoring honesty / permit assess for smart panel", ctaVerb: "Get a smart panel quote" },
+    B: { heroEmphasis: "quote-first smart panel honesty before firm price — not panel_upgrade, transfer_switch, battery_storage, generator, whole_home_surge, ev_charger, solar, or electrician emergency; no bait $/circuit or $/panel or fake same-day install; no fake always-online; NEC/UL educational only", ctaVerb: "Request a smart panel quote" },
+  },
 
 };
 
