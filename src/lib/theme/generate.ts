@@ -498,6 +498,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first boiler honesty before firm price — not furnace, heat_pump, mini_split, hvac emergency, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, or duct_cleaning; no bait $/BTU or $/sqft or $/boiler or fake same-day whole-home heat", ctaVerb: "Request a boiler quote" },
   },
 
+
+  geothermal: {
+    A: { heroEmphasis: "quote-first home size/heated+cooled sqft + climate zone / soil & geology / lot space horizontal vs vertical bore / existing HVAC ducts vs hydronic / open-closed-pond loop / drilling access / electrical panel / ductwork / permit assess for residential ground-source geothermal", ctaVerb: "Get a geothermal quote" },
+    B: { heroEmphasis: "quote-first geothermal honesty before firm price — not heat_pump, mini_split, furnace, boiler, hvac emergency, solar, insulation, electrician, plumber, or generator; no bait $/ton or $/sqft or $/loop or fake same-day install; rebates educational only", ctaVerb: "Request a geothermal quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
