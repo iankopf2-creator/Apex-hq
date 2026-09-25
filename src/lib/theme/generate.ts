@@ -207,6 +207,14 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  transfer_switch: {
+    A: { heroEmphasis: "quote-first main panel amperage + main breaker / generator type (portable vs standby) / ATS vs MTS / critical-loads vs whole-home / utility interlock / existing generator ATS interlock / outdoor pad clearance fuel / EV-solar-battery-surge coexistence / permit assess for transfer switch", ctaVerb: "Get a transfer switch quote" },
+    B: { heroEmphasis: "quote-first transfer switch honesty before firm price — not generator, whole_home_surge, panel_upgrade, battery_storage, ev_charger, solar, or electrician emergency; no bait $/amp or $/switch or fake same-day install; NEC/UL educational only", ctaVerb: "Request a transfer switch quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "transfer_switch";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / transfer_switch (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by";
 };
 
 export type NicheThemeConfig = {
@@ -1954,6 +1954,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  transfer_switch: {
+    niche: "transfer_switch",
+    label: "Transfer Switch",
+    palette: {
+      // Deep utility/electrical charcoal + safety copper/bronze — #0f172a + #d97706 — NOT whole_home_surge #111827/#eab308, panel_upgrade #1e242b/#c17a3a, generator #0f172a/#f59e0b, battery_storage #0b1220/#2dd4bf, electrician yellow, solar gold
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#d97706",
+      accentForeground: "#0f172a",
+      background: "#fffbeb",
+      foreground: "#0f172a",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential generator transfer switch / ATS / MTS — main panel amperage + main breaker size when true; generator type (portable vs standby) when true; ATS (automatic) vs MTS (manual) when true; critical-loads panel vs whole-home transfer when true; utility interlocking / breakers when true; existing generator / ATS / interlock already installed honesty when true; outdoor pad / clearance / fuel type (natural gas / propane / diesel) when true; EV / solar / battery / surge SPD coexistence when true; permit + licensed electrician honesty when true; quote before install; transfer switch product — not generator, whole_home_surge, panel_upgrade, battery_storage, ev_charger, solar, electrician call-first emergency, or HVAC emergency",
+      heroStyle: "quote-first transfer switch LP — main-panel-amps/main-breaker/generator-type-portable-vs-standby/ATS-vs-MTS/critical-loads-vs-whole-home/utility-interlock/existing-generator-ATS-interlock/outdoor-pad-clearance-fuel/EV-solar-battery-surge-coexistence/permit chips when true, no bait flat $/amp or $/switch, no fake same-day install, no scare outage copy, no inventing NEC/UL as Apex legal advice",
+      ctaStyle: "get a transfer switch quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/amp as Apex benchmark", "bait flat $/switch as Apex benchmark", "fake same-day install guarantees", "scare outage / fake emergency urgency copy", "competitor brand cloning", "Generac as Apex product name", "Kohler as Apex product name", "Briggs as Apex product name", "Reliance as Apex product name", "Siemens as Apex product name", "Eaton as Apex product name", "fake 24/7", "firm price before main panel amps/main breaker/generator type/ATS vs MTS/critical-loads vs whole-home/utility interlock/existing generator ATS interlock/outdoor pad clearance fuel/EV solar battery surge coexistence/permit assessment", "claiming licensed electrician/permit when not true", "inventing NEC/UL/code as Apex legal advice", "impersonating generator", "impersonating whole_home_surge", "impersonating panel_upgrade", "impersonating battery_storage", "impersonating ev_charger", "impersonating solar", "impersonating electrician call-first emergency", "impersonating hvac call-first emergency"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fffbeb",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Main panel amperage + main breaker size assessed before firm price", "Generator type (portable vs standby) + ATS vs MTS honesty when true", "Critical-loads panel vs whole-home transfer + utility interlocking / breakers honesty when true", "Existing generator / ATS / interlock already installed honesty when true", "Outdoor pad / clearance / fuel type (NG / propane / diesel) + EV / solar / battery / surge SPD coexistence when true", "Permit + licensed electrician honesty when true", "No bait flat $/amp or $/switch — no fake same-day install — not generator, whole-home surge, panel upgrade, battery, EV charger, or solar"],
+    heroImages: [
+      {
+        src: "/niches/transfer-switch.jpg",
+        alt: "Residential generator transfer switch panel with open door showing breakers and transfer mechanism — assess main panel amps, ATS vs MTS, and critical loads before a transfer switch quote",
+        credit: "Kinsleyanalytics on Wikimedia Commons (CC BY-SA 3.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:Intelligent_Transfer_Switch.jpg",
+        license: "cc-by",
+      },
+    ],
+  },
+
 
 
 };
