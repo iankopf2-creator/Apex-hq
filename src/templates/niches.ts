@@ -909,6 +909,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get an epoxy flooring quote",
     accentHint: "epoxy-charcoal-resin-teal",
   },
+  {
+    id: "boiler",
+    label: "Boiler",
+    defaultTagline: "Assess home size, fuel type, and hydronic layout before we quote a boiler",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Boiler install / replace", description: "Residential hydronic/steam boiler install or replacement after home size/heated sqft + climate zone / existing boiler age+fuel (gas/oil/propane/electric) + type (hot-water hydronic vs steam) / AFUE when true / radiators vs baseboard vs radiant loops / zone valves / circulator pumps / expansion tank + air elimination / venting+combustion air / chimney liner when true / electrical or gas/oil line / thermostat + outdoor reset when true / permit + licensed HVAC/plumbing-boiler contractor honesty when true assess — no bait flat $/BTU or $/sqft or $/boiler; no fake same-day whole-home heat guarantees; not forced-air furnace, heat_pump, mini_split, hvac call-first emergency, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, or duct_cleaning", priceFrom: 0 },
+      { name: "Boiler repair quote", description: "Repair after age/fuel/type/AFUE/circulator/zone-valve/expansion-tank/venting assess — quote before parts/labor; no scare emergency copy (hvac owns call-first emergency)", priceFrom: 0 },
+      { name: "Boiler tune-up / maintenance", description: "Service after heat-exchanger/burner/circulator/expansion-tank/air-elimination inspect — firm price after assess; no bait flat $/BTU", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/heated sqft + climate zone assessed before firm price", "Existing boiler age+fuel + hydronic vs steam + AFUE honesty when true", "Radiators/baseboard/radiant + zone valves/circulators + expansion tank honesty", "Venting/combustion air/chimney liner + electrical or fuel line honesty", "Thermostat/outdoor reset + permit + licensed HVAC/plumbing-boiler contractor when true", "No bait flat $/BTU or $/sqft or $/boiler — no fake same-day whole-home heat — not furnace, heat pump, mini-split, HVAC emergency, water heater, tankless, generator, insulation, electrician, plumber, solar, or duct cleaning"],
+    ctaLabel: "Get a boiler quote",
+    accentHint: "boiler-cast-iron-copper",
+  },
 
 
 ];

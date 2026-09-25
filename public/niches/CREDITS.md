@@ -49,3 +49,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Foundation repair | `foundation-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581094794329-c8112a89af12 |
 | Solar | `solar.jpg` | American Public Power Association | https://unsplash.com/photos/513dBrMJ_5w |
 | Epoxy flooring | `epoxy-flooring.jpg` | Shahabudin Ibragimov | https://unsplash.com/photos/seEumFkina8 |
+| Boiler | `boiler.jpg` | Audetat (Wikimedia Commons, CC BY-SA 3.0) | https://commons.wikimedia.org/wiki/File:ModCon_boiler_system.jpg |

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "boiler";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / boiler (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -49,7 +49,7 @@ export type ThemeHeroImage = {
   alt: string;
   credit: string;
   sourceUrl: string;
-  license: "unsplash";
+  license: "unsplash" | "cc-by-sa";
 };
 
 export type NicheThemeConfig = {
@@ -1951,6 +1951,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         credit: "Shahabudin Ibragimov on Unsplash",
         sourceUrl: "https://unsplash.com/photos/seEumFkina8",
         license: "unsplash",
+      },
+    ],
+  },
+
+  boiler: {
+    niche: "boiler",
+    label: "Boiler",
+    palette: {
+      // Cast-iron boiler brown-charcoal + hydronic copper-orange — #1c1410 + #ea580c — NOT furnace #1a1210/#fb923c, heat_pump #0c1929/#f43f5e, mini_split #0f3d3e/#5eead4, water_heater #283548/#fbbf24, tankless, generator #0f172a/#f59e0b, chimney, epoxy #0c0a09/#0d9488, foundation #1c1917/#b45309
+      primary: "#1c1410",
+      primaryForeground: "#fafaf9",
+      accent: "#ea580c",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1410",
+      muted: "#ffedd5",
+      mutedForeground: "#9a3412",
+      border: "#fed7aa",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first residential hydronic/steam boiler install/replace/repair — home size/heated sqft + climate zone / existing boiler age+fuel (gas/oil/propane/electric) + type (hot-water hydronic vs steam) / AFUE when true / radiators vs baseboard vs radiant loops / zone valves / circulator pumps / expansion tank + air elimination / venting+combustion air / chimney liner when true / electrical or gas/oil line / thermostat + outdoor reset when true / permit + licensed HVAC/plumbing-boiler contractor honesty when true; quote before install; boiler product — not forced-air furnace, heat_pump, mini_split, hvac call-first emergency, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, or duct_cleaning",
+      heroStyle: "quote-first boiler LP — home-sqft/climate-zone/existing-boiler-age-fuel-type/AFUE/radiators-baseboard-radiant/zone-valves-circulators/expansion-tank/venting-combustion-air-chimney-liner/electrical-or-fuel-line/thermostat-outdoor-reset/permit chips when true, no bait flat $/BTU or $/sqft or $/boiler, no fake same-day whole-home heat, no scare emergency copy",
+      ctaStyle: "get a boiler quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/BTU as Apex benchmark", "bait flat $/sqft as Apex benchmark", "bait flat $/boiler as Apex benchmark", "fake same-day whole-home heat guarantees", "scare copy / fake emergency urgency", "competitor brand cloning", "fake 24/7", "firm price before home size/heated sqft/climate zone/existing boiler age+fuel+type/AFUE/radiators vs baseboard vs radiant/zone valves/circulator pumps/expansion tank/air elimination/venting+combustion air/chimney liner/electrical or gas/oil line/thermostat/outdoor reset/permit assessment", "claiming licensed HVAC/plumbing-boiler contractor/permit when not true", "claiming AFUE when not true", "impersonating furnace", "impersonating heat_pump", "impersonating mini_split", "impersonating hvac call-first emergency", "impersonating water_heater", "impersonating tankless_water_heater", "impersonating generator", "impersonating insulation", "impersonating electrician", "impersonating plumber", "impersonating solar", "impersonating duct_cleaning", "Weil-McLain as Apex product name", "Buderus as Apex product name", "Navien boiler as Apex product name"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1410",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#ea580c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1410",
+    },
+    trustBadges: ["Home size/heated sqft + climate zone assessed before firm price", "Existing boiler age+fuel (gas/oil/propane/electric) + hydronic vs steam + AFUE honesty when true", "Radiators/baseboard/radiant + zone valves/circulators + expansion tank honesty", "Venting/combustion air/chimney liner + electrical or fuel line honesty", "Thermostat/outdoor reset + permit + licensed HVAC/plumbing-boiler contractor honesty when true", "No bait flat $/BTU or $/sqft or $/boiler — no fake same-day whole-home heat — not furnace or HVAC emergency"],
+    heroImages: [
+      {
+        src: "/niches/boiler.jpg",
+        alt: "Residential condensing boiler installation with piping serving radiant floors and cast-iron radiators — assess-first hydronic reference",
+        credit: "Audetat on Wikimedia Commons (CC BY-SA 3.0)",
+        sourceUrl: "https://commons.wikimedia.org/wiki/File:ModCon_boiler_system.jpg",
+        license: "cc-by-sa",
       },
     ],
   },

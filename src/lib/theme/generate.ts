@@ -207,6 +207,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  boiler: {
+    A: { heroEmphasis: "quote-first home size/heated sqft + climate zone / existing boiler age+fuel+type / AFUE / radiators-baseboard-radiant / zone valves+circulators / expansion tank / venting+combustion air+chimney liner / electrical or fuel line / thermostat+outdoor reset / permit assess for residential hydronic/steam boiler", ctaVerb: "Get a boiler quote" },
+    B: { heroEmphasis: "quote-first boiler honesty before firm price — not furnace, heat_pump, mini_split, hvac emergency, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, or duct_cleaning; no bait $/BTU or $/sqft or $/boiler or fake same-day whole-home heat", ctaVerb: "Request a boiler quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
