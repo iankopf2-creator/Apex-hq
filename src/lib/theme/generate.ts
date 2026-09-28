@@ -241,6 +241,13 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+
+  irrigation: {
+    A: { heroEmphasis: "quote-first assess lot/zone-count/head-types/controller-age/backflow/water-pressure/dig-access/winterize-vs-repair-vs-new/HOA-permit", ctaVerb: "Get an irrigation quote" },
+    B: { heroEmphasis: "quote-first sprinkler system evaluation before firm price honesty", ctaVerb: "Request an irrigation assess quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

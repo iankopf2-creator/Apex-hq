@@ -1037,6 +1037,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
 
 
 
+
+  {
+    id: "irrigation",
+    label: "Irrigation",
+    defaultTagline: "Irrigation — assess before we dig or rewire",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Irrigation Assess Quote", description: "Lot/zone count, head types, controller age, backflow, water pressure, dig access, and winterize vs repair vs new install assessed before firm price — no bait flat $/zone or $/head; HOA/permit when true", priceFrom: 0 },
+      { name: "Sprinkler Repair Quote", description: "Repair scope after zone/head/controller/backflow/pressure assess — licensed plumber/irrigation contractor honesty when true; no fake same-day; not landscaping beds/mow", priceFrom: 0 },
+      { name: "New Install / Winterize Quote", description: "New system install or seasonal winterization scope after assess — quote before dig or blow-out", priceFrom: 0 },
+    ],
+    heroHints: ["Zones/heads/controller/backflow/pressure assessed before firm price", "Quote before dig or rewire", "Licensed plumber/irrigation contractor honesty when true", "No bait flat $/zone or $/head"],
+    ctaLabel: "Get an irrigation quote",
+    accentHint: "irrigation-turf-charcoal-sprinkler-teal",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
