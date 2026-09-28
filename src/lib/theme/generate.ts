@@ -231,6 +231,15 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  patio_cover: {
+    A: { heroEmphasis: "quote-first assess sqft/attached-freestanding/material/footings/drainage/access/stories/HOA-permit", ctaVerb: "Get a patio cover quote" },
+    B: { heroEmphasis: "quote-first shade structure site evaluation before firm price honesty", ctaVerb: "Request a patio cover assess quote" },
+  },
+
+
+
+
+
 
 };
 

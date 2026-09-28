@@ -1008,6 +1008,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "patio_cover",
+    label: "Patio Cover",
+    defaultTagline: "Patio cover — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Patio Cover Assess Quote", description: "Sqft, attached vs freestanding, material (aluminum/wood/insulated/fabric-shade when true), footings, drainage, access, stories, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Patio Cover Install Quote", description: "Cover install scope after sqft/attachment/material/footings assess — licensed contractor honesty when true; no fake same-day; not decking, concrete flatwork, gutter cleaning, or fencing", priceFrom: 0 },
+      { name: "Footings & Permit Quote", description: "Footings/drainage and HOA/permit scope after assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/attachment/material/footings/permit assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft"],
+    ctaLabel: "Get a patio cover quote",
+    accentHint: "patio-cover-shade-charcoal-bronze",
+  },
+
+
+
+
+
 
 
 ];
