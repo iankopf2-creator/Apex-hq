@@ -54,3 +54,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Generator | `generator.jpg` | Alivia Alva | https://unsplash.com/photos/power-lines-and-transformers-on-a-utility-pole-88Chc9OJ3sg |
 | EV Charger | `ev-charger.jpg` | CHUTTERSNAP | https://unsplash.com/photos/electric-vehicle-charger-plugged-into-car-xfaYAsMV1p8 |
 | Patio Cover | `patio-cover.jpg` | Dominik | https://unsplash.com/photos/wooden-pergola-with-dining-table-and-chairs-outdoors-ACA92yjUKpg |
+| Irrigation | `irrigation.jpg` | Maxim Tolchinskiy | https://unsplash.com/photos/rCQfBD2Yg0k |

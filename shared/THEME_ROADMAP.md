@@ -50,6 +50,7 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Generator — quote_first (deep charcoal/slate `#0f172a` + safety amber `#f59e0b`; whole-home load/fuel NG-LP-diesel/automatic transfer switch/pad-setback/permit-HOA assess before firm price; no bait flat $/kW; no fake same-day install; licensed electrician honesty when true; quote before install; distinct from solar and portable camping power stations)
 - EV Charger — quote_first (deep electrical slate `#0b1220` + EV electric green `#22c55e`; panel capacity/amperage 30–60A typical L2/garage-vs-driveway/hardwired-vs-NEMA/permit-HOA/load calculation assess before firm price; no bait flat $/charger; no fake same-day install; licensed electrician honesty when true; quote before install; distinct from solar-only and standby generator)
 - Patio Cover — quote_first (deep shade charcoal `#1c1917` + warm bronze `#b45309`; sqft/attached-vs-freestanding/material aluminum-wood-insulated-fabric-shade/footings/drainage/access/stories/HOA-permit assess before firm price; no bait flat $/sqft or $/lf; no fake same-day; licensed contractor honesty when true; quote before build; distinct from decking, concrete flatwork, gutter_cleaning, and fencing)
+- Irrigation — quote_first (deep turf charcoal/slate `#0f1f17` + bright sprinkler-sky/teal `#2dd4bf`; lot/zone count/head types/controller age/backflow/water pressure/dig access/winterize-vs-repair-vs-new-install/HOA-permit assess before firm price; no bait flat $/zone or $/head; no fake same-day; licensed plumber/irrigation contractor honesty when true; quote before dig or rewire; distinct from landscaping beds/mow)
 
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
@@ -62,5 +63,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney + window_replacement + generator + ev_charger + patio_cover
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney + window_replacement + generator + ev_charger + patio_cover + irrigation
 - 48px tap targets; trust chips from research notes
