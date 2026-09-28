@@ -278,6 +278,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first unit-count/event-days-vs-jobsite/delivery-access/ADA/restock/pump-out assess for porta potty rental", ctaVerb: "Get a porta potty rental quote" },
     B: { heroEmphasis: "quote-first porta potty honesty before firm price — not dumpster, junk removal, septic pumping, or grease trap; permit/HOA educational only", ctaVerb: "Request a porta potty rental quote" },
   },
+  storage_container_rental: {
+    A: { heroEmphasis: "quote-first size/access/crane-tilt-bed/ground/duration/lock/residential-vs-jobsite assess for storage container rental", ctaVerb: "Get a storage container rental quote" },
+    B: { heroEmphasis: "quote-first storage container honesty before firm price — not dumpster, porta potty, junk removal, moving, septic, or grease trap; permit/HOA educational only", ctaVerb: "Request a storage container rental quote" },
+  },
 
 
 
