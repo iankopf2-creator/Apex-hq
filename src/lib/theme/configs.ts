@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2139,6 +2139,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  patio_cover: {
+    niche: "patio_cover",
+    label: "Patio Cover",
+    palette: {
+      // Deep shade charcoal + warm bronze — distinct from generator amber #f59e0b, decking sage, concrete amber, fencing sage
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#b45309",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#78716c",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft / attached-vs-freestanding / material aluminum-wood-insulated-fabric-shade / footings / drainage / access / stories / HOA-permit assess-first for patio cover install, quote before build",
+      heroStyle: "quote-first patio cover LP — sqft/attached-freestanding/material/footings/drainage/access/stories/HOA-permit chips when true, no bait flat $/sqft or $/lf, no fake same-day, not decking or concrete flatwork or gutter cleaning or fencing",
+      ctaStyle: "get a patio cover quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf as Apex benchmark", "fake same-day install", "competitor brand cloning", "Alumawood/Lattice/StruXure cloning", "fake 24/7", "decking confusion", "concrete flatwork confusion", "gutter_cleaning confusion", "fencing confusion", "firm price before sqft/attachment/material/footings/drainage/access/stories/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b45309",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/attachment/material/footings/permit assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft"],
+    heroImages: [
+      {
+        src: "/niches/patio-cover.jpg",
+        alt: "wooden patio cover / pergola shade structure over outdoor dining (home patio cover context)",
+        credit: "Dominik on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/wooden-pergola-with-dining-table-and-chairs-outdoors-ACA92yjUKpg",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
 
 
 
