@@ -1115,6 +1115,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
 
 
 
+
+  {
+    id: "carport",
+    label: "Carport",
+    defaultTagline: "Carport — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Carport Assess Quote", description: "Bay count, footprint/sqft, attached vs freestanding, material (metal/wood/poly when true), roof pitch/panels, post/footing, pad existing vs new, vehicle height clearance, wind/snow load when true, access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf or $/bay", priceFrom: 0 },
+      { name: "Carport Build Quote", description: "Build scope after bay/footprint/material/roof/post-footing/pad/height assess — licensed contractor honesty when true; no fake same-day; distinct from gazebo pavilion/people outdoor room, pergola open-beam/lattice shade, patio_cover solid patio shade canopy, decking floor platforms, garage enclosed door/opener, fencing, landscaping, irrigation, concrete flatwork alone", priceFrom: 0 },
+      { name: "Carport Repair Quote", description: "Repair/rebuild scope after posts/roof panels/pad/footing assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Bay/footprint/material/pad/height assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/bay"],
+    ctaLabel: "Get a carport quote",
+    accentHint: "carport-asphalt-charcoal-zinc-steel",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

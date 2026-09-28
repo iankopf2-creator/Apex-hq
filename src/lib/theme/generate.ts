@@ -260,6 +260,13 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  carport: {
+    A: { heroEmphasis: "quote-first assess bay count/footprint/sqft/attached-vs-freestanding/material/roof pitch-panels/post-footing/pad/vehicle height clearance/wind-snow/access/HOA-permit", ctaVerb: "Get a carport quote" },
+    B: { heroEmphasis: "quote-first open-sided carport / vehicle shelter evaluation before firm price honesty", ctaVerb: "Request a carport assess quote" },
+  },
+
+
+
 
 };
 

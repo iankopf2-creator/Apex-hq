@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2331,7 +2331,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
-
+  carport: {
+    niche: "carport",
+    label: "Carport",
+    palette: {
+      // Deep asphalt charcoal/slate + cool zinc/steel — distinct from gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309, irrigation #0f1f17/#2dd4bf, generator #0f172a/#f59e0b, garage orange
+      primary: "#0f1419",
+      primaryForeground: "#f8fafc",
+      accent: "#64748b",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f1419",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#94a3b8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest bay count / footprint/sqft / attached-vs-freestanding / material metal-wood-poly when true / roof pitch-panels / post-footing / pad existing-vs-new / vehicle height clearance / wind-snow load when true / access / HOA-permit assess-first for open-sided carport vehicle shelter, quote before build",
+      heroStyle: "quote-first carport LP — bay/footprint/attached-vs-freestanding/material/roof panels/post-footing/pad/height clearance/wind-snow/access/HOA-permit chips when true, no bait flat $/sqft or $/lf or $/bay, no fake same-day, not gazebo pavilion/people outdoor room / pergola open-beam/lattice shade / patio_cover solid patio canopy / decking floor platforms / garage enclosed door/opener / fencing / landscaping / irrigation / concrete flatwork alone, licensed contractor honesty when true",
+      ctaStyle: "get a carport quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf or $/bay as Apex benchmark", "fake same-day build", "competitor brand cloning", "fake 24/7", "gazebo pavilion/people outdoor room confusion", "pergola open-beam/lattice shade confusion", "patio_cover solid patio shade canopy confusion", "decking floor platform confusion", "garage enclosed door/opener confusion", "fencing confusion", "landscaping confusion", "irrigation confusion", "concrete flatwork alone confusion", "firm price before bay/footprint/attached-vs-freestanding/material/roof/post-footing/pad/height/wind-snow/access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f1419",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#64748b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f1419",
+    },
+    trustBadges: ["Bay/footprint/material/pad/height assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/bay"],
+    heroImages: [
+      {
+        src: "/niches/carport.jpg",
+        alt: "Cars parked under a modern open-sided carport / vehicle shelter on a sunny day (carport build & repair context)",
+        credit: "MAK on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/3u5Lco_0gPQ",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 };
