@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2421,6 +2421,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+  dumpster_rental: {
+    niche: "dumpster_rental",
+    label: "Dumpster / roll-off",
+    palette: {
+      // Deep dumpster iron charcoal + caution yellow/amber — distinct from junk_removal lime #a3e635, awning #14181f/#c45c26, carport #0f1419/#64748b, gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309, irrigation teal #2dd4bf, epoxy teal, generator #f59e0b
+      primary: "#1f1b16",
+      primaryForeground: "#fafaf9",
+      accent: "#eab308",
+      accentForeground: "#1f1b16",
+      background: "#fafaf9",
+      foreground: "#1f1b16",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest size 10/20/30/40 yd when true / rental duration / debris type / delivery access / driveway protection / permit-HOA educational only assess-first for dumpster and roll-off rental, quote before delivery",
+      heroStyle: "quote-first dumpster / roll-off rental LP — size yd/duration/debris/access/driveway-protection/permit-HOA chips when true, no bait flat $/day, no fake same-day drop, not junk_removal hauling labor / porta_potty_rental / storage_container_rental / septic_pumping / grease_trap_cleaning / concrete debris alone, licensed/hauler honesty when true",
+      ctaStyle: "get a dumpster rental quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/day as Apex benchmark", "fake same-day drop", "competitor brand cloning", "fake 24/7", "junk_removal hauling labor confusion", "porta_potty_rental confusion", "storage_container_rental confusion", "septic_pumping confusion", "grease_trap_cleaning confusion", "concrete debris alone confusion", "firm price before size/duration/debris/access/driveway-protection/permit-HOA assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1f1b16",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#eab308",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1f1b16",
+    },
+    trustBadges: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA educational only when true", "No bait flat $/day"],
+    heroImages: [
+      {
+        src: "/niches/dumpster-rental.jpg",
+        alt: "Crane lifts a roll-off dumpster onto a truck on a city street (dumpster rental context)",
+        credit: "Danial Dez on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 

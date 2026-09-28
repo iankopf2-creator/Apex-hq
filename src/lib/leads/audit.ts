@@ -52,6 +52,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   gazebo: 900,
   carport: 900,
   awning: 750,
+  dumpster_rental: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -151,6 +152,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first carport / open vehicle shelter page (bay count/footprint/sqft/attached-vs-freestanding/material metal-wood-poly/roof pitch-panels/post-footing/pad existing-vs-new/vehicle height clearance/wind-snow load when true/access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or $/bay or fake same-day; distinct from gazebo pavilion/people outdoor room, pergola open-beam/lattice shade, patio_cover solid patio shade canopy, decking floor platforms, garage enclosed door/opener, fencing, landscaping, irrigation, and concrete flatwork alone.",
   awning:
     "Add a quote-first awning / building-attached fabric or aluminum shade page (width/projection lf-ft/retractable-vs-fixed/fabric-vs-aluminum-vs-vinyl when true/mount wall-vs-roof/motorized-vs-manual when true/sun-wind rating when true/stories-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/lf or $/sqft or fake same-day; distinct from patio_cover solid permanent canopy, pergola open-beam freestanding/attached shade frame, gazebo pavilion, carport vehicle shelter, decking, fencing, landscaping, irrigation, and concrete flatwork alone.",
+  dumpster_rental:
+    "Add a quote-first dumpster / roll-off rental page (size 10/20/30/40 yd when true/rental duration/debris type/delivery access/driveway protection/permit-HOA educational only assess before firm price; licensed/hauler honesty when true) so callers get a real roll-off quote — not bait flat $/day or fake same-day drop; distinct from junk_removal hauling labor, porta_potty_rental, storage_container_rental, septic_pumping, grease_trap_cleaning, and concrete debris alone.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
