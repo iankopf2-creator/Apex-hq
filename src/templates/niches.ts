@@ -1139,6 +1139,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "carport-asphalt-charcoal-zinc-steel",
   },
 
+  {
+    id: "awning",
+    label: "Awning",
+    defaultTagline: "Awning — assess before we install",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Awning Assess Quote", description: "Width/projection (lf/ft), retractable vs fixed, fabric vs aluminum vs vinyl when true, mount wall-vs-roof, motorized vs manual when true, sun/wind rating when true, stories/access, and HOA/permit assessed before firm price — no bait flat $/lf or $/sqft", priceFrom: 0 },
+      { name: "Awning Install Quote", description: "Install scope after width/projection/retractable-vs-fixed/material/mount/motorized/sun-wind/access assess — licensed contractor honesty when true; no fake same-day; distinct from patio_cover solid permanent canopy, pergola open-beam freestanding/attached shade frame, gazebo pavilion, carport vehicle shelter, decking, fencing, landscaping, irrigation, concrete flatwork alone", priceFrom: 0 },
+      { name: "Awning Repair/Recover Quote", description: "Repair/recover/re-cover scope after fabric/frame/motor/hardware assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Width/projection/retractable-vs-fixed assessed before firm price", "Quote before install", "Licensed contractor honesty when true", "No bait flat $/lf or $/sqft"],
+    ctaLabel: "Get an awning quote",
+    accentHint: "awning-canopy-charcoal-canvas-terracotta",
+  },
+
 
 ];
 

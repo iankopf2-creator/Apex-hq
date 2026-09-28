@@ -51,6 +51,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   pergola: 850,
   gazebo: 900,
   carport: 900,
+  awning: 750,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -148,6 +149,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first gazebo / pavilion page (footprint/sqft/roof-style full-hip-octagon/screen-rail kit/foundation-floor optional/material/height-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from pergola open-beam/lattice shade, patio_cover attached solid canopy, decking floor platforms, fencing, landscaping beds/mow, and irrigation zones.",
   carport:
     "Add a quote-first carport / open vehicle shelter page (bay count/footprint/sqft/attached-vs-freestanding/material metal-wood-poly/roof pitch-panels/post-footing/pad existing-vs-new/vehicle height clearance/wind-snow load when true/access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or $/bay or fake same-day; distinct from gazebo pavilion/people outdoor room, pergola open-beam/lattice shade, patio_cover solid patio shade canopy, decking floor platforms, garage enclosed door/opener, fencing, landscaping, irrigation, and concrete flatwork alone.",
+  awning:
+    "Add a quote-first awning / building-attached fabric or aluminum shade page (width/projection lf-ft/retractable-vs-fixed/fabric-vs-aluminum-vs-vinyl when true/mount wall-vs-roof/motorized-vs-manual when true/sun-wind rating when true/stories-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/lf or $/sqft or fake same-day; distinct from patio_cover solid permanent canopy, pergola open-beam freestanding/attached shade frame, gazebo pavilion, carport vehicle shelter, decking, fencing, landscaping, irrigation, and concrete flatwork alone.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
