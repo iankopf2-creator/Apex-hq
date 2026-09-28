@@ -248,6 +248,12 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  pergola: {
+    A: { heroEmphasis: "quote-first assess footprint/sqft/attached-vs-freestanding/material/post-footing-depth/roof-style/height-stories-access/HOA-permit", ctaVerb: "Get a pergola quote" },
+    B: { heroEmphasis: "quote-first outdoor pergola evaluation before firm price honesty", ctaVerb: "Request a pergola assess quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

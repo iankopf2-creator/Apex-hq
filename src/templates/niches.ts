@@ -1063,6 +1063,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
 
 
 
+
+  {
+    id: "pergola",
+    label: "Pergola",
+    defaultTagline: "Pergola — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Pergola Assess Quote", description: "Footprint/sqft, attached vs freestanding, material (wood/vinyl/aluminum/composite when true), post/footing depth, roof style (open-beam vs lattice vs solid-roof kit), height/stories/access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Pergola Build Quote", description: "Build scope after footprint/material/roof-style/footing assess — licensed contractor honesty when true; no fake same-day; distinct from patio_cover solid shade canopy, decking floor platforms, fencing, landscaping beds/mow, irrigation zones", priceFrom: 0 },
+      { name: "Pergola Repair Quote", description: "Repair/rebuild scope after post/beam/rafter/lattice/attachment assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Footprint/material/roof style/footings assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    ctaLabel: "Get a pergola quote",
+    accentHint: "pergola-timber-charcoal-cedar-amber",
+  },
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

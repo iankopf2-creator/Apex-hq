@@ -48,6 +48,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   ev_charger: 550,
   patio_cover: 900,
   irrigation: 275,
+  pergola: 850,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -139,6 +140,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first patio cover / shade structure page (sqft/attached-vs-freestanding/material aluminum-wood-insulated-fabric-shade/footings/drainage/access/stories/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from decking, concrete flatwork, gutter_cleaning, and fencing.",
   irrigation:
     "Add a quote-first irrigation / lawn sprinkler page (lot/zone count/head types/controller age/backflow/water pressure/dig access/winterize-vs-repair-vs-new-install/HOA-permit assess before firm price; licensed plumber/irrigation contractor honesty when true) so callers get a real quote — not bait flat $/zone or $/head or fake same-day; distinct from landscaping beds/mow.",
+  pergola:
+    "Add a quote-first pergola / outdoor shade structure page (footprint/sqft/attached-vs-freestanding/material wood-vinyl-aluminum-composite/post-footing-depth/roof-style open-beam-vs-lattice-vs-solid-roof-kit/height-stories-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from patio_cover solid shade canopy, decking floor platforms, fencing, landscaping beds/mow, and irrigation zones.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
