@@ -56,3 +56,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Patio Cover | `patio-cover.jpg` | Dominik | https://unsplash.com/photos/wooden-pergola-with-dining-table-and-chairs-outdoors-ACA92yjUKpg |
 | Irrigation | `irrigation.jpg` | Maxim Tolchinskiy | https://unsplash.com/photos/rCQfBD2Yg0k |
 | Pergola | `pergola.jpg` | Naoki Suzuki | https://unsplash.com/photos/m8ZGnv4J1SM |
+| Gazebo | `gazebo.jpg` | Jakub Pabis | https://unsplash.com/photos/5Tr8rfs4em8 |

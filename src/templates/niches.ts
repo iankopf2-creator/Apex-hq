@@ -1089,6 +1089,32 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
 
 
 
+  {
+    id: "gazebo",
+    label: "Gazebo",
+    defaultTagline: "Gazebo — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Gazebo Assess Quote", description: "Footprint/sqft, roof style (full/hip/octagon when true), screen/rail kit, foundation/floor (optional), material, height/access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Gazebo Build Quote", description: "Build scope after footprint/roof-style/screen-rail/foundation/material assess — licensed contractor honesty when true; no fake same-day; distinct from pergola open-beam/lattice shade, patio_cover attached solid canopy, decking floor platforms, fencing, landscaping beds/mow, irrigation zones", priceFrom: 0 },
+      { name: "Gazebo Repair Quote", description: "Repair/rebuild scope after roof/posts/screen-rail/floor assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Footprint/roof style/screen-rail/foundation assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    ctaLabel: "Get a gazebo quote",
+    accentHint: "gazebo-pavilion-green-copper-brass",
+  },
+
+
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
