@@ -270,6 +270,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first building-attached fabric or aluminum awning evaluation before firm price honesty", ctaVerb: "Request an awning assess quote" },
   },
 
+  dumpster_rental: {
+    A: { heroEmphasis: "quote-first assess size 10/20/30/40 yd when true/rental duration/debris type/delivery access/driveway protection/permit-HOA educational only", ctaVerb: "Get a dumpster rental quote" },
+    B: { heroEmphasis: "quote-first dumpster / roll-off size and duration evaluation before firm price honesty", ctaVerb: "Request a roll-off size quote" },
+  },
+
 
 
 

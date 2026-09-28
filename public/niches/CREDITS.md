@@ -59,3 +59,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Gazebo | `gazebo.jpg` | Jakub Pabis | https://unsplash.com/photos/5Tr8rfs4em8 |
 | Carport | `carport.jpg` | MAK | https://unsplash.com/photos/3u5Lco_0gPQ |
 | Awning | `awning.jpg` | Maximilian Bungart | https://unsplash.com/photos/aj3KXG8Ytds |
+| Dumpster / roll-off | `dumpster-rental.jpg` | Danial Dez | https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk |

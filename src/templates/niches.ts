@@ -1162,6 +1162,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "awning-canopy-charcoal-canvas-terracotta",
   },
 
+  {
+    id: "dumpster_rental",
+    label: "Dumpster / roll-off",
+    defaultTagline: "Dumpster / roll-off rental — size and duration before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Size & Duration Quote", description: "Yard size (10/20/30/40 yd when true), rental duration, debris type, delivery access, and driveway protection assessed before firm price — no bait flat $/day; permit/HOA educational only", priceFrom: 0 },
+      { name: "Roll-Off Delivery Quote", description: "Delivery/pickup scope after size/duration/debris/access/driveway assess — licensed/hauler honesty when true; no fake same-day drop; distinct from junk_removal hauling labor, porta_potty_rental, storage_container_rental, septic_pumping, grease_trap_cleaning, concrete debris alone", priceFrom: 0 },
+      { name: "Permit / HOA Assist Quote", description: "Local permit or HOA note when required — educational only; honesty when true; not legal advice", priceFrom: 0 },
+    ],
+    heroHints: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA educational only when true", "No bait flat $/day"],
+    ctaLabel: "Get a dumpster rental quote",
+    accentHint: "dumpster-iron-charcoal-caution-amber",
+  },
+
 
 ];
 
