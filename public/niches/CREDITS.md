@@ -61,3 +61,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Awning | `awning.jpg` | Maximilian Bungart | https://unsplash.com/photos/aj3KXG8Ytds |
 | Dumpster / roll-off | `dumpster-rental.jpg` | Danial Dez | https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk |
 | Porta potty rental | `porta-potty-rental.jpg` | Vadym Alyekseyenko | https://unsplash.com/photos/loybh0-sGwI |
+| Storage container rental | `storage-container-rental.jpg` | Markus Winkler | https://unsplash.com/photos/-BXq7U-Yuxw |
