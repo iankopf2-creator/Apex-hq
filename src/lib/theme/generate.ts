@@ -265,6 +265,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first open-sided carport / vehicle shelter evaluation before firm price honesty", ctaVerb: "Request a carport assess quote" },
   },
 
+  awning: {
+    A: { heroEmphasis: "quote-first assess width/projection lf-ft/retractable-vs-fixed/fabric-vs-aluminum-vs-vinyl/mount wall-vs-roof/motorized-vs-manual/sun-wind rating/stories-access/HOA-permit", ctaVerb: "Get an awning quote" },
+    B: { heroEmphasis: "quote-first building-attached fabric or aluminum awning evaluation before firm price honesty", ctaVerb: "Request an awning assess quote" },
+  },
+
 
 
 

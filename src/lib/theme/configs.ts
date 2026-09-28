@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2371,6 +2371,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Cars parked under a modern open-sided carport / vehicle shelter on a sunny day (carport build & repair context)",
         credit: "MAK on Unsplash",
         sourceUrl: "https://unsplash.com/photos/3u5Lco_0gPQ",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  awning: {
+    niche: "awning",
+    label: "Awning",
+    palette: {
+      // Deep canopy charcoal/slate + soft awning canvas/terracotta — distinct from carport #0f1419/#64748b, gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309
+      primary: "#14181f",
+      primaryForeground: "#f8fafc",
+      accent: "#c45c26",
+      accentForeground: "#f8fafc",
+      background: "#faf7f5",
+      foreground: "#14181f",
+      muted: "#ebe4de",
+      mutedForeground: "#5c534c",
+      border: "#d6c7bb",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest width/projection lf-ft / retractable-vs-fixed / fabric-vs-aluminum-vs-vinyl when true / mount wall-vs-roof / motorized-vs-manual when true / sun-wind rating when true / stories-access / HOA-permit assess-first for building-attached fabric or aluminum awning, quote before install",
+      heroStyle: "quote-first awning LP — width/projection/retractable-vs-fixed/fabric-aluminum-vinyl/mount wall-vs-roof/motorized-vs-manual/sun-wind rating/stories-access/HOA-permit chips when true, no bait flat $/lf or $/sqft, no fake same-day, not patio_cover solid permanent canopy / pergola open-beam freestanding-attached shade frame / gazebo pavilion / carport vehicle shelter / decking / fencing / landscaping / irrigation / concrete flatwork alone, licensed contractor honesty when true",
+      ctaStyle: "get an awning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/sqft as Apex benchmark", "fake same-day install", "competitor brand cloning", "fake 24/7", "patio_cover solid permanent canopy confusion", "pergola open-beam freestanding/attached shade frame confusion", "gazebo pavilion confusion", "carport vehicle shelter confusion", "decking confusion", "fencing confusion", "landscaping confusion", "irrigation confusion", "concrete flatwork alone confusion", "firm price before width/projection/retractable-vs-fixed/fabric-aluminum-vinyl/mount/motorized/sun-wind/stories-access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#14181f",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#c45c26",
+      "--theme-bg": "#faf7f5",
+      "--theme-fg": "#14181f",
+    },
+    trustBadges: ["Width/projection/retractable-vs-fixed assessed before firm price", "Quote before install", "Licensed contractor honesty when true", "No bait flat $/lf or $/sqft"],
+    heroImages: [
+      {
+        src: "/niches/awning.jpg",
+        alt: "Red scalloped fabric awning over a residential window with flowers (awning install & repair context)",
+        credit: "Maximilian Bungart on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/aj3KXG8Ytds",
         license: "unsplash",
       },
     ],
