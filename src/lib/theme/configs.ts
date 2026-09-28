@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2236,6 +2236,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+  pergola: {
+    niche: "pergola",
+    label: "Pergola",
+    palette: {
+      // Deep timber/charcoal + soft cedar/amber — distinct from patio_cover bronze #b45309, generator amber #f59e0b, irrigation teal #2dd4bf, landscaping forest green, decking sage, concrete amber
+      primary: "#1a1510",
+      primaryForeground: "#fffbeb",
+      accent: "#d97706",
+      accentForeground: "#1a1510",
+      background: "#fffbeb",
+      foreground: "#1a1510",
+      muted: "#fef3c7",
+      mutedForeground: "#78350f",
+      border: "#fcd34d",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest footprint/sqft / attached-vs-freestanding / material wood-vinyl-aluminum-composite / post-footing-depth / roof-style open-beam-vs-lattice-vs-solid-roof-kit / height-stories-access / HOA-permit assess-first for outdoor pergola & shade structure, quote before build",
+      heroStyle: "quote-first pergola LP — footprint/attached-vs-freestanding/material/post-footing/roof-style/height-access/HOA-permit chips when true, no bait flat $/sqft or $/lf, no fake same-day, not patio_cover solid shade canopy / decking floor / fencing / landscaping beds/mow / irrigation zones, licensed contractor honesty when true",
+      ctaStyle: "get a pergola quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf as Apex benchmark", "fake same-day build", "competitor brand cloning", "fake 24/7", "patio_cover solid shade canopy confusion", "decking floor platform confusion", "fencing confusion", "landscaping beds/mow confusion", "irrigation zones confusion", "firm price before footprint/sqft/attached-vs-freestanding/material/post-footing-depth/roof-style/height-stories-access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1a1510",
+      "--theme-primary-fg": "#fffbeb",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fffbeb",
+      "--theme-fg": "#1a1510",
+    },
+    trustBadges: ["Footprint/material/roof style/footings assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    heroImages: [
+      {
+        src: "/niches/pergola.jpg",
+        alt: "Freestanding open-beam wooden pergola with posts and rafters in a garden (pergola build & repair context)",
+        credit: "Naoki Suzuki on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/m8ZGnv4J1SM",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 };
