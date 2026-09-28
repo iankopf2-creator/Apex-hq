@@ -274,6 +274,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first assess size 10/20/30/40 yd when true/rental duration/debris type/delivery access/driveway protection/permit-HOA educational only", ctaVerb: "Get a dumpster rental quote" },
     B: { heroEmphasis: "quote-first dumpster / roll-off size and duration evaluation before firm price honesty", ctaVerb: "Request a roll-off size quote" },
   },
+  porta_potty_rental: {
+    A: { heroEmphasis: "quote-first unit-count/event-days-vs-jobsite/delivery-access/ADA/restock/pump-out assess for porta potty rental", ctaVerb: "Get a porta potty rental quote" },
+    B: { heroEmphasis: "quote-first porta potty honesty before firm price — not dumpster, junk removal, septic pumping, or grease trap; permit/HOA educational only", ctaVerb: "Request a porta potty rental quote" },
+  },
 
 
 
