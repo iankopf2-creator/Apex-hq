@@ -254,6 +254,13 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  gazebo: {
+    A: { heroEmphasis: "quote-first assess footprint/sqft/roof-style full-hip-octagon/screen-rail kit/foundation-floor/material/height-access/HOA-permit", ctaVerb: "Get a gazebo quote" },
+    B: { heroEmphasis: "quote-first outdoor gazebo / pavilion evaluation before firm price honesty", ctaVerb: "Request a gazebo assess quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
