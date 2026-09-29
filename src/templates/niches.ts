@@ -1302,6 +1302,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "basalt-sandstone-retaining",
   },
 
+
+  {
+    id: "french_drain",
+    label: "French drain",
+    defaultTagline: "Yard drainage that works — assess length, soil, and discharge before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "French Drain Quote", description: "Trench length/depth, soil type, daylight vs sump daylighting, yard access/slope, buried utilities, existing vs new trench, gravel/pipe sizing when true, surface drainage vs subsurface, and HOA/permit when true assessed before firm price — no bait flat $/lf; no fake same-day dig; licensed contractor honesty when required; quote before dig; not retaining_wall, foundation_repair, concrete flatwork, landscaping, irrigation, gutter_cleaning, gutter_guards, basement waterproofing / crawl_space, sump_pump, water_damage, slab_leak, or plumber", priceFrom: 0 },
+      { name: "Length, Soil & Discharge Review", description: "Length/depth, soil type, and daylight vs sump discharge path honesty after site review — quote before dig; local permit/HOA educational only (not legal advice); licensed contractor honesty when required; no fake same-day dig", priceFrom: 0 },
+      { name: "Pipe, Gravel & Access Option", description: "Perforated vs solid pipe + gravel + fabric sizing when true, yard access/slope, and buried-utilities honesty after assess — quote before dig; distinct from retaining_wall, foundation_repair, concrete, landscaping, irrigation, gutter work, basement waterproofing, sump_pump, water_damage, slab_leak, plumber", priceFrom: 0 },
+    ],
+    heroHints: ["Length/depth/soil/daylight-vs-sump/access/utilities assessed before firm price", "Quote before dig — french drain / yard drainage honesty", "Local permit/HOA educational only — not legal advice", "No bait flat $/lf — not retaining_wall, foundation_repair, concrete, landscaping, irrigation, gutter work, basement waterproofing, sump_pump, water_damage, slab_leak, or plumber"],
+    ctaLabel: "Get a french drain quote",
+    accentHint: "drainage-slate-trench-copper",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

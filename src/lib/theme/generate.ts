@@ -297,6 +297,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first retaining wall honesty before firm price — not concrete flatwork, masonry, fencing, landscaping, foundation_repair, or stump_grinding; permit/HOA educational only", ctaVerb: "Request a retaining wall quote" },
   },
 
+  french_drain: {
+    A: { heroEmphasis: "quote-first length/depth/soil/daylight-vs-sump/yard-access/utilities/pipe-gravel assess for french drain", ctaVerb: "Get a french drain quote" },
+    B: { heroEmphasis: "quote-first french drain honesty before firm price — not retaining_wall, foundation_repair, concrete, landscaping, irrigation, gutter work, basement waterproofing, sump_pump, water_damage, slab_leak, or plumber; permit/HOA educational only", ctaVerb: "Request a french drain quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

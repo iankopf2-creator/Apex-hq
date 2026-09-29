@@ -58,6 +58,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   gutter_guards: 420,
   stump_grinding: 325,
   retaining_wall: 450,
+  french_drain: 425,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -169,6 +170,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first stump grinding page (stump count/diameter/root flare + access gate/slope/overhead lines + buried utilities + grind depth below-grade/flush + haul-away chips vs leave mulch + species/hardness when true assess before firm price; local permit/HOA educational only — not legal advice) so callers get a real quote — not bait flat $/stump or fake same-day; distinct from tree_service storm call-first, landscaping, lawn care, junk removal, concrete, and excavation.",
   retaining_wall:
     "Add a quote-first retaining wall page (height/lf + soil/drainage + toe/heel footing + material block/timber/stone/poured when true + surcharge/load above wall + access/equipment + existing vs new + HOA/permit when true assess before firm price; local permit/HOA educational only — not legal advice; licensed contractor/engineer honesty when required) so callers get a real quote — not bait flat $/lf or $/sqft or fake same-day; distinct from concrete flatwork, masonry, fencing, landscaping, foundation_repair, and stump_grinding.",
+  french_drain:
+    "Add a quote-first french drain page (trench length/depth + soil type + daylight vs sump daylighting + yard access/slope + buried utilities + existing vs new trench + gravel/pipe sizing when true + surface vs subsurface + HOA/permit when true assess before firm price; local permit/HOA educational only — not legal advice; licensed contractor honesty when required) so callers get a real quote — not bait flat $/lf or fake same-day dig; distinct from retaining_wall, foundation_repair, concrete flatwork, landscaping, irrigation, gutter_cleaning, gutter_guards, basement waterproofing / crawl_space, sump_pump, water_damage, slab_leak, and plumber.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
