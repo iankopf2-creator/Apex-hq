@@ -292,6 +292,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first stump-count/diameter/root-flare/access/utilities/grind-depth/chips assess for stump grinding", ctaVerb: "Get a stump grinding quote" },
     B: { heroEmphasis: "quote-first stump grinding honesty before firm price — not tree_service storm, landscaping, lawn care, junk removal, concrete, or excavation; permit/HOA educational only", ctaVerb: "Request a stump grinding quote" },
   },
+  retaining_wall: {
+    A: { heroEmphasis: "quote-first height/lf/soil/drainage/footing/material/surcharge/access assess for retaining wall", ctaVerb: "Get a retaining wall quote" },
+    B: { heroEmphasis: "quote-first retaining wall honesty before firm price — not concrete flatwork, masonry, fencing, landscaping, foundation_repair, or stump_grinding; permit/HOA educational only", ctaVerb: "Request a retaining wall quote" },
+  },
 
 };
 

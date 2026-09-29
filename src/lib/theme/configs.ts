@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2642,6 +2642,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Close-up of tree bark and fresh wood chips after outdoor grinding work",
         credit: "Haberdoedas on Unsplash",
         sourceUrl: "https://unsplash.com/photos/xFH7QN2LejE",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  retaining_wall: {
+    niche: "retaining_wall",
+    label: "Retaining wall",
+    palette: {
+      // Deep basalt slate + warm sandstone gold — #1e293b + #ca8a04 — not stump_grinding #292524/#b45309, gutter_guards #27272a/#15803d, storage_container_rental #3f3f46/#c2410c, concrete #475569/#d97706, masonry, landscaping, fencing, foundation_repair
+      primary: "#1e293b",
+      primaryForeground: "#f8fafc",
+      accent: "#ca8a04",
+      accentForeground: "#422006",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#f1f5f9",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest height/lf/soil/drainage/footing/material/surcharge/access assess-first, quote before dig; distinct from concrete flatwork, masonry, fencing, landscaping, foundation_repair, stump_grinding",
+      heroStyle: "quote-first retaining wall LP — height/lf/drainage/footing/material/surcharge when true, no bait flat $/lf or $/sqft, no fake same-day",
+      ctaStyle: "get a retaining wall quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/sqft as Apex benchmark", "fake same-day wall guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before height/lf/soil/drainage/footing/material/surcharge/access assessment", "impersonating concrete flatwork-only", "impersonating general masonry veneer-only", "fencing or landscaping beds/mow as retaining wall", "foundation_repair scare copy", "engineer stamp claims when not true"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e293b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#ca8a04",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Height/lf/soil/drainage/footing assessed before firm price", "Quote before dig", "Material + surcharge honesty", "Permit/HOA educational only — not legal advice", "No bait flat $/lf — not concrete flatwork or fencing"],
+    heroImages: [
+      {
+        src: "/niches/retaining-wall.jpg",
+        alt: "Dry stone retaining wall in a grassy field under a cloudy sky",
+        credit: "Unsplash contributor",
+        sourceUrl: "https://unsplash.com/photos/9tCs0D3dYCc",
         license: "unsplash",
       },
     ],

@@ -64,3 +64,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Storage container rental | `storage-container-rental.jpg` | Markus Winkler | https://unsplash.com/photos/-BXq7U-Yuxw |
 | Gutter guards | `gutter-guards.jpg` | Luke Southern | https://unsplash.com/photos/ZzZouwiQWV0 |
 | Stump grinding | `stump-grinding.jpg` | Haberdoedas | https://unsplash.com/photos/xFH7QN2LejE |
+| Retaining wall | `retaining-wall.jpg` | Unsplash contributor | https://unsplash.com/photos/9tCs0D3dYCc |
