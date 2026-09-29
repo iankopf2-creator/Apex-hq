@@ -302,6 +302,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first french drain honesty before firm price — not retaining_wall, foundation_repair, concrete, landscaping, irrigation, gutter work, basement waterproofing, sump_pump, water_damage, slab_leak, or plumber; permit/HOA educational only", ctaVerb: "Request a french drain quote" },
   },
 
+  basement_waterproofing: {
+    A: { heroEmphasis: "quote-first sqft/wall-height/interior-vs-exterior/drainage/sump/vapor + crawl-vs-poured-vs-block assess for basement waterproofing", ctaVerb: "Get a basement waterproofing quote" },
+    B: { heroEmphasis: "quote-first basement waterproofing honesty before firm price — not french_drain yard-only, retaining_wall, foundation_repair, concrete, water_damage, crawl_space, sump_pump, mold remediation, plumber, or slab_leak; permit/HOA educational only", ctaVerb: "Request a basement waterproofing quote" },
+  },
+
 
 };
 

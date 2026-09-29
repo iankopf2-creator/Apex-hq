@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2733,6 +2733,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Corrugated perforated drainage pipe on excavated soil and gravel in a residential yard — french drain trench reference",
         credit: "Unsplash contributor",
         sourceUrl: "https://unsplash.com/photos/j_S43VViMB8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  basement_waterproofing: {
+    niche: "basement_waterproofing",
+    label: "Basement waterproofing",
+    palette: {
+      // Deep damp basement slate + waterproof teal — #0f172a + #14b8a6 — not french_drain #1e3a4c/#b87333, retaining_wall #1e293b/#ca8a04, stump_grinding #292524/#b45309, foundation_repair #1c1917/#b45309, water_damage/plumber/slab_leak cyan family, mold_remediation
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#14b8a6",
+      accentForeground: "#042f2e",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/wall-height/crawl-vs-poured-vs-block/interior-vs-exterior/existing-drainage-sump-vapor-barrier/access/weather assess-first for basement waterproofing; french drain / sump only after assess when relevant; mold-adjacent referral only (NOT mold remediation claims); quote before dig/install — waterproofing only, not emergency water_damage dry-out or foundation_repair piers/slabs; not french_drain yard-only, retaining_wall, concrete, crawl_space encapsulation alone, sump_pump install-only, gutter_cleaning, gutter_guards, irrigation, landscaping, stump_grinding, plumber, slab_leak",
+      heroStyle: "quote-first basement waterproofing LP — sqft/wall-height/interior-exterior/drainage/sump/vapor/crawl-poured-block chips when true, no bait flat $/lf or $/sqft, no fake same-day dry-out",
+      ctaStyle: "get a basement waterproofing quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/sqft as Apex benchmark", "fake same-day dry-out guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/wall-height/crawl vs poured vs block/interior vs exterior/existing drainage/sump/vapor barrier/access/weather assessment", "emergency water_damage restoration / call-first dry-out claims as waterproofing", "structural foundation_repair pier/slab repair confusion", "mold remediation claims — referral only when mold-adjacent", "impersonating french_drain yard-only outdoor trench", "impersonating retaining_wall grade-hold", "impersonating concrete flatwork", "impersonating crawl_space encapsulation alone", "impersonating sump_pump install-only", "impersonating gutter_cleaning or gutter_guards", "impersonating irrigation or landscaping", "impersonating stump_grinding", "impersonating plumber or slab_leak detection", "claiming licensed contractor when not true", "HOA/permit as legal advice"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#14b8a6",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Sqft/wall-height/interior-vs-exterior/drainage/sump/vapor/access assessed before firm price", "Quote before dig/install — french drain / sump when relevant after assess", "Crawl vs poured vs block honesty — not emergency dry-out or foundation piers", "Mold-adjacent referral only — not mold remediation claims", "Permit/HOA educational only — not legal advice", "No bait flat $/lf or $/sqft — licensed contractor honesty when true"],
+    heroImages: [
+      {
+        src: "/niches/basement-waterproofing.jpg",
+        alt: "Crawlspace or basement interior with vapor barrier lining and sealed floor penetrations",
+        credit: "Brett Jordan on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/Upd68AjFQ9Y",
         license: "unsplash",
       },
     ],
