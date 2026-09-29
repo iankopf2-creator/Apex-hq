@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2825,6 +2825,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Building under construction with protective plastic sheeting — vapor barrier / encapsulation reference",
         credit: "Sebastian Schuster on Unsplash",
         sourceUrl: "https://unsplash.com/photos/T-ERO0eoI8I",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  sump_pump: {
+    niche: "sump_pump",
+    label: "Sump pump",
+    palette: {
+      // Deep water-slate + bright pump cyan — #164e63 + #22d3ee — not basement_waterproofing #0f172a/#14b8a6, crawl_space_encapsulation #1c2416/#65a30d, french_drain #1e3a4c/#b87333, retaining_wall #1e293b/#ca8a04, stump_grinding #292524/#b45309; inverted roles vs plumber primary #22d3ee / accent #164e63; not foundation_repair, water_damage, mold_remediation, slab_leak, radon_mitigation, wildlife_removal, insulation, concrete, landscaping, gutter_cleaning, gutter_guards
+      primary: "#164e63",
+      primaryForeground: "#f8fafc",
+      accent: "#22d3ee",
+      accentForeground: "#083344",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#f1f5f9",
+      mutedForeground: "#155e75",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first sump pump install/replace — pit/basin size & condition / existing pump age-HP/type (pedestal vs submersible) / backup battery vs water-powered need / check valve / discharge line length & freeze risk / alarm / crawl vs basement location / power availability / water table/flood history / float switch / crock condition / effluent route / permit-HOA educational only (not legal advice) / licensed contractor honesty when true; quote before install; sump pump product — not basement_waterproofing full systems, crawl_space_encapsulation vapor barrier, french_drain exterior trench, retaining_wall, foundation_repair structural, water_damage call-first emergency, mold_remediation (referral only), plumber general, slab_leak, radon_mitigation, wildlife_removal, insulation, concrete, landscaping, gutter_cleaning, gutter_guards",
+      heroStyle: "quote-first sump pump LP — pit/basin/pump age-HP/type/backup/check valve/discharge freeze/alarm/crawl-vs-basement/power/flood-history chips when true, no bait flat $/pump, no fake never-flood or same-day dry basement, no scare fake 24/7",
+      ctaStyle: "get a sump pump quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/pump as Apex benchmark", "fake never-flood guarantees", "fake same-day dry basement guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before pit/basin size & condition/existing pump age-HP/type pedestal vs submersible/backup battery vs water-powered/check valve/discharge line length & freeze risk/alarm/crawl vs basement location/power availability/water table/flood history/float switch/crock/effluent/permit-HOA assessment", "claiming licensed contractor when not true", "HOA/permit as legal advice", "impersonating basement_waterproofing full systems", "impersonating crawl_space_encapsulation vapor barrier", "impersonating french_drain exterior yard trench", "impersonating retaining_wall grade-hold", "impersonating foundation_repair structural", "impersonating water_damage call-first emergency", "impersonating mold_remediation — referral only", "impersonating plumber general service", "impersonating slab_leak", "impersonating radon_mitigation", "impersonating wildlife_removal", "impersonating insulation attic R-value", "impersonating concrete or landscaping", "impersonating gutter_cleaning or gutter_guards"],
+    },
+    cssVars: {
+      "--theme-primary": "#164e63",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#22d3ee",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Pit/basin size & condition + existing pump age-HP/type (pedestal vs submersible) assessed before firm price", "Check valve + discharge line length & freeze risk + effluent route honesty", "Battery vs water-powered backup + alarm + crawl vs basement location honesty", "Power availability + water table/flood history honesty", "Permit/HOA educational only — quote before install — licensed contractor honesty when true", "No bait flat $/pump — no fake never-flood or same-day dry basement — no scare fake 24/7"],
+    heroImages: [
+      {
+        src: "/niches/sump-pump.jpg",
+        alt: "Utility pipe on concrete floor — sump pump pit, discharge, and backup assess reference",
+        credit: "Miquel Parera on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/EBkB8zWMwIA",
         license: "unsplash",
       },
     ],
