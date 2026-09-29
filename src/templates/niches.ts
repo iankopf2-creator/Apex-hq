@@ -1397,6 +1397,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "deep-water-slate-pump-cyan",
   },
 
+  {
+    id: "radon_mitigation",
+    label: "Radon mitigation",
+    defaultTagline: "Assess home age, foundation type, and test levels before we quote mitigation — install after design",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Radon test & mitigation quote", description: "Home age, foundation type (slab vs basement vs crawl), existing mitigation system age/fan/piping/manometer, post-mitigation test levels, entry points/soil gas, HVAC interaction, sealed cracks, sump covers, and short-term vs long-term vs continuous monitor test-first before mitigation design — suction pit vs crawl membrane fan, discharge height & neighbor setbacks, electrical for fan assessed before firm price; permit/HOA educational only; licensed mitigator (NRPP/NRSB or state) honesty when true; EPA/action levels educational only (not medical/legal advice); no bait flat $/system; no fake pass guaranteed or same-day certify; no scare fake 24/7; mold / full waterproofing / wildlife / structural foundation referral only; not crawl_space_encapsulation, basement_waterproofing, sump_pump, french_drain, foundation_repair, insulation, mold_remediation, wildlife_removal, water_damage, plumber, HVAC general, or pest_control", priceFrom: 0 },
+      { name: "Active soil depressurization plan", description: "Suction pit vs crawl membrane fan design after test results, foundation type, existing system age/fan/piping/manometer, entry points, HVAC interaction, sealed cracks, and sump covers assess — quote before install; discharge height & neighbor setbacks honesty; licensed mitigator honesty only when true", priceFrom: 0 },
+      { name: "Post-mitigation retest option", description: "Retest after system install — manometer / post-mitigation test levels honesty; electrical for fan and permit/HOA honesty when true; no bait flat $/system; no fake pass guaranteed", priceFrom: 0 },
+    ],
+    heroHints: ["Home age + foundation type (slab vs basement vs crawl) + existing system age/fan/piping/manometer assessed before firm price", "Test-first (short/long/continuous) + entry points / soil gas / HVAC interaction / sealed cracks / sump covers honesty", "Suction vs crawl membrane fan + discharge/setbacks + post-mitigation retest + permit/HOA educational only", "No bait flat $/system — no fake pass guaranteed or same-day certify — no scare fake 24/7 — EPA/action levels educational only — not crawl encapsulation, basement waterproofing, sump pump, french drain, foundation, insulation, mold, wildlife, water damage, plumber, HVAC general, or pest control"],
+    ctaLabel: "Get a radon mitigation quote",
+    accentHint: "deep-basement-charcoal-radon-amber",
+  },
+
 
 ];
 

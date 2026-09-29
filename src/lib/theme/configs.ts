@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2870,6 +2870,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Utility pipe on concrete floor — sump pump pit, discharge, and backup assess reference",
         credit: "Miquel Parera on Unsplash",
         sourceUrl: "https://unsplash.com/photos/EBkB8zWMwIA",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  radon_mitigation: {
+    niche: "radon_mitigation",
+    label: "Radon mitigation",
+    palette: {
+      // Deep basement charcoal + radon amber/gold — #1a1625 + #d97706 — not sump_pump #164e63/#22d3ee, crawl_space_encapsulation #1c2416/#65a30d, basement_waterproofing #0f172a/#14b8a6, french_drain #1e3a4c/#b87333, retaining_wall #1e293b/#ca8a04, stump_grinding #292524/#b45309, foundation_repair #1c1917/#b45309, gutter_guards #27272a/#15803d, pergola #1a1510/#d97706 (near but purple-charcoal primary), concrete #475569/#d97706 (cool gray primary); not plumber inverted cyan/slate
+      primary: "#1a1625",
+      primaryForeground: "#fafafa",
+      accent: "#d97706",
+      accentForeground: "#fffbeb",
+      background: "#fafafa",
+      foreground: "#18181b",
+      muted: "#f4f4f5",
+      mutedForeground: "#92400e",
+      border: "#d4d4d8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first radon mitigation — home age / foundation type (slab vs basement vs crawl) / existing mitigation system age / fan / piping / manometer / post-mitigation test levels / entry points / soil gas / HVAC interaction / sealed cracks / sump covers / short-term vs long-term vs continuous monitor test-first before mitigation design / suction pit vs crawl membrane fan / discharge height & neighbor setbacks / electrical for fan / permit-HOA educational only (not legal advice) / licensed mitigator (NRPP/NRSB or state) honesty when true; educational on EPA/action levels — not medical or legal advice; quote before install; radon mitigation product — not crawl_space_encapsulation vapor barrier, basement_waterproofing full systems, sump_pump install-only, french_drain exterior trench, foundation_repair structural, insulation attic R-value, mold_remediation (referral only), wildlife_removal (referral only), water_damage call-first, plumber general, HVAC general, pest_control",
+      heroStyle: "quote-first radon mitigation LP — home age/foundation type/existing system age-fan-piping-manometer/test levels/entry points/HVAC interaction/sealed cracks/sump covers/permit-HOA chips when true, no bait flat $/system, no fake pass guaranteed or same-day certify, no scare fake 24/7",
+      ctaStyle: "get a radon mitigation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/system as Apex benchmark", "fake pass guaranteed / guaranteed zero radon claims", "fake same-day certify / same-day cure guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "medical claims about radon health risk (EPA/action levels educational only — not medical advice)", "legal advice claims (permit/HOA educational only)", "firm price before home age/foundation type slab vs basement vs crawl/existing mitigation system age/fan/piping/manometer/post-mitigation test levels/entry points/soil gas/HVAC interaction/sealed cracks/sump covers/test type short vs long vs continuous/suction vs membrane/discharge height/neighbor setbacks/electrical/permit-HOA assessment", "claiming licensed mitigator / NRPP/NRSB or state radon cert when not true", "impersonating crawl_space_encapsulation vapor barrier", "impersonating basement_waterproofing full systems", "impersonating sump_pump install-only", "impersonating french_drain exterior yard trench", "impersonating foundation_repair structural", "impersonating insulation attic R-value", "impersonating mold_remediation — referral only", "impersonating wildlife_removal — referral only", "impersonating water_damage call-first emergency", "impersonating plumber general service", "impersonating HVAC general / duct work", "impersonating pest_control"],
+    },
+    cssVars: {
+      "--theme-primary": "#1a1625",
+      "--theme-primary-fg": "#fafafa",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fafafa",
+      "--theme-fg": "#18181b",
+    },
+    trustBadges: ["Home age + foundation type (slab vs basement vs crawl) assessed before firm price", "Existing system age / fan / piping / manometer + post-mitigation test levels honesty", "Entry points / soil gas / HVAC interaction / sealed cracks / sump covers honesty", "Test-first (short-term / long-term / continuous) before mitigation design", "Permit/HOA educational only — quote before install — licensed mitigator honesty when true", "No bait flat $/system — no fake pass guaranteed or same-day certify — no scare fake 24/7 — EPA/action levels educational only (not medical/legal advice)"],
+    heroImages: [
+      {
+        src: "/niches/radon-mitigation.jpg",
+        alt: "Ventilation pipe / discharge stack reference for radon mitigation system design",
+        credit: "Mitchell Luo on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/RAliDqgJKbE",
         license: "unsplash",
       },
     ],

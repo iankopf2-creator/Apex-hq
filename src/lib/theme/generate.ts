@@ -318,6 +318,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first sump pump honesty before firm price — not basement_waterproofing, crawl_space_encapsulation, french_drain, retaining_wall, foundation_repair, water_damage, mold_remediation, plumber, slab_leak, radon_mitigation, wildlife_removal, insulation, concrete, landscaping, gutter_cleaning, or gutter_guards; no bait $/pump or fake never-flood/same-day dry basement/scare 24/7", ctaVerb: "Request a sump pump quote" },
   },
 
+  radon_mitigation: {
+    A: { heroEmphasis: "quote-first home age/foundation type slab-vs-basement-vs-crawl/existing system age-fan-piping-manometer/post-mitigation test levels/entry points/HVAC interaction/sealed cracks/sump covers/test-first short-long-continuous/suction vs membrane/discharge/electrical/permit-HOA assess for radon mitigation", ctaVerb: "Get a radon mitigation quote" },
+    B: { heroEmphasis: "quote-first radon mitigation honesty before firm price — not crawl_space_encapsulation, basement_waterproofing, sump_pump, french_drain, foundation_repair, insulation, mold_remediation, wildlife_removal, water_damage, plumber, HVAC general, or pest_control; no bait $/system or fake pass guaranteed/same-day certify/scare 24/7; EPA/action levels educational only", ctaVerb: "Request a radon mitigation quote" },
+  },
+
+
 
 };
 
