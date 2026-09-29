@@ -1421,6 +1421,31 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "wildlife_removal",
+    label: "Wildlife removal",
+    defaultTagline: "Wildlife in the attic or crawl — assess species, entry points, and access before we quote exclusion",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Wildlife inspection & quote", description: "Species ID, entry points, attic/crawl access, exclusion vs live-trap vs one-way door, cleanup/sanitation need, seasonal nesting, and local permit/wildlife rehab educational only assessed before firm price — licensed wildlife control honesty when true; quote before trap/exclude; priceFrom 0; no bait flat $/animal; no fake same-day guarantee; no scare fake 24/7; structural repair / mold remediation / full waterproofing / radon install / pest_control spray programs referral only; not pest_control insects, tree_service storm, stump_grinding, junk_removal haul, mold_remediation, water_damage, handyman, crawl_space_encapsulation, radon_mitigation, basement_waterproofing, or sump_pump", priceFrom: 0 },
+      { name: "Exclusion / re-entry sealing plan", description: "Entry-point sealing and exclusion plan after species/access assess — quote before work; local permit/wildlife rehab educational only (not legal advice); no fake same-day guaranteed catch for every species; licensed wildlife control honesty only when true", priceFrom: 0 },
+      { name: "Attic cleanup & sanitation option", description: "Attic/crawl cleanup and sanitation honesty after inspection — quote before cleanup; structural repair / mold remediation referral only when damage found", priceFrom: 0 },
+    ],
+    heroHints: ["Species ID + entry points + attic/crawl access assessed before firm price", "Quote before trap/exclude — exclusion vs live-trap vs one-way door honesty", "Cleanup/sanitation + seasonal nesting + permit/rehab educational only — not legal advice", "No bait flat $/animal — no fake same-day — no scare fake 24/7 — not pest spray, tree, stump, junk, mold, water damage, handyman, crawl encaps, radon, basement waterproofing, or sump"],
+    ctaLabel: "Get a wildlife removal quote",
+    accentHint: "night-attic-lantern-amber",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

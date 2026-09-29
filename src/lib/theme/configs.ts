@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2915,6 +2915,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Ventilation pipe / discharge stack reference for radon mitigation system design",
         credit: "Mitchell Luo on Unsplash",
         sourceUrl: "https://unsplash.com/photos/RAliDqgJKbE",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  wildlife_removal: {
+    niche: "wildlife_removal",
+    label: "Wildlife removal",
+    palette: {
+      // Night-attic slate + lantern/caution amber — #121a2b + #f59e0b — primary changed from old #79 #0f172a which collided with basement_waterproofing #0f172a/#14b8a6; distinct from radon_mitigation #1a1625/#d97706, pest_control lime, tree_service, stump_grinding #292524/#b45309, junk_removal, mold_remediation, water_damage, crawl_space_encapsulation #1c2416/#65a30d, sump_pump #164e63/#22d3ee, french_drain #1e3a4c/#b87333, retaining_wall #1e293b/#ca8a04, foundation_repair #1c1917/#b45309
+      primary: "#121a2b",
+      primaryForeground: "#f8fafc",
+      accent: "#f59e0b",
+      accentForeground: "#422006",
+      background: "#fafaf9",
+      foreground: "#0f172a",
+      muted: "#fef3c7",
+      mutedForeground: "#92400e",
+      border: "#fde68a",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first wildlife removal / exclusion (attic-crawl critters — not pest_control spray) — species ID / entry points / attic-crawl access / exclusion vs live-trap vs one-way door / cleanup-sanitation need / seasonal nesting / local permit-wildlife rehab educational only (not legal advice) / licensed wildlife control honesty when true; quote before trap/exclude; wildlife removal product — not pest_control insects call-first spray programs, tree_service storm, stump_grinding, junk_removal haul, mold_remediation (referral only), water_damage call-first, handyman, crawl_space_encapsulation vapor barrier, radon_mitigation install (referral only), basement_waterproofing full systems (referral only), sump_pump install-only; structural repair / mold remediation / full waterproofing / radon install / pest_control spray programs referral only",
+      heroStyle: "quote-first wildlife removal LP — species/entry/attic-crawl access/exclusion vs trap vs one-way door/cleanup/seasonal nesting/permit-rehab chips when true, no bait flat $/animal, no fake same-day guarantee, no scare fake 24/7",
+      ctaStyle: "get a wildlife removal quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/animal or $/attic as Apex benchmark", "fake same-day guaranteed catch for every species", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before species ID/entry points/attic-crawl access/exclusion vs live-trap vs one-way door/cleanup-sanitation/seasonal nesting/permit-rehab assessment", "claiming licensed/insured/state wildlife permit when not true", "legal advice on local wildlife laws — educational only", "impersonating pest_control insects/general pests spray programs call-first", "impersonating tree_service storm", "impersonating stump_grinding", "impersonating junk_removal haul", "impersonating mold_remediation — referral only", "impersonating water_damage call-first emergency", "impersonating handyman general", "impersonating crawl_space_encapsulation vapor barrier", "impersonating radon_mitigation install — referral only", "impersonating basement_waterproofing full systems — referral only", "impersonating sump_pump install-only"],
+    },
+    cssVars: {
+      "--theme-primary": "#121a2b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Species ID + entry points + attic/crawl access assessed before firm price", "Exclusion vs live-trap vs one-way door honesty — quote before trap/exclude", "Cleanup/sanitation + seasonal nesting honesty", "Local permit/wildlife rehab educational only — not legal advice", "Licensed wildlife control honesty when true — structural/mold/waterproofing/radon/pest spray referral only", "No bait flat $/animal — no fake same-day guarantee — no scare fake 24/7"],
+    heroImages: [
+      {
+        src: "/niches/wildlife-removal.jpg",
+        alt: "Raccoon sitting on a residential roof near attic entry — wildlife exclusion reference",
+        credit: "Pascal on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/NqcZoF6BFkw",
         license: "unsplash",
       },
     ],
