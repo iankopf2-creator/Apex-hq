@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2691,6 +2691,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+  french_drain: {
+    niche: "french_drain",
+    label: "French drain",
+    palette: {
+      // Deep drainage slate + soft trench copper — #1e3a4c + #b87333 — not retaining_wall #1e293b/#ca8a04, stump_grinding #292524/#b45309, gutter_guards #27272a/#15803d, storage_container_rental #3f3f46/#c2410c, concrete #475569/#d97706, foundation_repair, landscaping, irrigation
+      primary: "#1e3a4c",
+      primaryForeground: "#f8fafc",
+      accent: "#b87333",
+      accentForeground: "#fff7ed",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#f1f5f9",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest length/depth/soil/daylight-vs-sump/yard-access-slope/buried-utilities/existing-vs-new-trench/gravel-pipe-sizing when true/surface-vs-subsurface/HOA-permit educational assess-first, quote before dig; outdoor yard drainage — not retaining_wall, foundation_repair, concrete flatwork, landscaping, irrigation, gutter_cleaning, gutter_guards, basement waterproofing / crawl_space, sump_pump, water_damage, slab_leak, plumber",
+      heroStyle: "quote-first french drain LP — length/depth/soil/daylight-vs-sump/access/utilities/pipe-gravel when true, no bait flat $/lf, no fake same-day dig",
+      ctaStyle: "get a french drain quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf as Apex benchmark", "fake same-day dig guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before length/depth/soil type/daylight vs sump daylighting/yard access/slope/buried utilities/existing vs new trench/gravel-pipe sizing when true/surface vs subsurface/HOA-permit assessment", "impersonating retaining_wall grade-hold", "impersonating foundation_repair structural", "impersonating concrete flatwork pour", "impersonating landscaping mow/beds", "impersonating irrigation zones", "impersonating gutter_cleaning or gutter_guards", "impersonating basement waterproofing / crawl_space interior systems", "impersonating sump_pump install-only", "impersonating water_damage call-first emergency", "impersonating plumber or slab_leak detection", "claiming licensed contractor when not true", "HOA/permit as legal advice"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e3a4c",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#b87333",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Length/depth + soil type assessed before firm price", "Daylight vs sump daylighting honesty", "Yard access/slope + buried utilities before dig", "Existing vs new trench + gravel/pipe sizing when true", "Surface drainage vs subsurface honesty", "Permit/HOA educational only — not legal advice", "No bait flat $/lf — quote before dig"],
+    heroImages: [
+      {
+        src: "/niches/french-drain.jpg",
+        alt: "Corrugated perforated drainage pipe on excavated soil and gravel in a residential yard — french drain trench reference",
+        credit: "Unsplash contributor",
+        sourceUrl: "https://unsplash.com/photos/j_S43VViMB8",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 };
 
