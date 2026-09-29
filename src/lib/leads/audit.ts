@@ -64,6 +64,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   sump_pump: 400,
   radon_mitigation: 450,
   wildlife_removal: 375,
+  septic_pumping: 350,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -187,6 +188,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first radon mitigation page (home age + foundation type slab vs basement vs crawl + existing mitigation system age/fan/piping/manometer + post-mitigation test levels + entry points/soil gas + HVAC interaction + sealed cracks + sump covers + short-term vs long-term vs continuous monitor test-first before mitigation design + suction pit vs crawl membrane fan + discharge height/neighbor setbacks + electrical for fan + permit/HOA educational only — not legal advice; licensed mitigator NRPP/NRSB or state honesty when true; EPA/action levels educational only — not medical advice; mold / full waterproofing / wildlife / structural foundation referral only) so callers get a real quote — not bait flat $/system or fake pass guaranteed or same-day certify or scare fake 24/7; distinct from crawl_space_encapsulation, basement_waterproofing, sump_pump, french_drain, foundation_repair, insulation, mold_remediation, wildlife_removal, water_damage, plumber, HVAC general, and pest_control.",
   wildlife_removal:
     "Add a quote-first wildlife removal page (species ID + entry points + attic/crawl access + exclusion vs live-trap vs one-way door + cleanup/sanitation + seasonal nesting + local permit/wildlife rehab educational only — not legal advice; licensed wildlife control honesty when true; structural repair / mold remediation / full waterproofing / radon install / pest_control spray programs referral only) so callers get a real quote — not bait flat $/animal or fake same-day guarantee or scare fake 24/7; distinct from pest_control spray, tree_service, stump_grinding, junk_removal, mold_remediation, water_damage, handyman, crawl_space_encapsulation, radon_mitigation, basement_waterproofing, and sump_pump.",
+  septic_pumping:
+    "Add a quote-first septic pumping page (residential tank pump-out + tank size/access/last pump date/system type tank-vs-aerobic/distance/after-hours schedule assess before firm price; local septic rules educational only — not legal advice; licensed/permitted honesty when true) so callers get a real quote — not bait flat $/tank or fake same-day clear; distinct from plumber, slab leak, water damage, junk removal, and grease trap FOG cleaning.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
