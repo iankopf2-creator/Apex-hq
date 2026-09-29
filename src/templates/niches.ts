@@ -1279,6 +1279,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "bark-charcoal-stump-amber",
   },
 
+  {
+    id: "retaining_wall",
+    label: "Retaining wall",
+    defaultTagline: "Walls that hold the grade — assess before we quote the build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Retaining Wall Quote", description: "Wall height/length (lf), soil/drainage, toe/heel footing, material (block/timber/stone/poured when true — no competitor brand names), surcharge/load above wall, access/equipment, existing vs new, and HOA/permit when true assessed before firm price — no bait flat $/lf or $/sqft; not concrete flatwork alone, not general masonry, not fencing, not landscaping beds/mow, not foundation_repair, not stump_grinding", priceFrom: 0 },
+      { name: "Height, Drainage & Footing Review", description: "Height/length, soil/drainage, and toe/heel footing honesty after site review — quote before dig; local permit/HOA educational only (not legal advice); licensed contractor / engineer honesty when required; no fake same-day", priceFrom: 0 },
+      { name: "Material & Surcharge Option", description: "Block/timber/stone/poured material and surcharge/load-above-wall honesty after assess — quote before build; distinct from concrete flatwork, masonry veneer-only, fencing, landscaping, foundation_repair", priceFrom: 0 },
+    ],
+    heroHints: ["Height/lf/soil/drainage/footing/material/surcharge/access assessed before firm price", "Quote before dig — retaining wall / grade-hold honesty", "Local permit/HOA educational only — not legal advice", "No bait flat $/lf or $/sqft — not concrete flatwork, masonry, fencing, landscaping, foundation_repair, or stump_grinding"],
+    ctaLabel: "Get a retaining wall quote",
+    accentHint: "basalt-sandstone-retaining",
+  },
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {
