@@ -60,6 +60,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   retaining_wall: 450,
   french_drain: 425,
   basement_waterproofing: 475,
+  crawl_space_encapsulation: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -175,6 +176,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first french drain page (trench length/depth + soil type + daylight vs sump daylighting + yard access/slope + buried utilities + existing vs new trench + gravel/pipe sizing when true + surface vs subsurface + HOA/permit when true assess before firm price; local permit/HOA educational only — not legal advice; licensed contractor honesty when required) so callers get a real quote — not bait flat $/lf or fake same-day dig; distinct from retaining_wall, foundation_repair, concrete flatwork, landscaping, irrigation, gutter_cleaning, gutter_guards, basement waterproofing / crawl_space, sump_pump, water_damage, slab_leak, and plumber.",
   basement_waterproofing:
     "Add a quote-first basement waterproofing page (sqft + wall height + crawl vs poured vs block + interior vs exterior + existing drainage/sump/vapor barrier + access + weather assess before firm price; french drain / sump only after assess when relevant; mold-adjacent referral only — NOT mold remediation claims; local permit/HOA educational only — not legal advice; licensed contractor honesty when true) so callers get a real quote — not bait flat $/lf or $/sqft or fake same-day dry-out; distinct from french_drain, retaining_wall, foundation_repair, concrete, water_damage, crawl_space, sump_pump, mold_remediation, gutter_cleaning, gutter_guards, irrigation, landscaping, stump_grinding, plumber, and slab_leak.",
+  crawl_space_encapsulation:
+    "Add a quote-first crawl space encapsulation page (sqft + height/access hatches-vents-debris + dirt vs concrete floor + moisture/standing water vs humidity + existing vapor barrier/insulation/vents + HVAC ducts in crawl + pest/wildlife evidence referral only — NOT wildlife_removal claims + radon educational only — NOT radon_mitigation install + rim-joist/sill sealing + sump/dehumidifier need + permit/HOA assess before firm price; licensed contractor honesty only when true) so callers get a real quote — not bait flat $/sqft or fake same-day dry crawl guarantee; distinct from basement_waterproofing, french_drain, retaining_wall, foundation_repair, sump_pump, mold_remediation, water_damage, insulation, radon_mitigation, wildlife_removal, plumber, concrete, and landscaping.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
