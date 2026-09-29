@@ -1232,6 +1232,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a storage container rental quote",
     accentHint: "weathered-steel-muted-rust",
   },
+  {
+    id: "gutter_guards",
+    label: "Gutter Guards",
+    defaultTagline: "Leaf protection for your roof edge — assess before we quote the guards",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Gutter Guards Quote", description: "Linear feet, stories/height, roof pitch/access, existing gutter type (K-style/half-round/box), guard material (micro-mesh/brush/screen/helmet-style when true — no competitor brand names), debris/leaf load, and downspout count assessed before firm price — no bait flat $/lf; not gutter cleaning flush service, not roofing, not pressure washing, not siding, not fascia alone", priceFrom: 0 },
+      { name: "Linear Feet & Height Assess", description: "Gutter run length and stories/height honesty after scope review — quote before install", priceFrom: 0 },
+      { name: "Existing Gutter & Material Review", description: "Existing gutter type and guard material options assessed before firm price — local permit/HOA educational only (not legal advice); no fake same-day install; no competitor brand cloning", priceFrom: 0 },
+      { name: "Debris Load & Downspout Walkthrough", description: "Debris/leaf load and downspout count honesty — quote before install; distinct from gutter cleaning, roofing, pressure washing, siding, and fascia alone", priceFrom: 0 },
+    ],
+    heroHints: ["Linear-ft/stories/pitch/existing gutter/material/debris/downspouts assessed before firm price", "Quote before install — gutter guards / leaf protection covers", "Local permit/HOA educational only — not legal advice", "No bait flat $/lf — not gutter cleaning, roofing, pressure washing, siding, or fascia alone"],
+    ctaLabel: "Get a gutter guards quote",
+    accentHint: "zinc-leaf-guard-green",
+  },
 
 ];
 

@@ -59,6 +59,8 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 - Porta Potty Rental — quote_first (portable-unit plastic slate `#2c3542` + soft sanitation mint `#5eead4`; unit count / event days vs jobsite duration / delivery access / ADA unit need / restock-service cadence / waste pump-out schedule assess before firm price; no bait flat $/day or $/weekend; no fake same-day drop; local permit/HOA educational only — not legal advice; licensed/hauler when true; quote before delivery; distinct from dumpster_rental roll-off, junk_removal hauling labor, septic_pumping, grease_trap_cleaning, storage_container_rental)
 - Storage Container Rental — quote_first (weathered steel / container corrugation zinc `#3f3f46` + muted rust `#c2410c`; size 10/20/40 ft / delivery-pickup access & crane-tilt-bed / ground-surface / rental duration days-weeks-months / lock-security / residential vs jobsite assess before firm price; no bait flat $/day or $/month; no fake same-day delivery; local permit/HOA educational only — not legal advice; distinct from dumpster_rental roll-off, porta_potty_rental toilets, junk_removal hauling, moving labor, septic_pumping, grease_trap_cleaning)
 
+- Gutter Guards — quote_first (deep zinc/gutter-metal `#27272a` + leaf-guard forest green `#15803d`; linear-ft / stories-height / roof pitch-access / existing gutter type K-style-half-round-box / guard material micro-mesh-brush-screen-helmet-style when true (no competitor brand names) / debris-leaf load / downspout count / HOA-permit educational assess before firm price; no bait flat $/lf; no fake same-day install; licensed contractor honesty when true; quote before install; distinct from gutter_cleaning flush service, roofing, pressure_washing, siding, and fascia alone)
+
 ## Next high-ROI trades (US local SMB)
 1. More as Lead Scout / Research feed prioritizes
 
@@ -70,5 +72,5 @@ Ship unique visual identity per local trade. Each niche = palette + fonts + tone
 
 ## UX polish (2026-09-04)
 - Call-first vs book-first sticky CTAs on public sites (HVAC/plumber vs salon)
-- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney + window_replacement + generator + ev_charger + patio_cover + irrigation + pergola + gazebo + carport + awning + dumpster_rental + porta_potty_rental + storage_container_rental
+- quote_first for commercial janitorial + junk_removal + pressure_washing + gutter_cleaning + window_cleaning + carpet_cleaning + flooring + fencing + concrete + siding + decking + masonry + drywall + insulation + tile + cabinets + countertops + landscaping + auto_detail + foundation_repair + solar + epoxy_flooring + chimney + window_replacement + generator + ev_charger + patio_cover + irrigation + pergola + gazebo + carport + awning + dumpster_rental + porta_potty_rental + storage_container_rental + gutter_guards
 - 48px tap targets; trust chips from research notes
