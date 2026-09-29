@@ -66,3 +66,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Stump grinding | `stump-grinding.jpg` | Haberdoedas | https://unsplash.com/photos/xFH7QN2LejE |
 | Retaining wall | `retaining-wall.jpg` | Unsplash contributor | https://unsplash.com/photos/9tCs0D3dYCc |
 | French drain | `french-drain.jpg` | Unsplash contributor | https://unsplash.com/photos/j_S43VViMB8 |
+| Basement waterproofing | `basement-waterproofing.jpg` | Brett Jordan | https://unsplash.com/photos/Upd68AjFQ9Y |
