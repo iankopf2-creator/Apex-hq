@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards";
 
 export type ThemePalette = {
   primary: string;
@@ -2556,6 +2556,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  gutter_guards: {
+    niche: "gutter_guards",
+    label: "Gutter Guards",
+    palette: {
+      // Deep zinc/gutter-metal + leaf-guard forest green — #27272a + #15803d — not gutter_cleaning #78350f/#57534e, fencing sage, landscaping forest olive, irrigation #0f1f17/#2dd4bf, patio_cover #1c1917/#b45309, storage_container #3f3f46/#c2410c, roofing, siding
+      primary: "#27272a",
+      primaryForeground: "#fafafa",
+      accent: "#15803d",
+      accentForeground: "#f0fdf4",
+      background: "#fafaf9",
+      foreground: "#18181b",
+      muted: "#f4f4f5",
+      mutedForeground: "#52525b",
+      border: "#d4d4d8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest linear-ft / stories-height / roof pitch-access / existing gutter type (K-style/half-round/box) / guard material (micro-mesh/brush/screen/helmet-style when true — no competitor brand names) / debris-leaf load / downspout count / HOA-permit educational assess-first for gutter guards / leaf protection covers, quote before install — protection covers only, not gutter cleaning flush service, not roofing tear-off, not pressure washing, not siding, not fascia alone; local permit/HOA educational only (not legal advice)",
+      heroStyle: "quote-first gutter guards LP — linear-ft/stories/pitch/existing-gutter/material/debris/downspouts chips when true, no bait flat $/lf, no fake same-day install, no competitor brand cloning, permit/HOA educational only",
+      ctaStyle: "get a gutter guards quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf as Apex benchmark", "fake same-day install guarantees", "competitor brand cloning", "LeafFilter / Gutter Helmet / LeafGuard brand names", "fake 24/7", "scare copy / fake emergency urgency", "firm price before linear-ft/stories/pitch/existing-gutter/material/debris/downspout assessment", "gutter cleaning flush-only confusion", "roofing tear-off confusion", "pressure washing confusion", "siding/fascia-alone confusion", "legal advice on local permit/HOA rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#27272a",
+      "--theme-primary-fg": "#fafafa",
+      "--theme-accent": "#15803d",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#18181b",
+    },
+    trustBadges: ["Linear-ft/stories/pitch/existing gutter/material/debris/downspouts assessed before firm price", "Quote before install — gutter guards / leaf protection covers", "Local permit/HOA educational only — not legal advice", "No bait flat $/lf — not gutter cleaning, roofing, pressure washing, siding, or fascia alone"],
+    heroImages: [
+      {
+        src: "/niches/gutter-guards.jpg",
+        alt: "Close-up of a residential rain gutter on a shingle roof edge — linear feet, height, and existing gutter type assessed before quote",
+        credit: "Luke Southern on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/ZzZouwiQWV0",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 };
 

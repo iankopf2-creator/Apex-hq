@@ -283,6 +283,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first storage container honesty before firm price — not dumpster, porta potty, junk removal, moving, septic, or grease trap; permit/HOA educational only", ctaVerb: "Request a storage container rental quote" },
   },
 
+  gutter_guards: {
+    A: { heroEmphasis: "quote-first assess linear-ft/stories/pitch/existing-gutter/material/debris/downspouts/HOA-permit for gutter guards", ctaVerb: "Get a gutter guards quote" },
+    B: { heroEmphasis: "quote-first gutter guards honesty before firm price — not gutter cleaning, roofing, pressure washing, siding, or fascia alone; no brand cloning; permit/HOA educational only", ctaVerb: "Request a gutter guards assess quote" },
+  },
+
 
 
 

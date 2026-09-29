@@ -55,6 +55,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   dumpster_rental: 450,
   porta_potty_rental: 275,
   storage_container_rental: 350,
+  gutter_guards: 420,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -160,6 +161,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first porta potty rental page (event/construction portable toilets + unit count/event days vs jobsite duration/delivery access/ADA unit need/restock-service cadence/waste pump-out schedule assess before firm price; local permit/HOA educational only — not legal advice; licensed/hauler honesty when true) so callers get a real quote — not bait flat $/day or $/weekend or fake same-day drop; distinct from dumpster_rental roll-off, junk_removal hauling labor, septic_pumping, grease_trap_cleaning, and storage_container_rental.",
   storage_container_rental:
     "Add a quote-first storage container rental page (shipping-container / conex / portable storage + size 10/20/40 ft / delivery-pickup access & crane-tilt-bed / ground-surface / rental duration days-weeks-months / lock-security / residential vs jobsite assess before firm price; local permit/HOA educational only — not legal advice) so callers get a real quote — not bait flat $/day or $/month or fake same-day delivery; distinct from dumpster roll-off, porta potty, junk removal, moving, septic pumping, and grease trap FOG cleaning.",
+  gutter_guards:
+    "Add a quote-first gutter guards page (leaf protection covers + linear-ft/stories/pitch/existing gutter type/guard material micro-mesh-brush-screen when true/debris-leaf load/downspout count assess before firm price; local permit/HOA educational only — not legal advice; no competitor brand cloning) so callers get a real quote — not bait flat $/lf or fake same-day install; distinct from gutter_cleaning flush service, roofing, pressure_washing, siding, and fascia alone.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
