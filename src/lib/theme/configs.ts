@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -2779,6 +2779,52 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Crawlspace or basement interior with vapor barrier lining and sealed floor penetrations",
         credit: "Brett Jordan on Unsplash",
         sourceUrl: "https://unsplash.com/photos/Upd68AjFQ9Y",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  crawl_space_encapsulation: {
+    niche: "crawl_space_encapsulation",
+    label: "Crawl space encapsulation",
+    palette: {
+      // Deep crawl olive charcoal + vapor-barrier lime — #1c2416 + #65a30d — not basement_waterproofing #0f172a/#14b8a6, french_drain #1e3a4c/#b87333, retaining_wall #1e293b/#ca8a04, stump_grinding #292524/#b45309 (old #81 primary #292524 collided), foundation_repair #1c1917/#b45309, mold_remediation, insulation, radon_mitigation, wildlife_removal, water_damage, plumber, concrete, landscaping
+      primary: "#1c2416",
+      primaryForeground: "#f7fee7",
+      accent: "#65a30d",
+      accentForeground: "#1a2e05",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5f5f4",
+      mutedForeground: "#3f6212",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/height/access (hatches, vents, debris)/dirt-vs-concrete floor/moisture-standing-water-vs-humidity/existing vapor barrier-insulation-vents/HVAC-ducts in crawl/pest-wildlife evidence referral-only (NOT wildlife_removal claims)/radon educational-only (NOT radon_mitigation install claims)/rim-joist-sill sealing/sump-dehumidifier need/permit-HOA assess-first, quote before encapsulate; vapor barrier encapsulation product — not basement_waterproofing interior walls/floors, french_drain exterior yard trench, retaining_wall, foundation_repair structural, sump_pump install-only, mold_remediation call-first, water_damage emergency restoration, insulation attic R-value, radon_mitigation, wildlife_removal, plumber, concrete, landscaping",
+      heroStyle: "quote-first crawl space encapsulation LP — sqft/height/access/dirt-vs-concrete/moisture/vapor-barrier/insulation-vents/HVAC-duct/pest-referral/radon-edu chips when true, no bait flat $/sqft, no fake same-day dry crawl guarantee",
+      ctaStyle: "get a crawl space encapsulation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day dry crawl guarantee", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/height/access/dirt vs concrete floor/moisture-standing water vs humidity/existing vapor barrier/insulation/vents/HVAC ducts/pest-wildlife evidence/radon educational/rim-joist-sill/sump-dehumidifier/permit-HOA assessment", "claiming radon mitigation niche or install (educational only)", "wildlife_removal / pest control claims — referral only when evidence", "impersonating basement_waterproofing interior systems", "impersonating french_drain exterior yard trench", "impersonating retaining_wall grade-hold", "impersonating foundation_repair structural", "impersonating sump_pump install-only", "impersonating water_damage call-first emergency", "impersonating mold_remediation call-first", "impersonating insulation attic R-value blow-in", "impersonating plumber or concrete or landscaping", "claiming licensed contractor when not true", "HOA/permit as legal advice"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c2416",
+      "--theme-primary-fg": "#f7fee7",
+      "--theme-accent": "#65a30d",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/height/access + dirt vs concrete floor assessed before firm price", "Moisture/standing water + existing vapor barrier/insulation/vents honesty", "HVAC ducts in crawl honesty — pest/wildlife referral only (not wildlife_removal)", "Radon educational only — not radon_mitigation install claims", "Permit/HOA educational only — quote before encapsulate", "No bait flat $/sqft — no fake same-day dry crawl — licensed contractor honesty when true"],
+    heroImages: [
+      {
+        src: "/niches/crawl-space-encapsulation.jpg",
+        alt: "Building under construction with protective plastic sheeting — vapor barrier / encapsulation reference",
+        credit: "Sebastian Schuster on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/T-ERO0eoI8I",
         license: "unsplash",
       },
     ],

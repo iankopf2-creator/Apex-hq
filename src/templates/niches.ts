@@ -1351,6 +1351,30 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "crawl_space_encapsulation",
+    label: "Crawl space encapsulation",
+    defaultTagline: "Seal the crawl — assess access, moisture, and vapor barrier before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 6:00 PM",
+      tue: "7:00 AM – 6:00 PM",
+      wed: "7:00 AM – 6:00 PM",
+      thu: "7:00 AM – 6:00 PM",
+      fri: "7:00 AM – 6:00 PM",
+      sat: "8:00 AM – 2:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Crawl space inspection & encapsulation quote", description: "Sqft, crawl height/access (hatches, vents, debris), dirt vs concrete floor, moisture/standing water vs humidity, existing vapor barrier/insulation/vents, HVAC/ducts in crawl, pest/wildlife evidence (referral only — not wildlife_removal claims), radon educational only (not radon_mitigation install), rim-joist/sill sealing, sump/dehumidifier need, and permit/HOA when true — assessed before firm price; no bait flat $/sqft; no fake same-day dry crawl guarantee; not basement_waterproofing, french_drain, retaining_wall, foundation_repair, sump_pump, mold_remediation, water_damage, insulation, radon_mitigation, wildlife_removal, plumber, concrete, or landscaping", priceFrom: 0 },
+      { name: "Vapor barrier encapsulation plan", description: "Ground cover / wall liner plan after access, floor type, and moisture assess — quote before encapsulate; licensed contractor honesty only when true; permit/HOA educational only", priceFrom: 0 },
+      { name: "Rim-joist seal + dehumidifier option", description: "Rim-joist/sill sealing and sump/dehumidifier options after moisture assess — HVAC duct honesty when present; pest/wildlife referral only; no bait flat $/sqft", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/height/access + dirt vs concrete floor assessed before firm price", "Moisture + existing vapor barrier/insulation/vents honesty", "HVAC ducts + pest/wildlife referral only — radon educational only", "No bait flat $/sqft — no fake same-day dry crawl — not basement waterproofing, french drain, foundation, sump, mold, water damage, insulation, radon install, or wildlife removal"],
+    ctaLabel: "Get a crawl space encapsulation quote",
+    accentHint: "deep-crawl-olive-vapor-barrier-lime",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

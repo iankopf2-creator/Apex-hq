@@ -308,6 +308,12 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  crawl_space_encapsulation: {
+    A: { heroEmphasis: "quote-first sqft/height/access/dirt-vs-concrete/moisture/vapor-barrier/insulation-vents/HVAC-duct/pest-referral/radon-edu/rim-joist/sump-dehumidifier/permit assess for encapsulation", ctaVerb: "Get a crawl space encapsulation quote" },
+    B: { heroEmphasis: "quote-first crawl encapsulation honesty before firm price — not basement_waterproofing, french_drain, retaining_wall, foundation_repair, sump_pump, mold_remediation, water_damage, insulation, radon_mitigation, wildlife_removal, plumber, concrete, or landscaping; no bait $/sqft or fake same-day dry crawl", ctaVerb: "Request a crawl space encapsulation quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
