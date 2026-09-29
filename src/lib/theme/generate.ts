@@ -325,6 +325,13 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+
+  wildlife_removal: {
+    A: { heroEmphasis: "quote-first species-ID/entry-points/attic-crawl access/exclusion-vs-live-trap-vs-one-way-door/cleanup-sanitation/seasonal-nesting/permit-rehab educational assess for wildlife removal", ctaVerb: "Get a wildlife removal quote" },
+    B: { heroEmphasis: "quote-first wildlife removal honesty before firm price — not pest_control spray, tree_service, stump_grinding, junk_removal, mold_remediation, water_damage, handyman, crawl_space_encapsulation, radon_mitigation, basement_waterproofing, or sump_pump; no bait $/animal or fake same-day/scare 24/7; permit/rehab educational only", ctaVerb: "Request a wildlife removal quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

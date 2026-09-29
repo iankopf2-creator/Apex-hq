@@ -70,3 +70,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Crawl space encapsulation | `crawl-space-encapsulation.jpg` | Sebastian Schuster | https://unsplash.com/photos/T-ERO0eoI8I |
 | Sump pump | `sump-pump.jpg` | Miquel Parera | https://unsplash.com/photos/EBkB8zWMwIA |
 | Radon mitigation | `radon-mitigation.jpg` | Mitchell Luo | https://unsplash.com/photos/RAliDqgJKbE |
+| Wildlife removal | `wildlife-removal.jpg` | Pascal | https://unsplash.com/photos/NqcZoF6BFkw |
