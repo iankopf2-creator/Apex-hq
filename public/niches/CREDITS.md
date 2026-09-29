@@ -68,3 +68,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | French drain | `french-drain.jpg` | Unsplash contributor | https://unsplash.com/photos/j_S43VViMB8 |
 | Basement waterproofing | `basement-waterproofing.jpg` | Brett Jordan | https://unsplash.com/photos/Upd68AjFQ9Y |
 | Crawl space encapsulation | `crawl-space-encapsulation.jpg` | Sebastian Schuster | https://unsplash.com/photos/T-ERO0eoI8I |
+| Sump pump | `sump-pump.jpg` | Miquel Parera | https://unsplash.com/photos/EBkB8zWMwIA |

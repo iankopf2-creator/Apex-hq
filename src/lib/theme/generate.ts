@@ -313,6 +313,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first crawl encapsulation honesty before firm price — not basement_waterproofing, french_drain, retaining_wall, foundation_repair, sump_pump, mold_remediation, water_damage, insulation, radon_mitigation, wildlife_removal, plumber, concrete, or landscaping; no bait $/sqft or fake same-day dry crawl", ctaVerb: "Request a crawl space encapsulation quote" },
   },
 
+  sump_pump: {
+    A: { heroEmphasis: "quote-first pit/basin size & condition/existing pump age-HP/type pedestal vs submersible/backup battery vs water-powered/check valve/discharge freeze/alarm/crawl-vs-basement/power/flood-history/permit-HOA assess for sump pump", ctaVerb: "Get a sump pump quote" },
+    B: { heroEmphasis: "quote-first sump pump honesty before firm price — not basement_waterproofing, crawl_space_encapsulation, french_drain, retaining_wall, foundation_repair, water_damage, mold_remediation, plumber, slab_leak, radon_mitigation, wildlife_removal, insulation, concrete, landscaping, gutter_cleaning, or gutter_guards; no bait $/pump or fake never-flood/same-day dry basement/scare 24/7", ctaVerb: "Request a sump pump quote" },
+  },
+
 
 };
 

@@ -1374,6 +1374,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "deep-crawl-olive-vapor-barrier-lime",
   },
 
+  {
+    id: "sump_pump",
+    label: "Sump pump",
+    defaultTagline: "Assess the pit before we quote the pump — install after check valve, discharge, and backup review",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Sump pump install / replace", description: "New or replacement primary pump after pit/basin size & condition, existing pump age/HP/type (pedestal vs submersible), check valve, discharge line length & freeze risk, alarm, crawl vs basement location, power availability, water table/flood history, float switch, crock condition, and effluent route assess — permit/HOA educational only; licensed contractor honesty when true; no bait flat $/pump; no fake never-flood or same-day dry basement guarantees; no scare fake 24/7; not basement_waterproofing, crawl_space_encapsulation, french_drain, retaining_wall, foundation_repair, water_damage, mold_remediation, plumber, slab_leak, radon_mitigation, wildlife_removal, insulation, concrete, landscaping, gutter_cleaning, or gutter_guards", priceFrom: 0 },
+      { name: "Battery / water-powered backup add-on", description: "Battery backup vs water-powered backup option after primary pump, power availability, and flood-history assess — alarm honesty when true; quote before install; mold / full waterproofing / structural foundation referral only; no bait flat $/backup", priceFrom: 0 },
+      { name: "Discharge / check-valve service", description: "Check valve, discharge line length & freeze-risk, and effluent route service after pit/basin inspect — firm price after assess; no fake never-flood guarantees", priceFrom: 0 },
+    ],
+    heroHints: ["Pit/basin size & condition + existing pump age-HP/type (pedestal vs submersible) assessed before firm price", "Check valve + discharge freeze risk + backup battery vs water-powered honesty", "Crawl vs basement location + power + flood history + alarm + permit/HOA educational only", "No bait flat $/pump — no fake never-flood or same-day dry basement — not basement waterproofing, crawl encapsulation, french drain, retaining wall, foundation, water damage, mold, plumber, slab leak, radon, wildlife, insulation, concrete, landscaping, or gutter work"],
+    ctaLabel: "Get a sump pump quote",
+    accentHint: "deep-water-slate-pump-cyan",
+  },
+
 
 ];
 
