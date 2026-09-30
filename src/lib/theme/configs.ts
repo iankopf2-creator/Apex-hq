@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3205,6 +3205,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+
+  snow_removal: {
+    niche: "snow_removal",
+    label: "Snow removal",
+    palette: {
+      // Deep winter night slate + ice/sky — #0c1929 + #38bdf8 — pair unique vs landscaping forest green, pressure_washing sky-spray, irrigation #0f1f17/#2dd4bf, concrete amber, junk_removal charcoal/lime, tree_service call_first, duct_cleaning #334155/#14b8a6, basement_waterproofing #0f172a/#14b8a6, sump_pump #164e63/#22d3ee, wildlife_removal #121a2b/#f59e0b, handyman hybrid
+      primary: "#0c1929",
+      primaryForeground: "#f0f9ff",
+      accent: "#38bdf8",
+      accentForeground: "#082f49",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest driveway/sidewalk/lot sqft or linear-ft / storm depth / ice melt vs plow vs shovel / access/parking / recurring contract vs one-time storm assess-first for residential and commercial snow removal, quote before plow — equipment honesty (plow truck / skid / blower capacity when true); not landscaping mow/beds, not pressure washing, not concrete flatwork, not irrigation, not junk removal, not tree service storm work, not handyman; local ordinance/HOA educational only (not legal advice)",
+      heroStyle: "quote-first snow removal LP — sqft/linear-ft/storm-depth/ice-melt-vs-plow chips when true, no bait flat $/push, no fake same-day clear guarantee",
+      ctaStyle: "get a snow removal quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/push or per-driveway fees as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before driveway/sidewalk/lot size/storm depth/access assessment", "legal advice on ordinance or HOA rules", "landscaping mow/beds confusion", "pressure washing confusion", "concrete flatwork confusion", "irrigation confusion", "junk removal confusion", "tree service confusion", "handyman confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#0c1929",
+      "--theme-primary-fg": "#f0f9ff",
+      "--theme-accent": "#38bdf8",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Driveway/sidewalk/lot size & storm depth assessed before firm price", "Quote before plow — ice melt vs plow honesty", "No bait flat $/push fees", "Not landscaping, pressure washing, concrete, irrigation, junk, or tree service"],
+    heroImages: [
+      {
+        src: "/niches/snow-removal.jpg",
+        alt: "Man pushing snowblower to clear snow at a residential driveway — snow removal assess before quote",
+        credit: "Stephen H on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/53ozS5kjXOQ",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 

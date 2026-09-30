@@ -69,6 +69,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   kitchen_hood_cleaning: 525,
   dryer_vent_cleaning: 195,
   duct_cleaning: 425,
+  snow_removal: 275,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -202,6 +203,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first dryer vent cleaning page (stories/floors + vent length + exterior termination access + roof vs wall + bird nest/lint load + gas vs electric dryer + crawl/attic access + weather assess before firm price; fire-risk / fire-code educational only — no scare fake emergency; licensed honesty when true) so callers get a real quote — not bait flat $/vent or fake same-day clear; distinct from kitchen_hood_cleaning, duct_cleaning, chimney, hvac, appliance_repair, grease_trap_cleaning, janitorial, pressure_washing, fire_smoke.",
   duct_cleaning:
     "Add a quote-first air duct cleaning page (whole-home / light-commercial HVAC supply-return ducts + home size/system age/access/contamination assess before firm price; indoor-air educational only — no medical/mold remediation claims; licensed honesty when true) so callers get a real quote — not bait flat per-vent or fake same-day sanitize; distinct from dryer_vent_cleaning, kitchen_hood_cleaning, grease_trap_cleaning, chimney, hvac install/repair, mold_remediation, fire_smoke, appliance_repair, janitorial, pressure_washing.",
+  snow_removal:
+    "Add a quote-first snow removal page (driveway/sidewalk/lot sqft or linear-ft + storm depth + ice melt vs plow vs shovel + access/parking + recurring contract vs one-time storm assess before firm price; equipment honesty; local ordinance/HOA educational only — not legal advice) so callers get a real quote — not bait flat $/push or fake same-day clear; distinct from landscaping, pressure_washing, concrete, irrigation, junk_removal, tree_service, handyman.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
