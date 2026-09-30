@@ -356,6 +356,15 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+
+  dryer_vent_cleaning: {
+    A: { heroEmphasis: "quote-first stories/floors/vent-length/termination/roof-vs-wall/lint-load/gas-vs-electric/access assess for dryer exhaust vents", ctaVerb: "Get a dryer vent cleaning quote" },
+    B: { heroEmphasis: "quote-first dryer-vent honesty before firm price — not HVAC duct, chimney, kitchen hood, grease trap, or appliance repair; fire-risk educational only", ctaVerb: "Request a dryer vent cleaning quote" },
+  },
+
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
