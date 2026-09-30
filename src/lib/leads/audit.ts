@@ -65,6 +65,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   radon_mitigation: 450,
   wildlife_removal: 375,
   septic_pumping: 350,
+  grease_trap_cleaning: 375,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -190,6 +191,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first wildlife removal page (species ID + entry points + attic/crawl access + exclusion vs live-trap vs one-way door + cleanup/sanitation + seasonal nesting + local permit/wildlife rehab educational only — not legal advice; licensed wildlife control honesty when true; structural repair / mold remediation / full waterproofing / radon install / pest_control spray programs referral only) so callers get a real quote — not bait flat $/animal or fake same-day guarantee or scare fake 24/7; distinct from pest_control spray, tree_service, stump_grinding, junk_removal, mold_remediation, water_damage, handyman, crawl_space_encapsulation, radon_mitigation, basement_waterproofing, and sump_pump.",
   septic_pumping:
     "Add a quote-first septic pumping page (residential tank pump-out + tank size/access/last pump date/system type tank-vs-aerobic/distance/after-hours schedule assess before firm price; local septic rules educational only — not legal advice; licensed/permitted honesty when true) so callers get a real quote — not bait flat $/tank or fake same-day clear; distinct from plumber, slab leak, water damage, junk removal, and grease trap FOG cleaning.",
+  grease_trap_cleaning:
+    "Add a quote-first grease trap cleaning page (restaurant FOG interceptor + trap size/FOG load/indoor vs outdoor/interceptor type/access/pumping frequency/after-hours schedule assess before firm price; local FOG/wastewater rules educational only — not legal advice; licensed/permitted honesty when true) so callers get a real quote — not bait flat $/trap or fake same-day clear; distinct from kitchen_hood_cleaning, duct_cleaning, pressure_washing, janitorial, septic_pumping, dumpster_rental, porta_potty_rental, plumber, and junk_removal.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
