@@ -346,6 +346,15 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  kitchen_hood_cleaning: {
+    A: { heroEmphasis: "quote-first hood-type/grease-load/roof-access/fan-duct/after-hours assess for commercial kitchen exhaust hoods", ctaVerb: "Get a kitchen hood cleaning quote" },
+    B: { heroEmphasis: "quote-first kitchen-hood honesty before firm price — not grease trap, HVAC duct, dryer vent, janitorial, or chimney; NFPA-96 educational only", ctaVerb: "Request a kitchen hood cleaning quote" },
+  },
+
+
+
+
+
 
 };
 
