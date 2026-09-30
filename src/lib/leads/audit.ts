@@ -67,6 +67,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   septic_pumping: 350,
   grease_trap_cleaning: 375,
   kitchen_hood_cleaning: 525,
+  dryer_vent_cleaning: 195,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -196,6 +197,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first grease trap cleaning page (restaurant FOG interceptor + trap size/FOG load/indoor vs outdoor/interceptor type/access/pumping frequency/after-hours schedule assess before firm price; local FOG/wastewater rules educational only — not legal advice; licensed/permitted honesty when true) so callers get a real quote — not bait flat $/trap or fake same-day clear; distinct from kitchen_hood_cleaning, duct_cleaning, pressure_washing, janitorial, septic_pumping, dumpster_rental, porta_potty_rental, plumber, and junk_removal.",
   kitchen_hood_cleaning:
     "Add a quote-first kitchen hood cleaning page (commercial restaurant exhaust hood + hood type canopy/island/pizza oven + grease load + stories/roof access + fan & duct path + after-hours schedule assess before firm price; NFPA-96 / fire-code educational only — no scare fake emergency; licensed/certified honesty when true) so callers get a real quote — not bait flat $/hood or fake same-day clear; distinct from grease_trap_cleaning, dryer_vent_cleaning, duct_cleaning, janitorial, fire_smoke, appliance_repair, hvac, chimney, septic_pumping, pressure_washing, plumber, junk_removal.",
+  dryer_vent_cleaning:
+    "Add a quote-first dryer vent cleaning page (stories/floors + vent length + exterior termination access + roof vs wall + bird nest/lint load + gas vs electric dryer + crawl/attic access + weather assess before firm price; fire-risk / fire-code educational only — no scare fake emergency; licensed honesty when true) so callers get a real quote — not bait flat $/vent or fake same-day clear; distinct from kitchen_hood_cleaning, duct_cleaning, chimney, hvac, appliance_repair, grease_trap_cleaning, janitorial, pressure_washing, fire_smoke.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
