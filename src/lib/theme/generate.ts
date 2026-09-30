@@ -339,6 +339,14 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+
+  grease_trap_cleaning: {
+    A: { heroEmphasis: "quote-first trap-size/FOG-load/indoor-outdoor/interceptor-type/access/pumping-frequency/after-hours assess for grease traps", ctaVerb: "Get a grease trap cleaning quote" },
+    B: { heroEmphasis: "quote-first grease-trap honesty before firm price — not kitchen hood, HVAC duct, janitorial, septic, dumpster, or porta potty; FOG/wastewater educational only", ctaVerb: "Request a grease trap cleaning quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

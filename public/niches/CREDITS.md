@@ -72,3 +72,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Radon mitigation | `radon-mitigation.jpg` | Mitchell Luo | https://unsplash.com/photos/RAliDqgJKbE |
 | Wildlife removal | `wildlife-removal.jpg` | Pascal | https://unsplash.com/photos/NqcZoF6BFkw |
 | Septic pumping | `septic-pumping.jpg` | Unsplash contributor | https://unsplash.com/photos/yCmA1T4Y3r4 |
+| Grease trap cleaning | `grease-trap-cleaning.jpg` | Louis Hansel | https://unsplash.com/photos/ce391730fb2c |
