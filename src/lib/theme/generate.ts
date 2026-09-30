@@ -365,6 +365,14 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+
+  duct_cleaning: {
+    A: { heroEmphasis: "quote-first home size/system age/access/contamination assess for residential & light-commercial HVAC ducts", ctaVerb: "Get an air duct cleaning quote" },
+    B: { heroEmphasis: "quote-first duct honesty before firm price — not dryer vent, chimney, kitchen hood, grease trap, or mold claims", ctaVerb: "Request an air duct cleaning quote" },
+  },
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

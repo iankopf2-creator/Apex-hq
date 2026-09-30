@@ -1553,6 +1553,33 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+  {
+    id: "duct_cleaning",
+    label: "Air duct cleaning",
+    defaultTagline: "Home & light-commercial ducts — assess before we quote the clean",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Whole-Home Duct Cleaning Quote", description: "Home size, system age, supply/return access, and contamination load assessed before firm price — no bait flat per-vent; not dryer vent cleaning, not chimney sweeping, not commercial kitchen hood cleaning, not grease trap / FOG, not HVAC install/repair, not mold remediation, not fire/smoke restoration, not janitorial", priceFrom: 0 },
+      { name: "Supply / Return Access Assess", description: "Register count, trunk access, and crawl/attic duct path reviewed before firm price — quote before clean; licensed honesty when true", priceFrom: 0 },
+      { name: "Contamination / Filter Walkthrough", description: "Visible dust/debris load and filter condition honesty after access review — not medical air or mold-remediation claims; no fake same-day sanitize", priceFrom: 0 },
+      { name: "Light-Commercial Duct Quote", description: "Small office / light-commercial systems when true — assess before firm price; not restaurant kitchen hood or grease trap service", priceFrom: 0 },
+    ],
+    heroHints: ["Home size/system age/access/contamination assessed before firm price", "Quote before clean — not medical or mold claims", "No bait flat per-vent fees", "Not dryer vent, chimney, kitchen hood, grease trap, or HVAC install"],
+    ctaLabel: "Get an air duct cleaning quote",
+    accentHint: "duct-metal-slate-teal",
+  },
+
+
+
+
 
 
 ];
