@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3157,6 +3157,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+
+
+  duct_cleaning: {
+    niche: "duct_cleaning",
+    label: "Air duct cleaning",
+    palette: {
+      // Cool duct-metal slate + soft HVAC teal — #334155 + #14b8a6 — pair unique vs basement_waterproofing #0f172a/#14b8a6 (same accent, different primary), epoxy #0c0a09/#0d9488, sump_pump #164e63/#22d3ee; not dryer_vent_cleaning #292524/#f59e0b, kitchen_hood_cleaning #171412/#b87333, grease_trap_cleaning #141c26/#a68b4b, chimney #1f1a17/#c2410c, hvac sky/ocean, fire_smoke #b91c1c/#1c1917, appliance_repair #1e293b/#ea580c, janitorial soft trust, pressure_washing sky, mold_remediation, insulation
+      primary: "#334155",
+      primaryForeground: "#f8fafc",
+      accent: "#14b8a6",
+      accentForeground: "#042f2e",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest home size / system age / supply-return access / contamination load assess-first for residential and light-commercial HVAC air duct cleaning, quote before clean — whole-home supply/return ducts only, not dryer exhaust vent cleaning, not chimney sweeping, not commercial kitchen hood cleaning, not grease trap / FOG interceptor pumping, not HVAC install or repair, not mold remediation, not fire/smoke restoration, not general janitorial, not pressure washing, not appliance repair; indoor-air educational only (no medical cure claims); licensed when true",
+      heroStyle: "quote-first air duct cleaning LP — home-size/system-age/access/contamination chips when true, no bait flat per-vent, no fake same-day sanitize, not medical/mold claims",
+      ctaStyle: "get an air duct cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat per-vent or whole-house fees as Apex benchmark", "fake same-day sanitize guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before home size/system age/supply-return access/contamination assessment", "medical cure or mold remediation claims", "guarantee indoor air quality medical outcomes", "dryer vent cleaning confusion", "chimney sweeping confusion", "kitchen hood cleaning confusion", "grease trap / FOG interceptor cleaning confusion", "HVAC install/repair confusion", "fire/smoke restoration confusion", "janitorial floor cleaning confusion", "pressure washing confusion", "appliance repair confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#334155",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#14b8a6",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Home size/system age/access/contamination assessed before firm price", "Quote before clean — not medical or mold claims", "No bait flat per-vent fees", "Not dryer vent, chimney, kitchen hood, grease trap, or HVAC install"],
+    heroImages: [
+      {
+        src: "/niches/duct-cleaning.jpg",
+        alt: "Close photography of industrial metal air duct and vent hardware — air duct cleaning assess before quote",
+        credit: "Taylor Vick on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/qVXFewdVWn4",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 

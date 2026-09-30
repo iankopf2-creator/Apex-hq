@@ -75,3 +75,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Grease trap cleaning | `grease-trap-cleaning.jpg` | Louis Hansel | https://unsplash.com/photos/ce391730fb2c |
 | Kitchen hood cleaning | `kitchen-hood-cleaning.jpg` | Louis Hansel | https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU |
 | Dryer vent cleaning | `dryer-vent-cleaning.jpg` | Lisa Anna | https://unsplash.com/photos/a-laundry-room-with-a-washer-and-dryer-49NwSDtEsuw |
+| Air duct cleaning | `duct-cleaning.jpg` | Taylor Vick | https://unsplash.com/photos/qVXFewdVWn4 |
