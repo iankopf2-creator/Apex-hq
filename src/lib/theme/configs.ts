@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3056,6 +3056,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Chef working a commercial restaurant kitchen line — FOG grease trap and interceptor cleaning assess before quote",
         credit: "Louis Hansel on Unsplash",
         sourceUrl: "https://unsplash.com/photos/ce391730fb2c",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
+  kitchen_hood_cleaning: {
+    niche: "kitchen_hood_cleaning",
+    label: "Kitchen hood cleaning",
+    palette: {
+      // Commercial-kitchen grease charcoal + copper brass — deep grease charcoal #171412 + hood copper-brass #b87333 — not grease_trap_cleaning #141c26/#a68b4b, septic_pumping #252e2a/#86a373, wildlife_removal #121a2b/#f59e0b, dryer_vent #292524/#f59e0b, duct_cleaning #334155/#14b8a6, foundation #1c1917/#b45309, janitorial teal, fire_smoke #b91c1c/#1c1917, hvac sky/ocean, chimney #1f1a17/#c2410c, appliance_repair #1e293b/#ea580c, epoxy #0c0a09/#0d9488, pressure_washing sky, junk_removal lime
+      primary: "#171412",
+      primaryForeground: "#fafaf9",
+      accent: "#b87333",
+      accentForeground: "#1c1917",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#f5e6d3",
+      mutedForeground: "#78350f",
+      border: "#e7d3b8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest hood type (canopy vs island vs pizza oven) / grease load / stories or roof access / fan & duct path / after-hours schedule assess-first for commercial restaurant kitchen exhaust hood cleaning, quote before clean — grease hoods only, not grease trap / FOG interceptor pumping, not HVAC air duct cleaning, not dryer vent cleaning, not general janitorial mop work, not pressure washing, not fire/smoke restoration, not appliance repair, not HVAC install, not chimney sweeping, not septic pumping, not plumber emergencies, not junk removal hauling; NFPA-96 / fire-code educational only (no scare fake emergency); licensed or certified when true",
+      heroStyle: "quote-first kitchen hood cleaning LP — hood-type/grease-load/roof-access/fan-duct/after-hours chips when true, no bait flat $/hood, no fake same-day clear, NFPA-96 educational only",
+      ctaStyle: "get a kitchen hood cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/hood as Apex benchmark", "fake same-day clear guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before hood type/grease load/stories-or-roof access/fan & duct path/after-hours schedule assessment", "grease trap / FOG interceptor cleaning confusion", "HVAC air duct cleaning confusion", "dryer vent cleaning confusion", "janitorial floor cleaning confusion", "pressure washing confusion", "fire/smoke restoration confusion", "appliance repair confusion", "HVAC install confusion", "chimney sweeping confusion", "septic pumping confusion", "plumber emergency confusion", "junk removal hauling confusion", "scare fake fire emergency / fake emergency urgency as kitchen-hood sales"],
+    },
+    cssVars: {
+      "--theme-primary": "#171412",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b87333",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Hood type/grease load/roof access/fan & duct path assessed before firm price", "Quote before clean — after-hours schedule honesty", "NFPA-96 / fire-code educational only — not scare fake emergency; licensed/certified when true", "No bait flat $/hood — not grease trap, HVAC duct, dryer vent, janitorial, or chimney"],
+    heroImages: [
+      {
+        src: "/niches/kitchen-hood-cleaning.jpg",
+        alt: "Chef plating in a commercial restaurant kitchen — exhaust hood grease cleaning assess before quote",
+        credit: "Louis Hansel on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU",
         license: "unsplash",
       },
     ],

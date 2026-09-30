@@ -73,3 +73,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Wildlife removal | `wildlife-removal.jpg` | Pascal | https://unsplash.com/photos/NqcZoF6BFkw |
 | Septic pumping | `septic-pumping.jpg` | Unsplash contributor | https://unsplash.com/photos/yCmA1T4Y3r4 |
 | Grease trap cleaning | `grease-trap-cleaning.jpg` | Louis Hansel | https://unsplash.com/photos/ce391730fb2c |
+| Kitchen hood cleaning | `kitchen-hood-cleaning.jpg` | Louis Hansel | https://unsplash.com/photos/man-preparing-food-v3OlBE6-fhU |
