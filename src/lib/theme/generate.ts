@@ -373,6 +373,15 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+
+  snow_removal: {
+    A: { heroEmphasis: "quote-first driveway/sidewalk/lot sqft or linear-ft/storm depth/ice melt vs plow/access assess for residential & commercial snow removal", ctaVerb: "Get a snow removal quote" },
+    B: { heroEmphasis: "quote-first snow honesty before firm price — not landscaping, pressure washing, concrete, irrigation, junk, or tree service", ctaVerb: "Request a snow removal quote" },
+  },
+
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
