@@ -49,3 +49,14 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Foundation repair | `foundation-repair.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1581094794329-c8112a89af12 |
 | Solar | `solar.jpg` | American Public Power Association | https://unsplash.com/photos/513dBrMJ_5w |
 | Epoxy flooring | `epoxy-flooring.jpg` | Shahabudin Ibragimov | https://unsplash.com/photos/seEumFkina8 |
+| Chimney | `chimney.jpg` | Hanna Theresia Pitter | https://unsplash.com/photos/a-brick-chimney-on-top-of-a-roof-QadP_RXFHSs |
+| Window replacement | `window-replacement.jpg` | Griffin Wooldridge | https://unsplash.com/photos/corner-of-a-house-with-a-window-against-blue-sky-RBEn2oo_TyU |
+| Generator | `generator.jpg` | Alivia Alva | https://unsplash.com/photos/power-lines-and-transformers-on-a-utility-pole-88Chc9OJ3sg |
+| EV Charger | `ev-charger.jpg` | CHUTTERSNAP | https://unsplash.com/photos/electric-vehicle-charger-plugged-into-car-xfaYAsMV1p8 |
+| Patio Cover | `patio-cover.jpg` | Dominik | https://unsplash.com/photos/wooden-pergola-with-dining-table-and-chairs-outdoors-ACA92yjUKpg |
+| Irrigation | `irrigation.jpg` | Maxim Tolchinskiy | https://unsplash.com/photos/rCQfBD2Yg0k |
+| Pergola | `pergola.jpg` | Naoki Suzuki | https://unsplash.com/photos/m8ZGnv4J1SM |
+| Gazebo | `gazebo.jpg` | Jakub Pabis | https://unsplash.com/photos/5Tr8rfs4em8 |
+| Carport | `carport.jpg` | MAK | https://unsplash.com/photos/3u5Lco_0gPQ |
+| Awning | `awning.jpg` | Maximilian Bungart | https://unsplash.com/photos/aj3KXG8Ytds |
+| Dumpster / roll-off | `dumpster-rental.jpg` | Danial Dez | https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk |

@@ -207,6 +207,77 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first prep/moisture assess before firm price honesty", ctaVerb: "Request an epoxy flooring quote" },
   },
 
+
+  chimney: {
+    A: { heroEmphasis: "quote-first flue type/height/creosote/liner/cap/access/stories / wood-stove-vs-fireplace assess", ctaVerb: "Get a chimney quote" },
+    B: { heroEmphasis: "quote-first inspection before firm price honesty", ctaVerb: "Request a chimney inspection quote" },
+  },
+
+
+
+  window_replacement: {
+    A: { heroEmphasis: "quote-first count/size/stories/access / existing-vs-new / vinyl-vs-wood-vs-fiberglass-vs-aluminum / energy-rating assess", ctaVerb: "Get a window replacement quote" },
+    B: { heroEmphasis: "quote-first measure before firm price honesty", ctaVerb: "Request a window measure quote" },
+  },
+
+  generator: {
+    A: { heroEmphasis: "quote-first whole-home load / fuel NG-LP-diesel / automatic transfer switch / pad-setback / permit-HOA assess", ctaVerb: "Get a generator install quote" },
+    B: { heroEmphasis: "quote-first backup power assess before firm price honesty", ctaVerb: "Request a backup power assess quote" },
+  },
+
+  ev_charger: {
+    A: { heroEmphasis: "quote-first assess panel/amperage/garage-driveway/hardwired-NEMA/permit-HOA", ctaVerb: "Get an EV charger install quote" },
+    B: { heroEmphasis: "quote-first site/load evaluation before firm price honesty", ctaVerb: "Request an EV charger site quote" },
+  },
+
+
+  patio_cover: {
+    A: { heroEmphasis: "quote-first assess sqft/attached-freestanding/material/footings/drainage/access/stories/HOA-permit", ctaVerb: "Get a patio cover quote" },
+    B: { heroEmphasis: "quote-first shade structure site evaluation before firm price honesty", ctaVerb: "Request a patio cover assess quote" },
+  },
+
+
+
+
+
+
+
+  irrigation: {
+    A: { heroEmphasis: "quote-first assess lot/zone-count/head-types/controller-age/backflow/water-pressure/dig-access/winterize-vs-repair-vs-new/HOA-permit", ctaVerb: "Get an irrigation quote" },
+    B: { heroEmphasis: "quote-first sprinkler system evaluation before firm price honesty", ctaVerb: "Request an irrigation assess quote" },
+  },
+
+
+  pergola: {
+    A: { heroEmphasis: "quote-first assess footprint/sqft/attached-vs-freestanding/material/post-footing-depth/roof-style/height-stories-access/HOA-permit", ctaVerb: "Get a pergola quote" },
+    B: { heroEmphasis: "quote-first outdoor pergola evaluation before firm price honesty", ctaVerb: "Request a pergola assess quote" },
+  },
+
+
+  gazebo: {
+    A: { heroEmphasis: "quote-first assess footprint/sqft/roof-style full-hip-octagon/screen-rail kit/foundation-floor/material/height-access/HOA-permit", ctaVerb: "Get a gazebo quote" },
+    B: { heroEmphasis: "quote-first outdoor gazebo / pavilion evaluation before firm price honesty", ctaVerb: "Request a gazebo assess quote" },
+  },
+
+
+  carport: {
+    A: { heroEmphasis: "quote-first assess bay count/footprint/sqft/attached-vs-freestanding/material/roof pitch-panels/post-footing/pad/vehicle height clearance/wind-snow/access/HOA-permit", ctaVerb: "Get a carport quote" },
+    B: { heroEmphasis: "quote-first open-sided carport / vehicle shelter evaluation before firm price honesty", ctaVerb: "Request a carport assess quote" },
+  },
+
+  awning: {
+    A: { heroEmphasis: "quote-first assess width/projection lf-ft/retractable-vs-fixed/fabric-vs-aluminum-vs-vinyl/mount wall-vs-roof/motorized-vs-manual/sun-wind rating/stories-access/HOA-permit", ctaVerb: "Get an awning quote" },
+    B: { heroEmphasis: "quote-first building-attached fabric or aluminum awning evaluation before firm price honesty", ctaVerb: "Request an awning assess quote" },
+  },
+
+  dumpster_rental: {
+    A: { heroEmphasis: "quote-first assess size 10/20/30/40 yd when true/rental duration/debris type/delivery access/driveway protection/permit-HOA educational only", ctaVerb: "Get a dumpster rental quote" },
+    B: { heroEmphasis: "quote-first dumpster / roll-off size and duration evaluation before firm price honesty", ctaVerb: "Request a roll-off size quote" },
+  },
+
+
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

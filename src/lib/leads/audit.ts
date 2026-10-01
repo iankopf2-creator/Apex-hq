@@ -42,6 +42,17 @@ export const NICHE_JOB_USD: Record<string, number> = {
   foundation_repair: 2200,
   solar: 450,
   epoxy_flooring: 850,
+  chimney: 285,
+  window_replacement: 650,
+  generator: 1200,
+  ev_charger: 550,
+  patio_cover: 900,
+  irrigation: 275,
+  pergola: 850,
+  gazebo: 900,
+  carport: 900,
+  awning: 750,
+  dumpster_rental: 450,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -121,6 +132,28 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first solar page (roof size/condition/orientation/shading + utility/net-metering/interconnect + existing vs new + battery storage + HOA/permit assess before firm price; licensed electrician/solar contractor honesty when required) so callers get a real quote — not bait flat $/watt or fake same-day install.",
   epoxy_flooring:
     "Add a quote-first epoxy flooring page (garage/commercial coating + sqft/prep/moisture/existing-coating/access assess before firm price) so callers get a real quote — not bait flat $/sqft or fake same-day cure.",
+  chimney:
+    "Add a quote-first chimney page (sweep/fireplace repair + flue type/height/creosote/liner/cap/access/stories/wood-stove-vs-fireplace assess before firm price; CSIA/NFI / licensed honesty when true) so callers get a real quote — not bait flat $/sweep or fake same-day or scare copy.",
+  window_replacement:
+    "Add a quote-first window replacement page (measure/replace/energy upgrade + count/size/stories/access/existing-vs-new/vinyl-vs-wood-vs-fiberglass-vs-aluminum/energy-rating assess before firm price; licensed honesty when true) so callers get a real quote — not bait flat $/window or fake same-day; distinct from window cleaning.",
+  generator:
+    "Add a quote-first generator / standby backup power page (load/fuel NG-LP-diesel/automatic transfer switch/pad-setback/permit-HOA assess before firm price; licensed electrician honesty when true) so callers get a real quote — not bait flat $/kW or fake same-day install; distinct from solar-only and portable camping power stations.",
+  ev_charger:
+    "Add a quote-first EV charger / Level 2 home EVSE page (panel capacity/amperage 30–60A typical L2/garage-vs-driveway/hardwired-vs-NEMA/permit-HOA/load calculation assess before firm price; licensed electrician honesty when true) so callers get a real quote — not bait flat $/charger or fake same-day install; distinct from solar-only and standby generator.",
+  patio_cover:
+    "Add a quote-first patio cover / shade structure page (sqft/attached-vs-freestanding/material aluminum-wood-insulated-fabric-shade/footings/drainage/access/stories/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from decking, concrete flatwork, gutter_cleaning, and fencing.",
+  irrigation:
+    "Add a quote-first irrigation / lawn sprinkler page (lot/zone count/head types/controller age/backflow/water pressure/dig access/winterize-vs-repair-vs-new-install/HOA-permit assess before firm price; licensed plumber/irrigation contractor honesty when true) so callers get a real quote — not bait flat $/zone or $/head or fake same-day; distinct from landscaping beds/mow.",
+  pergola:
+    "Add a quote-first pergola / outdoor shade structure page (footprint/sqft/attached-vs-freestanding/material wood-vinyl-aluminum-composite/post-footing-depth/roof-style open-beam-vs-lattice-vs-solid-roof-kit/height-stories-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from patio_cover solid shade canopy, decking floor platforms, fencing, landscaping beds/mow, and irrigation zones.",
+  gazebo:
+    "Add a quote-first gazebo / pavilion page (footprint/sqft/roof-style full-hip-octagon/screen-rail kit/foundation-floor optional/material/height-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day; distinct from pergola open-beam/lattice shade, patio_cover attached solid canopy, decking floor platforms, fencing, landscaping beds/mow, and irrigation zones.",
+  carport:
+    "Add a quote-first carport / open vehicle shelter page (bay count/footprint/sqft/attached-vs-freestanding/material metal-wood-poly/roof pitch-panels/post-footing/pad existing-vs-new/vehicle height clearance/wind-snow load when true/access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/sqft or $/lf or $/bay or fake same-day; distinct from gazebo pavilion/people outdoor room, pergola open-beam/lattice shade, patio_cover solid patio shade canopy, decking floor platforms, garage enclosed door/opener, fencing, landscaping, irrigation, and concrete flatwork alone.",
+  awning:
+    "Add a quote-first awning / building-attached fabric or aluminum shade page (width/projection lf-ft/retractable-vs-fixed/fabric-vs-aluminum-vs-vinyl when true/mount wall-vs-roof/motorized-vs-manual when true/sun-wind rating when true/stories-access/HOA-permit assess before firm price; licensed contractor honesty when true) so callers get a real quote — not bait flat $/lf or $/sqft or fake same-day; distinct from patio_cover solid permanent canopy, pergola open-beam freestanding/attached shade frame, gazebo pavilion, carport vehicle shelter, decking, fencing, landscaping, irrigation, and concrete flatwork alone.",
+  dumpster_rental:
+    "Add a quote-first dumpster / roll-off rental page (size 10/20/30/40 yd when true/rental duration/debris type/delivery access/driveway protection/permit-HOA educational only assess before firm price; licensed/hauler honesty when true) so callers get a real roll-off quote — not bait flat $/day or fake same-day drop; distinct from junk_removal hauling labor, porta_potty_rental, storage_container_rental, septic_pumping, grease_trap_cleaning, and concrete debris alone.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

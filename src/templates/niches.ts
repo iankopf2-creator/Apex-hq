@@ -911,6 +911,281 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
   },
 
 
+
+  {
+    id: "chimney",
+    label: "Chimney",
+    defaultTagline: "Chimney sweep & fireplace repair — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Chimney Inspection Quote", description: "Flue type, height, creosote, liner, cap, access, stories, and wood-stove vs fireplace assessed before firm price — no bait flat $/sweep", priceFrom: 0 },
+      { name: "Chimney Sweep Quote", description: "Sweep scope after creosote/liner/cap check — CSIA/NFI honesty when true; no fake same-day", priceFrom: 0 },
+      { name: "Fireplace & Chimney Repair Quote", description: "Repair scope after access and flue assess — quote before repair; no scare copy", priceFrom: 0 },
+    ],
+    heroHints: ["Flue type/height/creosote/liner/cap/access assessed before firm price", "Quote before sweep or repair", "CSIA/NFI / licensed honesty when true", "No bait flat $/sweep fees"],
+    ctaLabel: "Get a chimney quote",
+    accentHint: "chimney-soot-creosote-copper",
+  },
+
+
+
+
+  {
+    id: "window_replacement",
+    label: "Window Replacement",
+    defaultTagline: "Window replacement — measure before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Window Measure Quote", description: "Count, size, stories, access, existing vs new, vinyl vs wood vs fiberglass vs aluminum, and energy rating assessed before firm price — no bait flat $/window", priceFrom: 0 },
+      { name: "Window Replacement Quote", description: "Replacement scope after measure — licensed honesty when true; no fake same-day; not window cleaning", priceFrom: 0 },
+      { name: "Energy Upgrade Window Quote", description: "Energy-rating upgrade scope after access and material assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Count/size/stories/access/material/energy assessed before firm price", "Quote before install", "Licensed honesty when true", "No bait flat $/window fees"],
+    ctaLabel: "Get a window replacement quote",
+    accentHint: "window-slate-sky-blue",
+  },
+
+  {
+    id: "generator",
+    label: "Generator",
+    defaultTagline: "Standby generator — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Generator Load Assess Quote", description: "Whole-home load, fuel (NG/LP/diesel), automatic transfer switch, pad/setback, and permit/HOA assessed before firm price — no bait flat $/kW", priceFrom: 0 },
+      { name: "Standby Generator Install Quote", description: "Install scope after load/fuel/ATS/pad assess — licensed electrician honesty when true; no fake same-day; not solar-only or portable camping batteries", priceFrom: 0 },
+      { name: "Transfer Switch & Pad Quote", description: "Automatic transfer switch and pad/setback scope after assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Load/fuel/ATS/pad/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/kW"],
+    ctaLabel: "Get a generator install quote",
+    accentHint: "generator-charcoal-safety-amber",
+  },
+
+  {
+    id: "ev_charger",
+    label: "EV Charger",
+    defaultTagline: "Home EV charger — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Panel/Amperage Assess Quote", description: "Panel capacity, amperage (30–60A typical L2), garage vs driveway, hardwired vs NEMA, and permit/HOA/load calc assessed before firm price — no bait flat $/charger", priceFrom: 0 },
+      { name: "Level 2 EV Charger Install Quote", description: "L2 install scope after panel/amperage/location assess — licensed electrician honesty when true; no fake same-day; not solar-only or standby generator", priceFrom: 0 },
+      { name: "Permit & Load-Calc Quote", description: "Permit/HOA and load calculation scope after assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Panel/amperage/location/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/charger"],
+    ctaLabel: "Get an EV charger install quote",
+    accentHint: "ev-charger-slate-electric-green",
+  },
+
+
+  {
+    id: "patio_cover",
+    label: "Patio Cover",
+    defaultTagline: "Patio cover — assess before we quote",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Patio Cover Assess Quote", description: "Sqft, attached vs freestanding, material (aluminum/wood/insulated/fabric-shade when true), footings, drainage, access, stories, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Patio Cover Install Quote", description: "Cover install scope after sqft/attachment/material/footings assess — licensed contractor honesty when true; no fake same-day; not decking, concrete flatwork, gutter cleaning, or fencing", priceFrom: 0 },
+      { name: "Footings & Permit Quote", description: "Footings/drainage and HOA/permit scope after assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft/attachment/material/footings/permit assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft"],
+    ctaLabel: "Get a patio cover quote",
+    accentHint: "patio-cover-shade-charcoal-bronze",
+  },
+
+
+
+
+
+
+
+
+  {
+    id: "irrigation",
+    label: "Irrigation",
+    defaultTagline: "Irrigation — assess before we dig or rewire",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Irrigation Assess Quote", description: "Lot/zone count, head types, controller age, backflow, water pressure, dig access, and winterize vs repair vs new install assessed before firm price — no bait flat $/zone or $/head; HOA/permit when true", priceFrom: 0 },
+      { name: "Sprinkler Repair Quote", description: "Repair scope after zone/head/controller/backflow/pressure assess — licensed plumber/irrigation contractor honesty when true; no fake same-day; not landscaping beds/mow", priceFrom: 0 },
+      { name: "New Install / Winterize Quote", description: "New system install or seasonal winterization scope after assess — quote before dig or blow-out", priceFrom: 0 },
+    ],
+    heroHints: ["Zones/heads/controller/backflow/pressure assessed before firm price", "Quote before dig or rewire", "Licensed plumber/irrigation contractor honesty when true", "No bait flat $/zone or $/head"],
+    ctaLabel: "Get an irrigation quote",
+    accentHint: "irrigation-turf-charcoal-sprinkler-teal",
+  },
+
+
+
+
+  {
+    id: "pergola",
+    label: "Pergola",
+    defaultTagline: "Pergola — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Pergola Assess Quote", description: "Footprint/sqft, attached vs freestanding, material (wood/vinyl/aluminum/composite when true), post/footing depth, roof style (open-beam vs lattice vs solid-roof kit), height/stories/access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Pergola Build Quote", description: "Build scope after footprint/material/roof-style/footing assess — licensed contractor honesty when true; no fake same-day; distinct from patio_cover solid shade canopy, decking floor platforms, fencing, landscaping beds/mow, irrigation zones", priceFrom: 0 },
+      { name: "Pergola Repair Quote", description: "Repair/rebuild scope after post/beam/rafter/lattice/attachment assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Footprint/material/roof style/footings assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    ctaLabel: "Get a pergola quote",
+    accentHint: "pergola-timber-charcoal-cedar-amber",
+  },
+
+
+
+  {
+    id: "gazebo",
+    label: "Gazebo",
+    defaultTagline: "Gazebo — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Gazebo Assess Quote", description: "Footprint/sqft, roof style (full/hip/octagon when true), screen/rail kit, foundation/floor (optional), material, height/access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf", priceFrom: 0 },
+      { name: "Gazebo Build Quote", description: "Build scope after footprint/roof-style/screen-rail/foundation/material assess — licensed contractor honesty when true; no fake same-day; distinct from pergola open-beam/lattice shade, patio_cover attached solid canopy, decking floor platforms, fencing, landscaping beds/mow, irrigation zones", priceFrom: 0 },
+      { name: "Gazebo Repair Quote", description: "Repair/rebuild scope after roof/posts/screen-rail/floor assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Footprint/roof style/screen-rail/foundation assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    ctaLabel: "Get a gazebo quote",
+    accentHint: "gazebo-pavilion-green-copper-brass",
+  },
+
+
+
+
+
+  {
+    id: "carport",
+    label: "Carport",
+    defaultTagline: "Carport — assess before we build",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Carport Assess Quote", description: "Bay count, footprint/sqft, attached vs freestanding, material (metal/wood/poly when true), roof pitch/panels, post/footing, pad existing vs new, vehicle height clearance, wind/snow load when true, access, and HOA/permit assessed before firm price — no bait flat $/sqft or $/lf or $/bay", priceFrom: 0 },
+      { name: "Carport Build Quote", description: "Build scope after bay/footprint/material/roof/post-footing/pad/height assess — licensed contractor honesty when true; no fake same-day; distinct from gazebo pavilion/people outdoor room, pergola open-beam/lattice shade, patio_cover solid patio shade canopy, decking floor platforms, garage enclosed door/opener, fencing, landscaping, irrigation, concrete flatwork alone", priceFrom: 0 },
+      { name: "Carport Repair Quote", description: "Repair/rebuild scope after posts/roof panels/pad/footing assess — quote before build", priceFrom: 0 },
+    ],
+    heroHints: ["Bay/footprint/material/pad/height assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/bay"],
+    ctaLabel: "Get a carport quote",
+    accentHint: "carport-asphalt-charcoal-zinc-steel",
+  },
+
+  {
+    id: "awning",
+    label: "Awning",
+    defaultTagline: "Awning — assess before we install",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Awning Assess Quote", description: "Width/projection (lf/ft), retractable vs fixed, fabric vs aluminum vs vinyl when true, mount wall-vs-roof, motorized vs manual when true, sun/wind rating when true, stories/access, and HOA/permit assessed before firm price — no bait flat $/lf or $/sqft", priceFrom: 0 },
+      { name: "Awning Install Quote", description: "Install scope after width/projection/retractable-vs-fixed/material/mount/motorized/sun-wind/access assess — licensed contractor honesty when true; no fake same-day; distinct from patio_cover solid permanent canopy, pergola open-beam freestanding/attached shade frame, gazebo pavilion, carport vehicle shelter, decking, fencing, landscaping, irrigation, concrete flatwork alone", priceFrom: 0 },
+      { name: "Awning Repair/Recover Quote", description: "Repair/recover/re-cover scope after fabric/frame/motor/hardware assess — quote before install", priceFrom: 0 },
+    ],
+    heroHints: ["Width/projection/retractable-vs-fixed assessed before firm price", "Quote before install", "Licensed contractor honesty when true", "No bait flat $/lf or $/sqft"],
+    ctaLabel: "Get an awning quote",
+    accentHint: "awning-canopy-charcoal-canvas-terracotta",
+  },
+
+  {
+    id: "dumpster_rental",
+    label: "Dumpster / roll-off",
+    defaultTagline: "Dumpster / roll-off rental — size and duration before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 12:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Size & Duration Quote", description: "Yard size (10/20/30/40 yd when true), rental duration, debris type, delivery access, and driveway protection assessed before firm price — no bait flat $/day; permit/HOA educational only", priceFrom: 0 },
+      { name: "Roll-Off Delivery Quote", description: "Delivery/pickup scope after size/duration/debris/access/driveway assess — licensed/hauler honesty when true; no fake same-day drop; distinct from junk_removal hauling labor, porta_potty_rental, storage_container_rental, septic_pumping, grease_trap_cleaning, concrete debris alone", priceFrom: 0 },
+      { name: "Permit / HOA Assist Quote", description: "Local permit or HOA note when required — educational only; honesty when true; not legal advice", priceFrom: 0 },
+    ],
+    heroHints: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA educational only when true", "No bait flat $/day"],
+    ctaLabel: "Get a dumpster rental quote",
+    accentHint: "dumpster-iron-charcoal-caution-amber",
+  },
+
+
 ];
 
 export function getTemplate(niche: string): NicheTemplate | undefined {

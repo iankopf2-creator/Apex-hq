@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -1955,6 +1955,518 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+  chimney: {
+    niche: "chimney",
+    label: "Chimney",
+    palette: {
+      // Flue soot charcoal + creosote copper-orange — not fire_smoke emergency, masonry kiln brick, foundation copper #b45309, roofing, appliance orange
+      primary: "#1f1a17",
+      primaryForeground: "#fafaf9",
+      accent: "#c2410c",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1f1a17",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest flue type / height / creosote / liner / cap / access / stories / wood-stove-vs-fireplace assess-first for chimney sweep and fireplace repair, quote before sweep or repair",
+      heroStyle: "quote-first chimney LP — flue/creosote/liner/cap chips when true, no bait flat $/sweep, no fake same-day, no scare copy",
+      ctaStyle: "get a chimney quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sweep as Apex benchmark", "fake same-day sweep or repair", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before flue type/height/creosote/liner/cap/access/stories/wood-stove-vs-fireplace assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1f1a17",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#c2410c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1f1a17",
+    },
+    trustBadges: ["Flue type/height/creosote/liner/cap/access assessed before firm price", "Quote before sweep or repair", "CSIA/NFI / licensed honesty when true", "No bait flat $/sweep fees"],
+    heroImages: [
+      {
+        src: "/niches/chimney.jpg",
+        alt: "brick chimney on a residential roof",
+        credit: "Hanna Theresia Pitter on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/a-brick-chimney-on-top-of-a-roof-QadP_RXFHSs",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
+  window_replacement: {
+    niche: "window_replacement",
+    label: "Window Replacement",
+    palette: {
+      // Window frame slate + sky-blue accent — distinct from window_cleaning ice blue-gray; not roofing, siding, or solar
+      primary: "#1e293b",
+      primaryForeground: "#f8fafc",
+      accent: "#0ea5e9",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#1e293b",
+      muted: "#e2e8f0",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest count / size / stories / access / existing-vs-new / vinyl-vs-wood-vs-fiberglass-vs-aluminum / energy-rating assess-first for window replacement, quote before install",
+      heroStyle: "quote-first window replacement LP — count/size/stories/access/material/energy chips when true, no bait flat $/window, no fake same-day, not window cleaning",
+      ctaStyle: "get a window replacement quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/window as Apex benchmark", "fake same-day install", "competitor brand cloning", "fake 24/7", "window cleaning confusion", "firm price before count/size/stories/access/existing-vs-new/vinyl-vs-wood-vs-fiberglass-vs-aluminum/energy-rating assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e293b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#0ea5e9",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#1e293b",
+    },
+    trustBadges: ["Count/size/stories/access/material/energy assessed before firm price", "Quote before install", "Licensed honesty when true", "No bait flat $/window fees"],
+    heroImages: [
+      {
+        src: "/niches/window-replacement.jpg",
+        alt: "residential house corner with window against blue sky",
+        credit: "Griffin Wooldridge on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/corner-of-a-house-with-a-window-against-blue-sky-RBEn2oo_TyU",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  generator: {
+    niche: "generator",
+    label: "Generator",
+    palette: {
+      // Deep charcoal/slate + safety amber — distinct from solar gold and electrician; standby backup power not portable camping
+      primary: "#0f172a",
+      primaryForeground: "#f8fafc",
+      accent: "#f59e0b",
+      accentForeground: "#0f172a",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest whole-home load / fuel NG-LP-diesel / automatic transfer switch / pad-setback / permit-HOA assess-first for standby generator install, quote before install",
+      heroStyle: "quote-first standby generator LP — load/fuel/ATS/pad/permit chips when true, no bait flat $/kW, no fake same-day, not solar-only or portable camping batteries",
+      ctaStyle: "get a generator install quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/kW as Apex benchmark", "fake same-day install", "competitor brand cloning", "Generac/Kohler/Atlas Copco cloning", "fake 24/7", "solar-only confusion", "portable camping power station confusion", "firm price before load/fuel/transfer-switch/pad/permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f172a",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#f59e0b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Load/fuel/ATS/pad/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/kW"],
+    heroImages: [
+      {
+        src: "/niches/generator.jpg",
+        alt: "power lines and transformers on a utility pole (backup power / outage context)",
+        credit: "Alivia Alva on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/power-lines-and-transformers-on-a-utility-pole-88Chc9OJ3sg",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  ev_charger: {
+    niche: "ev_charger",
+    label: "EV Charger",
+    palette: {
+      // Deep electrical slate + EV electric green — distinct from solar gold/amber, generator amber, electrician
+      primary: "#0b1220",
+      primaryForeground: "#f8fafc",
+      accent: "#22c55e",
+      accentForeground: "#0b1220",
+      background: "#f8fafc",
+      foreground: "#0b1220",
+      muted: "#e2e8f0",
+      mutedForeground: "#64748b",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest panel capacity / amperage (30–60A typical L2) / garage-vs-driveway / hardwired-vs-NEMA / permit-HOA / load calculation assess-first for Level 2 home EVSE install, quote before install",
+      heroStyle: "quote-first home EV charger LP — panel/amperage/garage-driveway/hardwired-NEMA/permit chips when true, no bait flat $/charger, no fake same-day, not solar-only or standby generator",
+      ctaStyle: "get an EV charger install quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/charger or $/port as Apex benchmark", "fake same-day install", "competitor brand cloning", "Tesla Wall Connector/ChargePoint/JuiceBox/Wallbox/Enphase cloning", "fake 24/7", "solar-only confusion", "standby generator confusion", "firm price before panel/amperage/location/permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0b1220",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#22c55e",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0b1220",
+    },
+    trustBadges: ["Panel/amperage/location/permit assessed before firm price", "Quote before install", "Licensed electrician honesty when true", "No bait flat $/charger"],
+    heroImages: [
+      {
+        src: "/niches/ev-charger.jpg",
+        alt: "electric vehicle charger plugged into a car (home Level 2 EVSE context)",
+        credit: "CHUTTERSNAP on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/electric-vehicle-charger-plugged-into-car-xfaYAsMV1p8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+  patio_cover: {
+    niche: "patio_cover",
+    label: "Patio Cover",
+    palette: {
+      // Deep shade charcoal + warm bronze — distinct from generator amber #f59e0b, decking sage, concrete amber, fencing sage
+      primary: "#1c1917",
+      primaryForeground: "#fafaf9",
+      accent: "#b45309",
+      accentForeground: "#fafaf9",
+      background: "#fafaf9",
+      foreground: "#1c1917",
+      muted: "#e7e5e4",
+      mutedForeground: "#78716c",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft / attached-vs-freestanding / material aluminum-wood-insulated-fabric-shade / footings / drainage / access / stories / HOA-permit assess-first for patio cover install, quote before build",
+      heroStyle: "quote-first patio cover LP — sqft/attached-freestanding/material/footings/drainage/access/stories/HOA-permit chips when true, no bait flat $/sqft or $/lf, no fake same-day, not decking or concrete flatwork or gutter cleaning or fencing",
+      ctaStyle: "get a patio cover quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf as Apex benchmark", "fake same-day install", "competitor brand cloning", "Alumawood/Lattice/StruXure cloning", "fake 24/7", "decking confusion", "concrete flatwork confusion", "gutter_cleaning confusion", "fencing confusion", "firm price before sqft/attachment/material/footings/drainage/access/stories/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1c1917",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#b45309",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft/attachment/material/footings/permit assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft"],
+    heroImages: [
+      {
+        src: "/niches/patio-cover.jpg",
+        alt: "wooden patio cover / pergola shade structure over outdoor dining (home patio cover context)",
+        credit: "Dominik on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/wooden-pergola-with-dining-table-and-chairs-outdoors-ACA92yjUKpg",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+
+
+
+
+  irrigation: {
+    niche: "irrigation",
+    label: "Irrigation",
+    palette: {
+      // Deep turf charcoal/slate + bright sprinkler-sky/teal — distinct from landscaping forest green, decking sage, concrete amber, patio_cover bronze, generator amber
+      primary: "#0f1f17",
+      primaryForeground: "#ecfdf5",
+      accent: "#2dd4bf",
+      accentForeground: "#042f2e",
+      background: "#f0fdfa",
+      foreground: "#0f1f17",
+      muted: "#ccfbf1",
+      mutedForeground: "#115e59",
+      border: "#99f6e4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest lot/zone-count / head-types / controller-age / backflow / water-pressure / dig-access / winterize-vs-repair-vs-new-install / HOA-permit assess-first for lawn sprinkler irrigation, quote before dig or rewire",
+      heroStyle: "quote-first irrigation LP — zone/head/controller/backflow/pressure/dig-access/winterize chips when true, no bait flat $/zone or $/head, no fake same-day, not landscaping beds/mow, licensed plumber/irrigation contractor honesty when true",
+      ctaStyle: "get an irrigation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/zone or $/head as Apex benchmark", "fake same-day install", "competitor brand cloning", "Rain Bird/Hunter/Toro brand cloning", "fake 24/7", "landscaping beds/mow confusion", "firm price before lot/zone count/head types/controller age/backflow/water pressure/dig access/winterize-vs-repair-vs-new/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f1f17",
+      "--theme-primary-fg": "#ecfdf5",
+      "--theme-accent": "#2dd4bf",
+      "--theme-bg": "#f0fdfa",
+      "--theme-fg": "#0f1f17",
+    },
+    trustBadges: ["Zones/heads/controller/backflow/pressure assessed before firm price", "Quote before dig or rewire", "Licensed plumber/irrigation contractor honesty when true", "No bait flat $/zone or $/head"],
+    heroImages: [
+      {
+        src: "/niches/irrigation.jpg",
+        alt: "Lawn sprinkler watering green grass during daytime (irrigation repair & install context)",
+        credit: "Maxim Tolchinskiy on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/rCQfBD2Yg0k",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  pergola: {
+    niche: "pergola",
+    label: "Pergola",
+    palette: {
+      // Deep timber/charcoal + soft cedar/amber — distinct from patio_cover bronze #b45309, generator amber #f59e0b, irrigation teal #2dd4bf, landscaping forest green, decking sage, concrete amber
+      primary: "#1a1510",
+      primaryForeground: "#fffbeb",
+      accent: "#d97706",
+      accentForeground: "#1a1510",
+      background: "#fffbeb",
+      foreground: "#1a1510",
+      muted: "#fef3c7",
+      mutedForeground: "#78350f",
+      border: "#fcd34d",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest footprint/sqft / attached-vs-freestanding / material wood-vinyl-aluminum-composite / post-footing-depth / roof-style open-beam-vs-lattice-vs-solid-roof-kit / height-stories-access / HOA-permit assess-first for outdoor pergola & shade structure, quote before build",
+      heroStyle: "quote-first pergola LP — footprint/attached-vs-freestanding/material/post-footing/roof-style/height-access/HOA-permit chips when true, no bait flat $/sqft or $/lf, no fake same-day, not patio_cover solid shade canopy / decking floor / fencing / landscaping beds/mow / irrigation zones, licensed contractor honesty when true",
+      ctaStyle: "get a pergola quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf as Apex benchmark", "fake same-day build", "competitor brand cloning", "fake 24/7", "patio_cover solid shade canopy confusion", "decking floor platform confusion", "fencing confusion", "landscaping beds/mow confusion", "irrigation zones confusion", "firm price before footprint/sqft/attached-vs-freestanding/material/post-footing-depth/roof-style/height-stories-access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1a1510",
+      "--theme-primary-fg": "#fffbeb",
+      "--theme-accent": "#d97706",
+      "--theme-bg": "#fffbeb",
+      "--theme-fg": "#1a1510",
+    },
+    trustBadges: ["Footprint/material/roof style/footings assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    heroImages: [
+      {
+        src: "/niches/pergola.jpg",
+        alt: "Freestanding open-beam wooden pergola with posts and rafters in a garden (pergola build & repair context)",
+        credit: "Naoki Suzuki on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/m8ZGnv4J1SM",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  gazebo: {
+    niche: "gazebo",
+    label: "Gazebo",
+    palette: {
+      // Deep pavilion green/slate + soft copper/brass — distinct from pergola timber #1a1510/#d97706, patio_cover bronze #b45309, irrigation teal #2dd4bf, generator amber #f59e0b, landscaping forest green
+      primary: "#14241c",
+      primaryForeground: "#faf6f1",
+      accent: "#c2410c",
+      accentForeground: "#faf6f1",
+      background: "#faf6f1",
+      foreground: "#14241c",
+      muted: "#ffedd5",
+      mutedForeground: "#7c2d12",
+      border: "#fdba74",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest footprint/sqft / roof-style full-hip-octagon / screen-rail kit / foundation-floor optional / material / height-access / HOA-permit assess-first for freestanding outdoor gazebo & pavilion, quote before build",
+      heroStyle: "quote-first gazebo LP — footprint/roof-style/screen-rail/foundation-floor/material/height-access/HOA-permit chips when true, no bait flat $/sqft or $/lf, no fake same-day, not pergola open-beam/lattice shade / patio_cover attached solid canopy / decking floor platforms / fencing / landscaping beds/mow / irrigation zones, licensed contractor honesty when true",
+      ctaStyle: "get a gazebo quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf as Apex benchmark", "fake same-day build", "competitor brand cloning", "fake 24/7", "pergola open-beam/lattice shade confusion", "patio_cover attached solid shade canopy confusion", "decking floor platform confusion", "fencing confusion", "landscaping beds/mow confusion", "irrigation zones confusion", "firm price before footprint/sqft/roof-style/screen-rail/foundation-floor/material/height-access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#14241c",
+      "--theme-primary-fg": "#faf6f1",
+      "--theme-accent": "#c2410c",
+      "--theme-bg": "#faf6f1",
+      "--theme-fg": "#14241c",
+    },
+    trustBadges: ["Footprint/roof style/screen-rail/foundation assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/lf"],
+    heroImages: [
+      {
+        src: "/niches/gazebo.jpg",
+        alt: "Freestanding outdoor wooden gazebo / pavilion with roof in a wooded setting (gazebo build & repair context)",
+        credit: "Jakub Pabis on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/5Tr8rfs4em8",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  carport: {
+    niche: "carport",
+    label: "Carport",
+    palette: {
+      // Deep asphalt charcoal/slate + cool zinc/steel — distinct from gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309, irrigation #0f1f17/#2dd4bf, generator #0f172a/#f59e0b, garage orange
+      primary: "#0f1419",
+      primaryForeground: "#f8fafc",
+      accent: "#64748b",
+      accentForeground: "#f8fafc",
+      background: "#f8fafc",
+      foreground: "#0f1419",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#94a3b8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest bay count / footprint/sqft / attached-vs-freestanding / material metal-wood-poly when true / roof pitch-panels / post-footing / pad existing-vs-new / vehicle height clearance / wind-snow load when true / access / HOA-permit assess-first for open-sided carport vehicle shelter, quote before build",
+      heroStyle: "quote-first carport LP — bay/footprint/attached-vs-freestanding/material/roof panels/post-footing/pad/height clearance/wind-snow/access/HOA-permit chips when true, no bait flat $/sqft or $/lf or $/bay, no fake same-day, not gazebo pavilion/people outdoor room / pergola open-beam/lattice shade / patio_cover solid patio canopy / decking floor platforms / garage enclosed door/opener / fencing / landscaping / irrigation / concrete flatwork alone, licensed contractor honesty when true",
+      ctaStyle: "get a carport quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft or $/lf or $/bay as Apex benchmark", "fake same-day build", "competitor brand cloning", "fake 24/7", "gazebo pavilion/people outdoor room confusion", "pergola open-beam/lattice shade confusion", "patio_cover solid patio shade canopy confusion", "decking floor platform confusion", "garage enclosed door/opener confusion", "fencing confusion", "landscaping confusion", "irrigation confusion", "concrete flatwork alone confusion", "firm price before bay/footprint/attached-vs-freestanding/material/roof/post-footing/pad/height/wind-snow/access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#0f1419",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#64748b",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f1419",
+    },
+    trustBadges: ["Bay/footprint/material/pad/height assessed before firm price", "Quote before build", "Licensed contractor honesty when true", "No bait flat $/sqft or $/bay"],
+    heroImages: [
+      {
+        src: "/niches/carport.jpg",
+        alt: "Cars parked under a modern open-sided carport / vehicle shelter on a sunny day (carport build & repair context)",
+        credit: "MAK on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/3u5Lco_0gPQ",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  awning: {
+    niche: "awning",
+    label: "Awning",
+    palette: {
+      // Deep canopy charcoal/slate + soft awning canvas/terracotta — distinct from carport #0f1419/#64748b, gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309
+      primary: "#14181f",
+      primaryForeground: "#f8fafc",
+      accent: "#c45c26",
+      accentForeground: "#f8fafc",
+      background: "#faf7f5",
+      foreground: "#14181f",
+      muted: "#ebe4de",
+      mutedForeground: "#5c534c",
+      border: "#d6c7bb",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest width/projection lf-ft / retractable-vs-fixed / fabric-vs-aluminum-vs-vinyl when true / mount wall-vs-roof / motorized-vs-manual when true / sun-wind rating when true / stories-access / HOA-permit assess-first for building-attached fabric or aluminum awning, quote before install",
+      heroStyle: "quote-first awning LP — width/projection/retractable-vs-fixed/fabric-aluminum-vinyl/mount wall-vs-roof/motorized-vs-manual/sun-wind rating/stories-access/HOA-permit chips when true, no bait flat $/lf or $/sqft, no fake same-day, not patio_cover solid permanent canopy / pergola open-beam freestanding-attached shade frame / gazebo pavilion / carport vehicle shelter / decking / fencing / landscaping / irrigation / concrete flatwork alone, licensed contractor honesty when true",
+      ctaStyle: "get an awning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf or $/sqft as Apex benchmark", "fake same-day install", "competitor brand cloning", "fake 24/7", "patio_cover solid permanent canopy confusion", "pergola open-beam freestanding/attached shade frame confusion", "gazebo pavilion confusion", "carport vehicle shelter confusion", "decking confusion", "fencing confusion", "landscaping confusion", "irrigation confusion", "concrete flatwork alone confusion", "firm price before width/projection/retractable-vs-fixed/fabric-aluminum-vinyl/mount/motorized/sun-wind/stories-access/HOA-permit assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#14181f",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#c45c26",
+      "--theme-bg": "#faf7f5",
+      "--theme-fg": "#14181f",
+    },
+    trustBadges: ["Width/projection/retractable-vs-fixed assessed before firm price", "Quote before install", "Licensed contractor honesty when true", "No bait flat $/lf or $/sqft"],
+    heroImages: [
+      {
+        src: "/niches/awning.jpg",
+        alt: "Red scalloped fabric awning over a residential window with flowers (awning install & repair context)",
+        credit: "Maximilian Bungart on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/aj3KXG8Ytds",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
+
+  dumpster_rental: {
+    niche: "dumpster_rental",
+    label: "Dumpster / roll-off",
+    palette: {
+      // Deep dumpster iron charcoal + caution yellow/amber — distinct from junk_removal lime #a3e635, awning #14181f/#c45c26, carport #0f1419/#64748b, gazebo #14241c/#c2410c, pergola #1a1510/#d97706, patio_cover #1c1917/#b45309, irrigation teal #2dd4bf, epoxy teal, generator #f59e0b
+      primary: "#1f1b16",
+      primaryForeground: "#fafaf9",
+      accent: "#eab308",
+      accentForeground: "#1f1b16",
+      background: "#fafaf9",
+      foreground: "#1f1b16",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest size 10/20/30/40 yd when true / rental duration / debris type / delivery access / driveway protection / permit-HOA educational only assess-first for dumpster and roll-off rental, quote before delivery",
+      heroStyle: "quote-first dumpster / roll-off rental LP — size yd/duration/debris/access/driveway-protection/permit-HOA chips when true, no bait flat $/day, no fake same-day drop, not junk_removal hauling labor / porta_potty_rental / storage_container_rental / septic_pumping / grease_trap_cleaning / concrete debris alone, licensed/hauler honesty when true",
+      ctaStyle: "get a dumpster rental quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/day as Apex benchmark", "fake same-day drop", "competitor brand cloning", "fake 24/7", "junk_removal hauling labor confusion", "porta_potty_rental confusion", "storage_container_rental confusion", "septic_pumping confusion", "grease_trap_cleaning confusion", "concrete debris alone confusion", "firm price before size/duration/debris/access/driveway-protection/permit-HOA assessment"],
+    },
+    cssVars: {
+      "--theme-primary": "#1f1b16",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#eab308",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#1f1b16",
+    },
+    trustBadges: ["Size/duration/debris/access/driveway assessed before firm price", "Quote before delivery", "Permit/HOA educational only when true", "No bait flat $/day"],
+    heroImages: [
+      {
+        src: "/niches/dumpster-rental.jpg",
+        alt: "Crane lifts a roll-off dumpster onto a truck on a city street (dumpster rental context)",
+        credit: "Danial Dez on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/crane-lifts-dumpster-onto-truck-on-city-street-lvCMOl6LHEk",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 
