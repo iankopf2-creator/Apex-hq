@@ -76,6 +76,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   asphalt_paving: 3200,
   line_striping: 950,
   crack_sealing: 700,
+  auto_parts: 95,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -223,6 +224,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first line striping page (parking-lot/road markings + linear-ft/stall/surface paint-vs-thermoplastic/layout/ADA/access/weather/sealcoat-pave wait assess before firm price) so callers get a real quote — not bait flat $/lf or $/stall or fake same-day striping; distinct from asphalt paving, sealcoating-only, and concrete flatwork.",
   crack_sealing:
     "Add a quote-first crack sealing page (asphalt driveway/parking-lot crack fill & seal + linear-ft/width-depth hairline-vs-alligator/surface age/routing-cleaning/hot-pour-vs-cold-pour/weather/access assess before firm price; sealcoat-after as referral/add-on honesty when true) so callers get a real quote — not bait flat $/lf or fake same-day drive-on; distinct from asphalt paving, sealcoating-only, line striping, and concrete flatwork.",
+  auto_parts:
+    "Add a quote-first auto parts page (year/make/model + OEM-vs-aftermarket + fitment/core-return/lead-time assess before firm price) so callers get a real parts-counter quote — not bait flat $/part or fake in-stock-everywhere; distinct from auto_detail wash and dealership sales.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
