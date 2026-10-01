@@ -82,3 +82,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Sealcoating | `sealcoating.jpg` | Nikhilesh Boppana | https://unsplash.com/photos/LsCshtzQCUU |
 | Asphalt paving | `asphalt-paving.jpg` | Brian J. Tromp | https://unsplash.com/photos/AYak7Oq4Ejw |
 | Line striping | `line-striping.jpg` | ALEKSEY ALYPOV | https://unsplash.com/photos/fFSum8_ZOLY |
+| Crack sealing | `crack-sealing.jpg` | Tim Oun | https://unsplash.com/photos/UW6F5jUfCC0 |
