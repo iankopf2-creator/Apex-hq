@@ -77,3 +77,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Dryer vent cleaning | `dryer-vent-cleaning.jpg` | Lisa Anna | https://unsplash.com/photos/a-laundry-room-with-a-washer-and-dryer-49NwSDtEsuw |
 | Air duct cleaning | `duct-cleaning.jpg` | Taylor Vick | https://unsplash.com/photos/qVXFewdVWn4 |
 | Snow removal | `snow-removal.jpg` | Stephen H | https://unsplash.com/photos/53ozS5kjXOQ |
+| Lawn care | `lawn-care.jpg` | arh Lee | https://unsplash.com/photos/zFdZJp_hpKo |
