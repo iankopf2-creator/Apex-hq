@@ -424,6 +424,11 @@ const NICHE_VARIANT_TWEAKS: Record<
 
 
 
+  auto_parts: {
+    A: { heroEmphasis: "quote-first year/make/model + OEM-vs-aftermarket + fitment/core/lead-time assess for local parts counter", ctaVerb: "Get a parts fitment quote" },
+    B: { heroEmphasis: "quote-first fitment before firm price honesty", ctaVerb: "Request a parts fitment quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
