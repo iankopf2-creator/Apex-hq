@@ -79,6 +79,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   auto_parts: 95,
   aircraft_detail: 650,
   str_cleaning: 225,
+  water_softener: 350,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -232,6 +233,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first aircraft detailing page (GA/turboprop/light jet + hangar/FBO/ramp location + interior vs exterior + oxidation/paint + access/badging assess before firm price; detailing only — no maintenance or FAA repair claims) so callers get a real quote — not bait flat package $ or fake same-day.",
   str_cleaning:
     "Add a quote-first STR / vacation rental cleaning page (checkout turnover + beds/baths/checkout window/linen/laundry/supplies/trash/access assess before firm price) so hosts and PMs get a real quote — not bait flat $/turnover or fake same-day.",
+  water_softener:
+    "Add a quote-first water softener page (hardness grains / existing softener age-capacity / resin condition / brine tank / salt type / iron-manganese / well vs municipal / drain for backwash / space / electrical / bypass valve / permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/softener or $/grain or fake forever-soft or same-day whole-home guarantees; distinct from plumber, sump_pump, water_damage, slab_leak, and appliance_repair.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
