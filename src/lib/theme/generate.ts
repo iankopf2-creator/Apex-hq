@@ -436,6 +436,13 @@ const NICHE_VARIANT_TWEAKS: Record<
   },
 
 
+  str_cleaning: {
+    A: { heroEmphasis: "quote-first beds/baths/checkout window/linen/laundry/supplies/trash/access assess for STR turnover", ctaVerb: "Get a turnover cleaning quote" },
+    B: { heroEmphasis: "quote-first checkout/linen/access assess before firm price honesty — no bait flat $/turnover", ctaVerb: "Request a turnover cleaning quote" },
+  },
+
+
+
 
 
 };

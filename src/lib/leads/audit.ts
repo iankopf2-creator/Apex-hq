@@ -78,6 +78,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   crack_sealing: 700,
   auto_parts: 95,
   aircraft_detail: 650,
+  str_cleaning: 225,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -229,6 +230,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first auto parts page (year/make/model + OEM-vs-aftermarket + fitment/core-return/lead-time assess before firm price) so callers get a real parts-counter quote — not bait flat $/part or fake in-stock-everywhere; distinct from auto_detail wash and dealership sales.",
   aircraft_detail:
     "Add a quote-first aircraft detailing page (GA/turboprop/light jet + hangar/FBO/ramp location + interior vs exterior + oxidation/paint + access/badging assess before firm price; detailing only — no maintenance or FAA repair claims) so callers get a real quote — not bait flat package $ or fake same-day.",
+  str_cleaning:
+    "Add a quote-first STR / vacation rental cleaning page (checkout turnover + beds/baths/checkout window/linen/laundry/supplies/trash/access assess before firm price) so hosts and PMs get a real quote — not bait flat $/turnover or fake same-day.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
