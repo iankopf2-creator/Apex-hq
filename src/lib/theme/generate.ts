@@ -379,6 +379,15 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first snow honesty before firm price — not landscaping, pressure washing, concrete, irrigation, junk, or tree service", ctaVerb: "Request a snow removal quote" },
   },
 
+  lawn_care: {
+    A: { heroEmphasis: "quote-first lot size/turf condition/access/obstacles/mow frequency assess for residential & commercial mow", ctaVerb: "Get a lawn care quote" },
+    B: { heroEmphasis: "quote-first turf/access/obstacles assess before firm price honesty — not landscaping, irrigation, snow removal, tree service, stump grinding, pressure washing, junk, or handyman", ctaVerb: "Request a lawn care quote" },
+  },
+
+
+
+
+
 
 
 
