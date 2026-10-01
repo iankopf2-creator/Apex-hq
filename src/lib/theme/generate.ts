@@ -412,6 +412,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first mill/overlay/full-depth honesty before firm price — not sealcoat-only, concrete flatwork, epoxy flooring, pressure washing, roof cleaning, or lawn care", ctaVerb: "Request an asphalt paving quote" },
   },
 
+  line_striping: {
+    A: { heroEmphasis: "quote-first linear-ft/stall/surface/paint-vs-thermoplastic/layout/ADA + access/weather assess", ctaVerb: "Get a line striping quote" },
+    B: { heroEmphasis: "quote-first markings honesty before firm price — not pave, sealcoat-only, or concrete flatwork", ctaVerb: "Request a line striping quote" },
+  },
+
 
 
 

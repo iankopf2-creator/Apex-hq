@@ -74,6 +74,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   roof_cleaning: 400,
   sealcoating: 425,
   asphalt_paving: 3200,
+  line_striping: 950,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -217,6 +218,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first sealcoating page (asphalt driveway/parking-lot + sqft/access/cracks/oil stains/weather/cure assess before firm price; sealcoat only — not full paving or concrete resurfacing; also not pressure washing, roof cleaning, epoxy flooring, lawn care) so callers get a real quote — not bait flat $/sqft or fake same-day drive-on.",
   asphalt_paving:
     "Add a quote-first asphalt paving page (driveway/parking-lot pave/overlay/mill + sqft/thickness/existing condition/access/equipment/weather-cure/base-prep assess before firm price) so callers get a real quote — not bait flat $/sqft or $/ton or fake same-day pave; distinct from sealcoating coat-only, concrete flatwork, epoxy_flooring, pressure_washing, roof_cleaning, lawn_care.",
+  line_striping:
+    "Add a quote-first line striping page (parking-lot/road markings + linear-ft/stall/surface paint-vs-thermoplastic/layout/ADA/access/weather/sealcoat-pave wait assess before firm price) so callers get a real quote — not bait flat $/lf or $/stall or fake same-day striping; distinct from asphalt paving, sealcoating-only, and concrete flatwork.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
