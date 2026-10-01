@@ -416,6 +416,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first linear-ft/stall/surface/paint-vs-thermoplastic/layout/ADA + access/weather assess", ctaVerb: "Get a line striping quote" },
     B: { heroEmphasis: "quote-first markings honesty before firm price — not pave, sealcoat-only, or concrete flatwork", ctaVerb: "Request a line striping quote" },
   },
+  crack_sealing: {
+    A: { heroEmphasis: "quote-first linear-ft/width-depth/surface/routing + hot-pour-vs-cold-pour/weather/access assess", ctaVerb: "Get a crack sealing quote" },
+    B: { heroEmphasis: "quote-first crack fill honesty before firm price — not pave, sealcoat-only, or striping", ctaVerb: "Request a crack sealing quote" },
+  },
 
 
 
