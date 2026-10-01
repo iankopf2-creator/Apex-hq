@@ -84,3 +84,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Line striping | `line-striping.jpg` | ALEKSEY ALYPOV | https://unsplash.com/photos/fFSum8_ZOLY |
 | Crack sealing | `crack-sealing.jpg` | Tim Oun | https://unsplash.com/photos/UW6F5jUfCC0 |
 | Auto Parts | `auto-parts.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1690986469727-1ed8bcdf6384 |
+| Aircraft detailing | `aircraft-detail.jpg` | Unsplash contributor | https://unsplash.com/photos/MqdQTFHfG1s |
