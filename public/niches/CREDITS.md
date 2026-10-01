@@ -85,3 +85,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Crack sealing | `crack-sealing.jpg` | Tim Oun | https://unsplash.com/photos/UW6F5jUfCC0 |
 | Auto Parts | `auto-parts.jpg` | Unsplash contributor | https://unsplash.com/photos/photo-1690986469727-1ed8bcdf6384 |
 | Aircraft detailing | `aircraft-detail.jpg` | Unsplash contributor | https://unsplash.com/photos/MqdQTFHfG1s |
+| STR / vacation rental cleaning | `str-cleaning.jpg` | Sidekix Media | https://unsplash.com/photos/aO-0TOpFT-k |
