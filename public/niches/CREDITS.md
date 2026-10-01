@@ -81,3 +81,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Roof cleaning | `roof-cleaning.jpg` | Alvaro Araoz | https://unsplash.com/photos/ug4M0QlUhiM |
 | Sealcoating | `sealcoating.jpg` | Nikhilesh Boppana | https://unsplash.com/photos/LsCshtzQCUU |
 | Asphalt paving | `asphalt-paving.jpg` | Brian J. Tromp | https://unsplash.com/photos/AYak7Oq4Ejw |
+| Line striping | `line-striping.jpg` | ALEKSEY ALYPOV | https://unsplash.com/photos/fFSum8_ZOLY |
