@@ -80,3 +80,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Lawn care | `lawn-care.jpg` | arh Lee | https://unsplash.com/photos/zFdZJp_hpKo |
 | Roof cleaning | `roof-cleaning.jpg` | Alvaro Araoz | https://unsplash.com/photos/ug4M0QlUhiM |
 | Sealcoating | `sealcoating.jpg` | Nikhilesh Boppana | https://unsplash.com/photos/LsCshtzQCUU |
+| Asphalt paving | `asphalt-paving.jpg` | Brian J. Tromp | https://unsplash.com/photos/AYak7Oq4Ejw |

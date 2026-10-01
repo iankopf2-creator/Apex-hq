@@ -407,6 +407,12 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first cracks/oil/weather/cure assess before firm price honesty — no bait flat $/sqft or fake same-day drive-on; not full paving, concrete resurfacing, pressure washing, roof cleaning, epoxy flooring, or lawn care", ctaVerb: "Request a sealcoating quote" },
   },
 
+  asphalt_paving: {
+    A: { heroEmphasis: "quote-first sqft/thickness/condition mill-overlay-replace + access/equipment/weather/base-prep assess", ctaVerb: "Get an asphalt paving quote" },
+    B: { heroEmphasis: "quote-first mill/overlay/full-depth honesty before firm price — not sealcoat-only, concrete flatwork, epoxy flooring, pressure washing, roof cleaning, or lawn care", ctaVerb: "Request an asphalt paving quote" },
+  },
+
+
 
 
 };
