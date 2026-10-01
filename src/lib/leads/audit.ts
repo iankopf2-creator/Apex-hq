@@ -71,6 +71,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   duct_cleaning: 425,
   snow_removal: 275,
   lawn_care: 185,
+  roof_cleaning: 400,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -208,6 +209,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first snow removal page (driveway/sidewalk/lot sqft or linear-ft + storm depth + ice melt vs plow vs shovel + access/parking + recurring contract vs one-time storm assess before firm price; equipment honesty; local ordinance/HOA educational only — not legal advice) so callers get a real quote — not bait flat $/push or fake same-day clear; distinct from landscaping, pressure_washing, concrete, irrigation, junk_removal, tree_service, handyman.",
   lawn_care:
     "Add a quote-first lawn care page (residential/commercial mow + lot size/turf condition/access/obstacles/mow frequency weekly-biweekly assess before firm price) so callers get a real quote — not bait flat $/visit or $/acre or overnight makeover / fake same-day; distinct from landscaping, irrigation, snow_removal, tree_service, stump_grinding, pressure_washing, junk_removal, handyman.",
+  roof_cleaning:
+    "Add a quote-first roof cleaning page (soft-wash / algae-moss + stories/access/algae-vs-granule-loss/soft-wash-vs-pressure/weather assess before firm price; soft-wash honesty — pressure can damage granules) so callers get a real quote — not bait flat $/sqft or fake same-day; distinct from gutter_cleaning, roofing replacement, pressure_washing, lawn_care, solar, chimney, siding, window_cleaning.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3300,6 +3300,55 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+
+
+
+  roof_cleaning: {
+    niche: "roof_cleaning",
+    label: "Roof cleaning",
+    palette: {
+      // Cool wet-roof slate/charcoal + soft algae/moss green — #1e293b + #65a30d — unique vs pressure_washing sky-spray, gutter zinc/copper, lawn lime #14532d/#a3e635, snow frost #0c1929/#38bdf8, roofing call_first, solar, siding, chimney, window_cleaning
+      primary: "#1e293b",
+      primaryForeground: "#f8fafc",
+      accent: "#65a30d",
+      accentForeground: "#f7fee7",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#ecfccb",
+      mutedForeground: "#3f6212",
+      border: "#d9f99d",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest stories/access/algae-vs-granule-loss/soft-wash-vs-pressure/weather assess-first for residential soft-wash roof cleaning, quote before wash — soft-wash only, not gutter cleaning, not full roof replacement, not pressure washing as default, not lawn care, not solar install, not chimney, not siding, not window cleaning",
+      heroStyle: "quote-first roof soft-wash LP — stories/access/algae chips when true, no bait flat $/sqft, no fake same-day, pressure can damage granules",
+      ctaStyle: "get a roof cleaning quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day guarantees", "competitor brand cloning", "fake 24/7", "firm price before stories/access/algae-vs-granule-loss/soft-wash-vs-pressure/weather assessment", "pressure-wash roofs as default", "gutter cleaning as roof cleaning", "full roof replacement claims as soft-wash", "lawn care confusion", "solar confusion", "chimney confusion", "siding confusion", "window cleaning confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#1e293b",
+      "--theme-primary-fg": "#f8fafc",
+      "--theme-accent": "#65a30d",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Stories/access/algae vs granule loss/soft-wash vs pressure/weather assessed before firm price", "Quote before wash", "Soft-wash honesty — pressure can damage granules", "Not gutter cleaning, roof replacement, pressure washing default, lawn care, solar, chimney, siding, or window cleaning", "No bait flat $/sqft or fake same-day"],
+    heroImages: [
+      {
+        src: "/niches/roof-cleaning.jpg",
+        alt: "Mossy residential roof tiles needing soft-wash cleaning — roof cleaning assess before quote",
+        credit: "Alvaro Araoz on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/ug4M0QlUhiM",
+        license: "unsplash",
+      },
+    ],
+  },
+
 
 
 
