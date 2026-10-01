@@ -79,3 +79,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Snow removal | `snow-removal.jpg` | Stephen H | https://unsplash.com/photos/53ozS5kjXOQ |
 | Lawn care | `lawn-care.jpg` | arh Lee | https://unsplash.com/photos/zFdZJp_hpKo |
 | Roof cleaning | `roof-cleaning.jpg` | Alvaro Araoz | https://unsplash.com/photos/ug4M0QlUhiM |
+| Sealcoating | `sealcoating.jpg` | Nikhilesh Boppana | https://unsplash.com/photos/LsCshtzQCUU |

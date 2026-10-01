@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3349,6 +3349,54 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
+
+
+
+
+  sealcoating: {
+    niche: "sealcoating",
+    label: "Sealcoating",
+    palette: {
+      // Warm asphalt charcoal + amber/orange road-crew — #14110f + #ea580c — unique PAIR vs patio_cover #1c1917/#b45309 (shifted primary off patio charcoal), kitchen_hood #171412/#b87333, epoxy #0c0a09/#0d9488, appliance_repair #1e293b/#ea580c, roofing #ea580c/#292524, roof_cleaning #1e293b/#65a30d, lawn_care #14532d/#a3e635, snow #0c1929/#38bdf8, pressure_washing sky-spray, concrete cool-slate+amber, asphalt paving confusion
+      primary: "#14110f",
+      primaryForeground: "#fafaf9",
+      accent: "#ea580c",
+      accentForeground: "#fff7ed",
+      background: "#fafaf9",
+      foreground: "#14110f",
+      muted: "#e7e5e4",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest sqft/access/cracks/oil stains/weather/cure time assess-first for asphalt driveway and parking-lot sealcoating, quote before coat — sealcoat only, not full paving or concrete resurfacing; also not pressure washing, roof cleaning, epoxy flooring, lawn care",
+      heroStyle: "quote-first sealcoating LP — driveway/parking-lot chips when true, no bait flat $/sqft, no fake same-day drive-on",
+      ctaStyle: "get a sealcoating quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft as Apex benchmark", "fake same-day drive-on guarantees", "competitor brand cloning", "fake 24/7", "firm price before sqft/access/cracks/oil stains/weather/cure assessment", "full paving or concrete resurfacing claims as sealcoat", "pressure washing confusion", "roof cleaning confusion", "epoxy flooring confusion", "lawn care confusion", "asphalt paving confusion"],
+    },
+    cssVars: {
+      "--theme-primary": "#14110f",
+      "--theme-primary-fg": "#fafaf9",
+      "--theme-accent": "#ea580c",
+      "--theme-bg": "#fafaf9",
+      "--theme-fg": "#14110f",
+    },
+    trustBadges: ["Sqft/access/cracks/oil stains/weather/cure assessed before firm price", "Quote before coat", "Sealcoat only — not full paving or concrete resurfacing", "Not pressure washing, roof cleaning, epoxy flooring, or lawn care", "No bait flat $/sqft or fake same-day drive-on"],
+    heroImages: [
+      {
+        src: "/niches/sealcoating.jpg",
+        alt: "Fresh asphalt parking lot surface after rain with painted lines — sealcoating assess before quote",
+        credit: "Nikhilesh Boppana on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/LsCshtzQCUU",
+        license: "unsplash",
+      },
+    ],
+  },
 
 
 
