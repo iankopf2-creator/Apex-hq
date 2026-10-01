@@ -1630,6 +1630,34 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     accentHint: "lawn-fresh-green-lime-sun",
   },
 
+  {
+    id: "roof_cleaning",
+    label: "Roof cleaning",
+    defaultTagline: "Soft-wash algae & moss roof cleaning — assess before we quote",
+    defaultHours: {
+      mon: "7:00 AM – 5:00 PM",
+      tue: "7:00 AM – 5:00 PM",
+      wed: "7:00 AM – 5:00 PM",
+      thu: "7:00 AM – 5:00 PM",
+      fri: "7:00 AM – 5:00 PM",
+      sat: "8:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Residential Roof Soft-Wash", description: "Algae/moss soft-wash on asphalt or tile — quote after stories, access, algae vs granule loss, soft-wash vs pressure, and weather check; no bait flat $/sqft; not gutter cleaning, not full roof replacement, not pressure washing as default, not lawn care, not solar, not chimney, not siding, not window cleaning", priceFrom: 0 },
+      { name: "Algae / Black-Streak Treatment", description: "Gloeocapsa-style streak treatment after assess — soft-wash honesty (pressure can damage granules); no fake same-day", priceFrom: 0 },
+      { name: "Moss / Lichen Spot Treatment", description: "Moss and lichen treatment when surface allows after assess — soft-wash only (not gutter cleaning or full roof replacement)", priceFrom: 0 },
+    ],
+    heroHints: ["Stories/access/algae vs granule loss/soft-wash vs pressure/weather assessed before firm price", "Quote before wash", "Soft-wash honesty — pressure can damage granules", "Not gutter cleaning, roof replacement, pressure washing default, lawn care, solar, chimney, siding, or window cleaning", "No bait flat $/sqft or fake same-day"],
+    ctaLabel: "Get a roof cleaning quote",
+    accentHint: "wet-roof-slate-algae-moss",
+  },
+
+
+
+
+
+
 
 
 

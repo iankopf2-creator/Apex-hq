@@ -384,6 +384,16 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first turf/access/obstacles assess before firm price honesty — not landscaping, irrigation, snow removal, tree service, stump grinding, pressure washing, junk, or handyman", ctaVerb: "Request a lawn care quote" },
   },
 
+  roof_cleaning: {
+    A: { heroEmphasis: "quote-first stories/access/algae-vs-granule-loss/soft-wash-vs-pressure/weather assess for residential roof soft-wash", ctaVerb: "Get a roof cleaning quote" },
+    B: { heroEmphasis: "quote-first soft-wash honesty — pressure can damage granules; assess before firm price — not gutter cleaning, roof replacement, pressure washing default, lawn care, solar, chimney, siding, or window cleaning", ctaVerb: "Request a roof cleaning quote" },
+  },
+
+
+
+
+
+
 
 
 
