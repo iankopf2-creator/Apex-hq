@@ -89,3 +89,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Water softener | `water-softener.jpg` | RephiLe water | https://unsplash.com/photos/FT1i_3OA7XI |
 | Gutter installation | `gutter-installation.jpg` | Taylor Hammersla | https://unsplash.com/photos/6QYiR0utkvA |
 | Water heater | `water-heater.jpg` | Michal Balog | https://unsplash.com/photos/ii5IRyypPhs |
+| Well pump | `well-pump.jpg` | Sergio Santana | https://unsplash.com/photos/TaYD4Y_UZCk |

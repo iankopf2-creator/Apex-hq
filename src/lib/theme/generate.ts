@@ -459,6 +459,13 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first water heater honesty before firm price — not plumber, water_softener, appliance_repair, water_damage, slab_leak, or sump_pump; no bait $/gallon or $/heater or fake same-day whole-home hot water", ctaVerb: "Request a water heater quote" },
   },
 
+
+  well_pump: {
+    A: { heroEmphasis: "quote-first well type dug-drilled-driven/static water level/pump type submersible-jet-constant-pressure/depth-HP-GPM/pressure tank size-psi/control box-wiring/yield-dry-well risk/sediment-iron/access-pitless adapter/permit assess for well pump", ctaVerb: "Get a well pump quote" },
+    B: { heroEmphasis: "quote-first well pump honesty before firm price — not plumber, water_heater, water_softener, sump_pump, water_damage, or slab_leak; no bait $/pump or $/ft or fake same-day whole-home water", ctaVerb: "Request a well pump quote" },
+  },
+
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {

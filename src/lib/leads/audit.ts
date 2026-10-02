@@ -82,6 +82,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   water_softener: 350,
   gutter_installation: 480,
   water_heater: 400,
+  well_pump: 500,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -241,7 +242,10 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first gutter installation page (linear-ft / stories-height / roof pitch-access / material aluminum-galvanized-copper-vinyl-steel / style K-style-half-round-box / downspout count-placement / fascia condition / existing-vs-full-replace / splash blocks / HOA-permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/lf or fake same-day hang; distinct from gutter_cleaning, gutter_guards alone, roofing, and siding/fascia alone.",
 
   water_heater:
-    "Add a quote-first water heater page (tank vs tankless / existing unit age-capacity-BTU or gallons / fuel type gas-electric-propane-heat-pump / venting-combustion air / location garage-closet-attic / drain pan-T&P-expansion tank / electrical-gas line capacity / space-access-stories / permit + licensed plumber honesty when true; assess before firm price) so callers get a real quote — not bait flat $/gallon or $/heater or fake same-day whole-home hot-water guarantees; distinct from plumber, water_softener, appliance_repair, water_damage, slab_leak, and sump_pump.",  countertops:
+    "Add a quote-first water heater page (tank vs tankless / existing unit age-capacity-BTU or gallons / fuel type gas-electric-propane-heat-pump / venting-combustion air / location garage-closet-attic / drain pan-T&P-expansion tank / electrical-gas line capacity / space-access-stories / permit + licensed plumber honesty when true; assess before firm price) so callers get a real quote — not bait flat $/gallon or $/heater or fake same-day whole-home hot-water guarantees; distinct from plumber, water_softener, appliance_repair, water_damage, slab_leak, and sump_pump.",
+  well_pump:
+    "Add a quote-first well pump page (well type dug-drilled-driven / static water level / pump type submersible-jet-constant-pressure / depth-HP-GPM / pressure tank size-psi / control box-wiring / yield-dry-well risk / sediment-iron / access-pitless adapter / permit + licensed well contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/pump or $/ft or fake same-day whole-home water guarantees; distinct from plumber, water_heater, water_softener, sump_pump, water_damage, and slab_leak.",
+  countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
 
