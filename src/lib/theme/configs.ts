@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3722,6 +3722,53 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
       },
     ],
   },
+
+  gutter_installation: {
+    niche: "gutter_installation",
+    label: "Gutter installation",
+    palette: {
+      // Deep rain-fascia navy + cool aluminum sky — #152238 + #7dd3fc — NOT gutter_cleaning #78350f/#57534e, gutter_guards #27272a/#15803d, roof_cleaning #1e293b/#65a30d, window_replacement #1e293b/#0ea5e9, carport #0f1419/#64748b, siding, roofing, water_softener #115e59/#fcd34d
+      primary: "#152238",
+      primaryForeground: "#f1f5f9",
+      accent: "#7dd3fc",
+      accentForeground: "#0c1929",
+      background: "#f8fafc",
+      foreground: "#0f172a",
+      muted: "#e2e8f0",
+      mutedForeground: "#475569",
+      border: "#cbd5e1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first new gutter install/replace — linear-ft / stories-height / roof pitch-access / material aluminum-galvanized-copper-vinyl-steel / style K-style-half-round-box / downspout count-placement / fascia condition / existing-vs-full-replace / splash blocks-extensions / HOA-permit honesty when true; quote before hang; new gutters product — not gutter_cleaning flush-only, not gutter_guards leaf covers alone, not roofing tear-off, not siding/fascia-alone",
+      heroStyle: "quote-first gutter installation LP — linear-ft/stories/pitch/material/style/downspouts/fascia/existing-vs-replace/HOA-permit chips when true, no bait flat $/lf, no fake same-day hang, no competitor brand cloning",
+      ctaStyle: "get a gutter installation quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/lf as Apex benchmark", "fake same-day hang guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before linear-ft/stories/pitch/material/style/downspout/fascia/existing-vs-replace/HOA-permit assessment", "impersonating gutter_cleaning flush-only", "impersonating gutter_guards leaf covers alone", "impersonating roofing tear-off", "impersonating siding/fascia-alone", "legal advice on local permit/HOA rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#152238",
+      "--theme-primary-fg": "#f1f5f9",
+      "--theme-accent": "#7dd3fc",
+      "--theme-bg": "#f8fafc",
+      "--theme-fg": "#0f172a",
+    },
+    trustBadges: ["Linear-ft / stories / pitch / material / style / downspouts / fascia assessed before firm price", "Existing vs full replace + splash blocks honesty", "HOA/permit honesty when true", "No bait flat $/lf — not gutter cleaning, gutter guards alone, roofing, or siding/fascia alone"],
+    heroImages: [
+      {
+        src: "/niches/gutter-installation.jpg",
+        alt: "Residential rain gutter and downspout on a building fascia — linear feet, height, and material assessed before quote",
+        credit: "Taylor Hammersla on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/6QYiR0utkvA",
+        license: "unsplash",
+      },
+    ],
+  },
+
+
 
 };
 

@@ -450,6 +450,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first hardness grains/existing softener age-capacity/resin condition/brine tank/salt type/iron-manganese/well vs municipal/drain for backwash/space/electrical/bypass valve/permit assess for water softener", ctaVerb: "Get a water softener quote" },
     B: { heroEmphasis: "quote-first water softener honesty before firm price — not plumber, sump_pump, water_damage, slab_leak, or appliance_repair; no bait $/softener or $/grain or fake forever-soft/same-day whole-home", ctaVerb: "Request a water softener quote" },
   },
+  gutter_installation: {
+    A: { heroEmphasis: "quote-first linear-ft/stories-height/roof pitch-access/material aluminum-galvanized-copper-vinyl-steel/style K-style-half-round-box/downspout count-placement/fascia condition/existing-vs-full-replace/splash blocks/HOA-permit assess for gutter installation", ctaVerb: "Get a gutter installation quote" },
+    B: { heroEmphasis: "quote-first gutter installation honesty before firm price — not gutter_cleaning, gutter_guards alone, roofing, or siding/fascia alone; no bait $/lf or fake same-day hang", ctaVerb: "Request a gutter installation quote" },
+  },
 
 };
 

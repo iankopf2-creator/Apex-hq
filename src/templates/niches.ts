@@ -1864,6 +1864,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a water softener quote",
     accentHint: "mineral-teal-salt-crystal",
   },
+  {
+    id: "gutter_installation",
+    label: "Gutter installation",
+    defaultTagline: "Assess linear feet, height, material, and fascia before we quote new gutters",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "New gutter install / replace", description: "New or full-replace gutter run after linear-ft / stories-height / roof pitch-access / material aluminum-galvanized-copper-vinyl-steel / style K-style-half-round-box / downspout count-placement / fascia condition / existing-vs-full-replace / splash blocks assess — HOA-permit honesty when true; no bait flat $/lf; no fake same-day hang; not gutter_cleaning flush-only, gutter_guards leaf covers alone, roofing tear-off, or siding/fascia alone", priceFrom: 0 },
+      { name: "Seamless aluminum gutter run", description: "Seamless aluminum (or other material when true) custom-run after linear-ft / stories / pitch / fascia assess — quote before hang; no bait flat $/lf", priceFrom: 0 },
+      { name: "Downspout / fascia assess quote", description: "Downspout count-placement + fascia condition + splash blocks/extensions assess before firm price — quote before hang; not cleaning-only or guards-alone", priceFrom: 0 },
+    ],
+    heroHints: ["Linear-ft / stories / pitch / material / style / downspouts / fascia assessed before firm price", "Existing vs full replace + splash blocks honesty", "HOA/permit honesty when true", "No bait flat $/lf — not gutter cleaning, gutter guards alone, roofing, or siding/fascia alone"],
+    ctaLabel: "Get a gutter installation quote",
+    accentHint: "rain-fascia-aluminum",
+  },
 
 ];
 
