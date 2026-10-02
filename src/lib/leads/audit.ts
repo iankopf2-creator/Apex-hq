@@ -88,6 +88,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   mini_split: 750,
   heat_pump: 900,
   furnace: 875,
+  boiler: 900,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -258,6 +259,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first heat pump page (whole-home / ducted install & replacement — home size/sqft + climate zone / existing furnace/AC vs heat-pump swap / ductwork condition / electrical panel/breaker capacity / outdoor pad/clearance / noise ordinance / backup heat strip vs dual-fuel / SEER2/HSPF2 when true / permit + licensed HVAC contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/ton or $/sqft or fake same-day whole-home comfort guarantees; distinct from hvac, mini_split, solar, generator, insulation, electrician, plumber, water_heater, and duct_cleaning.",
   furnace:
     "Add a quote-first furnace page (residential install/replace/repair — home size/sqft + climate zone / existing furnace age+fuel (gas/electric/oil/propane) / AFUE when true / ductwork condition / venting+combustion air / electrical or gas line / thermostat / permit + licensed HVAC contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/BTU or $/sqft or fake same-day whole-home heat guarantees; distinct from hvac, heat_pump, mini_split, boiler, generator, insulation, electrician, plumber, water_heater, duct_cleaning, and solar.",
+  boiler:
+    "Add a quote-first boiler page (residential hydronic/steam install/replace/repair — home size/heated sqft + climate zone / existing boiler age+fuel (gas/oil/propane/electric) + type (hot-water hydronic vs steam) / AFUE when true / radiators vs baseboard vs radiant loops / zone valves / circulator pumps / expansion tank + air elimination / venting+combustion air / chimney liner when true / electrical or gas/oil line / thermostat + outdoor reset when true / permit + licensed HVAC/plumbing-boiler contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/BTU or $/sqft or $/boiler or fake same-day whole-home heat guarantees; distinct from furnace, heat_pump, mini_split, hvac, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, and duct_cleaning.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
