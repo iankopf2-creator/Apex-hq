@@ -85,6 +85,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   well_pump: 500,
   water_filtration: 450,
   tankless_water_heater: 900,
+  mini_split: 750,
 };
 
 export const DEFAULT_JOB_USD = 120;

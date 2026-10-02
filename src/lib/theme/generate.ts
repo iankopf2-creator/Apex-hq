@@ -478,6 +478,11 @@ const NICHE_VARIANT_TWEAKS: Record<
     B: { heroEmphasis: "quote-first tankless water heater honesty before firm price — not water_heater general, plumber, water_filtration, water_softener, well_pump, sump_pump, slab_leak, or water_damage; no bait $/BTU or $/unit or fake same-day whole-home endless hot water", ctaVerb: "Request a tankless water heater quote" },
   },
 
+  mini_split: {
+    A: { heroEmphasis: "quote-first zones/rooms / BTU load / single vs multi-head / existing ducted HVAC vs window units / electrical panel / outdoor pad clearance / line-set length / wall material / stories/access / permit assess for mini-split / ductless", ctaVerb: "Get a mini-split quote" },
+    B: { heroEmphasis: "quote-first mini-split / ductless honesty before firm price — not hvac emergency, duct_cleaning, insulation, electrician, plumber, water_heater, generator, or solar; no bait $/head or $/ton or fake same-day whole-home comfort", ctaVerb: "Request a mini-split quote" },
+  },
+
 };
 
 export function isThemeNiche(value: string): value is ThemeNicheId {
