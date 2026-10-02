@@ -96,3 +96,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Heat pump | `heat-pump.jpg` | alpha innotec | https://unsplash.com/photos/TDtycnfiDa8 |
 | Furnace | `furnace.jpg` | Wtshymanski (Wikimedia Commons, CC BY-SA 4.0) | https://commons.wikimedia.org/wiki/File:Condensing_Forced_Air_Gas_Furnace.jpg |
 | Boiler | `boiler.jpg` | Audetat (Wikimedia Commons, CC BY-SA 3.0) | https://commons.wikimedia.org/wiki/File:ModCon_boiler_system.jpg |
+| Geothermal | `geothermal.jpg` | Dr Tzeferis Petros (Wikimedia Commons, CC BY-SA 4.0) | https://commons.wikimedia.org/wiki/File:Geothermal_heat_pump.JPG |

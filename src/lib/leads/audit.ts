@@ -89,6 +89,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   heat_pump: 900,
   furnace: 875,
   boiler: 900,
+  geothermal: 1600,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -261,6 +262,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first furnace page (residential install/replace/repair — home size/sqft + climate zone / existing furnace age+fuel (gas/electric/oil/propane) / AFUE when true / ductwork condition / venting+combustion air / electrical or gas line / thermostat / permit + licensed HVAC contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/BTU or $/sqft or fake same-day whole-home heat guarantees; distinct from hvac, heat_pump, mini_split, boiler, generator, insulation, electrician, plumber, water_heater, duct_cleaning, and solar.",
   boiler:
     "Add a quote-first boiler page (residential hydronic/steam install/replace/repair — home size/heated sqft + climate zone / existing boiler age+fuel (gas/oil/propane/electric) + type (hot-water hydronic vs steam) / AFUE when true / radiators vs baseboard vs radiant loops / zone valves / circulator pumps / expansion tank + air elimination / venting+combustion air / chimney liner when true / electrical or gas/oil line / thermostat + outdoor reset when true / permit + licensed HVAC/plumbing-boiler contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/BTU or $/sqft or $/boiler or fake same-day whole-home heat guarantees; distinct from furnace, heat_pump, mini_split, hvac, water_heater, tankless_water_heater, generator, insulation, electrician, plumber, solar, and duct_cleaning.",
+  geothermal:
+    "Add a quote-first geothermal page (residential ground-source install/replace — home size/heated+cooled sqft + climate zone / soil & geology suitability / lot space for ground loop (horizontal vs vertical bore) / existing HVAC type (forced-air ducts vs hydronic) / open-loop vs closed-loop vs pond when true / drilling access / utility rebates educational only (no guarantee) / electrical panel capacity / ductwork condition / permit + licensed geothermal/HVAC contractor honesty when true; assess before firm price) so callers get a real quote — not bait flat $/ton or $/sqft or $/loop or fake same-day install; distinct from heat_pump, mini_split, furnace, boiler, hvac, solar, insulation, electrician, plumber, and generator.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
