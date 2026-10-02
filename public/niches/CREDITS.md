@@ -90,3 +90,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Gutter installation | `gutter-installation.jpg` | Taylor Hammersla | https://unsplash.com/photos/6QYiR0utkvA |
 | Water heater | `water-heater.jpg` | Michal Balog | https://unsplash.com/photos/ii5IRyypPhs |
 | Well pump | `well-pump.jpg` | Sergio Santana | https://unsplash.com/photos/TaYD4Y_UZCk |
+| Water filtration | `water-filtration.jpg` | RephiLe water | https://unsplash.com/photos/QJmcc6i8xAc |
