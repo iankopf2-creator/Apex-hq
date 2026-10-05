@@ -1886,6 +1886,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a gutter installation quote",
     accentHint: "rain-fascia-aluminum",
   },
+  {
+    id: "bathroom_remodel",
+    label: "Bathroom remodel",
+    defaultTagline: "Assess layout, plumbing, waterproofing, and tile before we quote your bathroom",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Full bathroom remodel", description: "Gut or partial remodel after room sqft / layout keep-vs-move plumbing / shower pan + waterproofing / tile scope / vanity-countertop / fixtures / subfloor / vent fan / electrical-GFCI assess — permit honesty when true; hidden damage found at demo disclosed before extra work; no bait flat $ package; no fake one-day remodel", priceFrom: 0 },
+      { name: "Tub-to-shower conversion", description: "Tub removal + walk-in or curbless shower (when the floor allows) after drain location / waterproofing / tile / glass assess — quote before demo; no bait flat $", priceFrom: 0 },
+      { name: "Vanity, fixture & accessibility update", description: "Vanity-countertop, faucets, toilet, lighting, grab bars when asked — assess before firm price; not plumber emergency repair or tile-only", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft / layout / plumbing moves / waterproofing / tile / vanity assessed before firm price", "Hidden subfloor or water damage disclosed before extra work", "Permit honesty when true", "No bait flat $ package — not tile-only, cabinets-only, or plumber repair"],
+    ctaLabel: "Get a bathroom remodel quote",
+    accentHint: "eucalyptus-travertine",
+  },
 
 ];
 
