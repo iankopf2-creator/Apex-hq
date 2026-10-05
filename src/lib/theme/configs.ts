@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3763,6 +3763,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Residential rain gutter and downspout on a building fascia — linear feet, height, and material assessed before quote",
         credit: "Taylor Hammersla on Unsplash",
         sourceUrl: "https://unsplash.com/photos/6QYiR0utkvA",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  bathroom_remodel: {
+    niche: "bathroom_remodel",
+    label: "Bathroom remodel",
+    palette: {
+      // Deep eucalyptus + warm travertine — #2d4a43 + #e8d5b7 — NOT tile, cabinets, countertops, flooring, plumber, water_softener #115e59/#fcd34d, str_cleaning #0f766e, gutter_installation #152238/#7dd3fc
+      primary: "#2d4a43",
+      primaryForeground: "#f7f5f0",
+      accent: "#e8d5b7",
+      accentForeground: "#1c1917",
+      background: "#fbfaf7",
+      foreground: "#1c1917",
+      muted: "#ece7df",
+      mutedForeground: "#57534e",
+      border: "#d6d3d1",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first bathroom remodel — room sqft / layout keep-vs-move plumbing / tub-to-shower or tub-shower combo / shower pan + waterproofing / tile scope / vanity-countertop / fixtures / subfloor-rot-water damage found at demo / ventilation fan / electrical-GFCI / accessibility grab bars-curbless when asked / permit honesty when true; quote before demo; full remodel scope — not tile-only, not cabinets-only, not countertops-only, not plumber repair calls, not water_damage emergency",
+      heroStyle: "quote-first bathroom remodel LP — sqft/layout/tub-to-shower/waterproofing/tile/vanity/fixtures/subfloor/vent/electrical/permit chips when true, no bait flat $ bathroom package, no fake one-day remodel, no before/after photos that are not the business's own, no competitor brand cloning",
+      ctaStyle: "get a bathroom remodel quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $ bathroom package as Apex benchmark", "fake one-day or same-day remodel guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/layout/plumbing-move/waterproofing/tile/vanity/fixture/subfloor/electrical/permit assessment", "stock before/after presented as the business's own work", "impersonating tile-only installers", "impersonating cabinets or countertops alone", "impersonating plumber emergency repair", "impersonating water_damage restoration", "legal advice on local permit/code rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#2d4a43",
+      "--theme-primary-fg": "#f7f5f0",
+      "--theme-accent": "#e8d5b7",
+      "--theme-bg": "#fbfaf7",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft / layout / plumbing moves / waterproofing / tile / vanity assessed before firm price", "Subfloor or hidden water damage found at demo disclosed before extra work", "Permit honesty when true", "No bait flat $ package — not tile-only, cabinets-only, or plumber repair"],
+    heroImages: [
+      {
+        src: "/niches/bathroom-remodel.jpg",
+        alt: "Remodeled bathroom with glass walk-in shower, white tile, and double vanity — layout, tile, and fixtures assessed before quote",
+        credit: "Lotus Design N Print on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/g51F6-WYzyU",
         license: "unsplash",
       },
     ],

@@ -454,6 +454,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first linear-ft/stories-height/roof pitch-access/material aluminum-galvanized-copper-vinyl-steel/style K-style-half-round-box/downspout count-placement/fascia condition/existing-vs-full-replace/splash blocks/HOA-permit assess for gutter installation", ctaVerb: "Get a gutter installation quote" },
     B: { heroEmphasis: "quote-first gutter installation honesty before firm price — not gutter_cleaning, gutter_guards alone, roofing, or siding/fascia alone; no bait $/lf or fake same-day hang", ctaVerb: "Request a gutter installation quote" },
   },
+  bathroom_remodel: {
+    A: { heroEmphasis: "quote-first room sqft/layout keep-vs-move plumbing/tub-to-shower/shower pan + waterproofing/tile scope/vanity-countertop/fixtures/subfloor/vent fan/electrical-GFCI/permit assess for bathroom remodel", ctaVerb: "Get a bathroom remodel quote" },
+    B: { heroEmphasis: "quote-first bathroom remodel honesty before firm price — not tile-only, cabinets-only, countertops-only, plumber repair, or water_damage; no bait flat $ package or fake one-day remodel", ctaVerb: "Request a bathroom remodel quote" },
+  },
 
 };
 

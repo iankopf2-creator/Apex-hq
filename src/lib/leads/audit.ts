@@ -81,6 +81,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   str_cleaning: 225,
   water_softener: 350,
   gutter_installation: 480,
+  bathroom_remodel: 1400,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -238,6 +239,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first water softener page (hardness grains / existing softener age-capacity / resin condition / brine tank / salt type / iron-manganese / well vs municipal / drain for backwash / space / electrical / bypass valve / permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/softener or $/grain or fake forever-soft or same-day whole-home guarantees; distinct from plumber, sump_pump, water_damage, slab_leak, and appliance_repair.",
   gutter_installation:
     "Add a quote-first gutter installation page (linear-ft / stories-height / roof pitch-access / material aluminum-galvanized-copper-vinyl-steel / style K-style-half-round-box / downspout count-placement / fascia condition / existing-vs-full-replace / splash blocks / HOA-permit honesty when true; assess before firm price) so callers get a real quote — not bait flat $/lf or fake same-day hang; distinct from gutter_cleaning, gutter_guards alone, roofing, and siding/fascia alone.",
+  bathroom_remodel:
+    "Add a quote-first bathroom remodel page (room sqft / layout keep-vs-move plumbing / tub-to-shower / shower pan + waterproofing / tile scope / vanity-countertop / fixtures / subfloor-hidden water damage at demo / vent fan / electrical-GFCI / permit honesty when true; assess before firm price) so homeowners get a real quote — not a bait flat $ package or fake one-day remodel; distinct from tile-only, cabinets, countertops, plumber repair, and water_damage.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };

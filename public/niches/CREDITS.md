@@ -88,3 +88,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | STR / vacation rental cleaning | `str-cleaning.jpg` | Sidekix Media | https://unsplash.com/photos/aO-0TOpFT-k |
 | Water softener | `water-softener.jpg` | RephiLe water | https://unsplash.com/photos/FT1i_3OA7XI |
 | Gutter installation | `gutter-installation.jpg` | Taylor Hammersla | https://unsplash.com/photos/6QYiR0utkvA |
+| Bathroom remodel | `bathroom-remodel.jpg` | Lotus Design N Print | https://unsplash.com/photos/g51F6-WYzyU |
