@@ -458,6 +458,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first room sqft/layout keep-vs-move plumbing/tub-to-shower/shower pan + waterproofing/tile scope/vanity-countertop/fixtures/subfloor/vent fan/electrical-GFCI/permit assess for bathroom remodel", ctaVerb: "Get a bathroom remodel quote" },
     B: { heroEmphasis: "quote-first bathroom remodel honesty before firm price — not tile-only, cabinets-only, countertops-only, plumber repair, or water_damage; no bait flat $ package or fake one-day remodel", ctaVerb: "Request a bathroom remodel quote" },
   },
+  kitchen_remodel: {
+    A: { heroEmphasis: "quote-first kitchen sqft/layout keep-vs-reconfigure/plumbing-gas moves/cabinets reface-vs-replace/countertops/backsplash/flooring/appliance fit-venting/electrical-GFCI/permit assess for kitchen remodel", ctaVerb: "Get a kitchen remodel quote" },
+    B: { heroEmphasis: "quote-first kitchen remodel honesty before firm price — not cabinets-only, countertops-only, tile-only, appliance_repair, or kitchen_hood_cleaning; no bait flat $ package or fake fixed-timeline remodel", ctaVerb: "Request a kitchen remodel quote" },
+  },
 
 };
 

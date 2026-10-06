@@ -1907,7 +1907,29 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     heroHints: ["Sqft / layout / plumbing moves / waterproofing / tile / vanity assessed before firm price", "Hidden subfloor or water damage disclosed before extra work", "Permit honesty when true", "No bait flat $ package — not tile-only, cabinets-only, or plumber repair"],
     ctaLabel: "Get a bathroom remodel quote",
     accentHint: "eucalyptus-travertine",
+  },  {
+    id: "kitchen_remodel",
+    label: "Kitchen remodel",
+    defaultTagline: "Assess layout, plumbing, cabinets, and countertops before we quote your kitchen",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Full kitchen remodel", description: "Gut or partial remodel after kitchen sqft / layout keep-vs-reconfigure / plumbing + gas moves / cabinets / countertops / backsplash / flooring / appliance fit-venting / electrical-GFCI assess — load-bearing wall and permit honesty when true; hidden damage found at demo disclosed before extra work; no bait flat $ package; no fake fixed-timeline remodel", priceFrom: 0 },
+      { name: "Layout & island reconfiguration", description: "Open-up, island add, or galley-L-U change after wall, plumbing, gas, venting, and electrical assess — quote before demo; structural engineer referral when a wall is load-bearing; no bait flat $", priceFrom: 0 },
+      { name: "Cabinet, countertop & backsplash refresh", description: "Reface-or-replace cabinets, new counters, backsplash, sink and lighting — assess before firm price; not cabinets-only or countertops-only shops, not appliance_repair", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft / layout / plumbing-gas moves / cabinets / countertops / appliances assessed before firm price", "Hidden wiring, subfloor, or water damage disclosed before extra work", "Load-bearing wall + permit honesty when true", "No bait flat $ package — not cabinets-only, countertops-only, or tile-only"],
+    ctaLabel: "Get a kitchen remodel quote",
+    accentHint: "oxblood-butter-cream",
   },
+
 
 ];
 
