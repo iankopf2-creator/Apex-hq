@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel" | "kitchen_remodel";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel / kitchen_remodel (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3808,6 +3808,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Remodeled bathroom with glass walk-in shower, white tile, and double vanity — layout, tile, and fixtures assessed before quote",
         credit: "Lotus Design N Print on Unsplash",
         sourceUrl: "https://unsplash.com/photos/g51F6-WYzyU",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  kitchen_remodel: {
+    niche: "kitchen_remodel",
+    label: "Kitchen remodel",
+    palette: {
+      // Deep oxblood + warm butter cream — #5b1f24 + #f2d49b — NOT cabinets #3f2e24/#c4a574, countertops #364554/#c9a882, tile #3d4f5f/#cbbba3, flooring #292524/#b45309, bathroom_remodel #2d4a43/#e8d5b7, kitchen_hood_cleaning #171412/#b87333
+      primary: "#5b1f24",
+      primaryForeground: "#fdf8f0",
+      accent: "#f2d49b",
+      accentForeground: "#1c1917",
+      background: "#fcfaf6",
+      foreground: "#1c1917",
+      muted: "#f1ebe2",
+      mutedForeground: "#57534e",
+      border: "#e2dad0",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first kitchen remodel — kitchen sqft / layout keep-vs-reconfigure (galley-L-U-island) / wall removal load-bearing check when true / plumbing + gas moves / cabinet scope reface-vs-replace / countertop material / backsplash / flooring / appliance fit-venting / electrical circuits-GFCI-lighting / drywall-subfloor surprises found at demo / permit honesty when true; quote before demo; full remodel scope — not cabinets-only, not countertops-only, not tile-only, not appliance_repair, not kitchen_hood_cleaning",
+      heroStyle: "quote-first kitchen remodel LP — sqft/layout/plumbing-gas moves/cabinets/countertops/backsplash/flooring/appliances/electrical/permit chips when true, no bait flat $ kitchen package, no fake two-week guarantee, no before/after photos that are not the business's own, no competitor brand cloning",
+      ctaStyle: "get a kitchen remodel quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $ kitchen package as Apex benchmark", "fake fixed-timeline or same-week remodel guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/layout/plumbing-gas move/cabinet/countertop/appliance/electrical/permit assessment", "stock before/after presented as the business's own work", "impersonating cabinets or countertops alone", "impersonating tile-only installers", "impersonating appliance_repair", "impersonating kitchen_hood_cleaning", "structural or legal advice on load-bearing walls or local permit/code rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#5b1f24",
+      "--theme-primary-fg": "#fdf8f0",
+      "--theme-accent": "#f2d49b",
+      "--theme-bg": "#fcfaf6",
+      "--theme-fg": "#1c1917",
+    },
+    trustBadges: ["Sqft / layout / plumbing-gas moves / cabinets / countertops / appliances assessed before firm price", "Hidden wiring, subfloor, or water damage found at demo disclosed before extra work", "Permit honesty when true", "No bait flat $ package — not cabinets-only, countertops-only, or tile-only"],
+    heroImages: [
+      {
+        src: "/niches/kitchen-remodel.jpg",
+        alt: "Bright remodeled kitchen with white shaker cabinets, marble-look island, brass fixtures, and oak floors — layout, cabinets, and countertops assessed before quote",
+        credit: "Clay Banks on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/zAvzWN6CE5w",
         license: "unsplash",
       },
     ],
