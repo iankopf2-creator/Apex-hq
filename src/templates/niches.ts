@@ -1929,6 +1929,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a kitchen remodel quote",
     accentHint: "oxblood-butter-cream",
   },
+  {
+    id: "basement_finishing",
+    label: "Basement finishing",
+    defaultTagline: "Check moisture, layout, and egress before we quote your basement",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Full basement finish", description: "Framing, insulation, drywall, ceiling, flooring, lighting, and trim after basement sqft / ceiling height / moisture check / layout / egress / HVAC-electrical assess — waterproofing referral first when walls are wet; permit-inspection honesty when true; no bait flat $/sqft; no fake fixed-timeline finish", priceFrom: 0 },
+      { name: "Basement bath, bar, or bedroom add", description: "Plumbing rough-in, wet bar, or bedroom with egress window after layout, drain, venting, and code assess — quote before framing; no bait flat $", priceFrom: 0 },
+      { name: "Partial finish & rec room refresh", description: "Family room, home theater, office, or gym in part of the basement — bulkheads around ducts and utilities, below-grade flooring; assess before firm price; not drywall-only or flooring-only shops", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft / ceiling height / moisture / layout / egress / HVAC-electrical assessed before firm price", "Moisture checked before framing — waterproofing referral first when wet", "Egress + permit-inspection honesty when true", "No bait flat $/sqft — not drywall-only, flooring-only, or waterproofing"],
+    ctaLabel: "Get a basement finishing quote",
+    accentHint: "ink-indigo-oak-honey",
+  },
 
 
 ];

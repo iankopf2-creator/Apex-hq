@@ -90,3 +90,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Gutter installation | `gutter-installation.jpg` | Taylor Hammersla | https://unsplash.com/photos/6QYiR0utkvA |
 | Bathroom remodel | `bathroom-remodel.jpg` | Lotus Design N Print | https://unsplash.com/photos/g51F6-WYzyU |
 | Kitchen remodel | `kitchen-remodel.jpg` | Clay Banks | https://unsplash.com/photos/zAvzWN6CE5w |
+| Basement finishing | `basement-finishing.jpg` | Point3D Commercial Imaging Ltd. | https://unsplash.com/photos/vBBr-MOWhaY |

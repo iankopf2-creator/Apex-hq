@@ -462,6 +462,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first kitchen sqft/layout keep-vs-reconfigure/plumbing-gas moves/cabinets reface-vs-replace/countertops/backsplash/flooring/appliance fit-venting/electrical-GFCI/permit assess for kitchen remodel", ctaVerb: "Get a kitchen remodel quote" },
     B: { heroEmphasis: "quote-first kitchen remodel honesty before firm price — not cabinets-only, countertops-only, tile-only, appliance_repair, or kitchen_hood_cleaning; no bait flat $ package or fake fixed-timeline remodel", ctaVerb: "Request a kitchen remodel quote" },
   },
+  basement_finishing: {
+    A: { heroEmphasis: "quote-first basement sqft/ceiling height/moisture check/layout/egress/framing-insulation/drywall/below-grade flooring/HVAC-electrical/plumbing rough-in/permit assess for basement finishing", ctaVerb: "Get a basement finishing quote" },
+    B: { heroEmphasis: "quote-first basement finishing honesty before firm price — not basement_waterproofing, drywall-only, flooring-only, or insulation-only; no bait flat $/sqft or fake fixed-timeline finish", ctaVerb: "Request a basement finishing quote" },
+  },
 
 };
 
