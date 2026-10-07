@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel" | "kitchen_remodel";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel" | "kitchen_remodel" | "basement_finishing";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel / kitchen_remodel (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel / kitchen_remodel / basement_finishing (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3858,7 +3858,50 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
     ],
   },
 
-
+  basement_finishing: {
+    niche: "basement_finishing",
+    label: "Basement finishing",
+    palette: {
+      // Deep ink-indigo slate + warm oak honey — #2a2d43 + #e0b77a — NOT basement_waterproofing #0f172a/#14b8a6, kitchen_remodel #5b1f24/#f2d49b, bathroom_remodel #2d4a43/#e8d5b7, drywall, flooring #292524/#b45309, insulation, crawl_space_encapsulation, sump_pump
+      primary: "#2a2d43",
+      primaryForeground: "#f8f6f2",
+      accent: "#e0b77a",
+      accentForeground: "#1c1917",
+      background: "#faf9f7",
+      foreground: "#1c1b22",
+      muted: "#efedf1",
+      mutedForeground: "#55546a",
+      border: "#dedce4",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first basement finishing — basement sqft / ceiling height / moisture-dry check before framing (waterproofing referral first when wet) / layout rooms-bath-bar-theater-office / egress window for any bedroom / framing + insulation / drywall-ceiling (drop vs drywall) / below-grade flooring / HVAC-ductwork + electrical circuits-lighting / plumbing rough-in for bath or bar when true / stairs and bulkheads around utilities / permit-inspection honesty when true; quote before framing; full finish scope — not basement_waterproofing, not drywall-only, not flooring-only, not insulation-only",
+      heroStyle: "quote-first basement finishing LP — sqft/ceiling height/moisture check/layout/egress/framing-insulation/drywall/flooring/HVAC-electrical/plumbing/permit chips when true, no bait flat $/sqft finish package, no fake fixed-timeline guarantee, no before/after photos that are not the business's own, no competitor brand cloning",
+      ctaStyle: "get a basement finishing quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $/sqft basement package as Apex benchmark", "fake fixed-timeline or same-month finish guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/ceiling height/moisture/layout/egress/HVAC-electrical/plumbing/permit assessment", "framing over an active leak or damp walls without a waterproofing referral", "stock before/after presented as the business's own work", "impersonating basement_waterproofing", "impersonating drywall-only, flooring-only, or insulation-only installers", "structural, code, or legal advice on egress or local permit rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#2a2d43",
+      "--theme-primary-fg": "#f8f6f2",
+      "--theme-accent": "#e0b77a",
+      "--theme-bg": "#faf9f7",
+      "--theme-fg": "#1c1b22",
+    },
+    trustBadges: ["Sqft / ceiling height / moisture / layout / egress / HVAC-electrical assessed before firm price", "Moisture checked before framing — waterproofing referral first when wet", "Egress + permit-inspection honesty when true", "No bait flat $/sqft — not drywall-only, flooring-only, or waterproofing"],
+    heroImages: [
+      {
+        src: "/niches/basement-finishing.jpg",
+        alt: "Bright finished basement with white walls, recessed lights, oak-look plank floors, and an open staircase — layout, moisture, and egress assessed before quote",
+        credit: "Point3D Commercial Imaging Ltd. on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/vBBr-MOWhaY",
+        license: "unsplash",
+      },
+    ],
+  },
 
 };
 

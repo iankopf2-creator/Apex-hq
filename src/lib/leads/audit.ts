@@ -83,6 +83,7 @@ export const NICHE_JOB_USD: Record<string, number> = {
   gutter_installation: 480,
   bathroom_remodel: 1400,
   kitchen_remodel: 1800,
+  basement_finishing: 1500,
 };
 
 export const DEFAULT_JOB_USD = 120;
@@ -244,6 +245,8 @@ const NICHE_FIX: Record<string, string> = {
     "Add a quote-first bathroom remodel page (room sqft / layout keep-vs-move plumbing / tub-to-shower / shower pan + waterproofing / tile scope / vanity-countertop / fixtures / subfloor-hidden water damage at demo / vent fan / electrical-GFCI / permit honesty when true; assess before firm price) so homeowners get a real quote — not a bait flat $ package or fake one-day remodel; distinct from tile-only, cabinets, countertops, plumber repair, and water_damage.",
   kitchen_remodel:
     "Add a quote-first kitchen remodel page (kitchen sqft / layout keep-vs-reconfigure / load-bearing wall check when true / plumbing + gas moves / cabinets reface-vs-replace / countertops / backsplash / flooring / appliance fit-venting / electrical-GFCI-lighting / hidden damage at demo / permit honesty when true; assess before firm price) so homeowners get a real quote — not a bait flat $ package or fake fixed-timeline remodel; distinct from cabinets-only, countertops-only, tile-only, appliance_repair, and kitchen_hood_cleaning.",
+  basement_finishing:
+    "Add a quote-first basement finishing page (basement sqft / ceiling height / moisture-dry check before framing — waterproofing referral first when wet / layout rooms-bath-bar-theater / egress window for any bedroom / framing + insulation / drywall-ceiling / below-grade flooring / HVAC + electrical-lighting / plumbing rough-in when true / bulkheads around utilities / permit-inspection honesty when true; assess before firm price) so homeowners get a real quote — not bait flat $/sqft or a fake fixed-timeline finish; distinct from basement_waterproofing, drywall-only, flooring-only, and insulation-only.",
   countertops:
     "Add a quote-first countertops page (kitchen/bath + sqft/linear/edge/sink-cutout/access/stories/material quartz-granite-marble-laminate-butcher-block assess before firm price) so callers get a real quote — not bait flat $/sqft or $/lf or fake same-day.",
 };
