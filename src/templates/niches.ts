@@ -1951,6 +1951,28 @@ export const NICHE_TEMPLATES: NicheTemplate[] = [
     ctaLabel: "Get a basement finishing quote",
     accentHint: "ink-indigo-oak-honey",
   },
+  {
+    id: "sunroom",
+    label: "Sunroom",
+    defaultTagline: "Size, season, and roof tie-in checked before we quote your sunroom",
+    defaultHours: {
+      mon: "8:00 AM – 5:00 PM",
+      tue: "8:00 AM – 5:00 PM",
+      wed: "8:00 AM – 5:00 PM",
+      thu: "8:00 AM – 5:00 PM",
+      fri: "8:00 AM – 5:00 PM",
+      sat: "9:00 AM – 1:00 PM",
+      sun: "Closed",
+    },
+    defaultServices: [
+      { name: "Four-season sunroom addition", description: "Insulated, heated-and-cooled glass room after room sqft / new foundation vs existing slab / roof tie-in / insulated low-E glazing / HVAC + insulation / electrical assess — HOA + permit honesty when true; no bait flat $ package; no fake fixed-timeline build", priceFrom: 0 },
+      { name: "Three-season room", description: "Glass or vinyl-panel room for spring through fall over an existing deck or patio after we check the deck or slab can carry it, roof tie-in, and glazing — quote before build; no bait flat $", priceFrom: 0 },
+      { name: "Screen room enclosure", description: "Screen-in an existing porch, deck, or patio cover with framed screen panels and a door after size, structure, and roof assess; assess before firm price; not a patio cover, pergola, or window-only job", priceFrom: 0 },
+    ],
+    heroHints: ["Sqft / three-vs-four-season / deck-patio-vs-foundation / roof tie-in / glazing assessed before firm price", "Existing deck or patio checked before we build on it", "HVAC + insulation scoped for four-season rooms; HOA + permit honesty when true", "No bait flat $ package — not a patio cover, pergola, or window-only job"],
+    ctaLabel: "Get a sunroom quote",
+    accentHint: "daylight-sky-sun-gold",
+  },
 
 
 ];

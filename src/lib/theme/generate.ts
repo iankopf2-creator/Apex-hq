@@ -466,6 +466,10 @@ const NICHE_VARIANT_TWEAKS: Record<
     A: { heroEmphasis: "quote-first basement sqft/ceiling height/moisture check/layout/egress/framing-insulation/drywall/below-grade flooring/HVAC-electrical/plumbing rough-in/permit assess for basement finishing", ctaVerb: "Get a basement finishing quote" },
     B: { heroEmphasis: "quote-first basement finishing honesty before firm price — not basement_waterproofing, drywall-only, flooring-only, or insulation-only; no bait flat $/sqft or fake fixed-timeline finish", ctaVerb: "Request a basement finishing quote" },
   },
+  sunroom: {
+    A: { heroEmphasis: "quote-first sunroom sqft/three-vs-four-season/deck-patio-vs-new-foundation/roof tie-in/glass-glazing/HVAC-insulation/electrical/HOA-permit assess for sunroom builds", ctaVerb: "Get a sunroom quote" },
+    B: { heroEmphasis: "quote-first sunroom honesty before firm price — not patio_cover, pergola, gazebo, awning, window_replacement-only, or decking-only; no bait flat $ package or fake fixed-timeline build", ctaVerb: "Request a sunroom quote" },
+  },
 
 };
 
