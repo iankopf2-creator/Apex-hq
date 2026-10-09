@@ -91,3 +91,4 @@ Do **not** scrape Google Images for production use. Prefer Unsplash/Pexels with 
 | Bathroom remodel | `bathroom-remodel.jpg` | Lotus Design N Print | https://unsplash.com/photos/g51F6-WYzyU |
 | Kitchen remodel | `kitchen-remodel.jpg` | Clay Banks | https://unsplash.com/photos/zAvzWN6CE5w |
 | Basement finishing | `basement-finishing.jpg` | Point3D Commercial Imaging Ltd. | https://unsplash.com/photos/vBBr-MOWhaY |
+| Sunroom | `sunroom.jpg` | Clay Banks | https://unsplash.com/photos/S0olvSSw48w |

@@ -10,7 +10,7 @@
  * - Hero/copy tone must not use fake urgency or impersonation.
  */
 
-export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel" | "kitchen_remodel" | "basement_finishing";
+export type ThemeNicheId = "hvac" | "plumber" | "salon" | "trucking" | "electrician" | "roofing" | "landscaping" | "auto_detail" | "cleaning" | "pest_control" | "moving" | "painting" | "garage" | "locksmith" | "janitorial" | "towing" | "water_damage" | "fire_smoke" | "mold_remediation" | "tree_service" | "slab_leak" | "junk_removal" | "pressure_washing" | "gutter_cleaning" | "window_cleaning" | "carpet_cleaning" | "appliance_repair" | "handyman" | "flooring" | "fencing" | "concrete" | "siding" | "decking" | "masonry" | "drywall" | "insulation" | "tile" | "cabinets" | "countertops" | "foundation_repair" | "solar" | "epoxy_flooring" | "chimney" | "window_replacement" | "generator" | "ev_charger" | "patio_cover" | "irrigation" | "pergola" | "gazebo" | "carport" | "awning" | "dumpster_rental" | "porta_potty_rental" | "storage_container_rental" | "gutter_guards" | "stump_grinding" | "retaining_wall" | "french_drain" | "basement_waterproofing" | "crawl_space_encapsulation" | "sump_pump" | "radon_mitigation" | "wildlife_removal" | "septic_pumping" | "grease_trap_cleaning" | "kitchen_hood_cleaning" | "dryer_vent_cleaning" | "duct_cleaning" | "snow_removal" | "lawn_care" | "roof_cleaning" | "sealcoating" | "asphalt_paving" | "line_striping" | "crack_sealing" | "auto_parts" | "aircraft_detail" | "str_cleaning" | "water_softener" | "gutter_installation" | "bathroom_remodel" | "kitchen_remodel" | "basement_finishing" | "sunroom";
 
 export type ThemePalette = {
   primary: string;
@@ -38,7 +38,7 @@ export type CopyTone = {
    * Sticky CTA mode (Apex Research feed 2026-09-04):
    * call_first = emergency/home-service; book_first = salon/beauty/residential cleaning;
    * hybrid = seasonal/recurring (quote vs schedule vs call);
-   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel / kitchen_remodel / basement_finishing (quote primary + call beside).
+   * quote_first = commercial janitorial / junk_removal / pressure_washing / gutter_cleaning / window_cleaning / carpet_cleaning / flooring / fencing / concrete / siding / decking / masonry / drywall / insulation / tile / cabinets / countertops / landscaping / auto_detail / foundation_repair / solar / epoxy_flooring / chimney / window_replacement / generator / ev_charger / patio_cover / irrigation / pergola / gazebo / carport / awning / dumpster_rental / porta_potty_rental / storage_container_rental / gutter_guards / stump_grinding / retaining_wall / french_drain / basement_waterproofing / crawl_space_encapsulation / sump_pump / radon_mitigation / wildlife_removal / septic_pumping / grease_trap_cleaning / kitchen_hood_cleaning / dryer_vent_cleaning / duct_cleaning / snow_removal / lawn_care / roof_cleaning / sealcoating / asphalt_paving / line_striping / crack_sealing / auto_parts / aircraft_detail / str_cleaning / water_softener / gutter_installation / bathroom_remodel / kitchen_remodel / basement_finishing / sunroom (quote primary + call beside).
    */
   ctaPriority: "call_first" | "book_first" | "hybrid" | "quote_first";
 };
@@ -3898,6 +3898,51 @@ export const NICHE_THEME_CONFIGS: Record<ThemeNicheId, NicheThemeConfig> = {
         alt: "Bright finished basement with white walls, recessed lights, oak-look plank floors, and an open staircase — layout, moisture, and egress assessed before quote",
         credit: "Point3D Commercial Imaging Ltd. on Unsplash",
         sourceUrl: "https://unsplash.com/photos/vBBr-MOWhaY",
+        license: "unsplash",
+      },
+    ],
+  },
+
+  sunroom: {
+    niche: "sunroom",
+    label: "Sunroom",
+    palette: {
+      // Deep daylight sky blue + morning sun gold — #1d4f73 + #f4c86a — NOT window_replacement #1e293b/#0ea5e9, patio_cover #1c1917/#b45309, pergola #1a1510/#d97706, gazebo #14241c/#c2410c, awning #14181f/#c45c26, carport #0f1419/#64748b, decking #2d3439/#7a9e8a, basement_finishing #2a2d43/#e0b77a, gutter_installation #152238/#7dd3fc, solar #0f172a/#f59e0b
+      primary: "#1d4f73",
+      primaryForeground: "#fdfbf6",
+      accent: "#f4c86a",
+      accentForeground: "#1c1917",
+      background: "#fbfaf6",
+      foreground: "#18222c",
+      muted: "#eef3f6",
+      mutedForeground: "#4f5d68",
+      border: "#d9e2e8",
+    },
+    fonts: {
+      heading: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+      body: "ui-sans-serif, system-ui, -apple-system, Segoe UI, sans-serif",
+    },
+    copyTone: {
+      voice: "honest assess-first sunroom builds — room size sqft / three-season vs four-season use / attach over existing deck or patio (structure checked) vs new foundation / roof tie-in to the house / glass-glazing type (single, insulated, low-E, screen panels) / HVAC + insulation for four-season rooms / electrical outlets-lighting-fans / HOA + permit honesty when true; quote before build; full enclosed room scope — not patio_cover, not pergola, not gazebo, not awning, not window_replacement-only, not decking-only",
+      heroStyle: "quote-first sunroom LP — sqft/three-vs-four-season/deck-patio-vs-foundation/roof tie-in/glazing/HVAC-insulation/electrical/HOA-permit chips when true, no bait flat $ sunroom package, no fake fixed-timeline build, no before/after photos that are not the business's own, no competitor brand cloning",
+      ctaStyle: "get a sunroom quote (call beside form)",
+      ctaPriority: "quote_first",
+      avoid: [...baseAvoid, "bait flat $ sunroom kit or package as Apex benchmark", "fake fixed-timeline or same-week build guarantees", "competitor brand cloning", "fake 24/7", "scare copy / fake emergency urgency", "firm price before sqft/three-vs-four-season/deck-patio-vs-foundation/roof tie-in/glazing/HVAC-insulation/electrical/permit assessment", "building on an existing deck or slab without checking it can carry the room", "stock before/after presented as the business's own work", "impersonating patio_cover, pergola, gazebo, awning, or carport builders", "impersonating window_replacement-only or decking-only installers", "structural, code, or legal advice on local permit or HOA rules"],
+    },
+    cssVars: {
+      "--theme-primary": "#1d4f73",
+      "--theme-primary-fg": "#fdfbf6",
+      "--theme-accent": "#f4c86a",
+      "--theme-bg": "#fbfaf6",
+      "--theme-fg": "#18222c",
+    },
+    trustBadges: ["Sqft / three-vs-four-season / deck-patio-vs-foundation / roof tie-in / glazing assessed before firm price", "Existing deck or patio checked before we build on it", "HVAC + insulation scoped for four-season rooms; HOA + permit honesty when true", "No bait flat $ package — not a patio cover, pergola, or window-only job"],
+    heroImages: [
+      {
+        src: "/niches/sunroom.jpg",
+        alt: "Bright sunroom with floor-to-ceiling glass walls, a fireplace, and a sofa looking out on wooded yard — size, season use, glazing, and roof tie-in assessed before quote",
+        credit: "Clay Banks on Unsplash",
+        sourceUrl: "https://unsplash.com/photos/S0olvSSw48w",
         license: "unsplash",
       },
     ],
